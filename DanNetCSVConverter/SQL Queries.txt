@@ -1,0 +1,113 @@
+SELECT	*
+FROM	Word
+INNER JOIN Wordsense
+ON Word.Id = Wordsense.WordId
+INNER JOIN Synset
+On Wordsense.SynsetId = Synset.id
+INNER JOIN Relation
+ON Synset.Id = Relation.FromSynsetId Or Synset.Id = Relation.ToSynsetId
+WHERE	(Pos <> 'Noun')
+ORDER BY Word.Pos ASC
+
+-- Rowcount all tables
+SELECT SCHEMA_NAME(schema_id) AS [SchemaName],
+[Tables].name AS [TableName],
+SUM([Partitions].[rows]) AS [TotalRowCount]
+FROM sys.tables AS [Tables]
+JOIN sys.partitions AS [Partitions]
+ON [Tables].[object_id] = [Partitions].[object_id]
+AND [Partitions].index_id IN ( 0, 1 )
+-- WHERE [Tables].name = N'name of the table'
+GROUP BY SCHEMA_NAME(schema_id), [Tables].name;
+
+
+
+--DROP TABLE Relation;
+--DROP TABLE Synset;
+--DROP TABLE Word;
+--DROP TABLE Wordsense;
+--DROP TABLE SynsetDeleteId;
+--DROP TABLE WordDeleteId;
+-- create temporary table for deleted IDs
+CREATE TABLE WordDeleteId (
+    Id Varchar(255) PRIMARY KEY
+)
+CREATE TABLE SynsetDeleteId (
+    Id Varchar(255) PRIMARY KEY
+)
+
+-- Words that aren't Noun
+INSERT INTO WordDeleteId(Id)
+SELECT Word.Id
+FROM Word
+WHERE Pos != 'Noun'
+
+-- Synset that aren't Animal or Comestible
+INSERT INTO SynsetDeleteId(Id)
+SELECT Synset.Id
+FROM Synset
+WHERE Synset.Ontological_type
+NOT LIKE '%Animal%' AND Synset.Ontological_type NOT LIKE '%Comestible%'
+
+-- DELETE WORDSENSE
+DELETE Wordsense
+FROM Wordsense
+WHERE Wordsense.SynsetId IN (
+    SELECT SynsetDeleteId.Id
+    FROM SynsetDeleteId
+)OR Wordsense.SynsetId IN ( -- Delete where Synset doesn't exist
+	SELECT DISTINCT Wordsense.SynsetId
+	FROM Wordsense 
+	WHERE NOT EXISTS (
+		SELECT *
+		FROM Synset 
+		WHERE Synset.Id = Wordsense.SynsetId
+	)
+)
+
+-- DELETE SYNSET
+DELETE Synset
+FROM Synset
+WHERE Synset.Id IN (
+    SELECT SynsetDeleteId.Id
+    FROM SynsetDeleteId
+)
+
+-- ADD Deleted Wordsense.WordId to WordDeleteId
+INSERT INTO WordDeleteId(Id)
+SELECT DISTINCT Word.id
+FROM Word 
+WHERE NOT EXISTS (
+    SELECT *
+    FROM Wordsense 
+    WHERE Wordsense.WordId = Word.id
+)
+AND NOT EXISTS(
+		SELECT WordDeleteId.Id
+		FROM WordDeleteId
+		WHERE WordDeleteId.Id = Word.id
+)
+
+-- DELETE WORD
+DELETE Word
+FROM Word
+WHERE Word.Id IN (
+    SELECT WordDeleteId.Id
+    FROM WordDeleteId
+)
+
+
+
+--CLEANUP ?
+--- ToSynsetId Doesnt exist
+DELETE Relation
+FROM Relation
+WHERE NOT EXISTS(
+	SELECT Synset.Id
+	FROM Synset
+	WHERE Synset.Id = Relation.ToSynsetId
+)
+
+DROP TABLE WordDeleteId
+DROP TABLE SynsetDeleteId
+----##ENDREGION
