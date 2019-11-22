@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CookIt.API.Data;
 using CookIt.API.Dtos;
+using CookIt.API.Models;
 using GenericServices;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -24,9 +25,16 @@ namespace CookIt.API.Controllers
         [HttpPost]
         public async Task<ActionResult> CreateRecipes(RecipeJsonDto json)
         {
+            Host host = _service.ReadSingle<Host>(Guid.NewGuid());
+            if (host == null)
+            {
+                host = new Host(json.ProjectName, json.StartUrl.ToString(), "");
+                _service.CreateAndSave(host);
+            }
             foreach (var item in json.Data.AllRecipes)
             {
-                Recipe recipeToCreate = new Recipe(item.Recipe.Heading,Guid.NewGuid(), item.Metadata.FoundAtUrl.ToString(), item.Recipe.Image.ToString());
+
+                Recipe recipeToCreate = new Recipe(item.Recipe.Heading, host.Id, item.Metadata.FoundAtUrl.ToString(), item.Recipe.Image.ToString());
                 _service.CreateAndSave(recipeToCreate);
             }
             return Ok();
