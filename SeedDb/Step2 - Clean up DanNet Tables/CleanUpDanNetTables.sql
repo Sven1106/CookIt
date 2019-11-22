@@ -1,38 +1,3 @@
-SELECT	*
-FROM	Word
-INNER JOIN Wordsense
-ON Word.Id = Wordsense.WordId
-INNER JOIN Synset
-On Wordsense.SynsetId = Synset.id
-INNER JOIN Relation
-ON Synset.Id = Relation.FromSynsetId Or Synset.Id = Relation.ToSynsetId
-WHERE	(Pos <> 'Noun')
-ORDER BY Word.Pos ASC
-
--- Rowcount all tables
-SELECT SCHEMA_NAME(schema_id) AS [SchemaName],
-[Tables].name AS [TableName],
-SUM([Partitions].[rows]) AS [TotalRowCount]
-FROM sys.tables AS [Tables]
-JOIN sys.partitions AS [Partitions]
-ON [Tables].[object_id] = [Partitions].[object_id]
-AND [Partitions].index_id IN ( 0, 1 )
--- WHERE [Tables].name = N'name of the table'
-GROUP BY SCHEMA_NAME(schema_id), [Tables].name;
-
-
-
-
---DROP TABLE Host;
---DROP TABLE Ingredient;
---DROP TABLE Recipe;
---DROP TABLE RecipeIngredient;
---DROP TABLE Relation;
---DROP TABLE Synset;
---DROP TABLE Word;
---DROP TABLE Wordsense;
---DROP TABLE SynsetDeleteId;
---DROP TABLE WordDeleteId;
 -- create temporary table for deleted IDs
 CREATE TABLE WordDeleteId (
     Id Varchar(255) PRIMARY KEY
@@ -101,18 +66,5 @@ WHERE Word.Id IN (
     FROM WordDeleteId
 )
 
-
-
---CLEANUP ?
---- ToSynsetId Doesnt exist
-DELETE Relation
-FROM Relation
-WHERE NOT EXISTS(
-	SELECT Synset.Id
-	FROM Synset
-	WHERE Synset.Id = Relation.ToSynsetId
-)
-
 DROP TABLE WordDeleteId
 DROP TABLE SynsetDeleteId
-----##ENDREGION

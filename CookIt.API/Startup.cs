@@ -6,6 +6,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
+using GenericServices.Setup;
+using System.Reflection;
+using CookIt.API.Models;
 
 namespace CookIt.API
 {
@@ -21,11 +24,16 @@ namespace CookIt.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(option =>
+            services.AddDbContext<LatestDbContext>(option =>
             {
                 option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
-            services.AddControllers();
+            services.AddControllers()
+                .AddNewtonsoftJson(opt =>
+                {
+                    opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                });
+            services.GenericServicesSimpleSetup<LatestDbContext>(Assembly.GetAssembly(typeof(Recipe)));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -130,9 +130,7 @@ namespace DanNetCSVConverter
             DateTime startTime = DateTime.Now;
             for (int i = 0; i < csvValues.Length; i++)
             {
-
                 var valuesBeforeAdd = csvValues[i].Split('@');
-
                 if (i % maximumRowCount == 0)
                 {
                     sql = "";
