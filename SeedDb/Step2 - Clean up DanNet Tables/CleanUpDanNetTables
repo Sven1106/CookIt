@@ -12,12 +12,18 @@ SELECT Word.Id
 FROM Word
 WHERE Pos != 'Noun'
 
--- Synset that aren't Animal or Comestible
+-- Synset that should be removed
 INSERT INTO SynsetDeleteId(Id)
 SELECT Synset.Id
 FROM Synset
 WHERE Synset.Ontological_type
-NOT LIKE '%Animal%' AND Synset.Ontological_type NOT LIKE '%Comestible%'
+NOT LIKE '%Animal%'
+AND Synset.Ontological_type
+NOT LIKE '%Comestible%'
+AND Synset.Ontological_type
+NOT LIKE '%Plant%'
+AND Synset.Ontological_type
+NOT LIKE '%Natural%'
 
 -- DELETE WORDSENSE
 DELETE Wordsense

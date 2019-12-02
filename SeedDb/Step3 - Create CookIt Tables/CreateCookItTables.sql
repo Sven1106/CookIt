@@ -1,5 +1,5 @@
 CREATE TABLE [Ingredient] (
-	Id varchar(36) NOT NULL,
+	Id UNIQUEIDENTIFIER,
 	WordId varchar(255) NOT NULL,
   CONSTRAINT [PK_INGREDIENT] PRIMARY KEY CLUSTERED
   (
@@ -9,9 +9,10 @@ CREATE TABLE [Ingredient] (
 )
 GO
 CREATE TABLE [RecipeIngredient] (
-	Id varchar(36) NOT NULL,
-	RecipeId varchar(36) NOT NULL,
-	IngredientId varchar(36) NOT NULL,
+	Id UNIQUEIDENTIFIER,
+	RecipeId UNIQUEIDENTIFIER NOT NULL,
+	IngredientId UNIQUEIDENTIFIER NOT NULL,
+	DerivedFrom varchar(255) NOT NULL,
   CONSTRAINT [PK_RECIPEINGREDIENT] PRIMARY KEY CLUSTERED
   (
   [Id] ASC
@@ -20,11 +21,11 @@ CREATE TABLE [RecipeIngredient] (
 )
 GO
 CREATE TABLE [Recipe] (
-	Id varchar(36) NOT NULL,
+	Id UNIQUEIDENTIFIER,
 	Title varchar(255) NOT NULL,
-	HostId varchar(36) NOT NULL,
-	Path varchar(255) NOT NULL,
-	ImageUrl varchar(255) NOT NULL,
+	HostId UNIQUEIDENTIFIER NOT NULL,
+	Url varchar(255) NOT NULL,
+	ImageUrl varchar(255),
   CONSTRAINT [PK_RECIPE] PRIMARY KEY CLUSTERED
   (
   [Id] ASC
@@ -33,10 +34,10 @@ CREATE TABLE [Recipe] (
 )
 GO
 CREATE TABLE [Host] (
-	Id varchar(36) NOT NULL,
+	Id UNIQUEIDENTIFIER,
 	Name varchar(255) NOT NULL,
 	Url varchar(255) NOT NULL,
-	LogoUrl varchar(255) NOT NULL,
+	LogoUrl varchar(255),
   CONSTRAINT [PK_HOST] PRIMARY KEY CLUSTERED
   (
   [Id] ASC
@@ -44,11 +45,8 @@ CREATE TABLE [Host] (
 
 )
 
-
-ALTER TABLE [Ingredient] WITH CHECK ADD CONSTRAINT [Ingredient_fk0] FOREIGN KEY ([WordId]) REFERENCES [Word]([Id])
-ON UPDATE CASCADE
-GO
-ALTER TABLE [Ingredient] CHECK CONSTRAINT [Ingredient_fk0]
+INSERT INTO [Ingredient] ([Id],[WordId])
+VALUES('00000000-0000-0000-0000-000000000000','NO WORD FOUND');
 GO
 
 ALTER TABLE [RecipeIngredient] WITH CHECK ADD CONSTRAINT [RecipeIngredient_fk0] FOREIGN KEY ([RecipeId]) REFERENCES [Recipe]([Id])

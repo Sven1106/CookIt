@@ -5,39 +5,272 @@
     "allRecipes": [
       {
         "recipe": {
-          "heading": "Moussekage med &#230;ble og timian",
+          "heading": "Julelagkage med vaniljefrosting",
           "ingredients": [
-            "4 &#230;bler (ca. 500 g)",
-            "2 tsk citronskal (uspr&#248;jtet)",
-            "50 g sukker",
-            "3 stilke frisk timian",
-            "4 blade husblas",
-            "1 vaniljestang",
-            "100 g sukker (ca. 125 g)",
-            "2&#189; dl Karolines K&#248;kken&#174; Piskefl&#248;de 38%",
-            "500 g Karolines K&#248;kken&#174; Cremefraiche 18%",
-            "2 spsk friskpresset citronsaft",
-            "2&#189; dl hvedemel (ca. 150 g)",
-            "65 g flormelis",
-            "&#188; tsk groft salt",
-            "75 g koldt sm&#248;r",
-            "2 &#230;ggeblommer",
-            "100 g bl&#248;dt sm&#248;r",
-            "100 g sukker (ca. 1&#188; dl)",
-            "100 g mandelmel",
+            "150 g bl&#248;dt sm&#248;r",
+            "200 g r&#248;rsukker (ca. 2&#188; dl)",
+            "1 tsk groft salt",
             "2 &#230;g",
-            "hvid velvet spray (chokoladespray til kager)",
-            "&#230;ble i skiver",
-            "frisk timiankvist"
+            "300 g hvedemel (ca. 5&#189; dl)",
+            "1 spsk st&#248;dt ingef&#230;r",
+            "1 spsk st&#248;dt kanel",
+            "1 spsk st&#248;dt kardemomme",
+            "1 tsk st&#248;dt nellike",
+            "1 tsk natron",
+            "2&#189; dl k&#230;rnem&#230;lk",
+            "1 fed vaniljestang - kornene heraf",
+            "400 g flormelis (ca. 8 dl)",
+            "175 g bl&#248;dt sm&#248;r",
+            "100 g Karolines K&#248;kken&#174; Kvark 0,3%",
+            "sm&#229;kage, fx Julekager - se opskrift i link",
+            "s&#248;lvkugle af sukker",
+            "spiseligt glimmer"
           ],
           "image": {
-            "src": "https://images.arla.com/recordid/28b1d274c5ea446bbad7ab0900aa6dbc/moussekage-med-able-og-timian.jpg?crop=(0,714,0,-560)&amp;w=1680&amp;h=750&amp;scale=both&amp;ak=6826258c&amp;hm=1e2b7c86",
-            "alt": "Moussekage med æble og timian"
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2199526217/74b189b9-e1d9-4901-a81e-e97ce78b020a.jpg?crop=(0,432,0,-1056)&amp;w=1680&amp;h=750&amp;scale=both&amp;ak=6826258c&amp;hm=77e864f8",
+            "alt": "Julelagkage med vaniljefrosting"
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.arla.dk/opskrifter/moussekage-med-able-og-timian/",
-          "dateFound": "2019-11-21T09:42:58.216557Z"
+          "foundAtUrl": "https://www.arla.dk/opskrifter/julelagkage-med-vaniljefrosting/",
+          "dateFound": "2019-11-28T09:28:21.451394Z"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Gr&#248;nk&#229;lssalat",
+          "ingredients": [
+            "1 spsk friskpresset citronsaft",
+            "2&#189; dl Karolines K&#248;kken&#174; Piskefl&#248;de 38%",
+            "1 tsk sukker",
+            "1 tsk groft salt",
+            "friskkv&#230;rnet peber",
+            "2 spsk &#230;bleeddike",
+            "2 r&#248;dl&#248;g i b&#229;de (ca. 150 g)",
+            "2 r&#248;de &#230;bler (ca. 250 g)",
+            "150 g skr&#230;llede jordskokker",
+            "2 spsk friskpresset citronsaft",
+            "&#189; dl grofthakket bredbladet persille",
+            "100 g rensede, plukkede gr&#248;nk&#229;lsblade"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3770999704/640a9683-b244-4dbb-9fd2-a5bc79893818.jpg?mode=crop&amp;w=1680&amp;h=750&amp;scale=both&amp;ak=6826258c&amp;hm=62418bc5",
+            "alt": "Grønkålssalat"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/gronkalssalat/",
+          "dateFound": "2019-11-28T09:28:21.8306495Z"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Juletoast",
+          "ingredients": [
+            "1 appelsin",
+            "50 g fintsnittet r&#248;dk&#229;l",
+            "&#189; tsk groft salt",
+            "15 g valn&#248;ddekerner",
+            "1 confiteret andel&#229;r - eller stegt andek&#248;d",
+            "4 skiver langtidsh&#230;vet hvedebr&#248;d",
+            "15 g sm&#248;r",
+            "2 skiver Arla&#174; Havarti 55+ Jalapenos"
+          ],
+          "image": {
+            "src": "https://images.arla.com/recordid/b89ed05f42dc470db17baa0f00a56d96/juletoast.jpg?crop=(0,647,0,-396)&amp;w=1680&amp;h=750&amp;scale=both&amp;ak=6826258c&amp;hm=da0967dd",
+            "alt": "Juletoast"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/juletoast/",
+          "dateFound": "2019-11-28T09:28:22.2672406Z"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Tomatsuppe med k&#248;dboller",
+          "ingredients": [
+            "300 g hakket oksek&#248;d (ca. 6% fedt)",
+            "1 tsk fintrevet limeskal (uspr&#248;jtet)",
+            "&#190; tsk groft salt",
+            "friskkv&#230;rnet peber",
+            "15 g sm&#248;r",
+            "2 s&#248;de kartofler i sm&#229; tern (ca. 300 g)",
+            "7 for&#229;rsl&#248;g i tynde ringe (ca. 100 g)",
+            "100 g granat&#230;blekerner",
+            "1 spsk friskpresset limesaft",
+            "1 tsk groft salt",
+            "2 dl friske korianderblade",
+            "1 liter Karolines K&#248;kken&#174; &#248;kologisk Tomatsuppe",
+            "240 g groft br&#248;d"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/4032725081/7fbb4cdf-ed5c-499c-b978-3cb544ab2458.jpg?crop=(0,95,0,-816)&amp;w=1680&amp;h=750&amp;scale=both&amp;ak=6826258c&amp;hm=61360d6d",
+            "alt": "Tomatsuppe med kødboller"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/tomatsuppe-med-kodboller/",
+          "dateFound": "2019-11-28T09:28:22.7338492Z"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Ostegratinerede rodfrugter med savojk&#229;lssalat",
+          "ingredients": [
+            "800 g kartofler i stave",
+            "1 spsk rapsolie",
+            "1 tsk groft salt",
+            "1 knoldselleri i stave (ca. 400 g)",
+            "3 r&#248;dbeder i stave (ca. 400 g)",
+            "1 tsk groft salt",
+            "175 g Karolines K&#248;kken&#174; revet Tex mex chili 25%",
+            "225 g fintsnittet savojk&#229;l",
+            "2 tsk fintrevet citronskal (uspr&#248;jtet)",
+            "1&#189; spsk friskpresset citronsaft",
+            "&#190; tsk groft salt",
+            "1&#189; dl grofthakket bredbladet persille",
+            "100 g bresaola - luftt&#248;rret okseinderl&#229;r, i tynde skiver"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/39603814/289ebb9a-5b7b-4b92-a5ed-b1224a83ee5d.jpg?mode=crop&amp;w=1680&amp;h=750&amp;scale=both&amp;ak=6826258c&amp;hm=62418bc5",
+            "alt": "Ostegratinerede rodfrugter med savojkålssalat"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/ostegratinerede-rodfrugter-med-savojkalssalat/",
+          "dateFound": "2019-11-28T09:28:23.1597617Z"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hvid gl&#248;gg",
+          "ingredients": [
+            "5 kardemommekapsler (ca. &#189; tsk kardemommefr&#248;)",
+            "3 stjerneanis",
+            "5 hele nelliker",
+            "3 kanelst&#230;nger (a ca. 5 cm)",
+            "20 g frisk ingef&#230;r i tynde skiver",
+            "3 brede strimler citronskal (uspr&#248;jtet)",
+            "1 dl friskpresset citronsaft",
+            "&#189; liter koncentreret hyldeblomstsaft",
+            "1 flaske hvidvin",
+            "100 g t&#248;rrede traneb&#230;r",
+            "100 g mandelsplitter"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1320197807/e0834ca0-b857-459e-bf7a-fda0bd2fb2c5.jpg?crop=(0,829,0,-651)&amp;w=1680&amp;h=750&amp;scale=both&amp;ak=6826258c&amp;hm=97a93f17",
+            "alt": "Hvid gløgg"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/hvid-glogg/",
+          "dateFound": "2019-11-28T09:28:23.61971Z"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Andeburger med r&#248;dk&#229;lssalat og bl&#229; dressing",
+          "ingredients": [
+            "1 dl hvidvinseddike",
+            "85 g sukker (ca. 1 dl)",
+            "2 store finthakkede fed hvidl&#248;g",
+            "1 spsk finthakket r&#248;d chilipeber",
+            "4 andel&#229;r (ca. 1600 g)",
+            "2 tsk groft salt",
+            "2&#189; dl Karolines K&#248;kken&#174; Cremefraiche 38%",
+            "50 g Castello&#174; creamy Blue",
+            "2 tsk finthakket appelsinskal (uspr&#248;jtet)",
+            "&#189; tsk groft salt",
+            "friskkv&#230;rnet peber",
+            "2 appelsiner",
+            "200 g finsnittet r&#248;dk&#229;l",
+            "30 g grofthakkede t&#248;rrede traneb&#230;r",
+            "2 dl friske korianderblade",
+            "2 spsk friskpresset appelsinsaft",
+            "4 store burgerboller (ca. 400 g)"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1867400712/323277e4-ead9-4b6d-956d-99406e3bdd1b.jpg?mode=crop&amp;w=1680&amp;h=750&amp;scale=both&amp;ak=6826258c&amp;hm=62418bc5",
+            "alt": "Andeburger med rødkålssalat og blå dressing"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/andeburger-med-rodkalssalat-og-bla-dressing/",
+          "dateFound": "2019-11-28T09:28:24.3341Z"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Quinoasalat med granat&#230;blekerner",
+          "ingredients": [
+            "175 g sort quinoa (ca. 2 dl)",
+            "4 dl vand",
+            "&#189; tsk groft salt",
+            "3 spsk olivenolie",
+            "2 spsk &#230;bleeddike",
+            "3 spsk friskpresset citronsaft",
+            "&#189; tsk groft salt",
+            "friskkv&#230;rnet peber",
+            "1 finthakket r&#248;dl&#248;g (ca. 75 g)",
+            "1 dl grofthakket bredbladet persille",
+            "200 g Puck&#174; salatost i blok",
+            "150 g kerner fra granat&#230;ble (ca. 2 dl)"
+          ],
+          "image": {
+            "src": "https://images.arla.com/recordid/eb3920ea035d48f2ba12a6ea00489d61/quinoasalat-med-granatablekerner.jpg?crop=(0,173,0,-174)&amp;w=1680&amp;h=750&amp;scale=both&amp;ak=6826258c&amp;hm=523111ee",
+            "alt": "Quinoasalat med granatæblekerner"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/quinoasalat-med-granatablekerner/",
+          "dateFound": "2019-11-28T09:28:25.0174434Z"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pandekager",
+          "ingredients": [
+            "150 g hvedemel (ca. 2&#189; dl)",
+            "3 &#230;g",
+            "50 g sm&#248;r",
+            "4&#189; dl m&#230;lk",
+            "&#189; tsk groft salt",
+            "1&#189; dl Karolines K&#248;kken&#174; Piskefl&#248;de 38% - pisket til skum",
+            "125 g syltet&#248;j eller friske b&#230;r, fx jordb&#230;r, hindb&#230;r eller bl&#229;b&#230;r",
+            "spiselig blomst, fx hornvioler eller skovsyre"
+          ],
+          "image": {
+            "src": "https://images.arla.com/recordid/1029d0c032a642d68331aaae008902d3/pandekager.jpg?crop=(0,444,0,-830)&amp;w=1680&amp;h=750&amp;scale=both&amp;ak=6826258c&amp;hm=b1153b13",
+            "alt": "Pandekager"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/pandekager/",
+          "dateFound": "2019-11-28T09:28:28.8172459Z"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Banankage",
+          "ingredients": [
+            "3 &#230;g",
+            "170 g sukker (ca. 2 dl)",
+            "2 tsk vaniljesukker",
+            "125 g hvedemel (ca. 2 dl)",
+            "1 tsk bagepulver",
+            "100 g sm&#248;r - smeltet og afk&#248;let",
+            "1 moset banan (ca. 1&#189; dl)",
+            "100 g smeltet m&#248;rk chokolade (ca. 55% kakao)"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3478442265/836109f7-02c2-4070-a03e-b0d1cb0f1425.jpg?crop=(0,1249,0,-1006)&amp;w=1680&amp;h=750&amp;scale=both&amp;ak=6826258c&amp;hm=ae0a7461",
+            "alt": "Banankage"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/banankage/",
+          "dateFound": "2019-11-28T09:28:29.2460538Z"
         }
       }
     ]
