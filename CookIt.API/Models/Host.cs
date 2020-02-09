@@ -11,13 +11,13 @@ namespace CookIt.API.Models
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public string Url { get; set; }
+        public Uri Url { get; set; }
         public string LogoUrl { get; set; }
         public Host()
         {
 
         }
-        public Host(string Name, string Url, string LogoUrl)
+        public Host(string Name, Uri Url, string LogoUrl)
         {
             this.Id = Guid.NewGuid();
             this.Name = Name;

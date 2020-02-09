@@ -13,7 +13,6 @@ namespace CookIt.API.Core
         #region Add all repositoryInterfaces here.
         IHostRepository HostRepo { get; }
         IRecipeRepository RecipeRepo { get; }
-        IWordRepository WordRepo { get; }
         IIngredientRepository IngredientRepo { get; }
         IRecipeIngredientRepository RecipeIngredientRepo { get; }
 

@@ -12,20 +12,25 @@ namespace CookIt.API.Models
 
         public Guid Id { get; set; }
         public string Title { get; set; }
-        public Guid HostId { get; set; }
-        public string Url { get; set; }
-        public string ImageUrl { get; set; }
+        public Host Host { get; set; }
+        public Uri Url { get; set; }
+        public Uri ImageUrl { get; set; }
+        public List<RecipeIngredient> RecipeIngredients { get; set; }
         public Recipe()
         {
 
         }
-        public Recipe(string Title, Guid HostId, string Url, string ImageUrl)
+        public Recipe(string Title, Host Host, Uri Url, Uri ImageUrl)
         {
             this.Id = Guid.NewGuid();
             this.Title = Title;
-            this.HostId = HostId;
+            this.Host = Host;
             this.Url = Url;
             this.ImageUrl = ImageUrl;
         }
+    }
+    public class RecipeFilter
+    {
+        public List<Guid> IngredientsIds { get; set; }
     }
 }

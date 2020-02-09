@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0521A348-6653-44B3-AAC5-60F6E5B0B9D6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>NLP</RootNamespace>
+    <AssemblyName>NLP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UfalUdpipe\Children.cs" />
+    <Compile Include="UfalUdpipe\Comments.cs" />
+    <Compile Include="UfalUdpipe\EmptyNode.cs" />
+    <Compile Include="UfalUdpipe\EmptyNodes.cs" />
+    <Compile Include="UfalUdpipe\Evaluator.cs" />
+    <Compile Include="UfalUdpipe\InputFormat.cs" />
+    <Compile Include="UfalUdpipe\Model.cs" />
+    <Compile Include="UfalUdpipe\MultiwordToken.cs" />
+    <Compile Include="UfalUdpipe\MultiwordTokens.cs" />
+    <Compile Include="UfalUdpipe\OutputFormat.cs" />
+    <Compile Include="UfalUdpipe\Pipeline.cs" />
+    <Compile Include="UfalUdpipe\ProcessingError.cs" />
+    <Compile Include="UfalUdpipe\Sentence.cs" />
+    <Compile Include="UfalUdpipe\Sentences.cs" />
+    <Compile Include="UfalUdpipe\Token.cs" />
+    <Compile Include="UfalUdpipe\Trainer.cs" />
+    <Compile Include="UfalUdpipe\udpipe_csharp.cs" />
+    <Compile Include="UfalUdpipe\udpipe_csharpPINVOKE.cs" />
+    <Compile Include="UfalUdpipe\Version.cs" />
+    <Compile Include="UfalUdpipe\Word.cs" />
+    <Compile Include="UfalUdpipe\Words.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="danish-ddt-ud-2.4-190531.udpipe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="dict">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="flexrules">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="OpenNLP.NET">
+      <Version>1.9.1</Version>
+    </PackageReference>
+    <PackageReference Include="Stanford.NLP.POSTagger">
+      <Version>3.9.2</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cstlemma.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="udpipe_csharp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CstLemmaLibrary\CstLemmaLibrary.csproj">
+      <Project>{28925cca-1b4a-4527-ace9-9b24fd82feca}</Project>
+      <Name>CstLemmaLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UdpipeCSharpWrapper\UdpipeLibrary.csproj">
+      <Project>{e71fb320-c59d-4359-afde-82800684558e}</Project>
+      <Name>UdpipeLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

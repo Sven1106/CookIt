@@ -22,20 +22,30 @@ namespace CookIt.API.Controllers
             _unitOfWorkManager = new UnitOfWorkManager(unitOfWork);
         }
         [HttpPost]
-        public async Task<ActionResult> CreateRecipes(CreateRecipeDto json)
+        public async Task<ActionResult> CreateRecipesAsync(CreateRecipeDto json)
         {
-            _unitOfWorkManager.CreateRecipes(json);
-            return Ok("");
+            int rowsAdded = await _unitOfWorkManager.CreateRecipesAsync(json);
+            return Ok("CreateRecipesAsync DONE");
         }
         [HttpGet]
-        public async Task<IActionResult> GetRecipes()
+        public async Task<IActionResult> GetRecipesAsync([FromQuery]RecipeFilter filter)
         {
-            return Ok("");
+            List<Recipe> recipes = await _unitOfWorkManager.GetRecipesAsync(filter);
+            if (recipes == null)
+            {
+                return NoContent();
+            }
+            return Ok(recipes);
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetRecipe(Guid id)
+        public async Task<IActionResult> GetRecipeAsync(Guid id)
         {
-            return Ok();
+            Recipe recipe = await _unitOfWorkManager.GetRecipeAsync(id);
+            if (recipe == null)
+            {
+                return NoContent();
+            }
+            return Ok(recipe);
         }
     }
 }

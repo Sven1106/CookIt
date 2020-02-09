@@ -1,13 +1,13 @@
 ﻿using CookIt.API.Dtos;
 using CookIt.API.Models;
+using CstLemmaLibrary;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
 using System.Linq;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace CookIt.API.Core
 {
@@ -18,73 +18,113 @@ namespace CookIt.API.Core
         {
             _unitOfWork = unitOfWork;
         }
-        public int CreateRecipes(CreateRecipeDto createRecipeDto)
+        public async Task<int> CreateRecipesAsync(CreateRecipeDto createRecipeDto)
         {
-            IEnumerable<Word> words = _unitOfWork.WordRepo.Query.OrderBy(w => w.LexicalForm).ToList();
-            Host host = _unitOfWork.HostRepo.Query.FirstOrDefault(h => h.Name == createRecipeDto.ProjectName);
+            List<Ingredient> ingredients = await _unitOfWork.IngredientRepo.Query.OrderBy(i => i.Name).ToListAsync();
+
+            Dictionary<string, List<string>> ingredientsAsLemma = CstLemmaWrapper.GetLemmasByTextDictionary(
+                ingredients.Select(x => Helper.RemoveSpecialCharacters(x.Name)).ToList()
+            );
+            for (int i = 0; i < ingredients.Count; i++)
+            {
+                ingredients[i].Lemmas = ingredientsAsLemma.Values.ElementAt(i);
+            }
+
+            Host host = await _unitOfWork.HostRepo.Query.FirstOrDefaultAsync(h => h.Name == createRecipeDto.ProjectName);
             if (host == null)
             {
                 host = new Host(createRecipeDto.ProjectName, createRecipeDto.StartUrl, "https://via.placeholder.com/50");
                 _unitOfWork.HostRepo.Insert(host);
             }
 
-            foreach (var item in createRecipeDto.Data.AllRecipes)
+            foreach (var item in createRecipeDto.Task.AllRecipes)
             {
                 //create recipe
-                Recipe recipe = _unitOfWork.RecipeRepo.Query.FirstOrDefault(r => r.HostId == host.Id && r.Title == item.Recipe.Heading);
+                Recipe recipe = await _unitOfWork.RecipeRepo.Query.FirstOrDefaultAsync(r => r.Host == host && r.Title == item.Recipe.Heading);
                 if (recipe == null) // CREATE
                 {
-                    recipe = new Recipe(item.Recipe.Heading, host.Id, item.Metadata.FoundAtUrl, item.Recipe.Image.Src);
+                    recipe = new Recipe(item.Recipe.Heading, host, item.Metadata.FoundAtUrl, item.Recipe.Image.Src);
                     _unitOfWork.RecipeRepo.Insert(recipe);
-                    foreach (var ingredientSentence in item.Recipe.Ingredients)
+
+
+                    List<string> decodedRecipeIngredients = item.Recipe.Ingredients.Select(x => WebUtility.HtmlDecode(Helper.RemoveSpecialCharacters(x))).ToList();
+                    List<string> destinctRecipeIngredients = decodedRecipeIngredients.Distinct().ToList();
+
+                    Dictionary<string, List<string>> lemmasByRecipeIngredient = CstLemmaWrapper.GetLemmasByTextDictionary(destinctRecipeIngredients);
+                    foreach (var lemmasByRecipeIngredientPair in lemmasByRecipeIngredient)
                     {
-                        string ingredientSentenceDecodedToLower = WebUtility.HtmlDecode(ingredientSentence).ToLower();
-                        Word mostLikelyWord = new Word();
 
-                        IList<Word> matchingWords = new List<Word>();
-                        // FIRST Boyer–Moore string-search
-                        foreach (Word word in words)
+                        string recipeIngredientText = lemmasByRecipeIngredientPair.Key;
+                        List<string> recipeIngredientLemmas = lemmasByRecipeIngredientPair.Value;
+                        Dictionary<Ingredient, List<string>> matchedNodesByIngredient = new Dictionary<Ingredient, List<string>>();
+                        foreach (Ingredient ingredient in ingredients)
                         {
-                            string wordToLower = word.LexicalForm.ToLower(); // A bit Naive. TODO Find a better way to handle whitespace
-                            if (Helper.FindPatternInString(ingredientSentenceDecodedToLower, wordToLower).Length > 0)
+                            List<string> ingredientLemmas = ingredient.Lemmas;
+                            List<string> lemmaMatches = new List<string>();
+                            for (int i = 0; i < recipeIngredientLemmas.Count; i++)
                             {
-                                matchingWords.Add(word);
+                                if (recipeIngredientLemmas[i] != recipeIngredientLemmas.Last()) // Handles whitespace by creating a compoundWord of nodes 
+                                {
+                                    string nextRecipeIngredientLemma = recipeIngredientLemmas[i + 1];
+                                    foreach (var words in nextRecipeIngredientLemma.Split("|"))
+                                    {
+                                        string compoundOfLemmas = recipeIngredientLemmas[i].ToLower() + words.ToLower();
+                                        string ingredientAsLemma = ingredientLemmas.FirstOrDefault().ToLower();
+                                        int shortestEditDistance = Helper.GetShortestEditDistance(ingredientAsLemma, compoundOfLemmas);
+                                        int editThreshold = 0;
+                                        if (shortestEditDistance <= editThreshold)
+                                        {
+                                            lemmaMatches.Add(ingredientLemmas.FirstOrDefault());
+                                            break;
+                                        }
+                                    }
+                                }
+
+                                foreach (var ingredientNode in ingredientLemmas)
+                                {
+                                    bool areLemmaAndLemmaEqual = recipeIngredientLemmas[i].ToLower() == ingredientNode.ToLower();
+                                    if (areLemmaAndLemmaEqual)
+                                    {
+                                        lemmaMatches.Add(recipeIngredientLemmas[i]);
+                                    }
+                                }
+                            }
+
+
+                            if (lemmaMatches.Count > 0)
+                            {
+                                matchedNodesByIngredient.Add(ingredient, lemmaMatches);
                             }
                         }
-                        Dictionary<Word, int> matchingwordToEditDistance = new Dictionary<Word, int>();
-                        foreach (Word matchingWord in matchingWords)
+                        Ingredient mostLikelyIngredient = new Ingredient();
+                        if (matchedNodesByIngredient.Count == 0)
                         {
-                            string matchingWordToLower = matchingWord.LexicalForm.ToLower(); // A bit Naive. TODO Find a better way to handle whitespace
-                            int shortestDistance = Helper.GetShortestEditDistance(matchingWordToLower, ingredientSentenceDecodedToLower);
-                            matchingwordToEditDistance.Add(matchingWord, shortestDistance);
+                            mostLikelyIngredient = ingredients.Find(x => x.Id == Guid.Parse("00000000-0000-0000-0000-000000000000"));
                         }
-                        if (matchingwordToEditDistance.Count() > 0)
+                        else if (matchedNodesByIngredient.Count == 1)
                         {
-                            mostLikelyWord = matchingwordToEditDistance.Aggregate((l, r) => l.Value < r.Value ? l : r).Key;
-
-                            Ingredient ingredient = _unitOfWork.IngredientRepo.Query.FirstOrDefault(i => i.WordId == mostLikelyWord.Id);
-                            if (ingredient == null)
+                            mostLikelyIngredient = ingredients.Find(x => x.Id == matchedNodesByIngredient.FirstOrDefault().Key.Id);
+                        }
+                        else if (matchedNodesByIngredient.Count > 1)
+                        {
+                            int nodeCountOfMostMatched = matchedNodesByIngredient.OrderByDescending(x => x.Value.Count).ToList().FirstOrDefault().Value.Count();
+                            var ingredientsWithMostNodeMatches = matchedNodesByIngredient.Where(x => x.Value.Count == nodeCountOfMostMatched).ToList();
+                            var likelyIngredients = ingredientsWithMostNodeMatches.Where(x => x.Key.Lemmas.Count == x.Value.Count).ToList();
+                            if (likelyIngredients.Count == 0)
                             {
-                                ingredient = new Ingredient(mostLikelyWord.Id);
-                                _unitOfWork.IngredientRepo.Insert(ingredient);
+                                mostLikelyIngredient = ingredients.Find(x => x.Id == Guid.Parse("00000000-0000-0000-0000-000000000000"));
                             }
-
-                            if (_unitOfWork.RecipeIngredientRepo.Query.FirstOrDefault(ri => ri.IngredientId == ingredient.Id) == null)
+                            else if (likelyIngredients.Count == 1)
                             {
-                                RecipeIngredient recipeIngredient = new RecipeIngredient(recipe.Id, ingredient.Id, ingredientSentenceDecodedToLower);
-                                _unitOfWork.RecipeIngredientRepo.Insert(recipeIngredient);
+                                mostLikelyIngredient = ingredients.Find(x => x.Id == likelyIngredients.FirstOrDefault().Key.Id);
+                            }
+                            else if (likelyIngredients.Count > 1)
+                            {
+                                mostLikelyIngredient = ingredients.Find(x => x.Id == Guid.Parse("11111111-1111-1111-1111-111111111111"));
                             }
                         }
-                        else
-                        {
-                            //HANDLE NO MATCHING WORDS WERE FOUND.
-                            RecipeIngredient recipeIngredient = new RecipeIngredient(recipe.Id, Guid.Empty, ingredientSentenceDecodedToLower);
-                            _unitOfWork.RecipeIngredientRepo.Insert(recipeIngredient);
-                            //throw new Exception("NO MATCHING WORDS WERE FOUND.");
-
-                        }
-
-
+                        RecipeIngredient recipeIngredientForCreation = new RecipeIngredient(recipe, mostLikelyIngredient, recipeIngredientText);
+                        _unitOfWork.RecipeIngredientRepo.Insert(recipeIngredientForCreation);
                     }
                 }
                 else // UPDATE
@@ -93,6 +133,34 @@ namespace CookIt.API.Core
                 }
             }
             return _unitOfWork.Complete();
+        }
+
+
+        public async Task<List<Recipe>> GetRecipesAsync(RecipeFilter filter)
+        {
+            List<Recipe> recipes = await _unitOfWork.RecipeRepo.Query
+                 .Include(recipe => recipe.Host)
+                 .Include(recipe => recipe.RecipeIngredients)
+                     .ThenInclude(i => i.Ingredient)
+                 .ToListAsync();
+            if (filter.IngredientsIds != null)
+            {
+                recipes = recipes.Where(x =>
+                    x.RecipeIngredients.Any(y =>
+                        filter.IngredientsIds.Contains(y.Ingredient.Id))
+                    ).ToList();
+            }
+            return recipes;
+        }
+        public async Task<Recipe> GetRecipeAsync(Guid id)
+        {
+            Recipe recipe = await _unitOfWork.RecipeRepo.Query
+                .Include(recipe => recipe.Host)
+                .Include(recipe => recipe.RecipeIngredients)
+                    .ThenInclude(i => i.Ingredient)
+                .Where(x => x.Id == id)
+                .FirstOrDefaultAsync();
+            return recipe;
         }
     }
 }

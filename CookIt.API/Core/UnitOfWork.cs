@@ -15,7 +15,6 @@ namespace CookIt.API.Core
         private readonly AppDbContext _context;
         public IRecipeRepository RecipeRepo { get; }
         public IHostRepository HostRepo { get; }
-        public IWordRepository WordRepo { get; }
         public IIngredientRepository IngredientRepo { get; }
         public IRecipeIngredientRepository RecipeIngredientRepo { get; }
 
@@ -25,7 +24,6 @@ namespace CookIt.API.Core
             _context = context;
             RecipeRepo = new RecipeRepository(_context);
             HostRepo = new HostRepository(_context);
-            WordRepo = new WordRepository(_context);
             IngredientRepo = new IngredientRepository(_context);
             RecipeIngredientRepo = new RecipeIngredientRepository(_context);
         }

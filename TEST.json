@@ -1,0 +1,83 @@
+{
+    "projectName": "Arla",
+    "startUrl": "https://www.arla.dk/sitemap.xml?type=Modules.Recipes.Business.SitemapUrlWriter.RecipeSitemapUrlWriter",
+    "task": {
+        "allRecipes": [
+            {
+                "recipe": {
+                    "heading": "TEST",
+                    "ingredients": [
+                        "Acai pulver",
+                        "Afdryppede cannellinibønner",
+                        "Agurker",
+                        "Arla A38® naturel 0,5%",
+                        "Arla A38® naturel 1,5%",
+                        "Arla Klovborg® ML 25% (45+)",
+                        "Atamon",
+                        "Bambusspyd - ca. 10 cm lange",
+                        "Belugalinser (ca. 2½ dl)",
+                        "Buko® Pikant Light",
+                        "Cognac",
+                        "Digestive kiks",
+                        "Dragefrugter (pitahaya)",
+                        "Evt. pink pitaya pulver",
+                        "Finthakkede friske rosmarinblade",
+                        "Finthakkede mandler",
+                        "Finthakkede mandler (ca. 2 dl)",
+                        "Fintrevet appelsinskal (usprøjtet)",
+                        "Fintrevet appelsinskal (usprøjtet) eller 1 tsk fintrevet citronskal",
+                        "Fintrevet citronskal (usprøjtet)",
+                        "Fintrevet limeskal (usprøjtet)",
+                        "Friske basilikumblade",
+                        "Friske citronmelisseblade",
+                        "Friske estragonblade",
+                        "Friske figner i mindre stykker",
+                        "Friske grønne asparges",
+                        "Friske rosmarinblade",
+                        "Friske rosmarinkviste",
+                        "Granola",
+                        "Grofthakkede mandler",
+                        "Groftrevne pastinakker (ca. 400 g)",
+                        "Grøntsagsbouillon-pulver",
+                        "Hakkede friske basilikumblade",
+                        "Hakkede friske estragonblade",
+                        "Hakkede mandler",
+                        "Hakkede, smuttede mandler",
+                        "Halve, syltede abrikoser (a ca. 410 g)",
+                        "Hele nelliker",
+                        "Hvedetortillaer, ca. 20 cm i diameter",
+                        "Karolines Køkken® Pasta- & gratineringsost 30%",
+                        "Knuste brunkager",
+                        "Kokosflager",
+                        "Lurpak® cooks range spray",
+                        "Lys saucejævner",
+                        "Mandler",
+                        "Rugbrød uden kerner",
+                        "Skyllede babyspinatblade",
+                        "Syltede drueagurker i små tern",
+                        "Søde kakaonibs eller mørk granola",
+                        "Top af pastinakker eller andet grønt",
+                        "Tør vermouth, fx noilly prat",
+                        "Tørrede abrikoser",
+                        "Tørrede abrikoser i små tern",
+                        "Tørrede abrikoser i tern",
+                        "Tørrede figner",
+                        "Tørrede gojibær",
+                        "Unge agerhøns (ca. 1 kg)",
+                        "Vaniljestænger",
+                        "Vildtbouillon-pulver, fx touch of taste",
+                        "Æblemos"
+                    ],
+                    "image": {
+                        "src": "",
+                        "alt": ""
+                    }
+                },
+                "metadata": {
+                    "foundAtUrl": "",
+                    "dateFound": "2020-01-21T18:30:44.1911546Z"
+                }
+            }
+        ]
+    }
+}

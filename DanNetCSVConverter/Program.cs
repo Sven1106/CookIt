@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Data.SqlClient;
 using System.Data;
+using System.Diagnostics;
 
 namespace DanNetCSVConverter
 {
@@ -39,11 +40,11 @@ namespace DanNetCSVConverter
                 Directory.CreateDirectory(outputPath);
                 switch (fileNameWOExtention.ToLower())
                 {
-                    case "dummies":
-                        columnNames = new string[] { "id", "label", "gloss", "ontological_type" };
-                        columnTypes = new string[] { "varchar(255)", "varchar(255)", "varchar(8000)", "varchar(255)" };
-                        tableName = "Dummy";
-                        break;
+                    //case "dummies":
+                    //    columnNames = new string[] { "id", "label", "gloss", "ontological_type" };
+                    //    columnTypes = new string[] { "varchar(255)", "varchar(255)", "varchar(8000)", "varchar(255)" };
+                    //    tableName = "Dummy";
+                    //    break;
                     case "relations":
                         columnNames = new string[] { "FromSynsetId", "Name", "Name2", "ToSynsetId", "Taxonomic", "Inheritance_comment" };
                         columnTypes = new string[] { "varchar(255)", "varchar(255)", "varchar(255)", "varchar(255)", "varchar(8000)", "varchar(255)" };
@@ -96,25 +97,23 @@ namespace DanNetCSVConverter
             }
             return true;
         }
-
         static string CreateSql(string tableName, string[] columns, string[] columnTypes, string[] csvValues)
         {
             int maximumRowCount = 1000;
             var columnsCount = columns.Length;
-            List<string> sqlList = new List<string>();
-            string sql = "";
-            sql += string.Format("IF NOT EXISTS ( SELECT * FROM sys.tables where name = '{0}')", tableName);
-            sql += string.Format("\nCREATE TABLE {0} (", tableName);
+            StringBuilder sql = new StringBuilder();
+            sql.AppendFormat("IF NOT EXISTS ( SELECT * FROM sys.tables where name = '{0}')", tableName);
+            sql.AppendFormat("\nCREATE TABLE {0} (", tableName);
             for (int i = 0; i < columnsCount; i++)
             {
                 if (i > 0)
                 {
-                    sql += ",";
+                    sql.Append(",");
                 }
-                sql += "[" + columns[i] + "] " + columnTypes[i];
+                sql.Append("[" + columns[i] + "] " + columnTypes[i]);
             }
-            sql += ");";
-            sqlList.Add(sql);
+            sql.Append(");");
+            //sqlList.Add(sql);
             string insertIntoSql = "";
             insertIntoSql += string.Format("\n\nINSERT INTO {0} (", tableName);
             for (int i = 0; i < columnsCount; i++)
@@ -126,46 +125,42 @@ namespace DanNetCSVConverter
                 insertIntoSql += string.Format("[{0}]", columns[i]);
             }
 
-            sql = "";
+            // sql = "";
             DateTime startTime = DateTime.Now;
             for (int i = 0; i < csvValues.Length; i++)
             {
                 var valuesBeforeAdd = csvValues[i].Split('@');
                 if (i % maximumRowCount == 0)
                 {
-                    sql = "";
-                    sql += insertIntoSql;
-                    sql += ")";
-                    sql += "\nVALUES";
+                    sql.Append("");
+                    sql.Append(insertIntoSql);
+                    sql.Append(")");
+                    sql.Append("\nVALUES");
                 }
                 if (i % maximumRowCount != 0)
                 {
-                    sql += ",";
+                    sql.Append(",");
                 }
-                sql += "\n(";
+                sql.Append("\n(");
                 for (int ii = 0; ii < columnsCount; ii++)
                 {
                     if (ii > 0)
                     {
-                        sql += ",";
+                        sql.Append(",");
                     }
-                    sql += string.Format("'{0}'", valuesBeforeAdd[ii].Replace("'", ""));
+                    sql.AppendFormat("'{0}'", valuesBeforeAdd[ii].Replace("'", ""));
                 }
-                sql += ")";
+                sql.Append(")");
                 if ((i + 1) % maximumRowCount == 0 && i != 0 || i == csvValues.Length - 1)
                 {
-                    sql += ";";
-                    sqlList.Add(sql);
+                    sql.Append(";");
                 }
                 drawTextProgressBar(i + 1, csvValues.Length, startTime);
 
             }
-            sql = "";
-            foreach (var element in sqlList)
-            {
-                sql += element;
-            }
-            return sql;
+
+
+            return sql.ToString();
         }
         private static void drawTextProgressBar(int count, int total, DateTime startTime)
         {
