@@ -14,7 +14,8 @@ namespace CookIt.API.Core
         IHostRepository HostRepo { get; }
         IRecipeRepository RecipeRepo { get; }
         IIngredientRepository IngredientRepo { get; }
-        IRecipeIngredientRepository RecipeIngredientRepo { get; }
+        IRecipeSentenceRepository RecipeSentenceRepo { get; }
+        IRecipeSentenceIngredientRepository RecipeSentenceIngredientRepo { get; }
 
         #endregion
         int Complete();

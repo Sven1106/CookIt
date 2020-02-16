@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpipeLibrary", "UdpipeCSha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CstLemmaLibrary", "CstLemmaLibrary\CstLemmaLibrary.csproj", "{28925CCA-1B4A-4527-ACE9-9B24FD82FECA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomObjects", "RandomObjects\RandomObjects.csproj", "{414AFFAD-D89B-438D-96CB-FD1E92AA90BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{28925CCA-1B4A-4527-ACE9-9B24FD82FECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28925CCA-1B4A-4527-ACE9-9B24FD82FECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28925CCA-1B4A-4527-ACE9-9B24FD82FECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{414AFFAD-D89B-438D-96CB-FD1E92AA90BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{414AFFAD-D89B-438D-96CB-FD1E92AA90BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{414AFFAD-D89B-438D-96CB-FD1E92AA90BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{414AFFAD-D89B-438D-96CB-FD1E92AA90BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

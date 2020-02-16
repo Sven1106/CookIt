@@ -16,7 +16,8 @@ namespace CookIt.API.Core
         public IRecipeRepository RecipeRepo { get; }
         public IHostRepository HostRepo { get; }
         public IIngredientRepository IngredientRepo { get; }
-        public IRecipeIngredientRepository RecipeIngredientRepo { get; }
+        public IRecipeSentenceRepository RecipeSentenceRepo { get; }
+        public IRecipeSentenceIngredientRepository RecipeSentenceIngredientRepo { get; }
 
 
         public UnitOfWork(AppDbContext context)
@@ -25,7 +26,8 @@ namespace CookIt.API.Core
             RecipeRepo = new RecipeRepository(_context);
             HostRepo = new HostRepository(_context);
             IngredientRepo = new IngredientRepository(_context);
-            RecipeIngredientRepo = new RecipeIngredientRepository(_context);
+            RecipeSentenceRepo = new RecipeSentenceRepository(_context);
+            RecipeSentenceIngredientRepo = new RecipeSentenceIngredientRepository(_context);
         }
         public int Complete()
         {

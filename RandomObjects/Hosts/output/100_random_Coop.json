@@ -1,0 +1,2702 @@
+{
+  "projectName": "Coop",
+  "startUrl": "https://opskrifter.coop.dk/",
+  "task": {
+    "allRecipes": [
+      {
+        "recipe": {
+          "heading": "\"Fikse\" frikadeller",
+          "ingredients": [
+            "færdigrørt fiskefars",
+            "båndpasta",
+            "rød pesto (i glas)",
+            "frisk basilikum"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/4184/12668/1920/1000x1000-fikse_frikadeller_01.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/fikse-frikadeller-4184",
+          "dateFound": "2020-02-13T18:52:34.5530332+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Aioli til tun og kartoffelfad",
+          "ingredients": [
+            "ny kartoffel",
+            "bundt grønne asparges",
+            "tun i olie",
+            "æg",
+            "kartofler",
+            "mayonnaise",
+            "citronsaft",
+            "hvidløg",
+            "vand",
+            "salt og peber",
+            "Miniflutes"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/7771/16036/1920/aioli-til-tun-og-kartoffelfad1.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/aioli-til-tun-og-kartoffelfad-7771",
+          "dateFound": "2020-02-13T18:51:13.8025237+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Andesteg med mandel-crust og bagt kål",
+          "ingredients": [
+            "hel and",
+            "salt",
+            "peber",
+            "nelliker",
+            "spidskål",
+            "Kold smør (rigtigt smør)",
+            "groftreven ingefær",
+            "mandler, grofthakkede",
+            "kanelstang",
+            "stjerneanis",
+            "hakket sukat",
+            "friskhakket mynte",
+            "lime (saften)",
+            "kakifrugt",
+            "saft",
+            "gastrik"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10929/21654/1920/thumbs-03-andesteg-med-mandel-kaki-crust-og-bagt-kaal.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/andesteg-med-mandel-crust-og-bagt-kaal-10929",
+          "dateFound": "2020-02-13T18:50:26.3727756+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Blomkålsalat med guacamole",
+          "ingredients": [
+            "stort fast blomkål",
+            "store modne avocado",
+            "fintsnittede forårsløg",
+            "udkernet, finthakket chili",
+            "citron ( kun saften)",
+            "friskhakket koriander",
+            "salt og peber",
+            "faste, udkernede, finthakkede tomater",
+            "rødløg"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/4725/13068/1920/blomkaalssalat_guacemole.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/blomkaalsalat-med-guacamole-4725",
+          "dateFound": "2020-02-13T18:42:32.4357218+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Blomkålscurry med ris og kikærter",
+          "ingredients": [
+            "basmati ris",
+            "vand",
+            "salt",
+            "olivenolie",
+            "kikærter",
+            "salt",
+            "chili",
+            "ingefær",
+            "løg",
+            "blomkål",
+            "broccoli",
+            "tomater",
+            "rød karrypasta",
+            "olie",
+            "kokosmælk"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10415/21328/1920/401-9845.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/blomkaalscurry-med-ris-og-kikaerter-10415",
+          "dateFound": "2020-02-13T18:46:55.0443136+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Blåbærgelé",
+          "ingredients": [
+            "blåbær",
+            "sukker",
+            "vand"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/249/21734/1920/blaabaergel%C3%A9_original_jdlhnm.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/blaabaergelé-249",
+          "dateFound": "2020-02-13T18:43:29.8340374+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Burger med nachos og mild guacamole",
+          "ingredients": [
+            "iceberg",
+            "tomater",
+            "agurk",
+            "rødløg.",
+            "olie",
+            "hakket oksekød",
+            "Burger boller",
+            "avokado",
+            "hvidløg",
+            "creme fraiche",
+            "citron",
+            "Nachos",
+            "ketchup"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10380/21081/1920/burger.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/burger-med-nachos-og-mild-guacamole-10380",
+          "dateFound": "2020-02-13T18:47:42.593879+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Bøfsandwich",
+          "ingredients": [
+            "burgerboller, fuldkorn",
+            "gule løg",
+            "olivenolie",
+            "salt",
+            "peber",
+            "worchestershiresauce",
+            "hakket oksekød 3-7%",
+            "syltede rødbeder",
+            "spæde salater",
+            "skyr"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/287/7381/1920/boefsandwich_original.jpeg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/boefsandwich-287",
+          "dateFound": "2020-02-13T18:52:24.8336579+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Bønnesalat med citrondressing og abrikoser",
+          "ingredients": [
+            "bønner",
+            "grønne bønner",
+            "tørrede abrikoser",
+            "forårsløg",
+            "gedeost",
+            "Frisk purløg",
+            "olivenolie",
+            "citron, revet skal + saft",
+            "dijonsennep",
+            "Flydende honning",
+            "salt og sort peber"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10920/21646/1920/baelgerfrugter-pa-brik-8.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/boennesalat-med-citrondressing-og-abrikoser-10920",
+          "dateFound": "2020-02-13T18:50:46.8010292+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Chokoladepandekager",
+          "ingredients": [
+            "hvedemel",
+            "mørk chokolade",
+            "muscovadosukker",
+            "kakaopulver",
+            "vaniljesukker",
+            "salt",
+            "æg",
+            "sødmælk",
+            "smør",
+            "vaniljeis",
+            "blåbær"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/8236/17038/1920/1200chokoladepandekager-4.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/chokoladepandekager-8236",
+          "dateFound": "2020-02-13T18:51:39.0375378+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Claus Holms flæskestegssandwich",
+          "ingredients": [
+            "flæskestege med svær",
+            "store grovboller",
+            "lille rødkål",
+            "hvidløgsolie",
+            "røget salt",
+            "peber",
+            "syltede agurker i lange strimler",
+            "røgeost",
+            "balsamico eller balsamico-glace",
+            "æbleeddike"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10940/21662/1920/thumbs-05-holms-flaeskestegs-sw-den-siger-bum.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/claus-holms-flaeskestegssandwich-10940",
+          "dateFound": "2020-02-13T18:49:56.968417+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Claus Holms julekringle",
+          "ingredients": [
+            "butterdej, fersk",
+            "sukker",
+            "marcipan",
+            "nougat",
+            "valnødder",
+            "appelsin",
+            "æble",
+            "æg"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10956/21669/1920/thumbs-07-holms-jule-kringle-look-a-like-wanna-be.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/claus-holms-julekringle-10956",
+          "dateFound": "2020-02-13T18:49:12.3584601+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Claus Holms julesylte med pulled pork",
+          "ingredients": [
+            "færdig pulled pork",
+            "æbleeddike",
+            "dijonsennep",
+            "fedt",
+            "agurker",
+            "salt",
+            "peber",
+            "løg",
+            "frisk timian",
+            "valnødder",
+            "cayennepeber"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10962/21672/1920/thumbs-03-en-slags-julesylte-paa-pulled-pork.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/claus-holms-julesylte-med-pulled-pork-10962",
+          "dateFound": "2020-02-13T18:49:02.5323195+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Dildcreme",
+          "ingredients": [
+            "stort bdt. dild",
+            "cremefraiche",
+            "citronsaft",
+            "salt",
+            "peber"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/7142/15412/1920/dildcreme1278394870.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/dildcreme-7142",
+          "dateFound": "2020-02-13T18:44:06.2985507+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Du vilde vaffel",
+          "ingredients": [
+            "smør",
+            "mel",
+            "bagepulver",
+            "salt",
+            "vaniljesukker",
+            "sukker",
+            "æg",
+            "mælk",
+            "vand",
+            "sukker",
+            "kakao",
+            "sirup",
+            "mørk chokolade",
+            "Syltetøj",
+            "is",
+            "pisket flødeskum"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/1004/6470/1920/du_vilde_vaffel.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/du-vilde-vaffel-1004",
+          "dateFound": "2020-02-13T18:44:59.3407498+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Efterårssalat med rejer og grønkål",
+          "ingredients": [
+            "olivenolie",
+            "grønkål",
+            "salt",
+            "peber",
+            "frosne havtorn",
+            "grønlandske rejer",
+            "grapefrugt",
+            "tabasco",
+            "tyttebær",
+            "brøndkarse"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10907/21638/1920/thumbs-05-efteraars-salat-med-rejer.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/efteraarssalat-med-rejer-og-groenkaal-10907",
+          "dateFound": "2020-02-13T18:51:58.2688021+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Eksotisk coleslaw",
+          "ingredients": [
+            "fintsnittet spidskål, savoykål eller hvidkål",
+            "groftrevne gulerødder",
+            "grofthakket æble",
+            "lyse rosiner",
+            "groft stødt spidskommen",
+            "groft stødt korianderfrø",
+            "creme fraiche, 9 – 18%",
+            "salt og peber",
+            "mangochutney"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/4736/13079/1920/eksotisk_coleslaw.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/eksotisk-coleslaw-4736",
+          "dateFound": "2020-02-13T18:42:04.5342029+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Farsbrød med hasselbackkartofler, tzatziki og bagte tomater",
+          "ingredients": [
+            "hakket kalv og flæsk",
+            "salt",
+            "friskkværnet peber",
+            "æg",
+            "havregryn",
+            "mælk",
+            "bacon i skiver",
+            "kartofler",
+            "olivenolie",
+            "havsalt",
+            "timian",
+            "blommetomater",
+            "agurk",
+            "salt",
+            "græsk yoghurt",
+            "hvidløg"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11052/21769/1920/farsbroed-med-hasselback-kartofler-boernevenlig.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/farsbroed-med-hasselbackkartofler-tzatziki-og-bagte-tomater-11052",
+          "dateFound": "2020-02-13T18:41:08.5572959+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Farserede porrer med gulerødder",
+          "ingredients": [
+            "hakket svinekød",
+            "groft salt og peber",
+            "æg",
+            "løg, revet",
+            "hvedemel",
+            "mælk",
+            "små porrer",
+            "æg, sammenpisket",
+            "rasp",
+            "smør til stegning",
+            "små kartofler",
+            "gulerødder",
+            "bredbladet persille"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/8254/17056/1920/60_farserede_porrer_6853_dg_102386.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/farserede-porrer-8254",
+          "dateFound": "2020-02-13T18:44:26.3681462+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Fasanmiddag",
+          "ingredients": [
+            "fasaner",
+            "løg",
+            "tyk bacon",
+            "æbleedikke",
+            "æblemost",
+            "fløde",
+            "rosenkål",
+            "æbler",
+            "kantareller",
+            "tyttebærmarmelade",
+            "smør",
+            "salt",
+            "peber"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/1005/6472/1920/fasanmiddag.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/fasanmiddag-1005",
+          "dateFound": "2020-02-13T18:52:21.5518476+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Fiskefrikadeller med pasta og dilddressing",
+          "ingredients": [
+            "olie",
+            "smør",
+            "fiskefars",
+            "pasta penne",
+            "dild",
+            "citron",
+            "creme fraiche",
+            "havsalt",
+            "friskkværnet peber"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11056/21770/1920/fiskefrikadeller-med-pasta-og-dilddressing-boernevenlig.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/fiskefrikadeller-med-pasta-og-dilddressing-11056",
+          "dateFound": "2020-02-13T18:41:01.7835678+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Fladbrød med ristet blomkål og chilisauce",
+          "ingredients": [
+            "gær",
+            "vand",
+            "olie",
+            "hvedemel",
+            "sukker",
+            "salt",
+            "salt",
+            "Vindruekerneolie",
+            "havregryn",
+            "blomkål",
+            "Melorme",
+            "mayonaise",
+            "chilisauce",
+            "sennep",
+            "frisk basilikum"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10984/21688/1920/thumbs-06-pandebroed-med-melorme-og-blomkaal.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/fladbroed-med-ristet-blomkaal-og-chilisauce-10984",
+          "dateFound": "2020-02-13T18:48:08.7954949+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Flæskesteg med chili, timian og bagte rødder",
+          "ingredients": [
+            "salt",
+            "timian",
+            "chili",
+            "allehånde",
+            "kamstege med svær og uden ben",
+            "salt og peber",
+            "vand",
+            "hvidvin",
+            "Maizena",
+            "kulør",
+            "salt og peber",
+            "gulerødder",
+            "citronsaft",
+            "persille",
+            "æbler",
+            "knoldselleri",
+            "rapsolie",
+            "kartofler"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/1248/6958/1920/flaeskesteg-med-chili-41251.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/flaeskesteg-med-chili-timian-og-bagte-roedder-1248",
+          "dateFound": "2020-02-13T18:52:28.1404479+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Flæskesteg med æblekompot og bagte pastinakker",
+          "ingredients": [
+            "flæskesteg",
+            "vand",
+            "hele kardemomme",
+            "nelliker",
+            "stjerne anis",
+            "saft",
+            "salt",
+            "brun farin",
+            "pastinakker",
+            "smør",
+            "røget salt",
+            "æbler",
+            "revet peberrod",
+            "æblemost",
+            "grov sennep",
+            "løg",
+            "appelsin, skal"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10928/21653/1920/thumbs-02-flaeskesteg-med-stjerne-anis-og-aeblekompot.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/flaeskesteg-med-aeblekompot-og-bagte-pastinakker-10928",
+          "dateFound": "2020-02-13T18:50:29.8455899+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Flødeskumskage med appelsin og lidt græskarmos",
+          "ingredients": [
+            "smør",
+            "sukker",
+            "smør",
+            "æg",
+            "sukker",
+            "revet skal af økologisk appelsin",
+            "saft fra appelsin",
+            "græskar",
+            "flormelis",
+            "vaniljesukker",
+            "piskefløde",
+            "frisk figen",
+            "mørk chokolade"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10924/21650/1920/samvirke-floede-11.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/floedeskumskage-med-appelsin-og-lidt-graeskarmos-10924",
+          "dateFound": "2020-02-13T18:50:33.2275808+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Forloren hare med kartofler, rødbeder og broccoli",
+          "ingredients": [
+            "hakket kalv og flæsk",
+            "salt",
+            "sødmælk",
+            "æg",
+            "havregryn",
+            "friskkværnet peber",
+            "bacon i skiver",
+            "små kartofler",
+            "broccoli",
+            "syltede rødbeder",
+            "smør"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11057/21771/1920/forloren-hare-med-kartofler-roedbeder-og-broccoli-boernevenlig.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/forloren-hare-med-kartofler-roedbeder-og-broccoli-11057",
+          "dateFound": "2020-02-13T18:40:58.8565194+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Frikadellesandwich med råsyltet rødkål",
+          "ingredients": [
+            "frikadeller, fx en rest fra aftensmaden",
+            "hvidløgsolie",
+            "store grovboller",
+            "salt",
+            "røget salt",
+            "peber",
+            "rødkål",
+            "syltet rødbede",
+            "hindbæreddike eller anden frugteddike",
+            "grov sennep",
+            "Æbleflæsk\u2028:",
+            "gulerod",
+            "rødløg"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10938/21661/1920/thumbs-03-holms-frikadelle-sandwich-med-raasyltet-roedkaal-af-en-fraekke-slags.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/frikadellesandwich-med-raasyltet-roedkaal-10938",
+          "dateFound": "2020-02-13T18:50:00.4306564+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Frozen rosé med granatæbletopping",
+          "ingredients": [
+            "rosévin",
+            "granatæble",
+            "friske mynteblade",
+            "Flydende honning"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10121/20330/1920/nyta-%C3%A8rsmenu-14-min.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/frozen-rosé-med-granataebletopping-10121",
+          "dateFound": "2020-02-13T18:47:49.2117116+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Gedeostpakker med tomat- og timiancreme",
+          "ingredients": [
+            "tomater",
+            "olie",
+            "timian",
+            "olivenolie",
+            "rødvinseddike",
+            "honning",
+            "salt og sort peber",
+            "filodej",
+            "smeltet smør",
+            "gedeost",
+            "gulerødder",
+            "pære"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11038/21751/1920/samvirke1912201938339.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/gedeostpakker-med-tomat-og-timiancreme-11038",
+          "dateFound": "2020-02-13T18:40:28.7530333+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Gnocchi med dadeltomater, basilikum og pecorino",
+          "ingredients": [
+            "gnocchi",
+            "olivenolie",
+            "hvidløg",
+            "små tomater",
+            "basilikum",
+            "pecorino",
+            "salt",
+            "peber",
+            "flute"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11018/21722/1920/gnocchi-med-smaa-tomater-og-pecorinost.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/gnocchi-med-dadeltomater-basilikum-og-pecorino-11018",
+          "dateFound": "2020-02-13T18:44:02.9367292+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Gnocchi med kylling og tomat",
+          "ingredients": [
+            "citronolie",
+            "kyllinger",
+            "sesam",
+            "gnocchi",
+            "salt",
+            "peber",
+            "hvidløg",
+            "løg",
+            "flåede tomater",
+            "tomat",
+            "frisk basilikum til pynt",
+            "fintrevet parmesan"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11024/21737/1920/thumbs-04-kylling-med-gnocci-og-tomat.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/gnocchi-med-kylling-og-tomat-11024",
+          "dateFound": "2020-02-13T18:43:26.9311956+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Gryderet med lammerack",
+          "ingredients": [
+            "olivenolie",
+            "lammeracks",
+            "tørsaltet bacon",
+            "salt",
+            "peber",
+            "frisk rosmarin",
+            "honning",
+            "sennep",
+            "sort peberkorn",
+            "fennikel",
+            "rødløg",
+            "Stout øl",
+            "kyllingefond",
+            "parmesan, revet",
+            "friske krydderurter til pynt",
+            "tyttebær"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10964/21674/1920/thumbs-02-lammerack-snurre-gryde.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/simreret-med-lammerack-10964",
+          "dateFound": "2020-02-13T18:48:55.7985836+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Grøn dhal med asparges",
+          "ingredients": [
+            "løg",
+            "hvidløg",
+            "olivenolie",
+            "bladselleri",
+            "grønne asparges",
+            "squash",
+            "garam masala",
+            "grøn karrypasta",
+            "grønne linser",
+            "vand",
+            "grøntsagsbouillon",
+            "kokosmælk",
+            "babyspinat",
+            "citron",
+            "salt",
+            "peber",
+            "koriander",
+            "valnødder"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11031/21744/1920/groen-dahl-med-asparges-groenne.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/groen-dhal-med-asparges-11031",
+          "dateFound": "2020-02-13T18:41:39.4098798+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Grøn mango-smoothie bowl",
+          "ingredients": [
+            "havre- eller mandeldrik",
+            "frossen mango",
+            "frossen spinat",
+            "moden banan",
+            "frisk ingefær",
+            "granola",
+            "kokosflager",
+            "frisk mynte",
+            "frugt"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11008/21711/1920/oha-42.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/groen-mango-smoothie-bowl-11008",
+          "dateFound": "2020-02-13T18:44:32.2188919+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Grønkålspesto til 10 personer",
+          "ingredients": [
+            "mandler",
+            "parmesan",
+            "hvidløg",
+            "skal af økologisk citron",
+            "frisk eller frossen grønkål",
+            "salt",
+            "olivenolie"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/8159/16969/1920/grcnkaelspesto_1.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/groenkaalspesto-til-10-personer-8159",
+          "dateFound": "2020-02-13T18:42:57.131412+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Guldsuppe med linser",
+          "ingredients": [
+            "gulerødder",
+            "hvidløg",
+            "løg",
+            "olivenolie",
+            "røde linser",
+            "mild karry",
+            "stødt korianderfrø",
+            "vand",
+            "grøntsagsbouillon",
+            "ingefær",
+            "kokosmælk",
+            "citron",
+            "havsalt",
+            "friskkværnet sort peber",
+            "Friske koriander",
+            "creme fraiche"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11030/21743/1920/gulerodssuppe-med-linser.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/guldsuppe-med-linser-11030",
+          "dateFound": "2020-02-13T18:41:42.8042463+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hasselbackkartofler de luxe",
+          "ingredients": [
+            "kartofler",
+            "olie",
+            "salt og sort peber",
+            "blomkål",
+            "mayonnaise",
+            "gulerødder",
+            "pinjekerner",
+            "trøffelolie",
+            "timian"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10997/21700/1920/kartofler-9.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/hasselbackkartofler-de-luxe-10997",
+          "dateFound": "2020-02-13T18:45:16.1890567+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hurtig pot au feu med lammemørbrad",
+          "ingredients": [
+            "olivenolie",
+            "lammemørbrad",
+            "salt",
+            "peber",
+            "afskallede pistacienødder",
+            "morkler",
+            "knoldselleri",
+            "sød kartoffel (ikke alt for stor)",
+            "flydende kyllingefond",
+            "frisk ingefær",
+            "bladselleri",
+            "frisk rosmarin",
+            "vand"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10989/21693/1920/thumbs-06-lammemoerbrad-pot-au-feu.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/hurtig-pot-au-feu-med-lammemoerbrad-10989",
+          "dateFound": "2020-02-13T18:47:52.5535206+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Jordbær-mynte-smoothie",
+          "ingredients": [
+            "havre- eller mandeldrik",
+            "frosne jordbær",
+            "moden banan",
+            "mynteblade",
+            "friskt mynteblad"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11004/21707/1920/oha-41.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/jordbaer-mynte-smoothie-11004",
+          "dateFound": "2020-02-13T18:44:45.7380228+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Julekage med appelsin og dadler",
+          "ingredients": [
+            "smør",
+            "hvedemel",
+            "æg",
+            "bagepulver",
+            "honning",
+            "appelsinsaft",
+            "flormelis",
+            "mandler",
+            "dadel",
+            "appelsinmarmelade",
+            "smør",
+            "sukker",
+            "appelsinsaft",
+            "flormelis",
+            "dadel",
+            "pomeransskal",
+            "sølvkugle",
+            "granatæblekerner",
+            "kanel"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/1261/6984/1920/julekage-41508.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/julekage-med-appelsin-og-dadler-1261",
+          "dateFound": "2020-02-13T18:45:33.1875701+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Julekager med glasur",
+          "ingredients": [
+            "hvedemel",
+            "bagepulver",
+            "smør",
+            "sukker",
+            "vaniljestang (hele stangen)",
+            "Finthakkede mandler",
+            "friskpresset citronsaft",
+            "æg (str. mellem)",
+            "flormelis",
+            "vand",
+            "kakaopulver"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/7509/15774/1920/julekager1278395100.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/julekager-7509",
+          "dateFound": "2020-02-13T18:49:40.2773089+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Julekys",
+          "ingredients": [
+            "Odense Ren Rå Marcipan",
+            "sukker",
+            "vand",
+            "pasteuriserede æggehvider",
+            "ODENSE Mørk Overtræk"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/3791/17563/1920/julekys_870x620.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/julekys-3791",
+          "dateFound": "2020-02-13T18:48:59.2385571+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Julerisotto med øl og æblemost",
+          "ingredients": [
+            "olie",
+            "risottoris",
+            "finthakkede skalotteløg",
+            "kanelstang",
+            "rosenkål",
+            "æblemost",
+            "mørk øl",
+            "groftreven ingefær",
+            "mandarin",
+            "tranebær",
+            "citron (saften)",
+            "Kold smør (rigtigt smør)",
+            "Grofthakkede valnødder",
+            "æggeblomme",
+            "røget paprika",
+            "salt",
+            "peber"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10954/21668/1920/thumbs-06-jule-vegi-risotto-med-aeblemost-og-aeggeblomme.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/julerisotto-med-oel-og-aeblemost-10954",
+          "dateFound": "2020-02-13T18:49:15.9209087+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kalveschnitzel i flødesauce med blandet kål",
+          "ingredients": [
+            "olivenolie",
+            "kalveschnitzler",
+            "sennep",
+            "salt",
+            "peber",
+            "sød kartoffel (ikke alt for stor)",
+            "stødt spidskommen",
+            "hoisinsauce",
+            "kyllingefond",
+            "madlavningsfløde, 18%",
+            "c-salat",
+            "rapsolie",
+            "parmesan, revet"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10965/21675/1920/thumbs-03-kalve-schnitzel-med-kaal-i-hoissin-floede-sovs.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/kalveschnitzel-i-floedesauce-med-blandet-kaal-10965",
+          "dateFound": "2020-02-13T18:48:52.5167604+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kardemommesnurrer",
+          "ingredients": [
+            "Havredrik",
+            "gær",
+            "sukker",
+            "hvedemel",
+            "stødt kardemomme",
+            "salt",
+            "smør",
+            "smør",
+            "sukker",
+            "stødt kardemomme",
+            "mælk",
+            "sukker",
+            "kardemommefrø"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11045/21761/1920/kardemommesnurrer.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/kardemommesnurrer-11045",
+          "dateFound": "2020-02-13T18:41:31.0097941+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Koldhævede speltboller med græskar",
+          "ingredients": [
+            "koldt vand",
+            "gær",
+            "salt",
+            "honning",
+            "groft speltmel",
+            "havregryn",
+            "græskarkerner"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11044/21756/1920/koldhaevede-speltboller-med-graeskar.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/koldhaevede-speltboller-med-graeskar-11044",
+          "dateFound": "2020-02-13T18:43:03.9755713+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Koldrøget laks med figner og cremet spinat",
+          "ingredients": [
+            "frisk spinat",
+            "blomkålsris",
+            "æblecidereddike",
+            "sennep",
+            "friske figner",
+            "koldrøget laks (skiveskåret)",
+            "madlavningsfløde",
+            "salt",
+            "peber",
+            "kålrabi",
+            "rejer"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10915/21642/1920/thumbs-06-kold-roeget-laks-med-figner-og-cremet-kohlrabi.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/koldroeget-laks-med-figner-og-cremet-spinat-10915",
+          "dateFound": "2020-02-13T18:51:42.1722992+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Krebinetter med kartofler og stuvede grøntsager",
+          "ingredients": [
+            "kartofler",
+            "rød peber",
+            "hakket svine - og kalvekød",
+            "æg",
+            "raps",
+            "smør",
+            "olie",
+            "blomkål",
+            "gulerødder",
+            "smør",
+            "mel"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10390/21077/1920/krebinetter.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/krebinetter-med-kartofler-og-stuvede-groentsager-10390",
+          "dateFound": "2020-02-13T18:47:28.6647425+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Krydret hakkebøf med stegt rødkål",
+          "ingredients": [
+            "hakket oksekød",
+            "rapsolie",
+            "peberblanding",
+            "salt",
+            "lille rødkål",
+            "c-salat",
+            "æblecidereddike",
+            "Flydende honning",
+            "tyttebær",
+            "frisk timian"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10991/21694/1920/thumbs-07-krydret-hakkedreng-med-stegt-roedkaal.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/krydret-hakkeboef-med-stegt-roedkaal-10991",
+          "dateFound": "2020-02-13T18:41:46.4847736+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kylling cacciatore",
+          "ingredients": [
+            "kyllingelår",
+            "olie",
+            "salt",
+            "peber",
+            "løg",
+            "hvidløg",
+            "auberginer",
+            "bladselleri",
+            "spidskommen",
+            "paprika",
+            "olie",
+            "hakkede tomater",
+            "fettuccine",
+            "frisk basilikum"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10413/21103/1920/kylling-caccate.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/kylling-cacciatore-10413",
+          "dateFound": "2020-02-13T18:47:01.5528624+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kylling på en bund af kartofler med rosmarin og citron",
+          "ingredients": [
+            "kartofler",
+            "smør",
+            "salt og peber",
+            "fed hvidløg",
+            "citron",
+            "rosmarinstilk",
+            "kyllinger",
+            "vindruer"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/2730/10877/1920/r-41644.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/kylling-paa-en-bund-af-kartofler-med-rosmarin-og-citron-2730",
+          "dateFound": "2020-02-13T18:52:11.5326472+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kyllingeboller med krydret couscoussalat og chunky salsa",
+          "ingredients": [
+            "persille",
+            "hakket kyllingekød",
+            "honning",
+            "soyasauce",
+            "olivenolie",
+            "olie",
+            "couscous",
+            "vand",
+            "æble",
+            "spidskål",
+            "gulerødder",
+            "mandler",
+            "Tandoori krydderi",
+            "citron",
+            "salsa"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10328/21013/1920/kyllingeboller.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/kyllingeboller-med-krydret-couscoussalat-og-chunky-salsa-10328",
+          "dateFound": "2020-02-13T18:46:41.4046864+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kyllingefrikadeller med pasta og grønkålssalat",
+          "ingredients": [
+            "løg",
+            "persille",
+            "hakket kyllingekød",
+            "havregryn",
+            "mel",
+            "mælk",
+            "salt",
+            "peber",
+            "æg",
+            "olie",
+            "fuldkornspasta penne",
+            "rød pesto",
+            "grønkål",
+            "cherrytomater",
+            "salattern",
+            "snack-peber"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10382/21080/1920/kyllingefrikadeller.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/kyllingefrikadeller-med-pasta-og-groenkaalssalat-10382",
+          "dateFound": "2020-02-13T18:47:39.0120564+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kyllingeinderfilet i tomat",
+          "ingredients": [
+            "kyllinge-inderfilet",
+            "stort løg",
+            "fed hvidløg",
+            "olivenolie",
+            "salt og peber",
+            "balsamico eddike",
+            "hakket flået tomat",
+            "frisk basilikum"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/7663/15928/1920/kyllingeinderfilet-i-tomat1278.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/kyllingeinderfilet-i-tomat-7663",
+          "dateFound": "2020-02-13T18:42:46.8963552+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kyllingenuggets med råkost og grøn salat",
+          "ingredients": [
+            "gulerødder",
+            "grøn krølsalat",
+            "skyr",
+            "rapsolie",
+            "hvidløg",
+            "persille",
+            "citron",
+            "solsikkeolie",
+            "kyllingeinderfilet",
+            "æg",
+            "panko rasp"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10403/21096/1920/10403.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/kyllingenuggets-med-raakost-og-groen-salat-10403",
+          "dateFound": "2020-02-13T18:46:00.3802048+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kødboller i ratatouille",
+          "ingredients": [
+            "olivenolie",
+            "løg",
+            "hvidløg",
+            "aubergine",
+            "snackpebre",
+            "mosede tomater",
+            "tørret timian",
+            "salt og sort peber",
+            "balsamico",
+            "sukker",
+            "hakkede soltørrede tomater i olie",
+            "hakket kyllingekød",
+            "fint salt",
+            "peber",
+            "tørret rosmarin",
+            "løg",
+            "æg",
+            "rasp",
+            "mælk",
+            "valnødder"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10813/21549/1920/hakket-koed-7.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/koedboller-i-ratatouille-10813",
+          "dateFound": "2020-02-13T18:52:04.7656544+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Laks med hollandaise, ovnkartofler og aspargesbroccoli",
+          "ingredients": [
+            "små kartofler",
+            "timian",
+            "laks",
+            "aspargesbroccoli",
+            "hollandaisesauce",
+            "citron"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10399/21094/1920/10399.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/laks-med-hollandaise-ovnkartofler-og-aspargesbroccoli-10399",
+          "dateFound": "2020-02-13T18:46:14.1113768+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Laks med wokstegte grøntsager i østerssauce",
+          "ingredients": [
+            "ægnudler",
+            "lime",
+            "sesamfrø",
+            "gulerødder",
+            "forårsløg",
+            "røde snackpeber",
+            "hvidløg",
+            "olie",
+            "soja",
+            "østerssauce",
+            "laks",
+            "olie"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10420/21111/1920/den-nysgerrige-laks-med-wokstegte-groentsager.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/laks-med-wokstegte-groentsager-i-oesterssauce-10420",
+          "dateFound": "2020-02-13T18:45:36.6898833+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Lam med skovsyre og valnødder",
+          "ingredients": [
+            "lammefileter",
+            "sesam",
+            "citronolie",
+            "kålrabi",
+            "hakket grønkål",
+            "hindbæreddike eller anden frugteddike",
+            "rød skovsyre",
+            "lime (saften)",
+            "salt",
+            "peber",
+            "safran",
+            "hvidløg",
+            "paprika",
+            "valnødder",
+            "rapsolie"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10976/21681/1920/thumbs-06-stegt-carpaccio-af-lam-med-skovsyre-og-walnoedder.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/lam-med-skovsyre-og-valnødder-10976",
+          "dateFound": "2020-02-13T18:48:35.8451441+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Lasagne med salat og gnavegrønt",
+          "ingredients": [
+            "hvidløg",
+            "olie",
+            "hakket oksekød",
+            "oregano",
+            "hakkede tomater",
+            "friske lasagneplader",
+            "mornay sauce",
+            "speltrasp",
+            "rucola",
+            "æble",
+            "rødløg.",
+            "frisk mozzarellaost",
+            "agurk"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10385/21079/1920/lasagne.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/lasagne-med-salat-og-gnavegroent-10385",
+          "dateFound": "2020-02-13T18:47:35.5482522+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Majspandekage med grøntsagsrester",
+          "ingredients": [
+            "æg",
+            "mælk",
+            "fint majsmel",
+            "salt",
+            "olivenolie",
+            "edamame bønner",
+            "courgetter",
+            "tomater",
+            "græsk yougurt 10%"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10916/21643/1920/december2019.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/majspandekage-med-groentsagsrester-10916",
+          "dateFound": "2020-02-13T18:50:56.9218495+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Minipizza med spinat &amp; pølse",
+          "ingredients": [
+            "1/2 portion køleskabsdej (se opskrift her på siden)",
+            "durummel",
+            "tomatpure",
+            "rød pesto",
+            "revet ost, fx. mozarella eller emmentaler",
+            "frisk spinat",
+            "olivenolie",
+            "hvidløg i tynd skive",
+            "fennikelsalami i tynde skiver"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/8232/17034/1920/b3.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/minipizza-med-spinat-poelse-8232",
+          "dateFound": "2020-02-13T18:48:12.2501078+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Mormorkylling med argurkesalat, sukkerærter, hovedsalat og kartoffelmos",
+          "ingredients": [
+            "salt",
+            "sukker",
+            "eddike",
+            "agurker",
+            "bagekartofler",
+            "smør",
+            "piskefløde",
+            "kyllingebryster",
+            "olivenolie",
+            "smør",
+            "timian",
+            "hovedsalat",
+            "piskefløde",
+            "sukker",
+            "sukkerærter"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10401/21093/1920/10401.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/mormorkylling-med-argurkesalat-sukkeraerter-hovedsalat-og-kartoffelmos-10401",
+          "dateFound": "2020-02-13T18:46:07.2587473+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Muslinger i kokossauce",
+          "ingredients": [
+            "blåmuslinger",
+            "skalotteløg",
+            "hvidløg",
+            "frisk ingefær",
+            "gurkemeje",
+            "kokosmælk",
+            "vand",
+            "aspargesbroccoli",
+            "forårsløg, finthakkede",
+            "fiskesauce",
+            "revet limeskal",
+            "sukker",
+            "forårsløg, hakket",
+            "kogte nudler"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11034/21747/1920/kokosmaelk-_-7.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/muslinger-i-kokossauce-11034",
+          "dateFound": "2020-02-13T18:40:35.5796023+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Mættende bønnesalat med kylling og aubergine",
+          "ingredients": [
+            "aubergine",
+            "salt",
+            "kogte limabønner",
+            "kyllinger",
+            "spidskål",
+            "granatæble, kernerne",
+            "citronsaft",
+            "yoghurt naturel",
+            "frisk mynte",
+            "olivenolie",
+            "hvidvinseddike",
+            "hvidløg",
+            "stødt spidskommen",
+            "stødt koriander",
+            "stødt cayennepeber",
+            "salt og sort peber"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10921/21647/1920/baelgerfrugter-pa-brik-6.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/maettende-boennesalat-med-kylling-og-aubergine-10921",
+          "dateFound": "2020-02-13T18:50:43.4470151+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Nem chokoladekage med karamel",
+          "ingredients": [
+            "valnødder",
+            "dadel",
+            "kondenseret mælk",
+            "kaffe",
+            "appelsin",
+            "mørk chokolade",
+            "AMO chokoladekageblanding",
+            "kakaonibs",
+            "skyr"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11046/21762/1920/thumbs_01_-_pande_bagt_chokoladekage_med_alt_det_vi_godt_ka_li_til_chokoladekage-_fudge-_dadler_-_kaffe_-_appelsin-1.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/nem-chokoladekage-med-karamel-11046",
+          "dateFound": "2020-02-13T18:41:21.4259493+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Osso buco med figner",
+          "ingredients": [
+            "olivenolie",
+            "osso buco",
+            "champignoner",
+            "bønner (brune, hvide eller borlotti – gerne blandede)",
+            "krondild",
+            "hvidløg",
+            "paprika",
+            "blandede små tomater",
+            "figner",
+            "stødt spidskommen",
+            "fintreven peberrod",
+            "gulerodssaft",
+            "frisk chili",
+            "salt",
+            "peber"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10881/21614/1920/thumbs-05-osso-bucco-med-figner-og-krondild.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/osso-buco-med-figner-10881",
+          "dateFound": "2020-02-13T18:52:31.2661654+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Ovnbagt biksemad med confit af and",
+          "ingredients": [
+            "smør",
+            "olivenolie",
+            "pastinak",
+            "stribede og gule beder",
+            "hvidløg",
+            "rødløg",
+            "gulerod",
+            "sød kartoffel/sweet potato",
+            "salt",
+            "peber",
+            "hvidløgsolie",
+            "usprøjtet citron",
+            "Confit af and",
+            "evt. lidt frisk timian"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11023/21730/1920/thumbs-03-ovbagt-biks-med-confit-af-and.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/ovnbagt-biksemad-11023",
+          "dateFound": "2020-02-13T18:43:32.938957+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Ovnbagt kalvefrikasse",
+          "ingredients": [
+            "Vindruekerneolie",
+            "smør",
+            "kalvetykkam",
+            "salt",
+            "peber",
+            "oksefond",
+            "løg",
+            "shiitake svampe",
+            "porrer",
+            "gulerødder",
+            "hvidløg",
+            "dijonsennep",
+            "frisk babyspinat",
+            "piskefløde",
+            "revet citronskal som pynt",
+            "revet eller stødt muskatnød",
+            "Frisk dild"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11021/21728/1920/thumbs-01-ovbnabt-kalve-frikasse-by-holm.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/ovnbagt-kalvefrikasse-11021",
+          "dateFound": "2020-02-13T18:43:39.5926289+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Ovnbagt mørbradgryde med krydrede pølser",
+          "ingredients": [
+            "hvidløgsolie",
+            "svinemørbrad",
+            "krydrede pølser",
+            "tørsaltet bacon",
+            "smør",
+            "salt",
+            "peber",
+            "champignoner",
+            "hvidløg",
+            "blommetomater",
+            "shiitake svampe",
+            "dijonsennep",
+            "stødt spidskommen",
+            "røgsalt",
+            "røget paprika",
+            "løg",
+            "hvidvin",
+            "mosede tomater",
+            "oksefond",
+            "piskefløde",
+            "friske krydderurter til pynt"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11022/21729/1920/thumbs-02-ovnbagt-moerbradgryde-med-poelser.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/ovnbagt-moerbradgryde-med-poelser-11022",
+          "dateFound": "2020-02-13T18:43:36.1040935+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Ovnbagt skibberlabskovs",
+          "ingredients": [
+            "rødvin",
+            "kyllingefond",
+            "hele nelliker",
+            "laurbærblade",
+            "peberblanding",
+            "svinekæber",
+            "tørsaltet bacon",
+            "rødløg",
+            "zitauerløg",
+            "kartofler",
+            "søde kartofler",
+            "rødbeder",
+            "røgsalt",
+            "røget paprika",
+            "Løgpulver",
+            "salt",
+            "peber",
+            "smør",
+            "fintreven citronskal"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11016/21719/1920/thumbs-07-ovnbagt-labsskov-den-roede-skipper.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/ovnbagt-skibberlabskovs-11016",
+          "dateFound": "2020-02-13T18:43:07.1105465+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pandestegt andelever med salvie og valnødder",
+          "ingredients": [
+            "valnødder",
+            "tranebær",
+            "appelsin, usprøjtet",
+            "optøede andelever",
+            "knækbrød",
+            "kanelstang",
+            "hvidløg",
+            "frisk salvie",
+            "løg",
+            "Fedtstof (olivenolie/smør)",
+            "salt",
+            "peber",
+            "saft"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10960/21671/1920/thumbs-01-pandestegt-andelever-med-salvie-og-walnoedder.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/pandestegt-andelever-med-salvie-og-valnoedder-10960",
+          "dateFound": "2020-02-13T18:49:05.8192242+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Paneret kalkun med stegt grønkål",
+          "ingredients": [
+            "olivenolie",
+            "kalkunbryst",
+            "havregryn",
+            "salt",
+            "peber",
+            "rød grønkål",
+            "tranebær",
+            "hele kardemommekapsler",
+            "mørk øl",
+            "kirsebærsauce",
+            "groftreven ingefær",
+            "usprøjtet citron"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11007/21712/1920/thumbs-01-kalkun-steaks-i-havregryn-med-groenkaal-og-kirsebaer.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/paneret-kalkun-med-stegt-groenkaal-11007",
+          "dateFound": "2020-02-13T18:44:22.9869046+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Paneret torsk med julesalat",
+          "ingredients": [
+            "olivenolie",
+            "julesalat eller hjertesalat",
+            "torsk",
+            "panko eller gourmet rasp",
+            "salt",
+            "peber",
+            "banan",
+            "frisk estragon",
+            "appelsin",
+            "citron",
+            "jordskok",
+            "akaciehonning",
+            "mayonaise",
+            "finthakkede skalotteløg",
+            "tørret kokosmel"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10970/21676/1920/thumbs-01-jule-torsk-i-panko-og-kokus-med-lime-banan-med-esdragon.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/paneret-juletorsk-10970",
+          "dateFound": "2020-02-13T18:48:05.5748268+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Parmesanpaneret kylling med hvidløgsgrønt og ærtemos",
+          "ingredients": [
+            "kyllingebrystfileter",
+            "sennep",
+            "rasp",
+            "parmesan",
+            "frisk timian",
+            "olivenolie",
+            "salt",
+            "peber",
+            "kartofler",
+            "gulerødder",
+            "olivenolie",
+            "helt hvidløg",
+            "timian",
+            "salt",
+            "peber",
+            "frosne ærter",
+            "økologisk græsk yoghurt 4%",
+            "parmesan",
+            "revet skal af ½ citron",
+            "salt",
+            "peber"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/1068/6598/1920/parmesanpaneret-kylling-med-hvidloegsgroent-og-aertemos.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/parmesanpaneret-kylling-med-hvidloegsgroent-og-aertemos-1068",
+          "dateFound": "2020-02-13T18:44:09.7677509+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pasta carbonara og enkelt grøn salat med agurk, basilikum og vinaigrette",
+          "ingredients": [
+            "pancetta",
+            "olivenolie",
+            "spaghetti",
+            "vand",
+            "salt",
+            "parmesan",
+            "piskefløde",
+            "æg",
+            "hjertesalater",
+            "agurk",
+            "basilikum",
+            "dijonsennep",
+            "hvidvineddike",
+            "olivenolie"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10406/21098/1920/10406.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/pasta-carbonara-og-enkelt-groen-salat-med-agurk-basilikum-og-vinaigrette-10406",
+          "dateFound": "2020-02-13T18:45:50.4289115+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pasta med broccoli, rejer og fennikelsalat",
+          "ingredients": [
+            "pasta",
+            "broccoli",
+            "cherry tomater",
+            "piskefløde",
+            "salt",
+            "citron",
+            "rejer",
+            "fennikel",
+            "dild",
+            "citron",
+            "olivenolie",
+            "salt",
+            "peber"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11027/21739/1920/hverdagsretter-vox.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/pasta-med-broccoli-rejer-og-fennikelsalat-11027",
+          "dateFound": "2020-02-13T18:43:20.260301+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pasta med jordskokker og kalkunschnitzler",
+          "ingredients": [
+            "jordskokker",
+            "løg",
+            "olie",
+            "hasselnødder",
+            "salt og peber",
+            "Kalkun"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/6663/14937/1920/pasta-med-jordskokker-og-kalku.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/pasta-med-jordskokker-og-kalkunschnitzler-6663",
+          "dateFound": "2020-02-13T18:51:17.059301+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Peberfrugtpesto med mandler",
+          "ingredients": [
+            "røde peberfrugter",
+            "olivenolie",
+            "hvidløg",
+            "mandler",
+            "paprika",
+            "revet parmesan",
+            "salt",
+            "chili eller cayennepeber"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/1071/6604/1920/peberfrugtspesto-med-mandler.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/peberfrugtpesto-med-mandler-1071",
+          "dateFound": "2020-02-13T18:49:29.1431183+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pitabrød med fetacreme, rødbede og falafel",
+          "ingredients": [
+            "feta, gerne blød og cremet",
+            "cremefraiche 18%",
+            "hvidløg",
+            "mælk",
+            "peber",
+            "rødbeder",
+            "rødløg",
+            "olivenolie",
+            "hvidløg",
+            "citronsaft",
+            "frisk timian",
+            "pitabrød",
+            "falafler"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10995/21698/1920/pitabroed-13.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/pitabroed-med-fetacreme-roedbede-og-falafel-10995",
+          "dateFound": "2020-02-13T18:45:19.6699513+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pitabrød med tunsalat, sprøde grøntsager og citrondressing",
+          "ingredients": [
+            "tun i vand",
+            "mayonnaise",
+            "creme fraiche",
+            "citron",
+            "kapers",
+            "dild",
+            "rød peberfrugt",
+            "agurk",
+            "kinakål",
+            "majs",
+            "pitabrød",
+            "creme fraiche",
+            "citron"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10392/21327/1920/401_9852.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/pitabroed-med-tunsalat-sproede-groentsager-og-citrondressing-10392",
+          "dateFound": "2020-02-13T18:47:25.1383307+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pizza med søde kartofler og gedeost",
+          "ingredients": [
+            "lunkent vand",
+            "gær",
+            "salt",
+            "groft mel",
+            "hvedemel",
+            "cremefraiche 18 %",
+            "søde kartofler",
+            "gedeost",
+            "blå drue, uden sten",
+            "frisk timian",
+            "Lidt peber og salt",
+            "akaciahonning",
+            "persille",
+            "rucolasalat"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/8344/17225/1920/10.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/pizza-med-soede-kartofler-og-gedeost-8344",
+          "dateFound": "2020-02-13T18:51:07.1378096+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Poppelgris med porrer bagt i butterdej",
+          "ingredients": [
+            "butterdej",
+            "porrer",
+            "skiver svinebryst, ½ cm tykke",
+            "salt",
+            "røget salt",
+            "peber",
+            "BBQ marinade",
+            "usprøjtet appelsin",
+            "(oliven)olie",
+            "hvidløg",
+            "frisk kokos",
+            "blommer",
+            "saft",
+            "stjerneanis",
+            "hel nellike",
+            "hele kardemomme",
+            "soya"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10935/21659/1920/thumbs-01-poppelgris-i-bbq-og-bagt-porre-i-butterdej.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/bbq-gris-med-porrer-bagt-i-butterdej-10935",
+          "dateFound": "2020-02-13T18:50:06.79051+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Portobello burger med gulerod, hummus og sød kartoffelfritter",
+          "ingredients": [
+            "portobello svamp",
+            "løg",
+            "timian",
+            "olivenolie",
+            "salt",
+            "peber",
+            "søde kartofler",
+            "salt",
+            "peber",
+            "hummus",
+            "gulerødder",
+            "Burgerboller",
+            "creme fraiche",
+            "sød chili sauce"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10391/21069/1920/portobello-svampe-burger.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/portobello-burger-med-gulerod-hummus-og-soed-kartoffelfritter-10391",
+          "dateFound": "2020-02-13T18:46:17.5447188+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pulled pork med fladbrød og grillet kål",
+          "ingredients": [
+            "færdig pulled pork",
+            "æblemost",
+            "salt, evt. røget salt",
+            "vand",
+            "soya",
+            "fladbrød",
+            "citronolie eller ekstra jomfru olivenolie",
+            "appelsinskal",
+            "lille rødkål",
+            "rygeost",
+            "grovhakket valnødder",
+            "evt. lidt frisk timian"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10952/21667/1920/thumbs-04-graeskbroed-med-grillet-kaal-og-pulled-pork.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/pulled-pork-med-naanbroed-og-grillet-kaal-10952",
+          "dateFound": "2020-02-13T18:49:19.2135648+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pølsehorn ala Claus Holm",
+          "ingredients": [
+            "butterdej, fersk",
+            "stærk chilisauce",
+            "pølser eller røget medister",
+            "salt",
+            "olie",
+            "paprika",
+            "rødløg",
+            "citron, saft",
+            "mayonaise",
+            "Dipsauce"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10980/21685/1920/thumbs-03-holms-toemmermaend-grill-poelse-i-svoeb.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/poelsehorn-ala-claus-holm-10980",
+          "dateFound": "2020-02-13T18:48:25.4875706+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Ramensuppe a la Claus Holm",
+          "ingredients": [
+            "optøet hønsekødsuppe, for eksempel fra Mou",
+            "soya",
+            "lime",
+            "spaghetti",
+            "grønkål",
+            "porre",
+            "ingefær",
+            "spidskål",
+            "laks",
+            "fiskesauce",
+            "løg",
+            "gulerod"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11048/21764/1920/thumbs_02_-_rammen_suppe_paa_dansk-1.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/ramensuppe-a-la-claus-holm-11048",
+          "dateFound": "2020-02-13T18:41:14.7931844+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Rødbedebøf med ovnbagte kartofler og krydderurtemayo",
+          "ingredients": [
+            "rødbedebøffen fra Planteslagterne",
+            "kartofler",
+            "olie",
+            "salt",
+            "tørrede krydderier, fx timian og rosmarin",
+            "blandede krydderurter",
+            "mayonnaise"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11012/21716/1920/f-%C2%AArdigretter-3.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/roedbedeboef-med-ovnbagte-kartofler-og-krydderurtemayo-11012",
+          "dateFound": "2020-02-13T18:44:19.4823149+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Spaghetti med mandler og palmekål",
+          "ingredients": [
+            "vand",
+            "hvidløgsolie",
+            "linguini eller spaghetti",
+            "persille",
+            "c-salat",
+            "usprøjtet citron",
+            "mandelsplitter",
+            "frisk mozzarella",
+            "salt"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11026/21740/1920/thumbs-05-frisk-spaghetti-med-mandler-og-kohlrabi-og-palmekaal-fra-c-salat.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/spaghetti-med-mandler-og-palmekaal-11026",
+          "dateFound": "2020-02-13T18:43:16.9364023+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Stegt banan med marcipan og dadler",
+          "ingredients": [
+            "smør",
+            "modne bananer",
+            "havregryn",
+            "Udstenede dadler",
+            "revet appelsinskal",
+            "mørk rom",
+            "Marcipan (groftrevet)",
+            "Nougat (groftrevet)",
+            "æblechips"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10972/21678/1920/thumbs-03-stegt-banan-i-havregryn-med-dadler-og-marcipan-en-julebasker.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/stegt-banan-med-marcipan-og-dadler-10972",
+          "dateFound": "2020-02-13T18:48:42.4734111+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Stegt flæsk med spidskål, persille og aspargeskartofler",
+          "ingredients": [
+            "svinebryst",
+            "aspargeskartofler",
+            "spidskål",
+            "smør",
+            "hvedemel",
+            "mælk",
+            "stødt muskatnød",
+            "bredbladet persille",
+            "rapsolie"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10402/21086/1920/populaerestegtflaesk.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/stegt-flaesk-med-spidskaal-persille-og-aspargeskartofler-10402",
+          "dateFound": "2020-02-13T18:46:03.852079+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Svinekæber med rødkål og æbler",
+          "ingredients": [
+            "svinekæber",
+            "salt",
+            "rødkål",
+            "gastrik",
+            "jordskok",
+            "løg",
+            "æble",
+            "tranebær",
+            "Udstenede dadler",
+            "mandarin"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10983/21687/1920/thumbs-05-sousvide-grisekoeber-med-mandarin-og-roedlaal.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/svinekaeber-med-roedkaal-og-aebler-10983",
+          "dateFound": "2020-02-13T18:48:15.363587+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Syltede abrikoser",
+          "ingredients": [
+            "tørrede abrikoser",
+            "vand",
+            "eddike",
+            "sukker",
+            "frisk ingefær",
+            "hele nelliker",
+            "pinjekerner"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/6937/15209/1920/syltede-abrikoser1278394727.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/syltede-abrikoser-6937",
+          "dateFound": "2020-02-13T18:51:35.6890863+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Tarteletter med ovnbagt perlehøne",
+          "ingredients": [
+            "smør",
+            "piskefløde",
+            "kyllingefond",
+            "gulerod",
+            "porre",
+            "jordskok",
+            "rødløg",
+            "shiitake svampe",
+            "tørsaltet bacon",
+            "dijonsennep",
+            "perlehønebryst",
+            "salt",
+            "peber",
+            "tarteletter",
+            "frisk timian"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11015/21718/1920/thumbs-06-ovnbagt-perlehoene-tartelet-med-shitake-svampe.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/tarteletter-med-ovnbagt-perlehoene-11015",
+          "dateFound": "2020-02-13T18:44:12.9452902+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Timianmarinerede lammespyd med varm perlebygsalat",
+          "ingredients": [
+            "lammekød",
+            "løg",
+            "rødløg",
+            "timian",
+            "olivenolie",
+            "salt og sort peber",
+            "Perlebyg",
+            "søde kartofler",
+            "aubergine",
+            "citronsaft"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/11039/21752/1920/samvirke1912201938327.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/timianmarinerede-lammespyd-med-varm-perlebygsalat-11039",
+          "dateFound": "2020-02-13T18:40:25.4168329+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Torsk med polenta, portobello og spinat",
+          "ingredients": [
+            "parmesan",
+            "vand",
+            "polenta",
+            "smør",
+            "salt",
+            "løg",
+            "hvidløg",
+            "portobello",
+            "olie",
+            "spinat",
+            "citron",
+            "torsk",
+            "tomatpuré"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10411/21101/1920/polenta-torsk-den-groenne.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/torsk-med-polenta-portobello-og-spinat-10411",
+          "dateFound": "2020-02-13T18:47:07.9753377+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Vintersalat med brasede kartofler og pocheret æg",
+          "ingredients": [
+            "kartofler",
+            "olie",
+            "grønkål",
+            "æble",
+            "Snittet rødkål",
+            "piskefløde",
+            "citronsaft",
+            "mayonnaise",
+            "vand",
+            "hvidvinseddike",
+            "fint salt",
+            "æg"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10999/21702/1920/kartofler-7.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/vintersalat-med-brasede-kartofler-og-pocheret-aeg-10999",
+          "dateFound": "2020-02-13T18:45:09.4664714+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Vintersalat med stegte løg og kikærter",
+          "ingredients": [
+            "pølser",
+            "rødløg",
+            "kejserhatte",
+            "små tomater",
+            "olie",
+            "stødt spidskommen",
+            "kikærter",
+            "rød grønkål",
+            "frisk chili",
+            "saft",
+            "tortilla eller pitabrød",
+            "revet rødbede"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10988/21692/1920/thumbs-05-salat-af-stegte-poelser-roedbeder-kikaerter-og-kejserhatte.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/vintersalat-med-stegte-loeg-og-kikaerter-10988",
+          "dateFound": "2020-02-13T18:47:55.9078378+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Æbleflæsk med tranebær og mandler",
+          "ingredients": [
+            "svinebryst",
+            "mellemstore æbler",
+            "frisk timian",
+            "rødløg",
+            "zitauer (alm.) løg",
+            "tranebær",
+            "mandler",
+            "æbleeddike",
+            "dijonsennep",
+            "hvidløgsolie",
+            "salt",
+            "peber",
+            "æblemost",
+            "brun farin"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10942/21663/1920/thumbs-06-juleflaesk-med-poppelgris-og-tranbaer.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/æbleflaesk-med-tranebaer-og-mandler-10942",
+          "dateFound": "2020-02-13T18:49:53.4246252+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Æbleskiver med nougatfyld",
+          "ingredients": [
+            "tranebær",
+            "rørsukker",
+            "appelsin",
+            "hele kardemomme",
+            "æbleskiver",
+            "Odense nougat",
+            "Odense marcipan"
+          ],
+          "image": {
+            "src": "https://res.cloudinary.com/coop-recipes/image/upload/c_fill,dpr_auto,f_auto,g_auto,h_420,q_auto:eco,w_800/v1/pro-management/recipeimages/10909/21639/1920/thumbs-07-fyldte-bagte-aebleskiver-med-nougat.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://opskrifter.coop.dk/opskrifter/fyldte-aebleskiver-med-nougat-10909",
+          "dateFound": "2020-02-13T18:51:55.1178965+00:00"
+        }
+      }
+    ]
+  }
+}

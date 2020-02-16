@@ -13,9 +13,9 @@ namespace CookIt.API.Dtos
     }
     public partial class TaskDTO
     {
-        public List<AllRecipesDTO> AllRecipes { get; set; }
+        public List<AllRecipes> AllRecipes { get; set; }
     }
-    public partial class AllRecipesDTO
+    public partial class AllRecipes
     {
         public RecipeDTO Recipe { get; set; }
         public MetadataDTO Metadata { get; set; }

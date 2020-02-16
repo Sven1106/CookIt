@@ -15,7 +15,8 @@ namespace CookIt.API.Models
         public Host Host { get; set; }
         public Uri Url { get; set; }
         public Uri ImageUrl { get; set; }
-        public List<RecipeIngredient> RecipeIngredients { get; set; }
+        public List<RecipeSentence> RecipeSentences { get; set; }
+        
         public Recipe()
         {
 
@@ -32,5 +33,11 @@ namespace CookIt.API.Models
     public class RecipeFilter
     {
         public List<Guid> IngredientsIds { get; set; }
+        public List<Guid> HostIds { get; set; }
+        public int MissingIngredientsLimit { get; set; }
+        public RecipeFilter()
+        {
+            MissingIngredientsLimit = 1;
+        }
     }
 }
