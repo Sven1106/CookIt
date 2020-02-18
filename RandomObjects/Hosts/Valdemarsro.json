@@ -1,7 +1,7 @@
 {
     "projectName": "Valdemarsro",
     "startUrl": "https://www.valdemarsro.dk/",
-    "task": {
+    "tasks": {
     "allRecipes": [
         {
             "recipe": {

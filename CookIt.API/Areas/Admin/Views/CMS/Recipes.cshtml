@@ -1,0 +1,225 @@
+﻿@model CookIt.API.Areas.Admin.Models.RecipesVm
+@{
+    ViewData["Title"] = "Recipes";
+    Layout = "~/Areas/Admin/Views/Shared/CMS_Layout.cshtml";
+}
+
+@section CSS {
+    <style>
+        .table-striped > tbody > tr > td > div {
+            padding: 5px;
+            margin-bottom: 3px;
+        }
+
+        .table-striped > tbody > tr:nth-of-type(even) > td > div:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        .table-striped > tbody > tr:nth-of-type(odd) > td > div:nth-child(even) {
+            background: #ffffff;
+        }
+
+        .ingredient {
+            user-select: none;
+            cursor: pointer;
+            color: #fff;
+            background-color: #17a2b8;
+            position: relative;
+        }
+
+            .ingredient > select {
+                color: #000;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+            }
+
+        body.modal-open {
+            overflow: hidden;
+        }
+    </style>
+}
+
+<h1>Recipes</h1>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Ingredient</h4>
+            </div>
+            <div class="modal-body">
+                <select id="ingredientList" style="width:100%"></select>
+                @*<input type="text" value="" id="ingredientList" style="width:100%" />*@
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Save changes</button> HERE HERE HERE HERE
+                <a id="matchedIngredientDeleteBtn" class="btn btn-danger">Delete</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<a class="btn btn-default mb-2" href="/Admin/Cms/CreateRecipes/">CreateRecipes</a>
+<table id="recipeList" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th class="text-center" style="width: 20%; "><i class="fa fa-picture-o" aria-hidden="true"></i></th>
+            <th class="" style="width: 20%; ">Title</th>
+            <th class="" style="width:10%;">Host</th>
+            <th class="" style="width:40%;">
+                <div>
+                    <div style="width:50%; display:inline-block;">Recipesentence</div>
+                    <div style="width:50%; display:inline-block;">Matched ingredients</div>
+                </div>
+            </th>
+            <th class="text-center" style="width:10%;">Action(s)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var recipe in Model.Recipes)
+        {
+            <tr>
+                <td style="text-align: center;">
+                    <img style="width:200px;" src="@recipe.ImageUrl" alt="@recipe.Title" title="@recipe.Title" />
+                </td>
+                <td>
+                    @recipe.Title
+                </td>
+                <td>
+                    @recipe.Host.Name
+                </td>
+                <td>
+                    @foreach (var recipeSentence in recipe.RecipeSentences)
+                    {
+                        <div>
+                            <div style="width:50%; display:inline-block; vertical-align:top; white-space: initial;">@recipeSentence.DerivedFrom</div>
+                            <div style="width:50%; display:inline-block; vertical-align:top;">
+                                @foreach (var recipeSentenceIngredient in recipeSentence.RecipeSentenceIngredients)
+                                {
+
+                                    <span class="badge ingredient" onclick="prepareModal(this)" data-matchedIngredientId="@recipeSentenceIngredient.Id">
+                                        <span class="ingredientName">@recipeSentenceIngredient.Ingredient.Name</span>
+                                        <input type="hidden" class="ingredientId" value="@recipeSentenceIngredient.Ingredient.Id" />
+                                    </span>
+                                }
+                            </div>
+                        </div>
+                    }
+                </td>
+                <td class="text-center">
+                    <a class="btn btn-primary" href="/Admin/Cms/EditRecipe/@recipe.Id"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                    <a class="btn btn-danger" onclick="return confirm('Are you sure?')" href="/Admin/Cms/DeleteRecipe/@recipe.Id"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section JS{
+    <script>
+        let ingredients = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Ingredients.Select(x=> new { id =x.Id, text = x.Name })));
+
+        function prepareModal(e) {
+            let ingredientBadgeElement = e;
+            let currentIngredientBadgeId = ingredientBadgeElement.getElementsByClassName("ingredientId")[0].value;
+            $('#ingredientList').val(currentIngredientBadgeId).trigger('change');
+            let matchedIngredientId = ingredientBadgeElement.getAttribute("data-matchedIngredientId");
+            let matchedIngredientDeleteBtn = document.getElementById("matchedIngredientDeleteBtn");
+            matchedIngredientDeleteBtn.setAttribute("onclick","confirmDeleteOfMatchedIngredient('"+matchedIngredientId+"')")
+            $('#myModal').modal();
+        }
+        function confirmDeleteOfMatchedIngredient(id) {
+            var result = confirm("Are you sure?");
+            if (result) {
+                    $('#myModal').modal('hide');
+                    $.ajax({
+                        url: '/api/CMSApi/'+id,
+                        method: 'POST',
+                        dataType: 'json',
+                        statusCode: {
+                            204: function (error) {
+                                console.log("ERROR: /api/CMSApi/" + id + " => " + error);
+                            },
+                            200: function (data) {
+                                let ingredientBadgeElement = $("[data-matchedIngredientId=" + id + "]");
+                                ingredientBadgeElement.remove();
+                            }
+
+                        }
+                    })
+                return true;
+            }
+            return false;
+        }
+
+                function confirmUpdateOfMatchedIngredient(json) {
+            var result = confirm("Are you sure?");
+            if (result) {
+                    $('#myModal').modal('hide');
+                    $.ajax({
+                        url: '/api/CMSApi/',
+                        method: 'POST',
+                        dataType: 'json',
+                        data: json,
+                        statusCode: {
+                            204: function (error) {
+                                console.log("ERROR: /api/CMSApi/" + id + " => " + error);
+                            },
+                            200: function (data) {
+                                let ingredientBadgeElement = $("[data-matchedIngredientId=" + id + "]");
+                                ingredientBadgeElement.remove();
+                            }
+
+                        }
+                    })
+                return true;
+            }
+            return false;
+        }
+
+
+        $().ready(function () {
+            $('#recipeList').DataTable({
+                "pagingType": "full_numbers",
+                "order": [[1, "asc"]],
+                "columnDefs": [{
+                    "targets": [0, 3, 4], "sortable": false
+                }],
+                "initComplete": function () {
+                    this.api().columns([2]).every(function (e) {//For every columns||column[i] run the function.
+                        var column = this;
+                        var title = $('#recipeList thead th').eq(e).text();
+                        var select = $('<select><option value=""> Select ' + title + '</option></select>')
+                            .appendTo($(column.header()).empty())
+                            .on('click', function (e) {
+                                e.stopPropagation();//Prevents autosorting of columns to happen when clicking on the select tag.
+                            })
+                            .on('change', function () {
+
+                                var val = $.fn.dataTable.util.escapeRegex(
+                                    $(this).val()
+                                );
+
+                                column
+                                    .search(val ? '^' + val + '$' : '', true, false)
+                                    .draw();
+                            });
+                        column.data().unique().sort().each(function (d, j) {//Figure out a way to combine Razor and Javascript/Jquery
+                            select.append('<option value="' + d + '">' + d + '</option>')
+                        });
+                    });
+                }
+            });
+
+        });
+        $('#ingredientList').select2({
+            data: ingredients,
+            placeholder: 'search',
+            multiple: false
+        });
+
+    </script>
+}

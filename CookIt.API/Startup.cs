@@ -32,6 +32,7 @@ namespace CookIt.API
                     opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddMvc(option => option.EnableEndpointRouting = false).AddNewtonsoftJson();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,8 +41,9 @@ namespace CookIt.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
             }
-
+            app.UseStaticFiles();
             // app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -51,6 +53,13 @@ namespace CookIt.API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                  name: "areas",
+                  template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                );
             });
         }
     }

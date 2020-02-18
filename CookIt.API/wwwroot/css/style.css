@@ -1,0 +1,196 @@
+﻿html {
+    overflow-y: scroll; /*Permanently shows the y scrollbar*/
+}
+
+.modal-open { /*Fixes the css problem overflow-y: scroll create by removing the padding-right:17px on body.modal-open*/
+    padding-right: 0px !important;
+}
+
+
+
+.modal {
+    text-align: center;
+    padding: 0 !important;
+}
+
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+body {
+    background-color: #f8f8f8;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 400px!important;
+}
+
+h2 {
+    display: inline-block;
+}
+
+    h2 + a.btn {
+        display: inline-block;
+        margin-left: 5px;
+        margin-bottom: 10px;
+    }
+
+/*Navbar-top START*/
+.navbar-brand {
+    padding: 0px;
+}
+
+    .navbar-brand > img {
+        height: 100%;
+        padding: 5px;
+        width: auto;
+    }
+
+
+nav .navbar-top-links {
+    margin-right: 0;
+}
+
+    nav .navbar-top-links li {
+        display: inline-block;
+    }
+
+        nav .navbar-top-links li:last-child {
+            margin-right: 15px;
+        }
+
+        nav .navbar-top-links li a {
+            padding: 15px;
+            min-height: 50px;
+        }
+
+    nav .navbar-top-links .dropdown-menu li {
+        display: block;
+    }
+
+        nav .navbar-top-links .dropdown-menu li:last-child {
+            margin-right: 0;
+        }
+
+        nav .navbar-top-links .dropdown-menu li a {
+            padding: 3px 20px;
+            min-height: 0;
+        }
+
+            nav .navbar-top-links .dropdown-menu li a div {
+                white-space: normal;
+            }
+
+    nav .navbar-top-links .dropdown-messages,
+    nav .navbar-top-links .dropdown-tasks,
+    nav .navbar-top-links .dropdown-alerts {
+        width: 310px;
+        min-width: 0;
+    }
+
+    nav .navbar-top-links .dropdown-messages {
+        margin-left: 5px;
+    }
+
+    nav .navbar-top-links .dropdown-tasks {
+        margin-left: -59px;
+    }
+
+    nav .navbar-top-links .dropdown-alerts {
+        margin-left: -123px;
+    }
+
+    nav .navbar-top-links .dropdown-user {
+        right: 0;
+        left: auto;
+    }
+/*Navbar-top END*/
+
+
+/*Navbar sidebar START*/
+nav .sidebar .sidebar-nav.navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+nav .sidebar .sidebar-search {
+    padding: 15px;
+}
+
+nav .sidebar ul li {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+    nav .sidebar ul li a.active {
+        background-color: #e7e7e7;
+    }
+
+nav .sidebar .arrow {
+    float: right;
+}
+
+nav .sidebar .fa.arrow:before {
+    content: "\f104";
+}
+
+nav .sidebar .active > a > .fa.arrow:before {
+    content: "\f107";
+}
+
+
+nav .sidebar .nav-second-level li,
+nav .sidebar .nav-third-level li {
+    border-bottom: none !important;
+}
+
+    nav .sidebar .nav-second-level li a {
+        padding-left: 37px;
+    }
+
+    nav .sidebar .nav-third-level li a {
+        padding-left: 52px;
+    }
+
+@media (min-width: 768px) {
+    nav .sidebar {
+        z-index: 1;
+        position: absolute;
+        width: 250px;
+        margin-top: 51px;
+    }
+
+    .navbar-top-links .dropdown-messages,
+    .navbar-top-links .dropdown-tasks,
+    .navbar-top-links .dropdown-alerts {
+        margin-left: auto;
+    }
+}
+/*Navbar sidebar END*/
+
+
+#cms-page-wrapper {
+    padding: 0 15px;
+    padding-bottom: 20px !important;
+    min-height: calc(100vh - 51px);
+    background-color: white;
+}
+
+@media (min-width: 768px) {
+    #cms-page-wrapper {
+        position: inherit;
+        margin: 0 0 0 250px;
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+}

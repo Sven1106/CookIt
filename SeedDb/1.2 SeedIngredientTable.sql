@@ -500,6 +500,7 @@ VALUES
 (NEWID(),'ketjap manis'),
 (NEWID(),'kidneybønne'),
 (NEWID(),'kiks'),
+(NEWID(),'kikært'),
 (NEWID(),'kikært i saltlage'),
 (NEWID(),'kikærtespire'),
 (NEWID(),'kinakål'),

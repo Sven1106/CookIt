@@ -1,7 +1,7 @@
 {
     "projectName": "Coop",
     "startUrl": "https://opskrifter.coop.dk/",
-    "task": {
+    "tasks": {
         "allRecipes": [
             {
                 "recipe": {

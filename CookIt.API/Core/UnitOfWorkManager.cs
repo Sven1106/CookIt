@@ -15,7 +15,6 @@ namespace CookIt.API.Core
     public static class IngredientErrors
     {
         public static Guid NoIngredientFound = Guid.Parse("00000000-0000-0000-0000-000000000000");
-        public static Guid ToManyIngredientsFound = Guid.Parse("11111111-1111-1111-1111-111111111111");
     }
     public class UnitOfWorkManager
     {
@@ -158,10 +157,29 @@ namespace CookIt.API.Core
             return _unitOfWork.Complete();
         }
 
+        public List<Ingredient> GetIngredients()
+        {
+            List<Ingredient> ingredients = _unitOfWork.IngredientRepo.Query
+               .AsNoTracking().ToList();
+            return ingredients;
+        }
 
-        public List<RecipeForListDto> GetRecipes(RecipeFilter filter)
+        public List<Recipe> GetRecipes()
+        {
+            List<Recipe> recipes = _unitOfWork.RecipeRepo.Query
+                .AsNoTracking()
+                .Include(recipe => recipe.Host)
+                .Include(recipe => recipe.RecipeSentences)
+                    .ThenInclude(recipeSentence => recipeSentence.RecipeSentenceIngredients)
+                        .ThenInclude(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient).ToList();
+            return recipes;
+
+        }
+
+        public List<RecipeForListDto> GetFilteredRecipes(RecipeFilter filter)
         {
             List<Recipe> recipes = new List<Recipe>();
+
             IQueryable<Recipe> query = _unitOfWork.RecipeRepo.Query
                 .AsNoTracking()
                 .Include(recipe => recipe.Host)
@@ -174,41 +192,74 @@ namespace CookIt.API.Core
             {
                 query = query.Where(x => filter.HostIds.Contains(x.Host.Id));
             }
-            var bla = new List<Recipe>();
             if (filter.IngredientsIds != null)
             {
-                query = query.Where(recipe =>
-                                        recipe.RecipeSentences.Any(recipeSentence => recipeSentence.RecipeSentenceIngredients.Any(recipeSentenceIngredient => filter.IngredientsIds.Contains(recipeSentenceIngredient.Ingredient.Id))) &&
-                                        (recipe.RecipeSentences.Count -
-                                            recipe.RecipeSentences.Count(recipeSentence => 
-                                                recipeSentence.RecipeSentenceIngredients.Any(x => filter.IngredientsIds.Contains(x.Ingredient.Id))
-                                            ) <= filter.MissingIngredientsLimit
-                                        ) &&
-                                        recipe.RecipeSentences.Any(recipeSentence => recipeSentence.RecipeSentenceIngredients.Any(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient.Id == IngredientErrors.NoIngredientFound)) == false
-                                    );
-                bla = query.ToList();
+                query = query
+                    .Where(recipe => recipe.RecipeSentences
+                        .Any(recipeSentence => recipeSentence.RecipeSentenceIngredients
+                            .Any(recipeSentenceIngredient => filter.IngredientsIds
+                                .Contains(recipeSentenceIngredient.Ingredient.Id)
+                            )
+                        )
+                        && (recipe.RecipeSentences.Count - recipe.RecipeSentences
+                            .Count(recipeSentence => recipeSentence.RecipeSentenceIngredients
+                                .Any(x => filter.IngredientsIds.Contains(x.Ingredient.Id))
+                            ) <= filter.MissingIngredientsLimit
+                        )
+                        && recipe.RecipeSentences
+                            .Any(recipeSentence => recipeSentence.RecipeSentenceIngredients
+                                .Any(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient.Id == IngredientErrors.NoIngredientFound)
+                            ) == false
+                    );
             }
             #endregion
 
             #region DTOMapping
-            List<RecipeForListDto> recipesForList = new List<RecipeForListDto>();
-            recipesForList = query.Select(recipe => new RecipeForListDto
-            {
-                Id = recipe.Id,
-                Title = recipe.Title,
-                Host = recipe.Host,
-                Url = recipe.Url,
-                ImageUrl = recipe.ImageUrl,
-                Ingredients = recipe.RecipeSentences.SelectMany(recipeSentence => recipeSentence.RecipeSentenceIngredients.Select(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient)).ToList(), // THIS Flattens all the nested ingredients
-                //MatchedIngredients = recipe.RecipeSentences.Select(x => x.RecpeSentenceIngredients).Where(y => filter.IngredientsIds != null ? filter.IngredientsIds.Contains(y.Id) : false).ToList()
-            }).ToList();
+            List<RecipeForListDto> filteredRecipesForList = new List<RecipeForListDto>();
+            filteredRecipesForList = query
+                .Select(recipe => new RecipeForListDto
+                {
+                    Id = recipe.Id,
+                    Title = recipe.Title,
+                    Host = recipe.Host,
+                    Url = recipe.Url,
+                    ImageUrl = recipe.ImageUrl,
+                    Ingredients = recipe.RecipeSentences
+                        .Select(recipeSentence => recipeSentence.RecipeSentenceIngredients
+                            .Any(x => filter.IngredientsIds != null ? filter.IngredientsIds.Contains(x.Ingredient.Id) : false)
+                            ? recipeSentence.RecipeSentenceIngredients
+                                .Select(x => x.Ingredient)
+                                .Where(x => filter.IngredientsIds != null
+                                    ? filter.IngredientsIds.Contains(x.Id)
+                                    : false
+                                )
+                                .FirstOrDefault()
+                            : recipeSentence.RecipeSentenceIngredients
+                                .Select(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient)
+                                .FirstOrDefault()
+                        )
+                        .ToList(),
+                    MatchedIngredients = recipe.RecipeSentences
+                        .Select(recipeSentence => recipeSentence.RecipeSentenceIngredients
+                            .Select(x => x.Ingredient)
+                            .Where(x => filter.IngredientsIds != null
+                                ? filter.IngredientsIds.Contains(x.Id)
+                                : false)
+                            .FirstOrDefault()
+                        )
+                        .AsQueryable()
+                        .Where(x => x != null)
+                        .ToList()
+                }).ToList();
             #endregion
 
             #region sorting
-            recipesForList = recipesForList.OrderBy(x => x.Ingredients.Count - x.MatchedIngredients.Count)
-                                    .ThenBy(x => x.Title).ToList();
+            filteredRecipesForList = filteredRecipesForList
+                .OrderBy(x => x.Ingredients.Count - x.MatchedIngredients.Count)
+                .ThenBy(x => x.Title)
+                .ToList();
             #endregion
-            return recipesForList;
+            return filteredRecipesForList;
         }
         public Recipe GetRecipe(Guid id)
         {
@@ -221,6 +272,24 @@ namespace CookIt.API.Core
                 .Where(x => x.Id == id)
                 .FirstOrDefault();
             return recipe;
+        }
+
+        public bool DeleteRecipeSentenceIngredient(Guid id)
+        {
+            RecipeSentenceIngredient recipeSentenceIngredient = _unitOfWork.RecipeSentenceIngredientRepo.Query.Where(x => x.Id == id).FirstOrDefault();
+            if (recipeSentenceIngredient == null)
+            {
+                return false;
+            }
+            _unitOfWork.RecipeSentenceIngredientRepo.Delete(recipeSentenceIngredient);
+            return _unitOfWork.Complete() > 0;
+        }
+        public bool UpdateRecipeSentenceIngredient(Guid id, Guid IngredientId)
+        {
+            RecipeSentenceIngredient recipeSentenceIngredient = _unitOfWork.RecipeSentenceIngredientRepo.Query.Where(x => x.Id == id).FirstOrDefault();
+            Ingredient ingredient = _unitOfWork.IngredientRepo.Query.Where(x => x.Id == IngredientId).FirstOrDefault();
+            recipeSentenceIngredient.Ingredient = ingredient;
+            return _unitOfWork.Complete() > 0;
         }
     }
 }

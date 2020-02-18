@@ -1,0 +1,14 @@
+﻿@model CookIt.API.Models.Recipe
+@{
+    ViewData["Title"] = "EditRecipe";
+    Layout = "~/Areas/Admin/Views/Shared/CMS_Layout.cshtml";
+}
+
+<h1>EditRecipe</h1>
+@Model.Title
+@foreach (var recipeSentence in Model.RecipeSentences)
+{
+<p>@recipeSentence.DerivedFrom</p>
+
+}
+

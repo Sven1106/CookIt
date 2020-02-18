@@ -7,7 +7,6 @@ using CookIt.API.Data;
 using CookIt.API.Dtos;
 using CookIt.API.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Recipe = CookIt.API.Models.Recipe;
 
 namespace CookIt.API.Controllers
@@ -21,16 +20,12 @@ namespace CookIt.API.Controllers
         {
             _unitOfWorkManager = new UnitOfWorkManager(unitOfWork);
         }
-        [HttpPost]
-        public ActionResult CreateRecipesAsync(CreateRecipeDto json)
-        {
-            int rowsAdded = _unitOfWorkManager.CreateRecipes(json);
-            return Ok(rowsAdded + " affected");
-        }
+
         [HttpGet]
         public ActionResult GetRecipesAsync([FromBody]RecipeFilter filter)
         {
-            List<RecipeForListDto> recipes = _unitOfWorkManager.GetRecipes(filter);
+            List<RecipeForListDto> recipes = _unitOfWorkManager.GetFilteredRecipes(filter);
+
             if (recipes == null || recipes.Count == 0)
             {
                 return NoContent();
