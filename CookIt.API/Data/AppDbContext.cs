@@ -26,7 +26,12 @@ namespace CookIt.API.Data
             {
                 entity.Property(p => p.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
             });
+            
             modelBuilder.Entity<RecipeSentence>(entity =>
+            {
+                entity.Property(p => p.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
+            });
+            modelBuilder.Entity<RecipeSentenceIngredient>(entity =>
             {
                 entity.Property(p => p.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
             });

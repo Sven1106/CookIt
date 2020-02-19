@@ -1,12 +1,15 @@
 {
     "projectName": "Arla",
-    "startUrl": "https://www.arla.dk/sitemap.xml?type=Modules.Recipes.Business.SitemapUrlWriter.RecipeSitemapUrlWriter",
-    "task": {
+    "startUrl": "https://www.arla.dk/",
+    "tasks": {
         "allRecipes": [
             {
                 "recipe": {
                     "heading": "TEST",
                     "ingredients": [
+                        "majs",
+                        "Udstenede dadler",
+                        "tun i olie",
                         "1 12 kg spareribs",
                         "1 12 tsk fishsauce",
                         "1 æble i tern",
@@ -322,7 +325,6 @@
                         "træspyd",
                         "tun i vand",
                         "tyttebærmarmelade",
-                        "Udstenede dadler",
                         "valnødder",
                         "vaniljeis",
                         "Vindruekerneolie",

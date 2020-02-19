@@ -1,7 +1,7 @@
 {
   "projectName": "Coop",
   "startUrl": "https://opskrifter.coop.dk/",
-  "task": {
+  "tasks": {
     "allRecipes": [
       {
         "recipe": {
@@ -704,7 +704,7 @@
             "syltet rødbede",
             "hindbæreddike eller anden frugteddike",
             "grov sennep",
-            "Æbleflæsk\u2028:",
+            "Æbleflæsk",
             "gulerod",
             "rødløg"
           ],

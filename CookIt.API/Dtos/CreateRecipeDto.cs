@@ -9,9 +9,9 @@ namespace CookIt.API.Dtos
     {
         public string ProjectName { get; set; }
         public Uri StartUrl { get; set; }
-        public TaskDTO Task { get; set; }
+        public TasksDTO Tasks { get; set; }
     }
-    public partial class TaskDTO
+    public partial class TasksDTO
     {
         public List<AllRecipes> AllRecipes { get; set; }
     }

@@ -1,7 +1,7 @@
 {
   "projectName": "Arla",
   "startUrl": "https://www.arla.dk/",
-  "task": {
+  "tasks": {
     "allRecipes": [
       {
         "recipe": {

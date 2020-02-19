@@ -1,9 +1,8 @@
-﻿
+﻿@model Newtonsoft.Json.Schema.JSchema
 @{
     ViewData["Title"] = "CreateRecipes";
     Layout = "~/Areas/Admin/Views/Shared/CMS_Layout.cshtml";
 }
-
 
 <h1>CreateRecipes</h1>
 
@@ -27,141 +26,7 @@
             }
         });
 
-        const schema = {
-            "definitions": {},
-            "$schema": "http://json-schema.org/draft-07/schema#",
-            "$id": "http://example.com/root.json",
-            "type": "object",
-            "title": "The Root Schema",
-            "required": [
-                "projectName",
-                "startUrl",
-                "task"
-            ],
-            "properties": {
-                "projectName": {
-                    "$id": "#/properties/projectName",
-                    "type": "string",
-                    "title": "The Projectname Schema",
-                    "default": "",
-                    "pattern": "^(.*)$"
-                },
-                "startUrl": {
-                    "$id": "#/properties/startUrl",
-                    "type": "string",
-                    "title": "The Starturl Schema",
-                    "default": "",
-                    "pattern": "^(.*)$"
-                },
-                "task": {
-                    "$id": "#/properties/task",
-                    "type": "object",
-                    "title": "The Task Schema",
-                    "required": [
-                        "allRecipes"
-                    ],
-                    "properties": {
-                        "allRecipes": {
-                            "$id": "#/properties/task/properties/allRecipes",
-                            "type": "array",
-                            "title": "The Allrecipes Schema",
-                            "items": {
-                                "$id": "#/properties/task/properties/allRecipes/items",
-                                "type": "object",
-                                "title": "The Items Schema",
-                                "required": [
-                                    "recipe",
-                                    "metadata"
-                                ],
-                                "properties": {
-                                    "recipe": {
-                                        "$id": "#/properties/task/properties/allRecipes/items/properties/recipe",
-                                        "type": "object",
-                                        "title": "The Recipe Schema",
-                                        "required": [
-                                            "heading",
-                                            "ingredients",
-                                            "image"
-                                        ],
-                                        "properties": {
-                                            "heading": {
-                                                "$id": "#/properties/task/properties/allRecipes/items/properties/recipe/properties/heading",
-                                                "type": "string",
-                                                "title": "The Heading Schema",
-                                                "default": "",
-                                                "pattern": "^(.*)$"
-                                            },
-                                            "ingredients": {
-                                                "$id": "#/properties/task/properties/allRecipes/items/properties/recipe/properties/ingredients",
-                                                "type": "array",
-                                                "title": "The Ingredients Schema",
-                                                "items": {
-                                                    "$id": "#/properties/task/properties/allRecipes/items/properties/recipe/properties/ingredients/items",
-                                                    "type": "string",
-                                                    "title": "The Items Schema",
-                                                    "default": "",
-                                                    "pattern": "^(.*)$"
-                                                }
-                                            },
-                                            "image": {
-                                                "$id": "#/properties/task/properties/allRecipes/items/properties/recipe/properties/image",
-                                                "type": "object",
-                                                "title": "The Image Schema",
-                                                "required": [
-                                                    "src",
-                                                    "alt"
-                                                ],
-                                                "properties": {
-                                                    "src": {
-                                                        "$id": "#/properties/task/properties/allRecipes/items/properties/recipe/properties/image/properties/src",
-                                                        "type": "string",
-                                                        "title": "The Src Schema",
-                                                        "default": "",
-                                                        "pattern": "^(.*)$"
-                                                    },
-                                                    "alt": {
-                                                        "$id": "#/properties/task/properties/allRecipes/items/properties/recipe/properties/image/properties/alt",
-                                                        "type": "string",
-                                                        "title": "The Alt Schema",
-                                                        "default": "",
-                                                        "pattern": "^(.*)$"
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    },
-                                    "metadata": {
-                                        "$id": "#/properties/task/properties/allRecipes/items/properties/metadata",
-                                        "type": "object",
-                                        "title": "The Metadata Schema",
-                                        "required": [
-                                            "foundAtUrl",
-                                            "dateFound"
-                                        ],
-                                        "properties": {
-                                            "foundAtUrl": {
-                                                "$id": "#/properties/task/properties/allRecipes/items/properties/metadata/properties/foundAtUrl",
-                                                "type": "string",
-                                                "title": "The Foundaturl Schema",
-                                                "default": "",
-                                                "pattern": "^(.*)$"
-                                            },
-                                            "dateFound": {
-                                                "$id": "#/properties/task/properties/allRecipes/items/properties/metadata/properties/dateFound",
-                                                "type": "string",
-                                                "title": "The Datefound Schema",
-                                                "default": "",
-                                                "pattern": "^(.*)$"
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        };
+        const schema = @Html.Raw(Model);
         const container = document.getElementById("jsoneditor");
         const options = {
             schema: schema,

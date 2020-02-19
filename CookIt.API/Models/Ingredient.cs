@@ -10,5 +10,14 @@ namespace CookIt.API.Models
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
+        public Ingredient()
+        {
+
+        }
+        public Ingredient(string name)
+        {
+            this.Id = Guid.NewGuid();
+            this.Name = name;
+        }
     }
 }

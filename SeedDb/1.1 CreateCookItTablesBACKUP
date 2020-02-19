@@ -1,0 +1,78 @@
+CREATE TABLE [Host] (
+	Id UNIQUEIDENTIFIER,
+	Name varchar(MAX) NOT NULL,
+	Url varchar(MAX) NOT NULL,
+	LogoUrl varchar(MAX),
+  CONSTRAINT [PK_HOST] PRIMARY KEY CLUSTERED
+  (
+  [Id] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO
+CREATE TABLE [Ingredient] (
+	Id UNIQUEIDENTIFIER,
+	Name varchar(MAX) NOT NULL,
+  CONSTRAINT [PK_INGREDIENT] PRIMARY KEY CLUSTERED
+  (
+  [Id] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+
+)
+GO
+CREATE TABLE [Recipe] (
+	Id UNIQUEIDENTIFIER,
+	Title varchar(MAX) NOT NULL,
+	HostId UNIQUEIDENTIFIER NOT NULL,
+	Url varchar(MAX) NOT NULL,
+	ImageUrl varchar(MAX),
+  CONSTRAINT [PK_RECIPE] PRIMARY KEY CLUSTERED
+  (
+  [Id] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+)
+GO
+CREATE TABLE [RecipeSentence] (
+	Id UNIQUEIDENTIFIER,
+	RecipeId UNIQUEIDENTIFIER NOT NULL,
+	DerivedFrom varchar(MAX) NOT NULL,
+  CONSTRAINT [PK_RecipeSentence] PRIMARY KEY CLUSTERED
+  (
+  [Id] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+)
+GO
+CREATE TABLE [RecipeSentenceIngredient] (
+  Id UNIQUEIDENTIFIER,
+	RecipeSentenceId UNIQUEIDENTIFIER NOT NULL,
+  IngredientId UNIQUEIDENTIFIER NOT NULL,
+    CONSTRAINT [PK_RecipeSentenceIngredient] PRIMARY KEY CLUSTERED
+  (
+  [Id] ASC
+  ) WITH (IGNORE_DUP_KEY = OFF)
+)
+GO
+
+
+ALTER TABLE [Recipe] WITH CHECK ADD CONSTRAINT [Recipe_fk0] FOREIGN KEY ([HostId]) REFERENCES [Host]([Id])
+ON UPDATE CASCADE
+GO
+ALTER TABLE [Recipe] CHECK CONSTRAINT [Recipe_fk0]
+GO
+
+ALTER TABLE [RecipeSentence] WITH CHECK ADD CONSTRAINT [RecipeSentence_fk0] FOREIGN KEY ([RecipeId]) REFERENCES [Recipe]([Id])
+ON UPDATE CASCADE
+GO
+ALTER TABLE [RecipeSentence] CHECK CONSTRAINT [RecipeSentence_fk0]
+GO
+
+ALTER TABLE [RecipeSentenceIngredient] WITH CHECK ADD CONSTRAINT [RecipeSentenceIngredient_fk1] FOREIGN KEY ([RecipeSentenceId]) REFERENCES [RecipeSentence]([Id])
+ON UPDATE CASCADE
+GO
+ALTER TABLE [RecipeSentenceIngredient] CHECK CONSTRAINT [RecipeSentenceIngredient_fk1]
+GO
+ALTER TABLE [RecipeSentenceIngredient] WITH CHECK ADD CONSTRAINT [RecipeSentenceIngredient_fk2] FOREIGN KEY ([IngredientId]) REFERENCES [Ingredient]([Id])
+ON UPDATE CASCADE
+GO
+ALTER TABLE [RecipeSentenceIngredient] CHECK CONSTRAINT [RecipeSentenceIngredient_fk2]
+GO

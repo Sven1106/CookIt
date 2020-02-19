@@ -4,25 +4,33 @@ using CstLemmaLibrary;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 
 namespace CookIt.API.Core
 {
-
     public static class IngredientErrors
     {
         public static Guid NoIngredientFound = Guid.Parse("00000000-0000-0000-0000-000000000000");
     }
+
     public class UnitOfWorkManager
     {
         private readonly IUnitOfWork _unitOfWork;
+
         public UnitOfWorkManager(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
         }
+
+        public List<Ingredient> GetIngredients()
+        {
+            List<Ingredient> ingredients = _unitOfWork.IngredientRepo.Query
+               .AsNoTracking()
+               .ToList();
+            return ingredients;
+        }
+
         public int CreateRecipes(CreateRecipeDto createRecipeDto)
         {
             List<Ingredient> ingredients = _unitOfWork.IngredientRepo.Query.OrderBy(i => i.Name).ToList();
@@ -42,7 +50,7 @@ namespace CookIt.API.Core
                 _unitOfWork.HostRepo.Insert(host);
             }
 
-            foreach (var item in createRecipeDto.Task.AllRecipes)
+            foreach (var item in createRecipeDto.Tasks.AllRecipes)
             {
                 //create recipe
                 Recipe recipe = _unitOfWork.RecipeRepo.Query.Where(r => r.Host == host && r.Title == item.Recipe.Heading).FirstOrDefault();
@@ -60,14 +68,12 @@ namespace CookIt.API.Core
                     recipe = new Recipe(item.Recipe.Heading, host, item.Metadata.FoundAtUrl, imageUrl);
                     _unitOfWork.RecipeRepo.Insert(recipe);
 
-
                     List<string> decodedRecipeIngredients = item.Recipe.Ingredients.Select(x => WebUtility.HtmlDecode(Helper.RemoveSpecialCharacters(x))).ToList();
                     List<string> destinctRecipeIngredients = decodedRecipeIngredients.Distinct().ToList();
 
                     Dictionary<string, List<string>> lemmasByRecipeIngredient = CstLemmaWrapper.GetLemmasByTextDictionary(destinctRecipeIngredients);
                     foreach (var lemmasByRecipeIngredientPair in lemmasByRecipeIngredient)
                     {
-
                         string recipeIngredientText = lemmasByRecipeIngredientPair.Key;
                         List<string> recipeIngredientDistinctLemmas = lemmasByRecipeIngredientPair.Value.Distinct().ToList();
                         Dictionary<Ingredient, List<string>> matchedLemmasByIngredient = new Dictionary<Ingredient, List<string>>();
@@ -77,16 +83,14 @@ namespace CookIt.API.Core
                             List<string> lemmaMatches = new List<string>();
                             for (int i = 0; i < recipeIngredientDistinctLemmas.Count; i++)
                             {
-                                if (recipeIngredientDistinctLemmas[i] != recipeIngredientDistinctLemmas.Last()) // Handles whitespace by creating a compoundWord of nodes 
+                                if (recipeIngredientDistinctLemmas[i] != recipeIngredientDistinctLemmas.Last()) // Handles whitespace by creating a compoundWord of nodes
                                 {
                                     string nextRecipeIngredientLemma = recipeIngredientDistinctLemmas[i + 1];
-                                    foreach (var words in nextRecipeIngredientLemma.Split("|"))
+                                    foreach (var word in nextRecipeIngredientLemma.Split("|")) // handles lemmas returned with wordform
                                     {
-                                        string compoundOfLemmas = recipeIngredientDistinctLemmas[i].ToLower() + words.ToLower();
+                                        string compoundOfLemmas = recipeIngredientDistinctLemmas[i].ToLower() + word.ToLower();
                                         string ingredientAsLemma = ingredientLemmas.FirstOrDefault().ToLower();
-                                        int shortestEditDistance = Helper.GetShortestEditDistance(ingredientAsLemma, compoundOfLemmas);
-                                        int editThreshold = 0;
-                                        if (shortestEditDistance <= editThreshold)
+                                        if (ingredientAsLemma == compoundOfLemmas)
                                         {
                                             lemmaMatches.Add(ingredientLemmas.FirstOrDefault());
                                             break;
@@ -94,16 +98,17 @@ namespace CookIt.API.Core
                                     }
                                 }
 
-                                foreach (var ingredientNode in ingredientLemmas)
+                                foreach (var ingredientLemma in ingredientLemmas)
                                 {
-                                    bool areLemmaAndLemmaEqual = recipeIngredientDistinctLemmas[i].ToLower() == ingredientNode.ToLower();
-                                    if (areLemmaAndLemmaEqual)
+                                    var ingredientLemmaSplit = ingredientLemma.ToLower().Split("|"); // handles lemmas returned with wordform
+                                    var recipeIngredientDistinctLemmasSplit = recipeIngredientDistinctLemmas[i].ToLower().Split("|"); // handles lemmas returned with wordform
+                                    bool doesLemmasIntersect = recipeIngredientDistinctLemmasSplit.Intersect(ingredientLemmaSplit).Any();
+                                    if (doesLemmasIntersect)
                                     {
                                         lemmaMatches.Add(recipeIngredientDistinctLemmas[i]);
                                     }
                                 }
                             }
-
 
                             if (lemmaMatches.Count > 0)
                             {
@@ -123,7 +128,8 @@ namespace CookIt.API.Core
                                 IngredientLemmas = lemmasByIngredient[x.Key],
                                 MatchedLemmas = x.Value
                             }).OrderBy(x => x.IngredientLemmas.Count - x.MatchedLemmas.Count).ToList();
-                            var likelyIngredients = ingredientsWithLemmaMatches.Where(x => x.IngredientLemmas.Count == x.MatchedLemmas.Count).ToList();
+                            var ingredientsWhereLemmasCountAreEqualOrderedByCountDesc = ingredientsWithLemmaMatches.Where(x => x.IngredientLemmas.Count == x.MatchedLemmas.Count).OrderByDescending(x => x.MatchedLemmas.Count).ToList();
+                            var likelyIngredients = ingredientsWhereLemmasCountAreEqualOrderedByCountDesc.Where(x => x.MatchedLemmas.Count == ingredientsWhereLemmasCountAreEqualOrderedByCountDesc.FirstOrDefault().MatchedLemmas.Count).ToList();
                             if (likelyIngredients.Count == 0)
                             {
                                 mostLikelyIngredients.Add(ingredients.Find(x => x.Id == IngredientErrors.NoIngredientFound));
@@ -149,19 +155,23 @@ namespace CookIt.API.Core
                 }
                 else // UPDATE
                 {
-
                 }
-
             }
 
             return _unitOfWork.Complete();
         }
 
-        public List<Ingredient> GetIngredients()
+        public Recipe GetRecipe(Guid id)
         {
-            List<Ingredient> ingredients = _unitOfWork.IngredientRepo.Query
-               .AsNoTracking().ToList();
-            return ingredients;
+            Recipe recipe = _unitOfWork.RecipeRepo.Query
+                .AsNoTracking()
+                .Include(recipe => recipe.Host)
+                .Include(recipe => recipe.RecipeSentences)
+                    .ThenInclude(recipeSentence => recipeSentence.RecipeSentenceIngredients)
+                        .ThenInclude(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient)
+                .Where(x => x.Id == id)
+                .FirstOrDefault();
+            return recipe;
         }
 
         public List<Recipe> GetRecipes()
@@ -173,7 +183,6 @@ namespace CookIt.API.Core
                     .ThenInclude(recipeSentence => recipeSentence.RecipeSentenceIngredients)
                         .ThenInclude(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient).ToList();
             return recipes;
-
         }
 
         public List<RecipeForListDto> GetFilteredRecipes(RecipeFilter filter)
@@ -188,6 +197,7 @@ namespace CookIt.API.Core
                         .ThenInclude(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient);
 
             #region filtering
+
             if (filter.HostIds != null)
             {
                 query = query.Where(x => filter.HostIds.Contains(x.Host.Id));
@@ -212,9 +222,11 @@ namespace CookIt.API.Core
                             ) == false
                     );
             }
-            #endregion
+
+            #endregion filtering
 
             #region DTOMapping
+
             List<RecipeForListDto> filteredRecipesForList = new List<RecipeForListDto>();
             filteredRecipesForList = query
                 .Select(recipe => new RecipeForListDto
@@ -251,45 +263,96 @@ namespace CookIt.API.Core
                         .Where(x => x != null)
                         .ToList()
                 }).ToList();
-            #endregion
+
+            #endregion DTOMapping
 
             #region sorting
+
             filteredRecipesForList = filteredRecipesForList
                 .OrderBy(x => x.Ingredients.Count - x.MatchedIngredients.Count)
                 .ThenBy(x => x.Title)
                 .ToList();
-            #endregion
+
+            #endregion sorting
+
             return filteredRecipesForList;
         }
-        public Recipe GetRecipe(Guid id)
+
+        public int DeleteRecipe(Guid id)
         {
-            Recipe recipe = _unitOfWork.RecipeRepo.Query
-                .AsNoTracking()
-                .Include(recipe => recipe.Host)
-                .Include(recipe => recipe.RecipeSentences)
-                    .ThenInclude(recipeSentence => recipeSentence.RecipeSentenceIngredients)
-                        .ThenInclude(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient)
-                .Where(x => x.Id == id)
-                .FirstOrDefault();
-            return recipe;
+            Recipe recipe = _unitOfWork.RecipeRepo.Query.Where(x => x.Id == id).FirstOrDefault();
+            if (recipe == null)
+            {
+                return 0;
+            }
+            List<RecipeSentence> recipeSentences = _unitOfWork.RecipeSentenceRepo.Query
+                .Where(x => x.Recipe == recipe)
+                .ToList();
+            foreach (var recipeSentence in recipeSentences)
+            {
+                List<RecipeSentenceIngredient> recipeSentenceIngredients = _unitOfWork.RecipeSentenceIngredientRepo.Query
+                    .Where(x => x.RecipeSentence == recipeSentence)
+                    .ToList();
+                foreach (var recipeSentenceIngredient in recipeSentenceIngredients)
+                {
+                    _unitOfWork.RecipeSentenceIngredientRepo.Delete(recipeSentenceIngredient);
+                }
+                _unitOfWork.RecipeSentenceRepo.Delete(recipeSentence);
+            }
+            _unitOfWork.RecipeRepo.Delete(recipe);
+            return _unitOfWork.Complete();
         }
 
-        public bool DeleteRecipeSentenceIngredient(Guid id)
+        public RecipeSentenceIngredient GetRecipeSentenceIngredient(Guid id)
+        {
+            RecipeSentenceIngredient recipeSentenceIngredient = _unitOfWork.RecipeSentenceIngredientRepo.Query
+                .AsNoTracking()
+                .Include(recipeSentenceIngredient => recipeSentenceIngredient.RecipeSentence) //TODO WHY IS THIS NOT INCLUDED??!
+                .Include(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient)
+                .Where(x => x.Id == id)
+                .FirstOrDefault();
+            return recipeSentenceIngredient;
+        }
+
+        public int UpdateRecipeSentenceIngredient(Guid id, string ingredientValue)
+        {
+            if (ingredientValue == "")
+            {
+                return 0;
+            }
+
+            RecipeSentenceIngredient recipeSentenceIngredient = _unitOfWork.RecipeSentenceIngredientRepo.Query.Where(x => x.Id == id).FirstOrDefault();
+            if (recipeSentenceIngredient == null)
+            {
+                return 0;
+            }
+            Ingredient ingredient;
+            if (Guid.TryParse(ingredientValue, out Guid ingredientId))
+            {
+                ingredient = _unitOfWork.IngredientRepo.Query.Where(x => x.Id == ingredientId).FirstOrDefault();
+            }
+            else
+            {
+                ingredient = _unitOfWork.IngredientRepo.Query.Where(x => x.Name == ingredientValue).FirstOrDefault();
+            }
+            if (ingredient == null)
+            {
+                ingredient = new Ingredient(ingredientValue);
+                _unitOfWork.IngredientRepo.Insert(ingredient);
+            }
+            recipeSentenceIngredient.Ingredient = ingredient;
+            return _unitOfWork.Complete();
+        }
+
+        public int DeleteRecipeSentenceIngredient(Guid id)
         {
             RecipeSentenceIngredient recipeSentenceIngredient = _unitOfWork.RecipeSentenceIngredientRepo.Query.Where(x => x.Id == id).FirstOrDefault();
             if (recipeSentenceIngredient == null)
             {
-                return false;
+                return 0;
             }
             _unitOfWork.RecipeSentenceIngredientRepo.Delete(recipeSentenceIngredient);
-            return _unitOfWork.Complete() > 0;
-        }
-        public bool UpdateRecipeSentenceIngredient(Guid id, Guid IngredientId)
-        {
-            RecipeSentenceIngredient recipeSentenceIngredient = _unitOfWork.RecipeSentenceIngredientRepo.Query.Where(x => x.Id == id).FirstOrDefault();
-            Ingredient ingredient = _unitOfWork.IngredientRepo.Query.Where(x => x.Id == IngredientId).FirstOrDefault();
-            recipeSentenceIngredient.Ingredient = ingredient;
-            return _unitOfWork.Complete() > 0;
+            return _unitOfWork.Complete();
         }
     }
 }

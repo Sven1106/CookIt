@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CookIt.API.Core;
+﻿using CookIt.API.Core;
 using CookIt.API.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
+using System;
 
 namespace CookIt.API.Areas.Admin.Controllers
 {
@@ -15,42 +11,38 @@ namespace CookIt.API.Areas.Admin.Controllers
     public class CMSAPIController : ControllerBase
     {
         private readonly UnitOfWorkManager _unitOfWorkManager;
+
         public CMSAPIController(IUnitOfWork unitOfWork)
         {
             _unitOfWorkManager = new UnitOfWorkManager(unitOfWork);
         }
 
+        [Route("UpdateRecipeSentenceIngredient")]
         [HttpPost]
         public IActionResult UpdateRecipeSentenceIngredient([FromBody] JObject json)
         {
-            try
-            {
-                Guid id = json["id"].ToObject<Guid>();
-                Guid ingredientId = json["ingredientId"].ToObject<Guid>();
+            Guid id = json["recipeSentenceIngredientId"].ToObject<Guid>();
+            string ingredientValue = json["ingredientValue"].ToString();
 
-                bool wasUpdated = _unitOfWorkManager.UpdateRecipeSentenceIngredient(id, ingredientId);
-                if(wasUpdated == false)
-                {
-                    return NoContent();
-                }
-            }
-            catch (Exception)
+            int changesMade = _unitOfWorkManager.UpdateRecipeSentenceIngredient(id, ingredientValue);
+            if (changesMade == 0)
             {
-                return StatusCode(500);
+                return NoContent();
             }
-            return Ok();
+            RecipeSentenceIngredient recipeSentenceIngredient = _unitOfWorkManager.GetRecipeSentenceIngredient(id);
+            return Ok(new { id = recipeSentenceIngredient.Id, ingredientId = recipeSentenceIngredient.Ingredient.Id, ingredientName = recipeSentenceIngredient.Ingredient.Name });
         }
+
         [HttpPost("{id}")]
+        [Route("DeleteRecipeSentenceIngredient")]
         public IActionResult DeleteRecipeSentenceIngredient(Guid id)
         {
-            bool wasDeleted = _unitOfWorkManager.DeleteRecipeSentenceIngredient(id);
-            if (wasDeleted == false)
+            int changesMade = _unitOfWorkManager.DeleteRecipeSentenceIngredient(id);
+            if (changesMade == 0)
             {
                 return NoContent();
             }
             return Ok();
         }
-
-
     }
 }

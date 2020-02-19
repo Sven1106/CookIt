@@ -1,7 +1,7 @@
 {
   "projectName": "Valdemarsro",
   "startUrl": "https://www.valdemarsro.dk/",
-  "task": {
+  "tasks": {
     "allRecipes": [
       {
         "recipe": {
@@ -17,7 +17,10 @@
             "isterninger",
             "6 skiver agurker, til pynt"
           ],
-          "image": null
+          "image": {
+            "src": "",
+            "alt": ""
+          }
         },
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/agurk-ingefaer-cocktail-gin/",
@@ -589,7 +592,10 @@
             "1 tsk olivenolie, eller kokosolie",
             "1 håndfuld krydderurter, Finthakkede friske krydderurter, fx purløg, timian, kørvel eller brøndkarse"
           ],
-          "image": null
+          "image": {
+            "src": "",
+            "alt": ""
+          }
         },
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/frittata/",
@@ -703,7 +709,10 @@
             "3 spsk pinjekerner, ristede",
             "30 g feta"
           ],
-          "image": null
+          "image": {
+            "src": "",
+            "alt": ""
+          }
         },
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/graesk-omelet/",
@@ -1244,7 +1253,10 @@
             "3 dl basmati ris, kog efter anvisning på emballage",
             "1 håndfuld bredbladet persille, grofthakket"
           ],
-          "image": null
+          "image": {
+            "src": "",
+            "alt": ""
+          }
         },
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/kikaertegryde/",
@@ -1909,7 +1921,10 @@
             "1 spsk perlesukker, til at drysse med",
             "1 æg, til pensling"
           ],
-          "image": null
+          "image": {
+            "src": "",
+            "alt": ""
+          }
         },
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/rabarbertaerte/",

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using CookIt.API.Areas.Admin.Models;
 using CookIt.API.Core;
@@ -8,6 +10,7 @@ using CookIt.API.Dtos;
 using CookIt.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Schema;
 
 namespace CookIt.API.Areas.Admin.Controllers
 {
@@ -15,9 +18,13 @@ namespace CookIt.API.Areas.Admin.Controllers
     public class CMSController : Controller
     {
         private readonly UnitOfWorkManager _unitOfWorkManager;
+        private string _currentDirectory;
+        private JSchema _createRecipeSchema;
         public CMSController(IUnitOfWork unitOfWork)
         {
             _unitOfWorkManager = new UnitOfWorkManager(unitOfWork);
+            _currentDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            _createRecipeSchema = JSchema.Parse(System.IO.File.ReadAllText(Path.Combine(_currentDirectory, "createRecipeSchema.json")));
         }
         public IActionResult Index()
         {
@@ -26,12 +33,28 @@ namespace CookIt.API.Areas.Admin.Controllers
 
         public IActionResult CreateRecipes()
         {
-            return View();
+            return View(_createRecipeSchema);
         }
         [HttpPost]
         public IActionResult CreateRecipesAsync(string json)
         {
-            CreateRecipeDto createRecipeDto = JsonConvert.DeserializeObject<CreateRecipeDto>(json);
+            JSchemaValidatingReader jSchemaReader = new JSchemaValidatingReader(new JsonTextReader(new StringReader(json)));
+            jSchemaReader.Schema = _createRecipeSchema;
+
+            IList<string> errorMessages = new List<string>();
+            jSchemaReader.ValidationEventHandler += (o, a) => errorMessages.Add(a.Message);
+            JsonSerializer serializer = new JsonSerializer();
+            CreateRecipeDto createRecipeDto = serializer.Deserialize<CreateRecipeDto>(jSchemaReader);
+            if (errorMessages.Count > 0)
+            {
+                foreach (var eventMessage in errorMessages)
+                {
+                }
+            }
+
+
+
+
             int rowsAdded = _unitOfWorkManager.CreateRecipes(createRecipeDto);
             return RedirectToAction("Recipes");
         }
@@ -41,10 +64,11 @@ namespace CookIt.API.Areas.Admin.Controllers
             RecipesVm recipesVm = new RecipesVm(_unitOfWorkManager.GetRecipes(), _unitOfWorkManager.GetIngredients());
             return View(recipesVm);
         }
-        public IActionResult EditRecipe(Guid id)
+        public IActionResult DeleteRecipe(Guid id)
         {
-            Recipe recipe = _unitOfWorkManager.GetRecipe(id);
-            return View(recipe);
+           _unitOfWorkManager.DeleteRecipe(id);
+
+            return RedirectToAction("Recipes");
         }
 
 
