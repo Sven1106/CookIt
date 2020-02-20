@@ -46,7 +46,7 @@ namespace CookIt.API.Core
             Host host = _unitOfWork.HostRepo.Query.Where(h => h.Name == createRecipeDto.ProjectName).FirstOrDefault();
             if (host == null)
             {
-                host = new Host(createRecipeDto.ProjectName, createRecipeDto.StartUrl, "https://via.placeholder.com/50");
+                host = new Host(createRecipeDto.ProjectName, createRecipeDto.Domain, "https://via.placeholder.com/50");
                 _unitOfWork.HostRepo.Insert(host);
             }
 

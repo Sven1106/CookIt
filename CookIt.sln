@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpipeLibrary", "UdpipeCSha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CstLemmaLibrary", "CstLemmaLibrary\CstLemmaLibrary.csproj", "{28925CCA-1B4A-4527-ACE9-9B24FD82FECA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomObjects", "RandomObjects\RandomObjects.csproj", "{414AFFAD-D89B-438D-96CB-FD1E92AA90BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomObjects", "RandomObjects\RandomObjects.csproj", "{414AFFAD-D89B-438D-96CB-FD1E92AA90BB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

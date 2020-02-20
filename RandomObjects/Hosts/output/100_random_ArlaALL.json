@@ -1,0 +1,2696 @@
+{
+  "projectName": "Arla",
+  "domain": null,
+  "tasks": {
+    "allRecipes": [
+      {
+        "recipe": {
+          "heading": "Æbleboller",
+          "ingredients": [
+            "Mælk",
+            "Gær",
+            "Æg",
+            "Sukker",
+            "Groft salt",
+            "Hvedemel",
+            "Madæbler",
+            "Stødt kardemomme"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3582899853/35d96887-a09a-4823-8a55-49be88146b79.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Æbleboller"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/ableboller/",
+          "dateFound": "2020-01-21T18:31:19.8391107+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Æblechips",
+          "ingredients": [
+            "Æbler, fx granny smith",
+            "Æblecidereddike",
+            "Smør - smeltet",
+            "Fint salt"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2530286159/b200f9ff-f0b2-44b2-840d-34c67f32f11a.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Æblechips"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/ablechips/",
+          "dateFound": "2020-01-21T18:31:22.429158+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Æbletærte med ingefærsukker og vaniljesauce",
+          "ingredients": [
+            "Koldt vand",
+            "Friskpresset citronsaft",
+            "Store, skyllede røde æbler, fx pink lady (ca. 500 g)",
+            "Frossen, optøet butterdej",
+            "Sukker",
+            "Stødt ingefær",
+            "Smør - smeltet",
+            "Kold Karolines Køkken® Vaniljesauce med bourbon vanilje",
+            "Friske citronmelisseblade",
+            "Flormelis"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/4115862585/e5da8ca7-9618-4277-bf11-83671f9ae87b.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Æbletærte med ingefærsukker og vaniljesauce"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/abletarte-med-ingefarsukker-og-vaniljesauce/",
+          "dateFound": "2020-01-21T18:32:10.8962844+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Aioli",
+          "ingredients": [
+            "Æggeblomme (stuetemperatur)",
+            "Friskpresset citronsaft",
+            "Lille knust fed hvidløg",
+            "Fint salt",
+            "Friskkværnet peber",
+            "Smagsneutral olie, fx rapsolie (stuetemperatur)"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/471906521/96891fd9-2aeb-4cc0-a8ff-0d9d53b75c01.jpg?crop=(0,0,-315,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=f1aaa9bf",
+            "alt": "Aioli"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/aioli/",
+          "dateFound": "2020-01-21T18:32:52.2469352+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Aspargessuppe med muslinger og noilly prat",
+          "ingredients": [
+            "Friske blåmuslinger i skal",
+            "Tør vermouth, fx noilly prat",
+            "Dild",
+            "Hvide aspargessnitter (ca. 660 g)",
+            "Aspargesvand",
+            "Karolines Køkken® mælkesauce",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Tør vermouth, fx noilly prat",
+            "Lyst brød, fx flutes"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/569726734/866216a1-920e-41b1-b311-c8e9427bf892.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Aspargessuppe med muslinger og noilly prat"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/aspargessuppe-med-muslinger-og-noilly-prat/",
+          "dateFound": "2020-01-21T18:34:30.7897315+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Auberginegratin",
+          "ingredients": [
+            "Auberginer (ca. 400 g)",
+            "Groft salt",
+            "Smør",
+            "Zittauerløg (ca. 75 g)",
+            "Lille fed hvidløg",
+            "Flåede tomater (ca. 400 g)",
+            "Koncentreret tomatpuré",
+            "Koncentreret grøntsagsfond",
+            "Smør",
+            "Karolines Køkken® Mild ost Pastasauce",
+            "Karolines Køkken® Pasta- &amp; gratineringsost 30%"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3257961251/0da628a2-2c71-4268-968d-a899514cdb7c.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Auberginegratin"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/auberginegratin/",
+          "dateFound": "2020-01-21T18:34:43.7060758+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Bagte æbler med sprødt snask",
+          "ingredients": [
+            "Blødt smør",
+            "Brun farin",
+            "Knuste makroner",
+            "Stødt kanel",
+            "Uskrællede æbler, fx elstar",
+            "Karolines Køkken® Cremefraiche 18% eller vaniljeflødeis"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3144934621/7b75c3b5-b9e0-44e3-90fe-cf0232351128.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Bagte æbler med sprødt snask"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/bagte-abler/",
+          "dateFound": "2020-01-21T18:36:01.7954389+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Brændende kærlighed med sweet potatoes",
+          "ingredients": [
+            "Skrællede søde kartofler, fx batat (ca. 1 kg)",
+            "Skrællet knoldselleri (ca. 400 g)",
+            "Karolines Køkken® Madlavningsfløde 8%",
+            "Groft salt",
+            "Smør",
+            "Kalkunbacon",
+            "Zittauerløg i skiver (ca. 200 g)",
+            "Porrer i tynde ringe (ca. 375 g)",
+            "Vand",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Rugbrød",
+            "Syltede rødbeder i tern"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1066296835/d48c772f-1016-4162-a5ef-b643fd2047b6.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Brændende kærlighed med sweet potatoes"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/brandende-karlighed-med-sweet-potatoes/",
+          "dateFound": "2020-01-21T18:40:27.4148792+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Brunch-tortilla",
+          "ingredients": [
+            "Kogte kartofler i små tern",
+            "Hakkede zittauerløg",
+            "Smeltet smør",
+            "Sammenpiskede æg (ca. 1 liter)",
+            "Karolines Køkken® Piskefløde 38%",
+            "Vand",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Karolines Køkken® revet Mozzarella 15%",
+            "Rensede blandede babysalatblade",
+            "Dampede grønne asparges",
+            "Stegt bacon"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/51778576/3b89b233-0f9d-4240-aa6e-189f7cb3f373.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Brunch-tortilla"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/brunch-tortilla/",
+          "dateFound": "2020-01-21T18:41:25.8398152+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Cheeseburger med stegte løg",
+          "ingredients": [
+            "Hakket oksekød (ca. 6% fedt)",
+            "Karolines Køkken® Pasta- &amp; gratineringsost 30%",
+            "Smør",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Zittauerløg i ringe (ca. 300 g)",
+            "Vand",
+            "Fintsnittet spidskål",
+            "Groft salt",
+            "Store sandwichboller, fx fuldkorn (ca. 360 g)",
+            "Krydret mayonnaise, fx miracle whip balance",
+            "Tomatketchup"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1853924252/ea5e5363-c881-419d-9512-7ad2343dc454.jpg?crop=(141,0,0,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=f73aad3b",
+            "alt": "Cheeseburger med stegte løg"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/cheeseburger-med-stegte-log/",
+          "dateFound": "2020-01-21T18:43:57.7551764+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Chokoladeis med mokkakiks, appelsinlikør og flødeskum",
+          "ingredients": [
+            "Hvedemel (ca. 1¾ dl)",
+            "Brun farin (ca. ¾ dl)",
+            "Rørsukker",
+            "Hele kaffebønner - knuste",
+            "Et nip flagesalt",
+            "Smør",
+            "Stærk kaffe eller vand",
+            "Vand",
+            "Sukker (ca. 1 dl)",
+            "Strimlet appelsinskal (usprøjtet)",
+            "Karolines Køkken® Piskefløde 38%",
+            "Chokoladeis",
+            "Stærk kaffe",
+            "Appelsinlikør, fx grand marnier",
+            "Knuste kaffebønner og knuste mokkakiks"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/705068226/8a53fb6d-b106-4773-ae5b-21a2692e5e5d.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Chokoladeis med mokkakiks, appelsinlikør og flødeskum"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/chokoladeis-med-mokkakiks-appelsinlikor-og-flodeskum/",
+          "dateFound": "2020-01-21T18:45:28.7132904+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Chokoladenøddekompot  til ost",
+          "ingredients": [
+            "Castello® Marquis",
+            "Mørk chokolade (ca. 55% kakao) - med orange",
+            "Ristede, saltede cashewnødder",
+            "Grofthakkede tørrede abrikoser",
+            "Flydende honning",
+            "Friskpresset limesaft",
+            "Frisk kørvel",
+            "Ristet flutes"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2186798198/2d25286e-b678-4f76-8537-6168f4b76e9b.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Chokoladenøddekompot  til ost"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/chokoladenoddekompot--til-ost/",
+          "dateFound": "2020-01-21T18:46:30.8403857+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Chokoladesauce med havsalt",
+          "ingredients": [
+            "Mørk chokolade (ca. 55% kakao)",
+            "Mælkechokolade (ca. 30% kakao)",
+            "Karolines Køkken® Piskefløde 38%",
+            "Smør",
+            "Havsalt",
+            "Friske frugter, fx jordbær, kiwi og ananaskirsebær"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/4012588338/afb14d79-7575-4d3f-a5a8-6c9542d02e92.jpg?crop=(0,0,0,-279)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=e6cb523c",
+            "alt": "Chokoladesauce med havsalt"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/chokoladesauce-med-havsalt/",
+          "dateFound": "2020-01-21T18:46:46.1886353+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Citronmåne",
+          "ingredients": [
+            "Blødt smør",
+            "Sukker (ca. 2¼ dl)",
+            "Groftrevet ren, rå marcipan",
+            "Fintrevet citronskal (usprøjtet)",
+            "Vaniljepulver",
+            "Æg",
+            "Hvedemel (ca. 2¼ dl)",
+            "Kartoffelmel (ca. ¾ dl)",
+            "Bagepulver",
+            "Friskpresset citronsaft",
+            "Blødt smør til formen",
+            "Citroner (usprøjtede)",
+            "Vand",
+            "Sukker (ca. 1 dl)",
+            "Flormelis (ca. 4 dl)",
+            "Friskpresset citronsaft"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/19153374/0f8aa89b-d777-41ca-8f65-cdbcf78ef299.jpg?crop=(0,0,-141,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=baa48854",
+            "alt": "Citronmåne"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/citronmane/",
+          "dateFound": "2020-01-21T18:47:32.9656165+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Coq au vin blanc",
+          "ingredients": [
+            "Små kartofler - fx nix-pille",
+            "Lurpak® cooks range spray",
+            "Groft salt",
+            "Smør",
+            "Kyllingelårfileter (ca. 600 g)",
+            "Skalotteløg i halve (ca. 225 g)",
+            "Gulerødder i grove stykker (ca. 250 g)",
+            "Vand",
+            "Tør hvidvin",
+            "Groft salt",
+            "Karolines Køkken® Piskefløde 38%",
+            "Lys saucejævner",
+            "Frisk timian",
+            "Friskkværnet peber"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1893679178/58228daa-ffca-4686-9c10-4401b3f85e84.jpg?crop=(0,0,-256,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=89d8c940",
+            "alt": "Coq au vin blanc"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/coq-au-vin-blanc/",
+          "dateFound": "2020-01-21T18:48:41.6964325+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Couscoussalat med ost og appelsin",
+          "ingredients": [
+            "Kyllingeunderlår (ca. 1 kg)",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Appelsiner",
+            "Couscousgryn (ca. 1¼ dl)",
+            "Fintsnittet hvidkål",
+            "Optøede, frosne ekstrafine ærter",
+            "Groft salt",
+            "Kogende vand",
+            "Cheasy® Salatost i tern 3% - afdryppet",
+            "Friskkværnet peber",
+            "Groft brød"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3442393095/0b6a8c52-9bed-4a3b-a5d8-5af983ae4656.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Couscoussalat med ost og appelsin"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/couscoussalat-med-ost-og-appelsin/",
+          "dateFound": "2020-01-21T18:49:07.7777703+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Daimtrøffel",
+          "ingredients": [
+            "Karolines Køkken® Piskefløde 38%",
+            "Smør",
+            "Mørk chokolade (ca. 55% kakao)",
+            "Karolines Køkken® Kvark 0,3%",
+            "Cognac eller likør",
+            "Daim",
+            "Kakaopulver"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2107927938/fba8a990-95b6-4b8a-8437-e918356c9019.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Daimtrøffel"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/daimtroffel/",
+          "dateFound": "2020-01-21T18:50:39.5140006+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Dessertpizza med friske figner og rosmarin",
+          "ingredients": [
+            "Pizzadej - færdig, fuldkorn (ca. 26 cm i diameter)",
+            "Karolines Køkken® Kvark 0,3%",
+            "Karolines Køkken® revet Mozzarella 15%",
+            "Grofthakkede valnøddekerner (ca. 1 dl)",
+            "Friske rosmarinblade",
+            "Flagesalt",
+            "Friske figner (ca. 100 g)",
+            "Flydende honning"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2631016987/b61e1c96-3191-4b4b-a485-1c0b1735a4f7.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Dessertpizza med friske figner og rosmarin"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/dessertpizza-med-friske-figner-og-rosmarin/",
+          "dateFound": "2020-01-21T18:51:04.9915213+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Farsret med kartofler",
+          "ingredients": [
+            "Hakket svinekød (ca. 6% fedt), fx skinkekød",
+            "Hvedemel",
+            "Æg",
+            "Hakket zittauerløg (ca. 50 g)",
+            "Knuste fed hvidløg",
+            "Ostindisk karry",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Mælk",
+            "Ærter",
+            "Store kartofler i tern",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Tomater i skiver (ca. 200 g)",
+            "Tørret basilikum",
+            "Æg",
+            "Mælk",
+            "Kviste af kruspersille"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/129187480/dbb7544e-e5b9-458d-9d6d-031da54548d5.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Farsret med kartofler"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/farsret-med-kartofler/",
+          "dateFound": "2020-01-21T18:52:41.1898194+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Fastelavnsboller med flødeskum",
+          "ingredients": [
+            "Husblas",
+            "Frosne hindbær",
+            "Rørsukker",
+            "Vand",
+            "Smør",
+            "Sukker",
+            "Hvedemel",
+            "Sammenpiskede æg",
+            "Karolines Køkken® Piskefløde 38%",
+            "Sigtet flormelis"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1279183021/32390054-ca51-4ee0-8511-328e686a229d.jpg?crop=(130,0,-11,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=3ea549e8",
+            "alt": "Fastelavnsboller med flødeskum"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/fastelavnsboller-med-flode-og-marcipan/",
+          "dateFound": "2020-01-21T18:52:55.4673727+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Fiskelasagne med porrer",
+          "ingredients": [
+            "Rapsolie",
+            "Frossen helbladet spinat",
+            "Porrer i tynde ringe",
+            "Bladselleri i tynde skiver",
+            "Citronpeber",
+            "Groft salt",
+            "Fiskefileter, fx skrubbe eller ising",
+            "Karolines Køkken® Let Mornaysauce",
+            "Mælk",
+            "Forkogte tørrede lasagneplader",
+            "Landbrød"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/313847401/dc05bc0d-3276-490a-a4b2-5047d9859b1e.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Fiskelasagne med porrer"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/fiskelasagne-med-porrer/",
+          "dateFound": "2020-01-21T18:54:49.8380629+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Flækkert'er",
+          "ingredients": [
+            "Smør",
+            "Mælk",
+            "Kløver® tykmælk",
+            "Gær",
+            "Æg",
+            "Sukker",
+            "Groft salt",
+            "Sigtemel (ca. 4 dl)",
+            "Hvedemel",
+            "Sammenpisket æg"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/709587713/3e93997d-0f6c-4126-9c4f-af2bb75ed2d3.jpg?crop=(0,0,0,-2998)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=0b6a6f7b",
+            "alt": "Flækkert'er"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/flakkerter/",
+          "dateFound": "2020-01-21T18:55:24.1404824+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Frikadeller med sauce og kartofler",
+          "ingredients": [
+            "Hakket svinekød (ca. 12% fedt)",
+            "Groft salt",
+            "Fintrevet zittauerløg",
+            "Æg",
+            "Mælk",
+            "Hvedemel",
+            "Friskkværnet peber",
+            "Smør",
+            "Hvedemel",
+            "Mælk eller bouillon",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Kulør",
+            "Kogte kartofler",
+            "Letkogte grøntsager, fx grønne bønner eller gulerødder"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3194586306/250c5228-ec08-49f0-8d27-25237ab54882.jpg?crop=(0,0,-315,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=f1aaa9bf",
+            "alt": "Frikadeller med sauce og kartofler"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/frikadeller-med-sauce-og-kartofler/",
+          "dateFound": "2020-01-21T18:57:14.9007314+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Friske bær med vaniljesauce",
+          "ingredients": [
+            "Friske bær, fx brombær, blåbær, jordbær og/eller hindbær",
+            "Små klaser ribs",
+            "Sukker",
+            "Kold Karolines Køkken® Vaniljesauce med bourbon vanilje",
+            "Friske citronmelisseblade"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/667944228/f78f0a3b-c9c7-4d13-880a-73e417f0c13a.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Friske bær med vaniljesauce"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/friske-bar-med-vaniljesauce/",
+          "dateFound": "2020-01-21T18:57:36.9940165+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Frugtsalat med papaja",
+          "ingredients": [
+            "Faste pærer",
+            "Vand",
+            "Sukker",
+            "Friskpresset citronsaft",
+            "Netmelon i tynde skiver",
+            "Papaja i tynde både",
+            "Castello® Danablu Extra Creamy 60+ skiveost",
+            "Arla® Emmentaler"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1996242574/2e9d1971-a251-4e0f-8f14-6d6fcb25c0a7.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Frugtsalat med papaja"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/frugtsalat-med-papaja/",
+          "dateFound": "2020-01-21T18:58:46.5947948+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Frugttærte - uden ovn",
+          "ingredients": [
+            "Mandler",
+            "Ristede, salte solsikkekerner",
+            "Rosiner",
+            "Tørrede abrikoser",
+            "Stødt kanel",
+            "Friskpresset appelsinsaft eller appelsinjuice",
+            "Karolines Køkken® Piskefløde 38%",
+            "Karolines Køkken® Kvark 0,3%",
+            "Sukker",
+            "Vaniljesukker",
+            "Appelsiner",
+            "Groft skåret mørk chokolade (ca. 55% kakao)"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1539651809/eb4b5d26-ad09-4c03-9c8c-6888169b9328.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Frugttærte - uden ovn"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/frugttarte---uden-ovn-/",
+          "dateFound": "2020-01-21T18:59:03.1064803+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Gnocchi",
+          "ingredients": [
+            "Karolines Køkken® Kvark 0,3%",
+            "Italiensk hvedemel, fx Tipo 00",
+            "Æggeblommer",
+            "Karolines Køkken® Pasta- &amp; gratineringsost 30%",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Fintrevet muskatnød",
+            "Vand",
+            "Groft salt",
+            "Skrællet butternut squash i små tern",
+            "Finthakket zittauerløg (ca. 75 g)",
+            "Grofthakket bacon",
+            "Finthakket rød chilipeber",
+            "Finthakkede friske rosmarinblade",
+            "Stort finthakket fed hvidløg",
+            "Hvidvin",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Karolines Køkken® Pasta- &amp; gratineringsost 30%",
+            "Grofthakket bredbladet persille"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2310915638/d03c8261-17c2-4ac6-8374-3284136f304c.jpg?crop=(0,1246,0,-1156)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=93b53821",
+            "alt": "Gnocchi"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/gnocchi/",
+          "dateFound": "2020-01-21T19:00:43.2603174+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Græskarboller",
+          "ingredients": [
+            "Skrællet hokkaido græskar i tern",
+            "Smør",
+            "Mælk",
+            "Gær",
+            "Karolines Køkken® Kvark 0,3%",
+            "Sukker",
+            "Fint salt",
+            "Hvedemel",
+            "Sammenpisket æg",
+            "Pekannøddekerner"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2870917444/e2204896-9dd0-4574-bbdf-7fdd33d32b46.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Græskarboller"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/graskarboller/",
+          "dateFound": "2020-01-21T19:00:57.8403244+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Grillede kyllingespyd og spicy salsa",
+          "ingredients": [
+            "Karolines Køkken® Cremefraiche 18%",
+            "Finthakket rød peberfrugt",
+            "Koncentreret tomatpuré",
+            "Groft salt",
+            "Paprika",
+            "Stødt chili",
+            "Cayennepeber",
+            "Sukker",
+            "Grønne peberfrugter i små tern (ca. 250 g)",
+            "Nektariner, ferskener, æbler eller blommer i små tern (ca. 200 g)",
+            "Finthakket rødløg (ca. 100 g)",
+            "Grofthakkede sorte oliven",
+            "Finthakket rød chilipeber",
+            "Friskpresset limesaft",
+            "Honning",
+            "Grofthakkede friske oreganoblade",
+            "Stødt spidskommen",
+            "Groft salt",
+            "Rensede kyllingeinderfileter (ca. 500 g)",
+            "Grillspyd",
+            "Limefrugt i 16 små bidder",
+            "Rapsolie",
+            "Groft salt",
+            "Tortillachips med salt"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2451606184/7c25e2fd-f1b0-4ff1-902c-bba8d1019a4a.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Grillede kyllingespyd og spicy salsa"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/grillede-kyllingespyd-og-spicy-salsa/",
+          "dateFound": "2020-01-21T19:02:17.5419246+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Grillet laks med sprød salat",
+          "ingredients": [
+            "Friskpresset citronsaft",
+            "Jomfruolivenolie",
+            "Vand",
+            "Flydende honning",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Skrællet glaskål eller kinaradise",
+            "Blomkål",
+            "Radiser",
+            "Karolines Køkken® Klassisk Salatost i tern",
+            "Cheasy® skyr naturel",
+            "Citronskal (usprøjtet)",
+            "Friskkværnet peber",
+            "Laksefilet med skind -  i 4 stykker",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Små nye kartofler",
+            "Purløg"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/68326977/22dcb5c3-7a43-45ac-9a54-9aaf16384c21.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Grillet laks med sprød salat"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/grillet-laks-med-sprod-salat/",
+          "dateFound": "2020-01-21T19:02:52.9153638+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Grøn ærte- og aspargessuppe",
+          "ingredients": [
+            "Grønne asparges",
+            "Grøntsagsbouillon",
+            "Frosne fine ærter",
+            "Letmælk",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Hakket kyllingekød (ca. 5% fedt)",
+            "Groft salt",
+            "Fintrevet citronskal (usprøjtet)",
+            "Smør",
+            "Smør",
+            "Groft toastbrød i små tern",
+            "Groft salt",
+            "Strimlede blandede babysalatblade",
+            "Friskpresset citronsaft"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1240139993/b04ad547-74c7-4530-bca9-442559b28030.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Grøn ærte- og aspargessuppe"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/gron-arte--og-aspargessuppe/",
+          "dateFound": "2020-01-21T19:03:25.1851172+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Grønkålssalat med pasta og ostechips",
+          "ingredients": [
+            "Karolines Køkken® Pasta- &amp; gratineringsost 30%",
+            "Friske grønkålsblade",
+            "Ananas",
+            "Sød chilisauce",
+            "Vand",
+            "Groft salt",
+            "Kogt tørret fuldkornspasta (450 g kogt vægt)",
+            "Rød peberfrugt i meget tynde strimler",
+            "Grovbrød"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3938803167/2cefc97f-354e-4f1c-9864-b55d3a5a9692.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Grønkålssalat med pasta og ostechips"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/gronkalssalat-med-pasta-og-ostechips/",
+          "dateFound": "2020-01-21T19:04:10.5991068+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Gylden suppe - af en rest boller i karry",
+          "ingredients": [
+            "Klar hønsekødssuppe, evt. frossen",
+            "En rest karrysauce (ca. 1 dl)",
+            "Porrer i ringe",
+            "Broccoli i små buketter",
+            "En rest kogte ris",
+            "En rest kødboller skåret i små bidder",
+            "Tørrede abrikoser i tynde strimler",
+            "Ristet grovbrød"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1433280868/bbe301cc-1e0f-47e2-bc4f-21bd66ec8ea9.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Gylden suppe - af en rest boller i karry"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/gylden-suppe---af-en-rest-boller-i-karry/",
+          "dateFound": "2020-01-21T19:08:13.0354205+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Havrebrød",
+          "ingredients": [
+            "Smør",
+            "Vand",
+            "Karolines Køkken® Kvark 0,3%",
+            "Gær",
+            "Sukker",
+            "Groft salt",
+            "Havreklid (ca. 4 dl)",
+            "Hvedemel",
+            "Sammenpisket æg",
+            "Havreklid"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/448586904/9bc1c6f4-c0d6-4196-8abe-bdd65d4df845.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Havrebrød"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/havrebrod/",
+          "dateFound": "2020-01-21T19:09:25.3416269+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Havregrød med æble og kanel",
+          "ingredients": [
+            "Havregryn (ca. 3 dl)",
+            "Minimælk",
+            "Vand",
+            "Groft salt",
+            "Æggehvider",
+            "Cheasy® fraiche 5%",
+            "Rødt æble i små tern (ca. 125 g)",
+            "Stødt kanel"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2435154136/c8c93068-da29-418f-8f81-35f1dec6b6a7.jpg?crop=(0,191,0,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=044e792a",
+            "alt": "Havregrød med æble og kanel"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/havregrod-med-able-og-kanel/",
+          "dateFound": "2020-01-21T19:09:31.7710827+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hokkaidomos med syltede peberfrugter",
+          "ingredients": [
+            "Skyllet, uskrællet hokkaido græskar i tern",
+            "Kartofler i tern",
+            "Karolines Køkken® Madlavningsfløde 8%",
+            "Groft salt",
+            "Cayennepeber",
+            "Smør",
+            "Zittauerløg i tynde halve ringe",
+            "Store finthakkede fed hvidløg",
+            "Røde peberfrugter i strimler",
+            "Olivenolie",
+            "Æblecidereddike",
+            "Honning",
+            "Tørret rosmarin",
+            "Tørret salvie",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Ristede græskarkerner",
+            "Stegte kyllingefileter"
+          ],
+          "image": {
+            "src": "https://images.arla.com/recordid/eb90c7c288bc4f1e9f82a6e901517a99/hokkaidomos-med-syltede-peberfrugter.jpg?crop=(70,0,-284,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=ef80b95f",
+            "alt": "Hokkaidomos med syltede peberfrugter"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/hokkaidomos-med-syltede-peberfrugter/",
+          "dateFound": "2020-01-21T19:11:47.5173441+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hornfisk med dildcremefraiche",
+          "ingredients": [
+            "Filet af hornfisk",
+            "Karolines Køkken® Cremefraiche 38%",
+            "Finthakket rødløg",
+            "Dijonsennep",
+            "Fintklippet dild",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Mælk",
+            "Groft rugmel",
+            "Smør",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Rugbrød",
+            "Remoulade"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/4153212143/4edfb8d4-b27c-4ed0-b3c1-aa67996c9d48.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Hornfisk med dildcremefraiche"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/hornfisk-med-dildcremefraiche/",
+          "dateFound": "2020-01-21T19:12:29.4033383+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hurtigt madbrød med persille",
+          "ingredients": [
+            "Smør",
+            "Mælk",
+            "Arla A38® naturel 1,5%",
+            "Gær (½ pakke)",
+            "Sukker",
+            "Fint salt",
+            "Hakket, frisk kruspersille",
+            "Hvedemel (ca. 6½ dl)",
+            "Arla A38® naturel 1,5%"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1046301644/16b6d027-355a-4f70-a4bb-98a2e8501be3.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Hurtigt madbrød med persille"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/hurtigt-madbrod-med-persille/",
+          "dateFound": "2020-01-21T19:13:50.3310529+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Jule-figenlassi",
+          "ingredients": [
+            "Tørrede figner, uden stilk",
+            "Vand",
+            "Sri Lanka-kanelstang eller kanelstang (a ca. 5 cm)",
+            "Hele allehånde",
+            "Hele nelliker",
+            "Fintrevet muskatnød",
+            "Moden banan",
+            "Arla A38® naturel 1,5%",
+            "Isterninger"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/647765747/07a6016c-773e-4b58-8b38-b814fa72d722.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Jule-figenlassi"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/jule-figenlassi/",
+          "dateFound": "2020-01-21T19:19:52.2327059+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kalkunsuppe med majs og sprødt korianderdrys",
+          "ingredients": [
+            "Smør",
+            "Rasp (ca. 1¾ dl)",
+            "Fint salt",
+            "Majskolber",
+            "Karolines Køkken® Mild Kartoffel Porresuppe",
+            "Vand",
+            "Gulerødder i korte stave - evt. nogle med top",
+            "Kalkunbryst i strimler",
+            "Korianderfrø - knuste",
+            "Revet citronskal (usprøjtet)",
+            "Grofthakkede friske korianderblade",
+            "Friske korianderblade"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1815427764/24123f2b-8141-494a-8e30-d8743d3c16b5.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Kalkunsuppe med majs og sprødt korianderdrys"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/kalkunsuppe-med-majs-og-sprodt-korianderdrys/",
+          "dateFound": "2020-01-21T19:22:25.556975+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kalvemørbrad med svampesauce",
+          "ingredients": [
+            "Skrællede kartofler i mindre stykker",
+            "Vand",
+            "Smør",
+            "Mælk",
+            "Æggeblommer",
+            "Hakket frisk kruspersille",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Æggehvider",
+            "Karolines Køkken® Pasta- &amp; gratineringsost 30%",
+            "Smør",
+            "Kalvemørbrader",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Østershatte i strimler",
+            "Markchampignoner i kvarte",
+            "Grøntsagsbouillon",
+            "Karolines Køkken® Piskefløde 38%",
+            "Lys saucejævner",
+            "Tør, hvid portvin",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Smuttede mandler i halve",
+            "Evt. kulør",
+            "Sukkerærter"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1419083643/7b2bfd91-14c0-4a9c-9afa-a715dca4689d.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Kalvemørbrad med svampesauce"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/kalvemorbrad-med-svampesauce/",
+          "dateFound": "2020-01-21T19:23:02.4293317+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kartoffelpandekage med hytteostsalat",
+          "ingredients": [
+            "Bacon (ca. 125 g)",
+            "Tomater",
+            "Karolines Køkken® Hytteost 4%",
+            "Lille knust fed hvidløg",
+            "Melede kartofler",
+            "Søde kartofler",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Smør",
+            "Blade af egeløvsalat",
+            "Rødløg i tynde både"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3061145886/38876a7b-5505-4ea2-b554-353f6b40df93.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Kartoffelpandekage med hytteostsalat"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/kartoffelpandekage-med-hytteostsalat/",
+          "dateFound": "2020-01-21T19:27:23.6589131+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kartoffelsalat med peberrodsdressing",
+          "ingredients": [
+            "Rødløg i halve skiver (ca. 150 g)",
+            "Groft salt",
+            "Karolines Køkken® økologisk Fraiche 9%",
+            "Fintrevet peberrod",
+            "Honning",
+            "Groft salt",
+            "Kogte kartofler i mundrette bidder",
+            "Optøede edamamebønner (sojabønner)",
+            "Strimlet bredbladet persille"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2587166086/21ab59e2-0c64-4664-bf88-5390e399a64a.jpg?crop=(141,0,0,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=f73aad3b",
+            "alt": "Kartoffelsalat med peberrodsdressing"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/kartoffelsalat-med-peberrodsdressing/",
+          "dateFound": "2020-01-21T19:28:09.466803+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Klejner",
+          "ingredients": [
+            "Stort æg",
+            "Sukker (ca. 1¼ dl)",
+            "Smør - smeltet",
+            "Karolines Køkken® Madlavningsfløde 15%",
+            "Cognac",
+            "Stødt kardemomme",
+            "Fintrevet citronskal (usprøjtet)",
+            "Friskpresset citronsaft",
+            "Hvedemel (ca. 3½ dl)",
+            "Palmin eller rafinol - til kogning"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1024468061/633877d3-2016-4d1d-a037-7cc8b02a78b8.jpg?crop=(0,0,-315,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=f1aaa9bf",
+            "alt": "Klejner"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/klejner/",
+          "dateFound": "2020-01-21T19:30:37.9937555+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Krukkebrød",
+          "ingredients": [
+            "Små eller 6 store urtepottekrukker i ler (10 eller 12 cm i diameter)",
+            "Smør",
+            "Mælk",
+            "Gær",
+            "Groft salt",
+            "Sirup",
+            "Fintmalet rugmel (ca. 4 dl)",
+            "Hvedemel",
+            "Mælk eller smeltet smør"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/615767804/2c196171-9690-480c-8bc9-ba3e42c6b43d.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Krukkebrød"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/krukkebrod/",
+          "dateFound": "2020-01-21T19:34:25.6713057+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kyllingefrikadeller",
+          "ingredients": [
+            "Hakket kyllingekød (ca. 5% fedt)",
+            "Groft salt",
+            "Æggeblomme",
+            "Fintsnittet purløg",
+            "Fintrevne gulerødder (ca. 100 g)",
+            "Hvedemel (ca. 1 dl)",
+            "Kogte, afkølede couscousgryn (á ca. 150 g couscous gryn)",
+            "Arla® ØKO letmælk",
+            "Olivenolie"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/796599254/d32e79a2-cae2-4e4b-84e2-60b9def163b2.jpg?crop=(224,0,-91,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=41290a17",
+            "alt": "Kyllingefrikadeller"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/kyllingefrikadeller/",
+          "dateFound": "2020-01-21T19:41:01.9811497+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kyllingelevermousse",
+          "ingredients": [
+            "Kyllingelever",
+            "Lille zittauerløg",
+            "Lille fed hvidløg",
+            "Smør",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Cognac",
+            "Blødt smør",
+            "Karolines Køkken® Piskefløde 38%",
+            "Grofthakkede hasselnøddekerner",
+            "Grofthakkede hasselnøddekerner",
+            "Ristet rugbrød",
+            "Cornichoner"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3962695881/ad8fe122-e078-4f40-995a-f56917d7b856.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Kyllingelevermousse"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/kyllingelevermousse/",
+          "dateFound": "2020-01-21T19:41:46.7046758+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Lagkage med hindbærmousse og hvid chokolade",
+          "ingredients": [
+            "Ren, rå marcipan",
+            "Sukker (ca. 3 dl)",
+            "Blødt smør",
+            "Æg",
+            "Hvedemel (ca. 2¾ dl)",
+            "Groft salt",
+            "Grofthakkede, smuttede mandler",
+            "Husblas",
+            "Vaniljestang",
+            "Sukker",
+            "Hindbær",
+            "Friskpresset citronsaft",
+            "Karolines Køkken® Piskefløde 38%",
+            "Friske hindbær",
+            "Smeltet hvid chokolade"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1674471985/731c5e0c-8969-47a1-830d-e610bd0da716.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Lagkage med hindbærmousse og hvid chokolade"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/lagkage-med-hindbarmousse-og-hvid-chokolade/",
+          "dateFound": "2020-01-21T19:43:20.6149783+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Laksepakker med hasselbackkartofler",
+          "ingredients": [
+            "Skrællede, mellemstore kartofler",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Laksefilet med skind",
+            "Porrer i tynde ringe",
+            "Gulerødder i tændstiktynde stave",
+            "Fennikler i kvarte, tynde skiver",
+            "Noilly prat (tør fransk Vermouth)",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Smør evt. rørt med lidt safran"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1754459881/cf902f1d-7de3-4035-9c43-ac64eecb48dc.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Laksepakker med hasselbackkartofler"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/laksepakker-med-hasselbackkartofler/",
+          "dateFound": "2020-01-21T19:44:21.4662954+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Laksespyd med broccoli-quinoa",
+          "ingredients": [
+            "Sort quinoa (ca. 3 dl)",
+            "Vand",
+            "Groft salt",
+            "Renset broccoli",
+            "Rødløg i både (ca. 400 g)",
+            "Citron (usprøjtet) i tykke både",
+            "Groft salt",
+            "Laksefilet uden skind og ben",
+            "Bambusspyd - ca. 20 cm lange",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Karolines Køkken® Karrysauce",
+            "Rødløg i halve, tynde ringe (ca. 100 g)"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/733890755/b546d3a1-b4ea-4ad7-9afc-0abe5dd44adf.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Laksespyd med broccoli-quinoa"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/laksespyd-med-broccoli-quinoa/",
+          "dateFound": "2020-01-21T19:44:34.875335+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Langtidsbraiseret lammehals",
+          "ingredients": [
+            "Udbenet lammehals (ca. 1 kg)",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Friske timianblade",
+            "Fintrevet citronskal (usprøjtet)",
+            "Kanelstang (a ca. 5 cm)",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Smør",
+            "Tør hvidvin, fx pinot gris",
+            "Søde kartofler (ca. 1 kg)",
+            "Vaniljestænger - kornene herfra",
+            "Stødt chili",
+            "Karolines Køkken® Piskefløde 38%",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Dampede haricots verts"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1240404904/1dc054f8-b1bf-44e4-80f9-57ec9755689b.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Langtidsbraiseret lammehals"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/langtidsbraiseret-lammehals/",
+          "dateFound": "2020-01-21T19:46:14.7625526+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Lavendelkylling og linser",
+          "ingredients": [
+            "Kogte røde linser",
+            "Vand",
+            "Groft salt",
+            "Kyllingeinderfileter",
+            "Smør",
+            "Karolines Køkken® Madlavningsfløde 15%",
+            "Hønsebouillon, fx oscar",
+            "Frisk eller ½ tsk tørret lavendler",
+            "Friskpresset citronsaft",
+            "Små grofthakkede fed hvidløg",
+            "Ristede pinjekerner",
+            "Grofthakket bredbladet persille",
+            "Fintrevet citronskal (usprøjtet)",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Dampede ærter"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2207529328/af18f4ce-17a7-4a14-8a47-2bfbe76deef2.jpg?crop=(0,806,0,-878)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7b0703fe",
+            "alt": "Lavendelkylling og linser"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/lavendelkylling-og-linser/",
+          "dateFound": "2020-01-21T19:47:06.999896+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Løg- og porrepostej med stegte rødbeder",
+          "ingredients": [
+            "Karolines Køkken® Hytteost 4%",
+            "Grofthakkede zittauerløg",
+            "Grofthakkede porrer",
+            "Finvalsede havregryn",
+            "Æg",
+            "Tørret timian",
+            "Groft salt",
+            "Smør",
+            "Rødbeder i tynde stave",
+            "Mørk balsamicoeddike",
+            "Vand",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Svesker i tynde strimler",
+            "Blade af bredbladet persille",
+            "Ristet rugbrød"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/4034689113/35025e53-4566-4030-b975-dc3bb01725c5.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Løg- og porrepostej med stegte rødbeder"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/log--og-porrepostej-med-stegte-rodbeder/",
+          "dateFound": "2020-01-21T19:47:57.9664431+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Løgblinis og æblesellerikompot",
+          "ingredients": [
+            "Groftrevne zittauerløg",
+            "Franskbrød uden skorpe",
+            "Karolines Køkken® Madlavningsfløde 8%",
+            "Karolines Køkken® Pasta- &amp; gratineringsost 30%",
+            "Æg",
+            "Finthakkede friske rosmarinblade",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Smør",
+            "Æblemost eller æblejuice",
+            "Uskrællede æbler i både, fx ingrid marie",
+            "Knoldselleri i stave",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Friske rosmarinkviste",
+            "Rugbrød"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/39731814/9281c8bb-3a2d-4919-abbc-c8fc8cb5901d.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Løgblinis og æblesellerikompot"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/logblinis-og-ablesellerikompot/",
+          "dateFound": "2020-01-21T19:48:01.9333434+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Mild chokolade-creme brulé og glaseret ananas",
+          "ingredients": [
+            "Matilde® Premium Kakaoletmælk",
+            "Æggeblommer",
+            "Vaniljestænger",
+            "Ananas i små tern",
+            "Vand",
+            "Sukker (ca. 1¼ dl)",
+            "Frisk ingefær i skiver",
+            "Rørsukker",
+            "Friske citronmelisseblade",
+            "Vaniljeflødeis i kugler"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1127088470/7388761b-3688-43b1-b73f-270113cfad79.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Mild chokolade-creme brulé og glaseret ananas"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/mild-chokolade-creme-brule-og-glaseret-ananas/",
+          "dateFound": "2020-01-21T19:54:31.2379452+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Omelet med flødeost og grønt",
+          "ingredients": [
+            "Grønne asparges",
+            "Rapsolie",
+            "Æg",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Smør",
+            "Babyspinatblade (ca. 50 g)",
+            "Smør",
+            "Rødbedespirer",
+            "Purløg og/eller ærteskud",
+            "Buko® Garli"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/685694484/3c8e1548-ab3a-4a4e-b409-250681b68694.jpg?crop=(145,0,0,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=585122c9",
+            "alt": "Omelet med flødeost og grønt"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/omelet-med-flodeost-og-gront/",
+          "dateFound": "2020-01-21T20:02:27.6551265+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Ørreder i folie",
+          "ingredients": [
+            "Blødt smør",
+            "Fintrevet citronskal (usprøjtet)",
+            "Hakkede friske basilikumblade",
+            "Ørreder (ca. 1 kg)",
+            "Groft salt",
+            "Friskpresset citronsaft",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Olie",
+            "Vand",
+            "Groftrevet frisk spinatblade",
+            "Finthakket rødløg",
+            "Kartofler"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3944399286/9a396892-0a6e-4f06-ba99-5e26f9355bdc.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Ørreder i folie"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/orreder-i-folie/",
+          "dateFound": "2020-01-21T20:03:15.0574121+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Ostegratineret sej",
+          "ingredients": [
+            "Hvedemel",
+            "Karolines Køkken® Madlavningsfløde 8%",
+            "Smør",
+            "Grofthakkede skalotteløg",
+            "Vand",
+            "Fiskebouillon-pulver eller ½ fiskebouillon-terning",
+            "Friskpresset citronsaft",
+            "Frisk, hakket dild",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Muslinger naturel",
+            "Lyssejfileter",
+            "Groft salt",
+            "Karolines Køkken® Pasta- &amp; gratineringsost 30%",
+            "Ristet landbrød",
+            "Både af citroner (usprøjtede)"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1499007978/fba74bf8-1f95-45ad-9677-eb9c9871b0c7.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Ostegratineret sej"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/ostegratineret-sej/",
+          "dateFound": "2020-01-21T20:04:52.1578502+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Overnight chiagrød med granatæble",
+          "ingredients": [
+            "Cheasy® skyr naturel",
+            "Grovvalsede havregryn (ca. 1 dl)",
+            "Vand",
+            "Chiafrø",
+            "Blåbær",
+            "Granatæblekerner",
+            "Akaciehonning"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2093030465/73b2e3e9-50b1-4db1-8fe2-292b1c8d6d7d.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Overnight chiagrød med granatæble"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/overnight-chiagrod-med-granatable/",
+          "dateFound": "2020-01-21T20:06:01.0249913+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Ovnbagt torsk med rodfrugter",
+          "ingredients": [
+            "Vand",
+            "Porrer i tynde ringe",
+            "Frossen rodfrugtblanding",
+            "Karolines Køkken® Madlavningsfløde 8%",
+            "Hakkede, blandede krydderurter",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Torskefilet uden skind",
+            "Hakkede, blandede krydderurter",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Kogte, skrællede kartofler",
+            "Citroner (usprøjtede)"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/4004887940/261e2baf-478a-4da5-a66f-e84e6fd84fd0.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Ovnbagt torsk med rodfrugter"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/ovnbagt-torsk-med-rodfrugter/",
+          "dateFound": "2020-01-21T20:06:24.5923291+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pæreis med timian og nøddeslør",
+          "ingredients": [
+            "Skrællede pærer i tynde både, fx clara frijs",
+            "Vand",
+            "Sukker (ca. 3¼ dl)",
+            "Majsstivelse, fx maizena",
+            "Friske timianblade",
+            "Æbleeddike",
+            "Kløver® sødmælksyoghurt naturel",
+            "Hasselnøddekerner",
+            "Sukker (ca. 1½ dl)",
+            "Vand",
+            "Æbleeddike"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/5894042/8c24ef52-8b45-4ee8-9c0d-b08d37acb3d0.jpg?crop=(70,0,-71,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=df5d0f7e",
+            "alt": "Pæreis med timian og nøddeslør"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/pareis-med-timian-og-noddeslor/",
+          "dateFound": "2020-01-21T20:07:41.0502088+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pærekompot til blåskimmelost",
+          "ingredients": [
+            "Sød, engelsk ingefærmarmelade",
+            "Pære",
+            "Smuttede mandler",
+            "Castello® creamy Blue",
+            "Lyst brød"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3368565069/4a74f8f2-d992-48fd-ad99-b04af57d3447.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Pærekompot til blåskimmelost"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/parekompot-til-blaskimmelost/",
+          "dateFound": "2020-01-21T20:07:48.5699134+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pandekagelagkage med chokolade og flødeskum",
+          "ingredients": [
+            "Hvedemel (ca. 2¼ dl)",
+            "Sukker",
+            "Matilde® Original Kakaoskummetmælk",
+            "Æg",
+            "Smør - smeltet",
+            "Karolines Køkken® Piskefløde 38% - pisket til let skum",
+            "Grofthakket mørk chokolade (ca. 55% kakao)",
+            "Hindbærmarmelade",
+            "Bananer i tynde skiver (ca. 400 g - gem lidt til pynt.)",
+            "Friske hindbær",
+            "Grofthakket mørk chokolade (ca. 55% kakao)"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1454681709/2a0c43a7-c8b1-4f34-8370-379c59760e55.jpg?crop=(40,0,-101,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=b5112032",
+            "alt": "Pandekagelagkage med chokolade og flødeskum"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/pandekagelagkage-med-chokolade-og-flodeskum/",
+          "dateFound": "2020-01-21T20:08:32.8900576+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pasta med aubergine og oliven",
+          "ingredients": [
+            "Smør",
+            "Gule peberfrugter i små tern (ca. 300 g)",
+            "Aubergine i små tern (ca. 300 g)",
+            "Porre i tynde skiver (ca. 150 g)",
+            "Karolines Køkken® Tomat &amp; cremefraiche Pastasauce",
+            "Sorte oliven uden sten i kvarte",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Frisk pasta, fx tagliatelle",
+            "Karolines Køkken® Pasta- &amp; gratineringsost 30%"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3040025220/1fd5c2af-01d0-413c-82d3-df6feb162a4b.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Pasta med aubergine og oliven"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/pasta-med-aubergine-og-oliven/",
+          "dateFound": "2020-01-21T20:10:22.4893418+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pasta med blåskimmelost og grillede cocktailtomater",
+          "ingredients": [
+            "Karolines Køkken® Madlavningsfløde 8%",
+            "Castello® Danablu Extra Creamy 60+ skiveost",
+            "Cocktailtomater, gerne både gule og røde",
+            "Olivenolie",
+            "Sukkerærter",
+            "Frisk pasta, fx papardelle",
+            "Groft brød",
+            "Grøn salat"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2372064025/0db02fae-41f6-4aeb-b2af-39a557737909.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Pasta med blåskimmelost og grillede cocktailtomater"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/pasta-med-blaskimmelost-og-grillede-cocktailtomater/",
+          "dateFound": "2020-01-21T20:10:34.5046076+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Perlebyggrød med pærer og dadler",
+          "ingredients": [
+            "Vand",
+            "Perlebyg - polerede bygkerner (ca. 3¼ dl)",
+            "Mælk",
+            "Skrællede pærer i tern",
+            "Tørrede dadler i strimler",
+            "Groft salt",
+            "Karolines Køkken® Cremefraiche 18%",
+            "Majsstivelse, fx maizena",
+            "Halve ferskner fra dåse",
+            "Friskpresset citronsaft",
+            "Sukker",
+            "Fintrevet citronskal (usprøjtet)",
+            "Friske citronmelisseblade"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1979114343/074dc8c3-f67b-4b43-881a-849f7a90930c.jpg?crop=(0,1336,0,-1066)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=bdaa647b",
+            "alt": "Perlebyggrød med pærer og dadler"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/perlebyggrod-med-parer-og-dadler/",
+          "dateFound": "2020-01-21T20:14:31.5663046+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pitabrød med grillede auberginer og kyllingekødboller",
+          "ingredients": [
+            "Auberginer i aflange skiver (ca. 600 g)",
+            "Olivenolie",
+            "Groft salt",
+            "Hakket kyllingekød (ca. 5% fedt)",
+            "Groft salt",
+            "Lille finthakket fed hvidløg",
+            "Hakkede friske mynteblade",
+            "Hakket bredbladet persille",
+            "Olivenolie",
+            "Karolines Køkken® Kvark 0,3%",
+            "Vand",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Fuldkornspitabrød (ca. 425 g)",
+            "Små røde, gule og orange snackpebere i strimler",
+            "Rødløg i halve, tynde skiver (ca. 75 g)",
+            "Blade af mynte og bredbladet persille"
+          ],
+          "image": {
+            "src": "https://images.arla.com/recordid/d5035bcc5fe74cda8846aaef008b9492/pitabrod-med-grillede-auberginer-og-kyllingekodboller.jpg?crop=(0,0,-272,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=87181666",
+            "alt": "Pitabrød med grillede auberginer og kyllingekødboller"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/pitabrod-med-grillede-auberginer-og-kyllingekodboller/",
+          "dateFound": "2020-01-21T20:15:33.8774922+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pizza med torsk og oliven",
+          "ingredients": [
+            "Gær",
+            "Vand - lillefingervarmt",
+            "Olivenolie",
+            "Groft salt",
+            "Pizzamel (ca. 5½ dl)",
+            "Koncentreret tomatpuré (ca. 140 g)",
+            "Olivenolie",
+            "Sød chilisauce",
+            "Finthakket zittauerløg (ca. 75 g)",
+            "Groft salt",
+            "Karolines Køkken® revet Mozzarella 15%",
+            "Torskefilet eller anden hvid fisk - uden skind",
+            "Grofthakkede sorte oliven",
+            "Friske merianblade",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Renset rucolasalat",
+            "Fintsnittet hvidkål",
+            "Friskpresset citronsaft",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Både af citroner (usprøjtede) i halve"
+          ],
+          "image": {
+            "src": "https://images.arla.com/recordid/392c58a9ae734108822ca6ea00358ad5/pizza-med-torsk-og-oliven.jpg?crop=(0,1386,0,-1612)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=064c29cc",
+            "alt": "Pizza med torsk og oliven"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/pizza-med-torsk-og-oliven/",
+          "dateFound": "2020-01-21T20:16:34.6280522+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pizzasnegle",
+          "ingredients": [
+            "Pizzadej - færdig, fuldkorn (ca. 280 g)",
+            "Karolines Køkken® økologisk Tomatsuppe",
+            "Karolines Køkken® Økologisk revet Mozzarella 20%",
+            "Majskerner",
+            "Tørret oregano"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3043573555/a380c02e-7a8b-4663-aa1f-4043c9e21510.jpg?crop=(0,0,-315,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=f1aaa9bf",
+            "alt": "Pizzasnegle"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/pizzasnegle/",
+          "dateFound": "2020-01-21T20:16:49.9605254+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Ragout med fisk og karry",
+          "ingredients": [
+            "Vilde ris",
+            "Uskrællet æbler fx coxorange",
+            "Fiskebouillon",
+            "Rødspættefileter",
+            "Smør",
+            "Ostindisk karry",
+            "Rød peberfrugt i tern",
+            "Grofthakket zittauerløg",
+            "Karolines Køkken® mælkesauce",
+            "Groft salt",
+            "Ristede græskarkerner",
+            "Italiensk flute"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1703239240/4b9598cb-e51f-4d32-ae97-825db4bbfeff.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Ragout med fisk og karry"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/ragout-med-fisk-og-karry/",
+          "dateFound": "2020-01-21T20:19:45.5736935+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Risotto med karry",
+          "ingredients": [
+            "Smør",
+            "Ostindisk karry",
+            "Finthakkede zittauerløg",
+            "Kyllingefileter i strimler (ca. 350 g)",
+            "Grødris (ca. 2¼ dl)",
+            "Hønsebouillon",
+            "Karolines Køkken® Madlavningsfløde 8%",
+            "Gulerødder i tynde, skrå skiver (ca. 450 g)",
+            "Karolines Køkken® Pasta- &amp; gratineringsost 30%",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Landbrød"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1313831771/3eca413e-0ee0-466b-a22c-9b93954be91a.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Risotto med karry"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/risotto-med-karry/",
+          "dateFound": "2020-01-21T20:22:21.1231084+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Roastbeef med bagte kartofler",
+          "ingredients": [
+            "Roastbeef af okseinderlår",
+            "Smør",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Vand",
+            "Vand",
+            "Groft salt",
+            "Skrubbede bagekartofler",
+            "Karolines Køkken® Cremefraiche 18%",
+            "Ravigottesauce",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Karolines Køkken® Piskefløde 38% - pisket til let skum",
+            "Blandet grøn salat"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3303747008/7314fa3d-8501-407c-802d-a69f9a429feb.jpg?crop=(40,0,-101,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=b5112032",
+            "alt": "Roastbeef med bagte kartofler"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/roastbeef-med-bagte-kartofler/",
+          "dateFound": "2020-01-21T20:23:20.3267323+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Rødbedecoleslaw",
+          "ingredients": [
+            "Rødbeder (ca. 300 g)",
+            "Fintsnittet rødkål",
+            "Finthakket rødløg (ca. 75 g)",
+            "Røde æbler i tern (ca. 250 g)",
+            "Karolines Køkken® økologisk Fraiche 9%",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Karolines Køkken® Klassisk Salatost i tern",
+            "Friske oreganoblade"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/627939775/aae527b1-dbd1-4219-9dc7-79dcc2e307d5.jpg?crop=(0,0,-270,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=b1446f66",
+            "alt": "Rødbedecoleslaw"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/rodbedecoleslaw/",
+          "dateFound": "2020-01-21T20:23:55.3030013+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Rødbedesalat med blåskimmelost",
+          "ingredients": [
+            "Friske små rødbeder",
+            "Rucolasalat",
+            "Olivenolie",
+            "Mørk balsamicoeddike",
+            "Castello® creamy Blue",
+            "Pinjekerner"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/691532143/674aa479-9360-4ed8-9ebc-15f60e2c60fa.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Rødbedesalat med blåskimmelost"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/rodbedesalat-med-blaskimmelost/",
+          "dateFound": "2020-01-21T20:24:38.0328195+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Røget laks med cremet agurk og ærteskud",
+          "ingredients": [
+            "Agurker",
+            "Groft salt",
+            "Buko® flødeost naturel 25%",
+            "Fintklippet purløg",
+            "Friskkværnet peber",
+            "Ristet grovbrød",
+            "Røget laks i tynde skiver",
+            "Æbler i små tern",
+            "Ærteskud",
+            "Friskkværnet peber"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2838640129/1de8faa0-3e9b-40fa-ba5a-d6ac12fdf8a0.jpg?crop=(0,0,-141,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=baa48854",
+            "alt": "Røget laks med cremet agurk og ærteskud"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/roget-laks-med-cremet-agurk-og-arteskud/",
+          "dateFound": "2020-01-21T20:26:20.1664715+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Røsti med ostecreme og koldrøget laks",
+          "ingredients": [
+            "Kartofler (ca. 700 g)",
+            "Groft salt",
+            "Hvid peber",
+            "Smør",
+            "Castello® creamy Blue",
+            "Karolines Køkken® økologisk Fraiche 9%",
+            "Friskpresset citronsaft",
+            "Små æbler (ca. 275 g)",
+            "Små pærer (ca. 275 g)",
+            "Porrer",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Koldrøget laks (ca. 300 g)"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/832662229/d3308a5c-8c12-4120-9907-be7a23b4a6ae.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Røsti med ostecreme og koldrøget laks"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/rosti-med-ostecreme-og-koldroget-laks/",
+          "dateFound": "2020-01-21T20:27:31.0725378+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Rygeostsalat med røget hellefisk og ristet rugbrød",
+          "ingredients": [
+            "Rygeost 0,4%",
+            "Karolines Køkken® Kvark 0,3%",
+            "Mælk",
+            "Ravigottesauce",
+            "Havsalt, fx maldon",
+            "Friskkværnet peber",
+            "Agurk (ca. 400 g)",
+            "Radiser i halve tynde skiver",
+            "Røget hellefisk (ca. 400 g)",
+            "Groft rugbrød (ca. 400 g)",
+            "Radiser",
+            "Agurker"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3772324230/c87072b9-c07e-478a-894a-4dc9cfd43dd5.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Rygeostsalat med røget hellefisk og ristet rugbrød"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/rygeostsalat-med-roget-hellefisk-og-ristet-rugbrod/",
+          "dateFound": "2020-01-21T20:28:57.5131346+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Salte æbleskiver med ostefyld",
+          "ingredients": [
+            "Karolines Køkken® Klassisk Salatost i tern - afdryppet",
+            "Hvedemel (ca. 1¼ dl)",
+            "Bagepulver",
+            "Tørret oregano",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Mælk",
+            "Æggeblommer",
+            "Æggehvider",
+            "Rapsolie",
+            "Basilikumpesto",
+            "Vand",
+            "Fintstrimlet radicchiosalat",
+            "Hjertesalat revet i grove stykker"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/523803214/a3eaaf48-9efd-4e7d-aeb6-f9197d6a2067.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Salte æbleskiver med ostefyld"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/salte-ableskiver-med-ostefyld/",
+          "dateFound": "2020-01-21T20:32:07.4714278+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Sellerihummus med wasabi og æblecidereddike",
+          "ingredients": [
+            "Skrællet knoldselleri",
+            "Olivenolie",
+            "Groft salt",
+            "Karolines Køkken® Græsk inspireret yoghurt 10%",
+            "Wasabi",
+            "Æblecidereddike",
+            "Karse"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1939443508/49d374e5-98f8-4bcc-9691-b258a9c599c9.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Sellerihummus med wasabi og æblecidereddike"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/sellerihummus-med-wasabi-og-ablecidereddike-/",
+          "dateFound": "2020-01-21T20:33:50.4832238+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Skinkebruschetta med rødbedetzatziki",
+          "ingredients": [
+            "Syltede rødbeder",
+            "Rødløg",
+            "Karolines Køkken® Klassisk Salatost i tern",
+            "Arla A38® naturel 1,5%",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Toastbrød",
+            "Smør",
+            "Kogt røget skinke"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3248328597/164af5d7-2371-4640-bc4e-5adefeb29802.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Skinkebruschetta med rødbedetzatziki"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/skinkebruschetta-med-rodbedetzatziki/",
+          "dateFound": "2020-01-21T20:35:01.8964435+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Skinkemignon og lun linsesalat",
+          "ingredients": [
+            "Arla A38® naturel 1,5%",
+            "Sukker",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Grønne linser, fx fra Puy",
+            "Grøntsagsbouillon",
+            "Bacon",
+            "Smør",
+            "Skinkemignoner (ca. 300 g)",
+            "Groft salt",
+            "Vand",
+            "Skrællet moden mangofrugt i små stykker",
+            "Romainesalat i strimler",
+            "Landbrød"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2595982258/a629a5de-72a5-4e2e-acdf-e3d4554b628a.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Skinkemignon og lun linsesalat"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/skinkemignon-og-lun-linsesalat/",
+          "dateFound": "2020-01-21T20:35:11.8521426+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Skyr med ingefærmarineret frugt",
+          "ingredients": [
+            "Skyllede friske blåbær",
+            "Kerner fra et granatæble",
+            "Friskpresset limesaft",
+            "Fintrevet frisk ingefær",
+            "Finthakkede tørrede figner",
+            "Cheasy® Skyr med skovbær 0,2%",
+            "Chiafrø"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/222271980/08812f8e-6637-46e6-8fb9-f966d6f6a80a.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Skyr med ingefærmarineret frugt"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/skyr-med-ingefarmarineret-frugt/",
+          "dateFound": "2020-01-21T20:35:52.2792029+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Små citrontærter med marengslåg",
+          "ingredients": [
+            "Hvedemel (ca. 3 dl)",
+            "Flormelis",
+            "Smør",
+            "Vand",
+            "Smør",
+            "Fintrevet citronskal (usprøjtet)",
+            "Friskpresset citronsaft",
+            "Æggeblommer (ca. 4 spsk)",
+            "Æggehvider (ca. 4 spsk)",
+            "Sukker (ca. 1 dl)",
+            "Æggehvider (ca. 4 spsk)",
+            "Sukker",
+            "Friskpresset citronsaft"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2785997470/4fe040e0-9578-4125-9884-48fa24c7907b.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Små citrontærter med marengslåg"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/sma-citrontarter-med-marengslag/",
+          "dateFound": "2020-01-21T20:36:21.9402613+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Små lammepakker i vejbred",
+          "ingredients": [
+            "Store blade af vejbred",
+            "Små kartofler i halve og kvarte",
+            "Olivenolie",
+            "Groft salt",
+            "Hakket lammekød",
+            "Groft salt",
+            "Finthakket citrongræs",
+            "Finthakkede friske mynteblade",
+            "Friskkværnet peber",
+            "Fintstrimlede blade af vejbred",
+            "Fintstrimlet icebergsalat (ca. 300 g)",
+            "Skrællede hvide asparges i skrå stykker",
+            "Karolines Køkken® Græsk inspireret yoghurt 10%",
+            "Vand",
+            "Finthakkede friske mynteblade",
+            "Hvid balsamicoeddike",
+            "Rørsukker",
+            "Groft salt",
+            "Friskkværnet peber"
+          ],
+          "image": {
+            "src": "https://images.arla.com/recordid/431403ec728e47fb9caca6e900e9df66/sma-lammepakker-i-vejbred.jpg?crop=(0,1062,0,-165)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=ae3cfb63",
+            "alt": "Små lammepakker i vejbred"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/sma-lammepakker-i-vejbred/",
+          "dateFound": "2020-01-21T20:36:47.1094402+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Smoothie med jordbær",
+          "ingredients": [
+            "Frosne jordbær",
+            "Isterninger",
+            "Flormelis",
+            "Friskpresset citronsaft",
+            "Arla A38® naturel 0,5%",
+            "Mælk"
+          ],
+          "image": {
+            "src": "https://images.arla.com/recordid/f75f18cec7634adcbc96a6e9010ff4af/smoothie-med-jordbar.jpg?crop=(0,726,0,-422)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=24cdd095",
+            "alt": "Smoothie med jordbær"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/smoothie-med-jordbar/",
+          "dateFound": "2020-01-21T20:37:41.0344948+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Sommer-coleslaw med rygeost",
+          "ingredients": [
+            "Rygeost 0,4%",
+            "Dijon-honningsennep",
+            "Groft salt",
+            "Fintsnittet spidskål",
+            "Groftrevet grøn squash (ca. 200 g)",
+            "Groftrevne radiser"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/536438822/a4752d3e-3934-4e67-9625-2ddd38f6b3bd.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Sommer-coleslaw med rygeost"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/sommer-coleslaw-med-rygeost/",
+          "dateFound": "2020-01-21T20:38:57.4317799+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Spaghetti næsten som i Italien",
+          "ingredients": [
+            "Lufttørret bacon",
+            "Olivenolie",
+            "Tør hvidvin",
+            "Hakket rød chilipeber",
+            "Flåede tomater (a ca. 400 g)",
+            "Sukker",
+            "Groft salt",
+            "Vand",
+            "Groft salt",
+            "Tørret spaghetti",
+            "Fintrevet Castello® Cheddar extra Matured",
+            "Masser af friske basilikumblade"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1763734473/eb87591c-1a4a-4b63-853d-03d490c9ba38.jpg?crop=(0,751,0,-1651)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=6427420b",
+            "alt": "Spaghetti næsten som i Italien"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/spaghetti-nasten-som-i-italien/",
+          "dateFound": "2020-01-21T20:40:16.0732335+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Spicy lammeragout med kølende myntelassi",
+          "ingredients": [
+            "Smør",
+            "Afpudset lammekød i tern, fx lammekølle",
+            "Zittauerløg i både",
+            "Store grofthakkede fed hvidløg",
+            "Fintrevet frisk ingefær",
+            "Hele nelliker",
+            "Vand",
+            "Arla® ØKO yoghurt naturel 0,5%",
+            "Laurbærblade",
+            "Stødt gurkemeje",
+            "Sukker",
+            "Groft salt",
+            "Cayennepeber",
+            "Friske mynteblade",
+            "Iskoldt vand",
+            "Arla® ØKO yoghurt naturel 0,5%",
+            "Groft salt",
+            "Friske mynteblade",
+            "Mangofrugt i tern",
+            "Basmatiris",
+            "Spiseklare papadums"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2239027809/100d4246-f564-489d-8c2e-bb101e9740a0.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Spicy lammeragout med kølende myntelassi"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/spicy-lammeragout-med-kolende-myntelassi/",
+          "dateFound": "2020-01-21T20:40:54.5793544+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Sprød kålsalat med chili, hytteost og appelsiner",
+          "ingredients": [
+            "Karolines Køkken® Piskefløde 38%",
+            "Karolines Køkken® økologisk Hytteost 4%",
+            "Finthakket grøn og rød chilipeber",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Fintsnittet rødkål",
+            "Fintsnittet savojkål",
+            "Appelsiner",
+            "Pære i mindre stykker",
+            "Ristede, grofthakkede hasselnøddekerner"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1566503872/856cb699-d8f0-4f09-aea6-1e714252cdba.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Sprød kålsalat med chili, hytteost og appelsiner"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/sprod-kalsalat-med-chili-hytteost-og-appelsiner/",
+          "dateFound": "2020-01-21T20:41:32.4046411+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Sprød og frisk rejesalat",
+          "ingredients": [
+            "Karolines Køkken® Cremefraiche 18%",
+            "Fintrevet appelsinskal (usprøjtet)",
+            "Fintrevet limeskal (usprøjtet)",
+            "Friskpresset appelsinsaft",
+            "Friskpresset limesaft",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Perlespelt (ca. 3¾ dl)",
+            "Vand",
+            "Groft salt",
+            "Rødløg i tynde både (ca. 100 g)",
+            "Eddike",
+            "Fintsnittet spidskål",
+            "Grofthakkede friske korianderblade",
+            "Modne avocadoer i tynde både (ca. 200 g)",
+            "Moden mangofrugt i mundrette stykker (ca. 300 g)",
+            "Rejer",
+            "Friske korianderblade",
+            "Groft flute"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/4122838565/8062df01-2de8-4bca-ab46-06e7a23c3d62.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Sprød og frisk rejesalat"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/sprod-og-frisk-rejesalat/",
+          "dateFound": "2020-01-21T20:41:41.1578966+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Stegt torskerogn og ærtepuré",
+          "ingredients": [
+            "Frisk torskerogn",
+            "Vand",
+            "Groft salt",
+            "Lagereddike",
+            "Fintrevet citronskal (usprøjtet)",
+            "Små knuste fed hvidløg",
+            "Hakket bredbladet persille",
+            "Smør",
+            "Groft salt",
+            "Karolines Køkken® Hytteost 4%",
+            "Optøede, frosne fine ærter",
+            "Fintrevet citronskal (usprøjtet)",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Ovnbagte, halve små kartofler, fx nix pille",
+            "Dampede rødløg i kvarte",
+            "Citron (usprøjtet) i både"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3964948154/a665e6ad-e3c8-4468-9470-4e44bbd2fd69.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Stegt torskerogn og ærtepuré"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/stegt-torskerogn-og-artepure/",
+          "dateFound": "2020-01-21T20:43:37.1931596+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Svampetoast",
+          "ingredients": [
+            "Smør",
+            "Zittauerløg (ca. 20 g)",
+            "Friske timiankviste",
+            "Champignoner i skiver",
+            "Lille fed hvidløg",
+            "Groft salt",
+            "Karolines Køkken® Cremefraiche 38%",
+            "Friskpresset citronsaft",
+            "Sukker",
+            "Friskkværnet peber",
+            "Grovbrød",
+            "Smør",
+            "Arla® Havarti 55+ Jalapenos"
+          ],
+          "image": {
+            "src": "https://images.arla.com/recordid/2fe27f6662e14b6ab91aaa2d009a0e6d/svampetoast.jpg?crop=(0,0,-272,0)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=87181666",
+            "alt": "Svampetoast"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/svampetoast/",
+          "dateFound": "2020-01-21T20:46:40.8036173+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "T-bonesteak med persillesmør",
+          "ingredients": [
+            "T-bonesteaks ca. 1½ cm høje",
+            "Smør",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Pillede små skalotteløg",
+            "Ærter",
+            "Hovedsalat i strimler",
+            "Smør",
+            "Persillesmør"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1265922131/8cef8cde-cf6a-4119-898c-b13b319e4d9f.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "T-bonesteak med persillesmør"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/t-bonesteak-med-persillesmor/",
+          "dateFound": "2020-01-21T20:49:35.1630352+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Tebrød",
+          "ingredients": [
+            "Smuttede mandler",
+            "Flormelis (ca. 1½ dl)",
+            "Æggehvide (ca. 2 spsk)",
+            "Fintrevet limeskal (usprøjtet)",
+            "Friske mynteblade"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2595496255/0da2956b-18a6-4618-98cc-a5bf94f400b8.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Tebrød"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/tebrod/",
+          "dateFound": "2020-01-21T20:49:44.2279472+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Timiangryde med sweet potatoes mos",
+          "ingredients": [
+            "Skrællede søde kartofler",
+            "Skrællede melede kartofler",
+            "Vand",
+            "Smør",
+            "Mælk",
+            "Groft salt",
+            "Karolines Køkken® mælkesauce",
+            "Vand",
+            "Porrer i ringe",
+            "Rosiner",
+            "Finthakkede friske timianblade",
+            "Wokstrimler af okseklump",
+            "Stenfri, grønne vindruer i halve",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Kviste af frisk timian"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/2190103994/f204260e-67e9-47f2-bba6-6fed6fb905ab.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Timiangryde med sweet potatoes mos"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/timiangryde-med-sweet-potatoes-mos/",
+          "dateFound": "2020-01-21T20:50:28.4812598+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Toast med sprød æblesalat",
+          "ingredients": [
+            "Store æbler i tynde skiver, fx jonagored",
+            "Ingefærmarmelade",
+            "Friskpresset citronsaft",
+            "Ristede sesamfrø",
+            "Groft toastbrød, fx fuldkorn",
+            "Figenpålæg - 4 skiver",
+            "Castello® Black",
+            "Blødt smør"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/945057190/d8d6cf65-eb6c-4d44-b9df-0b9cc8f3af52.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Toast med sprød æblesalat"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/toast-med-sprod-ablesalat-/",
+          "dateFound": "2020-01-21T20:50:56.0213124+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Tomatlasagne",
+          "ingredients": [
+            "Hakkede tomater (ca. 400 g)",
+            "Koncentreret tomatpuré (ca. 120 g)",
+            "Grofthakkede soltørrede tomater",
+            "Vand",
+            "Finthakkede zittauerløg (ca. 200 g)",
+            "Fintrevne gulerødder (ca. 200 g)",
+            "Finthakket rød chilipeber",
+            "Stort hakket fed hvidløg",
+            "Mørk balsamicoeddike",
+            "Sukker",
+            "Groft salt",
+            "Hakkede friske oreganoblade",
+            "Karolines Køkken® Let Mornaysauce",
+            "Tørrede lasagneplader (ca. 200 g)",
+            "Karolines Køkken® revet Mozzarella 15%",
+            "Groft salt",
+            "Rasp",
+            "Grøn salat, fx romainesalat i grove stykker drysset med salt og",
+            "Ristede solsikkekerner"
+          ],
+          "image": {
+            "src": "https://images.arla.com/recordid/9792586b7c6c4f688231a8c500e70921/tomatlasagne.jpg?crop=(0,591,0,-591)&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=1573ad03",
+            "alt": "Tomatlasagne"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/tomatlasagne/",
+          "dateFound": "2020-01-21T20:51:01.1776875+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Tundressing til grissini",
+          "ingredients": [
+            "Tun i vand (ca. 185 g)",
+            "Finthakket frisk rød chilipeber uden kerner",
+            "Fintrevet citronskal (usprøjtet)",
+            "Friskpresset citronsaft",
+            "Finthakket kruspersille",
+            "Olivenolie",
+            "Karolines Køkken® Græsk inspireret yoghurt 10%",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Grissini",
+            "Sprøde blandede grøntsager, fx gulerod, blomkål, grønne asparges og rød peberfrugt"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/4124153656/96c64a1e-fa4e-4843-a92f-ab2b6229f4bd.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Tundressing til grissini"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/tundressing-til-grissini/",
+          "dateFound": "2020-01-21T20:53:46.9898949+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Tynde omeletter med krydret fyld",
+          "ingredients": [
+            "Æg",
+            "Karolines Køkken® Piskefløde 38%",
+            "Vand",
+            "Groft salt",
+            "Smør",
+            "Rød tabascosauce",
+            "Rød snackpeber i tynde strimler",
+            "Bladselleri i tynde strimler",
+            "Castello® Golden",
+            "Blade af bladselleri"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/3693929213/311ad9e4-2c4b-459d-8f81-4dcc8c1da2b8.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Tynde omeletter med krydret fyld"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/tynde-omeletter-med-krydret-fyld/",
+          "dateFound": "2020-01-21T20:54:06.5362792+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Vitello tonnato - koldt kalvekød med tunsauce",
+          "ingredients": [
+            "Kalveinderlår",
+            "Vand",
+            "Gulerod i kvarte",
+            "Zittauerløg i kvarte",
+            "Små fed hvidløg",
+            "Kviste af frisk timian",
+            "Laurbærblade",
+            "Sorte peberkorn",
+            "Groft salt",
+            "Tun i vand",
+            "Hårdkogte æg",
+            "Olivenolie",
+            "Ansjosfileter",
+            "Mayonnaise",
+            "Dijonsennep",
+            "Friskpresset citronsaft",
+            "Groft salt",
+            "Friskkværnet peber",
+            "Kapers uden lage",
+            "Kviste af frisk timian",
+            "Landbrød",
+            "Både af citroner (usprøjtede)"
+          ],
+          "image": {
+            "src": "https://cdn-rdb.arla.com/Files/arla-dk/1175127193/bd022094-212a-4d7d-8b49-4ea0d7deae3c.jpg?mode=crop&amp;w=479&amp;h=335&amp;ak=6826258c&amp;hm=7f6a8eb6",
+            "alt": "Vitello tonnato - koldt kalvekød med tunsauce"
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.arla.dk/opskrifter/vitello-tonnato---koldt-kalvekod-med-tunsauce/",
+          "dateFound": "2020-01-21T20:57:17.2621908+00:00"
+        }
+      }
+    ]
+  }
+}

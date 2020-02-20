@@ -6,7 +6,7 @@
     "title": "The Root Schema",
     "required": [
         "projectName",
-        "startUrl",
+        "domain",
         "tasks"
     ],
     "properties": {
@@ -17,10 +17,10 @@
             "default": "",
             "pattern": "^(.*)$"
         },
-        "startUrl": {
-            "$id": "#/properties/startUrl",
+        "domain": {
+            "$id": "#/properties/domain",
             "type": "string",
-            "title": "The Starturl Schema",
+            "title": "The domain Schema",
             "default": "",
             "pattern": "^(.*)$"
         },

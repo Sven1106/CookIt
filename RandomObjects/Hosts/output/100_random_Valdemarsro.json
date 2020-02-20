@@ -1,373 +1,426 @@
 {
   "projectName": "Valdemarsro",
-  "startUrl": "https://www.valdemarsro.dk/",
+  "domain": null,
   "tasks": {
     "allRecipes": [
       {
         "recipe": {
-          "heading": "Agurk &amp; Ingefær cocktail med gin",
+          "heading": "Æbleskiver",
           "ingredients": [
-            "1/2 dl vand",
-            "1/2 dl sukker",
-            "15 g ingefær, skrællet og finthakket",
-            "1/2 agurk, friskpresset til agurkejuice",
-            "6 cl gin",
-            "6 cl ingefærsirup",
-            "1 lime, 6 cl limesaft",
-            "isterninger",
-            "6 skiver agurker, til pynt"
-          ],
-          "image": {
-            "src": "",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/agurk-ingefaer-cocktail-gin/",
-          "dateFound": "2020-02-14T17:51:41.2352255+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Amerikanske pandekager med citrus karamel sirup",
-          "ingredients": [
-            "2 1/2 dl hvedemel",
-            "2 1/2 dl mælk, eller kærnemælk",
-            "2 æg",
-            "1 spsk sukker",
-            "1/2 tsk flagesalt",
-            "1 tsk bagepulver",
+            "5 dl hvedemel",
+            "1/2 tsk salt",
+            "2 tsk sukker",
+            "1 1/2 tsk stødt kardemomme",
+            "1 tsk natron",
+            "1/2 tsk bagepulver",
+            "3 æg",
+            "4 1/2 dl kærnemælk",
+            "3 spsk smør, smeltet",
+            "1/2 vaniljestang, kornene herfra",
+            "1 øko citron, revet skal",
             "1 spsk smør, til stegning",
+            "200 g flormelis",
+            "100 g marmelade",
+            "æblesmør"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2012/11/aebleskiver_-1.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/aebleskiver/",
+          "dateFound": "2020-02-14T18:04:44.7429276+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Æbletrifli",
+          "ingredients": [
+            "500 g æbler",
             "1 dl vand",
-            "1/2 dl sukker",
-            "1 citron, 4 spsk. citronsaft herfra"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/uhmmm-pandekager.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/amerikanske-pandekager-med-jordbaer/",
-          "dateFound": "2020-02-14T18:09:24.513615+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Appelsin – vanilje og kanel julesirup",
-          "ingredients": [
-            "5 appelsiner, saften herfra (4 dl)",
-            "90 g rørsukker",
-            "2 kanelstænger",
-            "1 vaniljestang",
-            "1 tsk stødt kardemomme",
-            "2 stjerneanis",
-            "4 nelliker"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2011/11/julesirup.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/appelsin-vanilje-og-kanel-julesirup/",
-          "dateFound": "2020-02-14T18:07:37.3788994+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Avocado Smoothie",
-          "ingredients": [
-            "1 avocado, moden",
-            "1 appelsin, saften herfra",
-            "1 håndfuld persille, uden stilk (alternativt spinat)",
-            "4 dl mandelmælk",
-            "1 spsk mandelsmør",
-            "3 medjool dadler",
-            "1/2 tsk stødt kardemomme",
-            "1 banan, moden",
-            "1 tsk chiafrø",
-            "1 tsk hampefrø"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/10/avocadosmoothie.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/avocado-smoothie/",
-          "dateFound": "2020-02-14T18:07:40.7236474+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Bananmilkshake med vaniljeis",
-          "ingredients": [
-            "3 bananer, meget modne",
-            "2 spsk vaniljeis",
-            "1/2 tsk vaniljepulver, eller kornene fra 1/2 vaniljestang",
-            "8 dl mælk, eller justeret til konsistensen er perfekt"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/smoothie-banan.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/bananmilkshake-med-vaniljeis/",
-          "dateFound": "2020-02-14T18:10:21.6124708+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Beef Wellington",
-          "ingredients": [
-            "1 kg oksemørbrad",
-            "1 spsk sennep, grov",
-            "1 spsk dijon sennep",
-            "500 g champignon, finthakket",
-            "4 skalotteløg, finthakket",
-            "3 fed hvidløg, finthakket",
-            "1 tsk timian, tørret",
-            "1 trøffel, eller trøffelolie",
-            "140 g serranoskinke",
-            "400 g butterdej",
+            "1 vaniljestang, tom",
+            "1 dl rørsukker",
+            "1 dl havregryn, finvalset",
+            "1 spsk honning",
+            "50 g nødder, blandende og grofthakkede",
             "2 æggeblommer",
+            "1 1/2 spsk rørsukker",
+            "1 vaniljestang, kornene herfra",
+            "1 dl piskefløde"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2017/11/aebletrifli.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/aebletrifli/",
+          "dateFound": "2020-02-14T17:45:04.6687197+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Æg og spinat med sennepscreme",
+          "ingredients": [
+            "2 æg",
+            "2 skiver serranoskinke",
+            "50 g spinat",
+            "1 spsk dijon sennep",
+            "1 spsk cheddar ost, friskrevet",
+            "1 spsk parmesan, friskrevet",
+            "2 spsk cremefraiche 18 %",
+            "salt",
+            "sort peber, friskkværnet"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/morgenmad-2.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/aeg-og-spinat-med-sennepscreme-perfekt-til-morgenmad-og-brunch/",
+          "dateFound": "2020-02-14T18:04:01.8762348+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Æggemuffins med squash og tomater",
+          "ingredients": [
+            "1 løg, finthakket",
+            "1 tsk olivenolie",
+            "7 æg",
+            "1/2 dl vand",
+            "1 tsk flagesalt",
+            "sort peber, friskkværnet",
+            "1 håndfuld frisk basilikum, finthakket",
+            "300 g squash",
+            "24 cherrytomater",
+            "1 tsk smør, til at smøre formene med",
+            "1/2 håndfuld frisk basilikum"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2019/08/aeggemuffins-opskrift.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/aeggemuffins-opskrift/",
+          "dateFound": "2020-02-14T17:44:29.4110922+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Asiatisk Kyllingesalat",
+          "ingredients": [
+            "2 kyllingebryst med skind",
+            "1/2 spidskål",
+            "125 g blandet salat",
+            "1 håndfuld frisk mynte",
+            "1/2 håndfuld frisk koriander",
+            "5 radisser, (kan undlades)",
+            "1/2 rød chili, i tynde skiver",
+            "3 spsk sesamfrø, sorte",
             "salt",
             "sort peber, friskkværnet",
-            "olivenolie, til stegning",
-            "smør, til stegning"
+            "2 spsk fishsauce",
+            "1 lime, 2 spsk saft herfra",
+            "1 tsk honning",
+            "1 spsk ingefær, finthakket",
+            "1 tsk fed hvidløg, finthakket",
+            "1 chili, finthakket"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/11/beef-wellington-opskrift.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2014/08/asiatisk-kyllingesalat.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/beef-wellington/",
-          "dateFound": "2020-02-14T17:41:18.8693946+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/kyllingesalat-med-inspiration-fra-vietnam/",
+          "dateFound": "2020-02-14T17:53:43.7603365+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Bircher Müsli med pære",
+          "heading": "Banoffee Pie",
           "ingredients": [
-            "30 g havregryn, grovvalset",
-            "1 dl æblejuice",
-            "1 pære, groftrevet",
+            "100 g digestive kiks",
+            "35 g smør, stuetemperatur+ lidt til formen",
+            "350 g karamelcreme, fx lavet af kondenseret mælk",
+            "3 bananer, i skiver",
+            "3 dl piskefløde",
+            "1 tsk rørsukker",
             "1 knivspids vaniljepulver",
-            "1/2 tsk kanel",
-            "1 citron, 1 tsk. saft herfra",
-            "",
-            "1 dl ymer, alternativt skyr, yoghurt naturel, mælk",
-            "1 drys valnødder, eller pekannødder",
-            "1 pære, skåret i tern",
-            "1 dryp honning, elle ahornsirup"
+            "50 g mørk chokolade, grofthakket",
+            "50 g pekannødder, grofthakket",
+            "1 drys mørk chokolade, fintrevet til pynt"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/10/bircher_musli.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2017/09/banoffeepie.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/bircher-musli/",
-          "dateFound": "2020-02-14T18:05:32.7962292+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/banoffee-pie/",
+          "dateFound": "2020-02-14T17:56:54.2553313+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Blomkålspizza – lavet på blomkålsbund",
+          "heading": "Bearnaise",
           "ingredients": [
-            "1 blomkål, fintrevet - evt i foodprocessor",
-            "3 æg",
-            "1 fed hvidløg, presset",
-            "15 mandler, hakket til mandelmel",
-            "75 g parmesan, fintrevet",
-            "60 g frisk mozzarella, finthakket",
-            "1 tsk salt",
-            "1 spsk oregano, tørret",
-            "1 dåse hakkede tomater",
-            "1 tsk oregano, tørret",
-            "125 g frisk mozzarella, skåret i skiver",
-            "2 tomater, skåret i skiver",
-            "1 håndfuld bredbladet persille, som pynt på de færdige pizzaer"
+            "250 g smør",
+            "4 spsk hvidvinseddike",
+            "1 dl vand",
+            "2 skalotteløg, finthakket - eller 1 alm. løg",
+            "1 håndfuld frisk estragon, blade og stængler hver for sig",
+            "4 æggeblommer",
+            "1 citron, ca 1 spsk saft herfra",
+            "salt",
+            "sort peber, friskkværnet"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2012/09/pizza-med-blomkaalbund.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2014/08/bearnaise.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/hjemmelavet-pizza-lavet-pa-blomkalsbund/",
-          "dateFound": "2020-02-14T18:11:28.1530762+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/bearnaise/",
+          "dateFound": "2020-02-14T18:02:28.8498986+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Blåbærmuffins",
+          "heading": "Belgiske vafler",
           "ingredients": [
-            "100 g smør, blødt",
-            "100 g rørsukker",
-            "75 g brun farin",
-            "3 æg",
-            "175 g hvedemel",
-            "50 g fuldkornshvedemel",
-            "2 tsk bagepulver",
-            "1 tsk kanel",
+            "2 æg",
+            "75 g sukker",
             "1/2 tsk vaniljepulver",
-            "1/2 tsk salt",
-            "225 g blåbær, frosne"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/03/blaabaermuffins.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/blaabaermuffins/",
-          "dateFound": "2020-02-14T17:54:55.2330203+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Chiagrød",
-          "ingredients": [
-            "2 dl mandelmælk, evt hjemmelavet - se opskrift",
-            "3 spsk chiafrø",
-            "1 knivspids vaniljepulver",
-            "2 spsk græsk yoghurt, (kan undlades)"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2014/06/chia-grod-opskrift.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/chiagroed/",
-          "dateFound": "2020-02-14T18:13:45.0779433+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Chili Cheese Scones",
-          "ingredients": [
-            "175 g hvedemel",
-            "1 tsk sukker",
-            "1 tsk salt",
+            "2 1/2 dl mælk, (evt. kærnemælk)",
+            "150 g smør, smeltet",
+            "250 g hvedemel",
             "2 tsk bagepulver",
-            "70 g smør",
-            "1 1/2 dl kærnemælk",
-            "50 g cheddar ost, skåret i tern",
-            "1 spsk jalapenos, finthakket",
-            "1 æg, sammenpisket"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2014/10/chili-cheese-scones.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/chili-cheese-scones/",
-          "dateFound": "2020-02-14T18:09:04.5850584+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Chokolade Chiagrød",
-          "ingredients": [
-            "1 spsk chiafrø, (eller 30g havregryn)",
-            "2 spsk havregryn, finvalset",
-            "1 dl mælk, eller mandelmælk",
-            "1 tsk kakao, usødet",
-            "1 spsk mørk chokolade, finthakket",
-            "1 dl skyr, alternativt ymer, græsk yoghurt o.l",
-            "1 tsk ahornsirup",
-            "1/2 tsk kakaonibs",
-            "5 pekannødder",
-            "1/2 banan, i skiver"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/10/kakao-chiagroed.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/chokolade-chiagroed/",
-          "dateFound": "2020-02-14T18:12:33.7247694+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Citronkage",
-          "ingredients": [
-            "1 øko citron, 1 dl saft + skal",
-            "200 g sukker",
-            "200 g smør",
-            "1 tsk vaniljepulver",
-            "200 g marcipan, i små tern",
-            "5 æg",
-            "240 g hvedemel",
-            "2 tsk bagepulver",
+            "1 øko citron, skal herfra",
             "1 nip salt",
-            "1 spsk blå birkes, (kan undlades)",
-            "150 g flormelis",
-            "1/2 øko citron, saft og skal",
-            "1 tsk blå birkes"
+            "Derudover",
+            "2 spsk smør, til stegning"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2018/01/citronkage.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2017/08/belgiske-vafler-opskrift.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/citronkage/",
-          "dateFound": "2020-02-14T17:56:44.1070292+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/belgiske-vafler/",
+          "dateFound": "2020-02-14T17:55:22.8634276+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Citrussalat",
+          "heading": "Blåbærsyltetøj",
           "ingredients": [
-            "2 klementiner, eller mandariner",
-            "1 rød grapefrugt",
-            "1 appelsin",
-            "2 spsk usaltede pistacienødder",
-            "1 spsk mandler, hakkede",
-            "1 håndfuld frisk mynte, blade"
+            "225 g blåbær, frosne, eller friske",
+            "135 g rørsukker",
+            "3/4 dl vand",
+            "1 vaniljestang, eller 1/2 tsk vaniljepulver"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/citrus-dessert1.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2014/02/blaabaer-syltetoej-opskrift-kompot.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/citrus-dessert-eller-snack/",
-          "dateFound": "2020-02-14T17:53:56.6132556+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/blaabaersyltetoej/",
+          "dateFound": "2020-02-14T18:11:03.8578366+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Confiterede andelår – Confit de Canard",
+          "heading": "Boeuf Bourguignon",
           "ingredients": [
-            "4 andelår",
-            "1 kg andefedt",
-            "1 spsk peberkorn, groft knust",
-            "1 spsk rørsukker",
-            "1 øko citron, fintrevet skal herfra",
-            "1 spsk flagesalt",
+            "1,8 kg oksekød, fx oksetykkam",
+            "2 spsk hvedemel",
+            "150 g bacon",
+            "1 spsk smør",
+            "2 løg, finthakket",
+            "3 gulerødder, skåret i tern",
+            "0,75 l rødvin, fx på druen Pinot Noir (Bourgogne, hvis det skal være ekstra godt og autentisk), det meste af en flaske - resten i et glas til kokken",
+            "2 dl oksefond",
             "1 spsk timian, tørret",
-            "1 spsk frisk rosmarin, nåle herfra, finthakkede",
-            "1 frisk salvie, 2 finthakkede blade herfra",
-            "3 fed hvidløg"
+            "6 laurbærblade",
+            "perleløg, ca. 25 stk.",
+            "1 spsk sukker",
+            "400 g champignon, skåret i halve",
+            "1 spsk smør",
+            "salt",
+            "sort peber, friskkværnet"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/02/confit-canard-opskrift.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2014/10/bouf-bourgignon.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/confit-de-canard/",
-          "dateFound": "2020-02-14T18:06:57.8281084+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/boeuf-bourguignon/",
+          "dateFound": "2020-02-14T17:52:42.0720431+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Broccolisalat",
+          "ingredients": [
+            "1 broccoli, skåret i små buketter",
+            "1/2 dl granatæblekerner",
+            "1/2 rødløg, skåret i fine tern",
+            "2 spsk solsikkekerner",
+            "2 spsk tranebær, tørrede, eller rosiner",
+            "3 skiver bacon",
+            "1 dl yoghurt, naturel, eller creme fraiche 18%",
+            "2 spsk mayonnaise",
+            "1 tsk rørsukker",
+            "flagesalt",
+            "sort peber, friskkværnet"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2014/01/broccolisalat-1.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/broccolisalat/",
+          "dateFound": "2020-02-14T18:08:41.5357816+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Brombæris med hvid chokolade",
+          "ingredients": [
+            "300 g brombær",
+            "100 g rørsukker",
+            "1 knivspids vaniljepulver",
+            "2 spsk vand",
+            "1/2 l piskefløde",
+            "2 dl sødmælk"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2014/09/hjemmelavet-brombaer-is-opskrift.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/brombaeris-med-hvid-chokolade/",
+          "dateFound": "2020-02-14T17:52:24.8310779+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Brownie",
+          "ingredients": [
+            "200 g mørk chokolade, heraf 50g hakket",
+            "200 g smør",
+            "4 æg",
+            "225 g sukker",
+            "100 g hvedemel",
+            "1/2 vaniljestang",
+            "125 g hasselnødder, ristede",
+            "1/2 tsk flagesalt, 1/4 tsk i dejen og lidt flager til at drysse på de færdige kolde brownies"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/brownies.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/brownie/",
+          "dateFound": "2020-02-14T18:05:12.9000901+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Chia Budding med mango",
+          "ingredients": [
+            "2 dl mandelmælk",
+            "1 1/2 spsk chiafrø",
+            "1 knivspids vaniljepulver",
+            "1 mango, moden, skåret i tern",
+            "1 tsk stødt kardemomme",
+            "1 dl græsk yoghurt",
+            "1 banan, moden"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2014/08/mango-chiapudding.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/chia-budding/",
+          "dateFound": "2020-02-14T18:09:47.9434917+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "ChokoKaffe",
+          "ingredients": [
+            "2 espresso",
+            "1 dl mælk",
+            "10 g mørk chokolade"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/choko-latte-og-chokoladebogen.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/chokokaffe/",
+          "dateFound": "2020-02-14T18:13:20.861686+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Chokolade påskeæg",
+          "ingredients": [
+            "500 g marcipan",
+            "200 g nougat",
+            "200 g mørk chokolade",
+            "50  g karamelcreme",
+            "1 spsk rålakridspulver",
+            "100 g hvid chokolade",
+            "1 tsk hindbærstøv",
+            "30 g hasselnødder, ristede og grofthakket",
+            "2 spsk flormelis"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/paeskeaeg.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/chokolade-paskeaeg/",
+          "dateFound": "2020-02-14T18:13:26.4069261+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Cookies med sød finsk lakrids og chokolade",
+          "ingredients": [
+            "150 g smør, stuetempereret",
+            "100 g sukker",
+            "100 g brun farin",
+            "1 æg",
+            "200 g hvedemel",
+            "1 tsk bagepulver",
+            "1/2 tsk vaniljepulver",
+            "130 g mørk chokolade",
+            "100 g sød finsk lakrids, skåret i små stykker"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2018/09/cookies-lakrids.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/cookies-lakrids/",
+          "dateFound": "2020-02-14T17:58:35.8087121+00:00"
         }
       },
       {
@@ -401,287 +454,252 @@
       },
       {
         "recipe": {
-          "heading": "Cosmopolitan",
+          "heading": "Cornflakestoppe med karamel",
           "ingredients": [
-            "2 cl cointreau",
-            "3 cl vodka",
-            "4 cl tranebærjuice",
-            "Isterninger",
-            "1 lime, saften herfra",
-            "Til servering",
-            "1 lime, skåret i både",
-            "",
-            ""
+            "150 g mørk chokolade",
+            "150 g cornflakes",
+            "2 spsk karamelcreme, (kan undlades)",
+            "1 knivspids guldstøv, spiseligt, (kan undlades)"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/08/cosmopolitan-cocktail.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2015/01/cornflakes-kager-opskrift.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/cosmopolitan/",
-          "dateFound": "2020-02-14T17:47:36.6318062+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/cornflakestoppe-med-karamel/",
+          "dateFound": "2020-02-14T17:55:47.5250458+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Date Shake – Toplækker smoothie med dadler",
+          "heading": "Couscous salat med den skønneste dressing",
           "ingredients": [
-            "2 bananer, modne",
-            "5 dadler",
-            "1 tsk vaniljepulver",
-            "1 tsk stødt kardemomme",
-            "5 dl mælk, efter eget valg",
-            "10 isterninger",
-            "10 cashewnødder, eller mandler"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2014/09/opskrift-milkshake-dadler.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/date-shake-toplaekker-smoothie-med-dadler/",
-          "dateFound": "2020-02-14T18:10:04.5882699+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Egg Florentine",
-          "ingredients": [
-            "1 english muffin - se opskrift",
-            "2 skiver koldrøget laks",
-            "2 æg, pocherede - se opskrift",
-            "4 spsk hollandaise sauce - se opskrift",
-            "2 håndfulde spinat, evt babyspinat",
+            "250 g couscous",
+            "1/2 dl olivenolie",
+            "1 øko citron, saft og skal herfra",
+            "2 fed hvidløg, presset",
+            "1 tsk ingefær, friskrevet",
+            "0,5 rød chili, finthakket",
+            "1 spsk rørsukker",
+            "2 dl bredbladet persille, finthakket",
+            "1 dl frisk mynte, finthakket",
             "flagesalt",
             "sort peber, friskkværnet",
-            "1 håndfuld purløg, finthakket"
+            "2 forårsløg, finthakkede",
+            "200 g tomater, finthakkede",
+            "1 rødløg, finthakket",
+            "2 håndfuld bredbladet persille, grofthakket",
+            "1 håndfuld frisk mynte, grofthakket"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2015/06/egg-florentine-opskrift.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2016/05/couscous-salat.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/egg-florentine/",
-          "dateFound": "2020-02-14T18:03:55.7478626+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/couscous-salat/",
+          "dateFound": "2020-02-14T17:51:25.0042135+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Farserede peberfrugter",
+          "heading": "Dadelskål med friske bær",
           "ingredients": [
-            "2 peberfrugter",
-            "400 g hakket lammekød, eller svinekød",
-            "1 løg, finthakket",
-            "3 fed hvidløg, finthakket",
-            "40 g pinjekerner, ristede (kan undlades)",
+            "15 dadler, uden sten",
+            "10 mandler",
+            "1 tsk kanel",
+            "1 spsk kakao, usødet",
+            "2 dl skyr, eller græsk yoghurt",
+            "150 g bær, fx hondbær, jordbær, blåbær",
+            "frisk mynte, lidt blade herfra til pynt"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2014/06/morgenmad-og-baer.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/sund-dadelskaal-med-friske-baer/",
+          "dateFound": "2020-02-14T18:04:18.5044682+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "De Lækreste Calamares",
+          "ingredients": [
+            "1 blæksprutte, tube fra fiskehandleren",
+            "1 spsk hvedemel",
             "1 æg",
-            "1 tsk timian, tørret",
-            "30 g persille, finthakket",
-            "1/2 tsk chiliflager",
-            "1 tsk stødt spidskommen",
+            "150 g rasp",
+            "flagesalt",
+            "sort peber, friskkværnet",
+            "1 spsk krydderurter, dild, koriander, og persille, finthakket",
+            "1/2 øko citron, fintrevet skal herfra",
+            "1/2 l solsikkeolie til friture",
+            "1 dl cremefraiche 18 %",
+            "1 dl yoghurt, naturel",
+            "1 spsk mayonnaise",
+            "1/2 øko citron, fintrevet skal herfra",
+            "2 spsk kapers, finthakket",
+            "1 spsk cornichoner, finthakket",
+            "1 håndfuld krydderurter, dild, purløg og persille",
             "flagesalt",
             "sort peber, friskkværnet"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2018/10/peberfrugter-farserede.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2015/07/calamares.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/farserede-peberfrugter/",
-          "dateFound": "2020-02-14T17:43:00.3315125+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/de-laekreste-calamares/",
+          "dateFound": "2020-02-14T18:03:22.5243338+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Finskbrød – i 4 varianter",
+          "heading": "Eton Mess",
           "ingredients": [
-            "300 g hvedemel",
-            "200 g smør",
-            "125 g sukker",
-            "1 øko citron, 1/2 tsk. fintrevet skal herfra",
-            "1 knivspids vaniljepulver, eller 1 vaniljestang",
-            "1 æg, sammenpisket til at pensle med",
-            "4 spsk perlesukker",
-            "30 g mandler, smuttede og finthakket"
+            "2 æg, æggehviderne herfra",
+            "5 spsk sukker",
+            "1/2 tsk æblecidereddike",
+            "2 dl piskefløde",
+            "450 g jordbær",
+            "1 knivspids vaniljepulver",
+            "2 spsk sukker",
+            "30 g mørk chokolade, hakket"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/12/finskbroed-opskrift.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2016/05/eton-mess-1.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/finskbroed/",
-          "dateFound": "2020-02-14T17:58:56.4554928+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/eton-mess/",
+          "dateFound": "2020-02-14T17:52:08.2053291+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Fiskefingre",
+          "heading": "Fennikelsalat med blåbær og pære",
           "ingredients": [
-            "1 dl rasp",
-            "1 øko citron, fintrevet skal herfra",
-            "1 spsk bredbladet persille, finthakket",
-            "2 æg",
-            "25 g hvedemel",
-            "25 g fuldkornshvedemel",
-            "500 g torskefiletter, sejfilet, helleflynder eller anden hvid fisk",
-            "salt",
-            "sort peber, friskkværnet",
-            "1 spsk smør",
-            "2 spsk olivenolie"
+            "2 fennikel, hvis de er små - eller en stor",
+            "1 pære, skåret i tern",
+            "50 g blåbær",
+            "7 mandler",
+            "1  knivspids lakridsrodspulver, (kan undlades)",
+            "1/2 tsk kakaonibs, eller finthakket mørk chokolade"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/05/fiskefingre.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2015/09/fennikelsalat.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/fiskefingre/",
-          "dateFound": "2020-02-14T17:42:07.6143584+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/fennikelsalat-med-blaabaer-og-paere/",
+          "dateFound": "2020-02-14T17:53:26.974575+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Forloren hare",
+          "heading": "Flæskesteg med abrikos og timianfyld",
           "ingredients": [
-            "800 g hakket svinekød",
-            "3 skiver bacon, sprødstegt og skåret i små tern",
-            "2 løg, helt finthakket",
-            "2 fed hvidløg, finthakket",
-            "1 1/2 dl mælk",
-            "1/2 dl piskefløde",
-            "2 æg",
-            "20 g havregryn, finvalset",
-            "2 spsk frisk timian, finthakket",
-            "1 tsk frisk rosmarin, finthakket",
-            "2 tsk salt",
-            "sort peber, friskkværnet",
-            "4 spsk rasp",
-            "15 skiver bacon",
-            "300 g rødbeder, i grove tern",
-            "300 g kartofler, i grove tern",
-            "3 spsk frisk timian, finthakket",
-            "frisk timian, til pynt"
+            "1 svinekam",
+            "2 tsk flagesalt",
+            "6 tørrede abrikoser",
+            "2 spsk abrikosmarmelade",
+            "1 håndfuld frisk timian, (eller 1 spsk. tørret)",
+            "2 fed hvidløg"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2014/09/forloren-hare.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2011/12/flaeskesteg-abrikos-1.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/forloren-hare/",
-          "dateFound": "2020-02-14T17:49:28.4157134+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/flaeskesteg-med-abrikos-og-timianfyld/",
+          "dateFound": "2020-02-14T18:05:57.1094089+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Frittata med squash og chorizo",
+          "heading": "Flammkuchen",
           "ingredients": [
-            "2 squash, groftrevet",
-            "2 løg, finthakket",
-            "75 g chorizo",
-            "8 æg",
-            "1 dl mælk, eller vand",
-            "1 tsk flagesalt",
-            "sort peber, friskkværnet",
-            "50 g ost, groftrevet, fx Gruyère eller cheddar (kan undlades)",
-            "1 tsk olivenolie, eller kokosolie",
-            "1 håndfuld krydderurter, Finthakkede friske krydderurter, fx purløg, timian, kørvel eller brøndkarse"
-          ],
-          "image": {
-            "src": "",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/frittata/",
-          "dateFound": "2020-02-14T17:43:38.1477561+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Fudge",
-          "ingredients": [
-            "400 g sød kondenseret mælk",
-            "100 g smør",
-            "350 g rørsukker, eller dermerarasukker",
-            "1 1/2 dl sødmælk",
-            "1/2 tsk vaniljepulver",
-            "1 nip flagesalt"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/11/fudge.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/fudge/",
-          "dateFound": "2020-02-14T17:47:23.6286743+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Gravad Laks med rævesauce",
-          "ingredients": [
-            "700 g lakseside",
-            "4 spsk salt",
-            "4 spsk sukker",
-            "1/2 tsk sort peber",
-            "1 knivspids fennikelfrø, stødt",
-            "1 knivspids stødt koriander",
-            "4 spsk dild, tørret",
-            "1 håndfuld frisk dild, finthakket",
-            "1 dl olivenolie, mild",
-            "1 spsk brun farin",
-            "2 tsk dijon sennep",
-            "1 spsk æblecidereddike",
-            "1 nip salt",
-            "sort peber",
-            "1 spsk dild, tørret",
-            "1/2 dl cremefraiche 18 %",
-            "1 håndfuld frisk dild, til pynt"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/12/Gravad-laks-opskrift.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/gravad-laks/",
-          "dateFound": "2020-02-14T17:45:52.7416278+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Grillspyd med kylling, halloumi og chorizo",
-          "ingredients": [
-            "300 g kyllingefilet, i tern",
-            "50 g chorizo, skåret i skiver",
-            "200 g Halloumi, i tern",
-            "2 rødløg, i både",
-            "1 squash, i tern",
-            "1 aubergine, i tern",
-            "4 spsk olivenolie",
-            "1 øko citron, fintrevet skal + saft",
-            "2 fed hvidløg, presset",
-            "1 spsk ingefær, fintrevet",
+            "3 dl vand",
+            "2 spsk olivenolie",
+            "100 g tipo 00 mel",
+            "250 g hvedemel, Evt. lidt ekstra til æltningen",
+            "2 tsk bagepulver",
             "1 tsk salt",
+            "400 g cremefraiche 18 %, eller 38%",
+            "flagesalt",
             "sort peber, friskkværnet",
-            "Derudover",
-            "12 grillspyd af træ, iblødsat"
+            "1 nip muskatnød, fintrevet",
+            "250 g bacon, skåret i tynde strimler",
+            "2 rødløg, i tynde skiver",
+            "1 håndfuld frisk timian"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/05/grillspyd-kylling.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2018/09/flammkuchen.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/grillspyd-med-kylling/",
-          "dateFound": "2020-02-14T17:42:01.340276+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/flammkuchen/",
+          "dateFound": "2020-02-14T17:43:11.4434638+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Frugtsalat med chokolade",
+          "ingredients": [
+            "1 banan, i tern",
+            "1 pære, i tern",
+            "1 mandarin, i både",
+            "1 spsk solsikkekerner",
+            "1 spsk mandler",
+            "20 g mørk chokolade, finthakket",
+            "frisk mynte"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/frugtsalat3.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/frugtsalat-sund-og-god/",
+          "dateFound": "2020-02-14T18:10:40.5305908+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Græsk burger med lammekød og tzatziki",
+          "ingredients": [
+            "400 g hakket lammekød",
+            "1 æg",
+            "50 g feta, smuldret",
+            "1 tsk timian, tørret",
+            "1 spsk frisk rosmarin, eller 1 tsk tørret)",
+            "flagesalt",
+            "sort peber, friskkværnet",
+            "1 spsk olivenolie, og smør til stegning",
+            "2 dl græsk yoghurt",
+            "1 agurk, groftrevet",
+            "1 fed hvidløg, presset",
+            "1 tsk salt",
+            "4 burgerboller, evt hjemmebagte",
+            "125 g blandet salat",
+            "1 rødløg, evt til hjemmelavede syltede rødløg"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2014/10/grask-burger-lammekod.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/graesk-burger-med-lammekod/",
+          "dateFound": "2020-02-14T18:06:04.8072268+00:00"
         }
       },
       {
@@ -709,14 +727,37 @@
             "3 spsk pinjekerner, ristede",
             "30 g feta"
           ],
-          "image": {
-            "src": "",
-            "alt": ""
-          }
+          "image": null
         },
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/graesk-omelet/",
           "dateFound": "2020-02-14T18:06:04.193088+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Græskarboller",
+          "ingredients": [
+            "3 1/2 dl vand",
+            "20 g gær",
+            "250 g hokkaido græskar, groftrevet",
+            "25 g græskarkerner",
+            "1 spsk honning",
+            "1 tsk salt",
+            "75 g havregryn, finvalset",
+            "100 g fuldkornshvedemel",
+            "350 g hvedemel",
+            "1 æg, til at pensle med",
+            "25 g græskarkerner, som drys"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2018/12/graeskarboller.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/graeskarboller/",
+          "dateFound": "2020-02-14T17:50:36.5285431+00:00"
         }
       },
       {
@@ -752,319 +793,468 @@
       },
       {
         "recipe": {
-          "heading": "Grøn mango salat med rejer",
+          "heading": "Greasy Portobello Burger med Bønnebøf",
           "ingredients": [
-            "2 umoden mango, grønne",
-            "2 skalotteløg, eller 1 rødløg i fine tern",
-            "1 håndfuld frisk mynte, finthakket",
-            "100 g rejer uden skal",
-            "1 lime, saften herfra",
-            "1 spsk rørsukker",
-            "1 1/2 tsk fishsauce",
-            "1 fed hvidløg, finthakket",
-            "1/4 rød chili, finthakket"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2015/05/gron-mangosalat.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/groen-mango-salat-med-rejer/",
-          "dateFound": "2020-02-14T17:53:32.2367546+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Grønskål til morgenmad",
-          "ingredients": [
-            "1 banan",
-            "1/4 ananas",
-            "2 kiwi",
-            "1 appelsin, saften herfra",
-            "2 håndfulde spinat, frosne",
-            "1 håndfuld broccoli, frosne",
-            "10  mandler, lagt i blød og smuttede",
-            "1 tsk kanel",
-            "1/2 tsk stødt kardemomme",
-            "20 g ingefær",
-            "vand"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/03/groenskaal-opskrift.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/groenskaal-til-morgenmad/",
-          "dateFound": "2020-02-14T17:51:24.5761172+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Gulerodsjuice",
-          "ingredients": [
-            "4 gulerødder",
-            "2 appelsiner",
-            "1 æble",
-            "2 stængler bladselleri",
-            "15 g ingefær"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/hjemmelavet-gulerodsjuice.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/gulerodsjuice/",
-          "dateFound": "2020-02-14T18:07:33.9511302+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Hakkebøffer med bløde løg",
-          "ingredients": [
-            "200 g champignon, Skåret i skiver",
-            "100 g kantareller, halverede",
-            "2 stængler frisk timian",
-            "3 løg, skåret i ringe",
-            "1 spsk balsamico",
-            "1 spsk smør",
-            "1 tsk olivenolie",
-            "500 g hakket oksekød",
+            "240 g sorte bønner, iblødsatte og kogte, svarende til 1 dåse",
+            "2 æg",
+            "1 tsk stødt spidskommen",
+            "2 spsk persille, finthakket",
+            "1 tsk stødt koriander",
+            "1/2 tsk cayenne peber",
+            "2 fed hvidløg, presset",
+            "1 løg, finthakket",
             "salt",
             "sort peber, friskkværnet",
-            "1 spsk smør",
-            "1 dl grøntsagsbouillon",
-            "2 dl kartoffelvand",
+            "8 portobellosvampe",
+            "1 håndfuld grøn salat",
+            "2 tomater, i skiver",
+            "1/2 agurk, i skiver",
+            "1 avocado, i skiver",
+            "4 skiver ost, (kan undlades)",
+            "4 dryp ketchup, et til hver burger",
+            "4 tsk mayonnaise, et til hver burger",
+            "1 rødløg, i tynde ringe"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2014/05/portobello-burger-med-bonneboef.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/greasy-portobello-burger-med-boenneboef/",
+          "dateFound": "2020-02-14T18:11:39.2126532+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Grillede asparges og rabarber med bacon",
+          "ingredients": [
+            "12 grønne asparges",
+            "12 stængler rabarber, fx jordbær- eller vinrabarber",
+            "8 skiver bacon"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2016/06/asparges-bacon-rabarber.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/grillede-asparges-rabarber-bacon/",
+          "dateFound": "2020-02-14T18:00:41.624602+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Grønkålssuppe",
+          "ingredients": [
+            "2 løg, finthakket",
+            "3 fed hvidløg, finthakkede",
+            "1 spsk olivenolie",
+            "4 kartofler, skrællede og skåret i tern",
+            "1 l grøntsagsbouillon",
+            "200 g grønkål, finthakket",
             "1 dl piskefløde",
-            "1 tsk worcestershire sauce",
-            "sort peber, friskkværnet",
-            "2 spsk saucejævner, (eller til saucen er jævnet)",
-            "200 g syltede agurker",
-            "1 kg kartoffel, kogte"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/10/hakkeboef-bloede-loeg.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/hakkeboeffer-med-bloede-loeg/",
-          "dateFound": "2020-02-14T17:41:30.2111862+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Hanoi Egg Coffee",
-          "ingredients": [
-            "2 espresso, shot",
-            "3 æggeblommer",
-            "3 spsk kondenseret mælk"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2015/06/A14_2761.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/hanoi-egg-coffee/",
-          "dateFound": "2020-02-14T18:01:57.9638962+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Hasselnøddekurv",
-          "ingredients": [
-            "40 g hasselnødder",
-            "25 g smør",
-            "2 spsk glukosesirup",
-            "50 g rørsukker"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2018/12/hasselnoeddekurv.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/hasselnoeddekurv/",
-          "dateFound": "2020-02-14T17:56:36.588293+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Havregrynskager med luftig smørcreme",
-          "ingredients": [
-            "75 g smør",
-            "1 knivspids vaniljepulver, eller 1/2 vaniljestang",
-            "125 g rørsukker, erstat evt. 25 g rørsukker med muscovadosukker",
-            "1 æg",
-            "1 tsk bagepulver",
-            "1 1/2 spsk hvedemel",
-            "125 g havregryn, finvalset",
-            "1 knivspids vaniljepulver, eller 1/2 vaniljestang",
-            "100 g rørsukker",
-            "1/2 dl vand",
-            "125 g smør, stuetempereret",
-            "1 æggeblomme",
-            "100 g mørk chokolade"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2015/01/havregrynskager.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/havregrynskager-med-luftig-smoercreme/",
-          "dateFound": "2020-02-14T17:56:16.150648+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Havregrynskugler",
-          "ingredients": [
-            "250 g havregryn, finvalset",
-            "150 g smør",
-            "150 g rørsukker",
-            "50 g kakao, usødet",
-            "1 dl kaffe, stærk",
-            "1 spsk mørk rom",
-            "250 g havregryn, finvalset",
-            "1/2 dl appelsinjuice, friskpresset",
-            "150 g smør",
-            "150 g rørsukker",
-            "40 g kakao, usødet",
-            "75 g kokosmel",
-            "1 dl kokosmel",
-            "1 spsk kakao, usødet",
-            "1 spsk frysetørret hindbær"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/03/hjemmelavede-havregrynskugler.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/havregrynskugler/",
-          "dateFound": "2020-02-14T18:07:44.9695992+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Helstegt kylling med krydderurter og citron",
-          "ingredients": [
-            "1 kylling",
-            "3 citroner",
-            "7 stængler frisk rosmarin",
-            "1 håndfuld frisk timian",
-            "3 spsk smør",
-            "3 fed hvidløg",
-            "flagesalt",
+            "salt",
             "sort peber, friskkværnet"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2014/05/kylling-med-rosmarin.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2016/11/groenkaalssuppe.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/helstegt-kylling/",
-          "dateFound": "2020-02-14T18:03:42.7118854+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/groenkaalssuppe/",
+          "dateFound": "2020-02-14T17:48:29.0814262+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Hjemmelavet Rocky Road Is",
+          "heading": "Gulerodskage",
           "ingredients": [
-            "70 g mørk chokolade, finthakket",
-            "1/2 vaniljestang",
-            "125 ml sødmælk",
-            "125 ml piskefløde",
-            "2 æggeblommer",
-            "60 g sukker",
-            "25 mandler",
-            "50 g mørk chokolade",
-            "25 skumfiduser, små",
-            "10 pekannødder"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2015/07/rockyroad-is-opskrift.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/hjemmelavet-rocky-road-is/",
-          "dateFound": "2020-02-14T18:13:01.584099+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Hokkaidosuppe med ristede græskarkerner og æbletern",
-          "ingredients": [
-            "1 hokkaido græskar",
-            "1 løg, grofthakket",
-            "4 fed hvidløg, finthakket",
-            "2 gulerødder, i tern",
-            "4 kartofler, i tern",
-            "1/3 rød chili, skåret midt over og uden kerner",
-            "1 tsk ingefær, fintrevet",
-            "1 l grøntsagsbouillon",
-            "1 1/2 dl piskefløde",
-            "1 spsk olivenolie",
-            "1 øko citron, 1 spsk. citronsaft herfra",
-            "1/2 tsk stødt spidskommen",
-            "sort peber, friskkværnet",
-            "vand",
-            "1 dl cremefraiche 18 %, alternativt græsk yoghurt",
-            "75 g græskarkerner",
-            "1 tsk smør",
-            "1 tsk olivenolie",
-            "1 tsk salt",
-            "1 æble, skåret i små tern",
-            "1/2 øko citron",
-            "1/2 tsk honning"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2011/10/hokkaidosuppe-1.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/hokkaidosuppe/",
-          "dateFound": "2020-02-14T17:50:03.1087504+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Indiske ris",
-          "ingredients": [
-            "3 dl basmati ris",
-            "6 dl vand",
-            "salt, til risene",
-            "1/2 dl sorte ris, kogte (kan undlades)",
-            "1 løg, finthakket",
-            "2 fed hvidløg, finthakket",
-            "1 spsk olivenolie, eller kokosolie til stegning",
-            "2 dadler, finthakkede eller 2 spsk. lyse rosiner",
-            "1 tsk stødt gurkemeje, eller fintrevet frisk",
-            "1 knivspids cayenne peber",
-            "1 tsk stødt kardemomme",
+            "4 gulerødder, groftrevet , ca 275g",
+            "150 g smør, stuetempereret",
+            "100 g sukker",
+            "100 g brun farin",
+            "200 g hvedemel",
+            "4 æg",
+            "2 tsk bagepulver",
+            "1/2 tsk salt",
             "1 tsk kanel",
-            "4 nelliker, stødt",
-            "1 tsk stødt spidskommen",
-            "30 g cashewnødder",
+            "50 g valnødder, hakkede",
+            "150 g flødeost, naturel",
+            "1 øko citron, saft og skal fra en 1/2 citron",
+            "1/2 vaniljestang, kornene herfra",
+            "3 tsk flormelis"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/gulerodskage1.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/gulerodskage_opskrift/",
+          "dateFound": "2020-02-14T17:58:05.8658498+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Gulerodssuppe",
+          "ingredients": [
+            "2 løg, finthakkede",
+            "1 tsk olivenolie",
+            "900 g gulerødder, skrællede og skåret i tern",
+            "3 fed hvidløg",
+            "2 tsk stødt koriander",
+            "2 tsk stødt spidskommen",
+            "1 tsk sød paprika",
+            "9 dl kyllingefond, alternativt hønsefond eller grøntsagsbouillon",
+            "1 dl kokosmælk",
             "salt",
             "sort peber, friskkværnet",
+            "2 spsk kokosmælk",
+            "1 drys bredbladet persille, eller frisk koriander",
+            "salt",
+            "sort peber, friskkværnet"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2016/02/gulerodssuppe-2.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/gulerodssuppe/",
+          "dateFound": "2020-02-14T17:48:48.7748341+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Havregrød med æbler og karamel",
+          "ingredients": [
+            "120 g havregryn, finvalset",
+            "5 dl vand",
+            "1 knivspids vaniljepulver",
+            "1 knivspids stødt kardemomme",
+            "4 1/2 dl mælk",
+            "1 knivspids salt",
+            "2 æbler, i tern",
+            "1 tsk karamelcreme",
+            "1 drys kanel",
+            "1 håndfuld mandler, finthakkede"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2012/03/havregrod.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/havregroed/",
+          "dateFound": "2020-02-14T18:01:25.7716061+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Havregrynsmuffins med honning og pære",
+          "ingredients": [
+            "50 g smør, stuetempereret",
+            "3/4 dl yoghurt, naturel",
+            "60 g honning",
+            "2 æg",
+            "100 g havregryn, finvalset",
+            "50 g hvedemel",
+            "1/2 tsk stødt kardemomme",
+            "1 knivspids salt",
+            "1 tsk bagepulver",
+            "2 tsk kanel",
+            "40 g valnødder, finthakkede",
+            "200 g pærer, groftrevet",
+            "1 pære, skåret i tynde skiver"
+          ],
+          "image": null
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/havregrynsmuffins-honning-paere/",
+          "dateFound": "2020-02-14T17:55:18.1263666+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hindbærmuffins",
+          "ingredients": [
+            "70 g smør, stuetemperet",
+            "100 g sukker",
+            "1 æg",
+            "1/2 dl yoghurt, naturel",
+            "50 g hvedemel",
+            "1/2 tsk bagepulver",
+            "1 knivspids salt",
+            "100 g hindbær, friske eller frosne",
+            "1 spsk sukker"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/muffins-med-hindbaer.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/hindbaermuffins/",
+          "dateFound": "2020-02-14T18:04:54.4248103+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "hjemmelavet bounty",
+          "ingredients": [
+            "100 g sød kondenseret mælk",
+            "80 g kokosmel",
+            "100 g mørk chokolade, eller variant efter smag"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/hjemmelavet-bounty.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/hjemmelavet-bounty/",
+          "dateFound": "2020-02-14T18:05:06.1388238+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hjemmelavet Gul Karry Pasta – til asiatiske retter",
+          "ingredients": [
+            "1 spsk stødt spidskommen",
+            "1 spsk korianderfrø",
+            "10 peberkorn",
+            "10  nelliker",
+            "1 spsk kanel, ægte, eller kanelstang",
+            "10 kardemommekapsler",
+            "1/2 stængel citrongræs, finthakket",
+            "20 g galangarod, skrællet og finthakket",
+            "15 g ingefær, skrællet og finthakket",
+            "15 g frisk gurkemeje, skrællet og finthakket",
+            "7 kaffirblade, fjern stilken i midten og derefter finthakket",
+            "5 fed hvidløg, finthakket",
+            "4 skalotteløg, eller 1-2 rødløg fitnhakket",
+            "2 rød chili, mild-medium stærke, fjern frø og derefter finthakket",
+            "1 chili, stærk, (eller flere, hvis du gerne vil have en HOT curry) fjern frø og derefter finthakket",
+            "1 tsk thai chilipasta"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2015/06/gul-curry-pasta-opskrift.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/hjemmelavet-gul-karry-pasta-til-asiatiske-retter/",
+          "dateFound": "2020-02-14T18:01:57.4757883+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hjemmelavet hasselnøddesmør",
+          "ingredients": [
+            "120 g hasselnødder",
+            "1 nip salt"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2013/10/hasselnoeddesmoer-hjemmelavet.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/hasselnoddesmor/",
+          "dateFound": "2020-02-14T18:02:34.4921614+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hjemmelavet Jordbæris",
+          "ingredients": [
+            "500 g jordbær, rensede",
+            "150 g sukker",
+            "1 vaniljestang",
+            "5 æggeblommer",
+            "2 dl sødmælk",
+            "4 dl piskefløde"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2015/07/jordbaer-is.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/hjemmelavet-jordbaeris/",
+          "dateFound": "2020-02-14T18:11:00.5362266+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hønsefrikassé",
+          "ingredients": [
+            "1 suppehøne, eller kylling",
+            "1 1/2 l vand",
+            "1 dl hvidvin, tør",
+            "1 løg, skåret i kvarte",
+            "10 peberkorn",
+            "1 spsk salt",
+            "2 laurbærblade",
+            "4 stængler persille",
+            "50 g smør",
+            "4 spsk hvedemel",
+            "1 dl piskefløde",
+            "salt",
+            "sort peber, friskkværnet",
+            "250 g gulerødder, i tern",
+            "1 porre",
+            "250 g friske ærter",
+            "1 dl frisk dild",
+            "1 kg kartofler, nye, kogte"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2019/05/kyllingefrikasse.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/hoensefrikasse/",
+          "dateFound": "2020-02-14T17:41:52.3603372+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hvid julegløgg",
+          "ingredients": [
+            "500 g lys sirup",
+            "1 øko appelsin",
+            "1 øko citron",
+            "3 kanelstænger",
+            "1 stjerneanis",
+            "5 kardemommekapsler",
+            "10 g ingefær, i skiver",
+            "3 dl kogende vand",
+            "hvidvin",
+            "lys rom, (kan undlades)"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/julefrokost.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/hvid-juleglogg/",
+          "dateFound": "2020-02-14T18:07:42.825118+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Hvidløgsolie",
+          "ingredients": [
+            "4 hvidløg, hele",
+            "3 dl solsikkeolie, eller anden olie, der tåler opvarmning",
+            "4 stængler frisk timian",
+            "1 stængel frisk rosmarin",
+            "1 tsk sort peber, hele peberkorn"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2018/04/opskrift-hvidloegsolie.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/hvidloegsolie/",
+          "dateFound": "2020-02-14T17:54:25.5309509+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Indisk Curry med kylling",
+          "ingredients": [
+            "2 kyllingebryst",
+            "1 dl yoghurt, naturel",
+            "1 lime, saften herfra",
+            "3 spsk karry, medium",
+            "1 tsk kanel",
+            "4 nelliker, stødt",
+            "1 tsk stødt kardemomme",
+            "2 fed hvidløg, finthakket",
+            "1 spsk ingefær, fintrevet",
+            "3 spsk olivenolie",
+            "2 løg, grofthakket",
+            "1 dåse hakkede tomater",
+            "1 rød peberfrugt, i grove tern",
+            "1 dåse kokosmælk",
+            "flagesalt",
+            "sort peber, friskkværnet",
+            "1 drys chili, evt - efter smag",
+            "1 lime, skåret i både til servering",
             "1 håndfuld frisk koriander"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/03/indiske-ris-opskrift.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2013/06/indisk-curry1.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/indiske-ris/",
-          "dateFound": "2020-02-14T17:46:58.5950185+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/indisk_curry_med_kylling/",
+          "dateFound": "2020-02-14T17:46:41.1095798+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Jambalaya med kylling og chorizo",
+          "ingredients": [
+            "250 g kyllingebryst, skåret i tern",
+            "100 g chorizo, skåret i tern eller skiver",
+            "2 spsk olivenolie",
+            "1 løg, finthakket",
+            "3 fed hvidløg, finthakket",
+            "1 tsk chiliflager",
+            "1 tsk sød paprika",
+            "1/2 tsk nellike, stødt",
+            "1 tsk timian, tørret",
+            "1 tsk oregano, tørret",
+            "1 rød peberfrugt, finthakket",
+            "3 stængler bladselleri, finthakket",
+            "300 g basmati ris",
+            "6 dl grøntsagsbouillon",
+            "3 spsk tomatpuré",
+            "1 dåse hakkede tomater",
+            "1 lime, saft herfra",
+            "125 g rejer",
+            "flagesalt",
+            "sort peber, friskkværnet",
+            "2 dryp tabasco, efter smag (kan undlades)",
+            "1 håndfuld persille, finthakket",
+            "2 forårsløg, finthakket",
+            "godt brød",
+            "100 g grøn salat"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2017/09/jambalaya.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/jambalaya/",
+          "dateFound": "2020-02-14T17:48:14.2954814+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Jordbær og Honning – opskrift på jordbærsmør",
+          "ingredients": [
+            "75 g smør, stuetempereret",
+            "2 spsk honning",
+            "7 jordbær, skåret i kvarte"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2017/06/jordbaersmoer-1.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/jordbaer-og-honning/",
+          "dateFound": "2020-02-14T17:51:47.9357626+00:00"
         }
       },
       {
@@ -1084,85 +1274,6 @@
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/jordbaersyltetoej/",
           "dateFound": "2020-02-14T17:44:40.5341562+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Jordskokkesuppe med torsk æbletern og bacon",
-          "ingredients": [
-            "350 g jordskokker, skrællede og skåret i tern",
-            "300 g kartofler, skrællede og skåret i tern",
-            "2 løg, skåret i mellemstore tern",
-            "1 fed hvidløg, finthakket",
-            "2 stængler frisk timian, eller 1 tsk. tørret timian",
-            "2 spsk olivenolie",
-            "1 l hønsebouillon",
-            "1 knivspids muskatnød, fintrevet",
-            "1 dl piskefløde",
-            "1 tsk salt",
-            "sort peber, friskkværnet",
-            "2 spsk æblecidereddike",
-            "1 tsk honning",
-            "1 citron, 1 tsk. citronsaft herfra",
-            "2 torskefiletter, Ca 1/2 torskefilet pr. portion",
-            "2 skiver bacon",
-            "2 æbler, skåret i tern"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2011/12/jordskokkesuppe-1.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/jordskokkesuppe/",
-          "dateFound": "2020-02-14T17:50:00.6021904+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Jødekager",
-          "ingredients": [
-            "150 g hvedemel",
-            "125 g smør",
-            "70 g sukker",
-            "1/2 æg, sammenpisket",
-            "1 knivspids hjortetaksalt",
-            "1/2 æg, sammenpisket",
-            "2 spsk sukker",
-            "1 spsk kanel",
-            "25 g mandler, smuttede og hakkede"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2013/12/joedekager_opskrift.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/joedekager/",
-          "dateFound": "2020-02-14T17:56:16.9968387+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Kakaobowl",
-          "ingredients": [
-            "2 frosne bananer, i skiver",
-            "1 spsk kakao, usødet",
-            "3 dadler, uden sten",
-            "1 avocado",
-            "1 tsk honning",
-            "1 knivspids vaniljepulver",
-            "1 tsk kanel",
-            "4 dl mælk, efter eget valg"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/11/kakaobowl.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/kakaobowl/",
-          "dateFound": "2020-02-14T18:08:06.1524705+00:00"
         }
       },
       {
@@ -1202,117 +1313,130 @@
       },
       {
         "recipe": {
-          "heading": "Kanelsnurrer",
+          "heading": "Kardemommekage",
           "ingredients": [
-            "100 g smør",
-            "1 1/2 dl mælk",
-            "25 g gær",
-            "2 æg",
-            "50 g sukker",
-            "1 tsk stødt kardemomme",
-            "1/2 tsk salt",
-            "1/2 tsk vaniljepulver",
-            "60 g grahamsmel",
-            "300 g hvedemel",
-            "150 g smør, stuetempereret",
-            "125 g rørsukker",
-            "50 g brun farin",
-            "1 tsk kanel"
+            "220 g rørsukker",
+            "150 g smør, blødt",
+            "200 g marcipan",
+            "4 æg",
+            "225 g hvedemel",
+            "2 tsk bagepulver",
+            "2 tsk stødt kardemomme",
+            "1 tsk vaniljepulver",
+            "200 g flødeost, naturel",
+            "150 g flormelis",
+            "1 spsk kakaonibs",
+            "1 spsk pistaciekerner"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/02/kanelsnurrer-opskrift.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2019/02/kardemommekage.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/kanelsnurrer/",
-          "dateFound": "2020-02-14T17:57:05.9960293+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/kardemommekage/",
+          "dateFound": "2020-02-14T17:56:32.3573433+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Kikærtegryde med linser og kokosmælk",
+          "heading": "Kikærtesalat med ristede gulerødder",
           "ingredients": [
-            "4 fed hvidløg",
+            "1 tsk stødt spidskommen",
+            "1/2 tsk stødt koriander",
+            "1/2 tsk kanel",
+            "1 tsk sød paprika",
+            "1 spsk olivenolie",
+            "3 gulerødder, skrællede og skåret i tern",
+            "2 fed hvidløg, knust",
+            "1 rødløg, skåret i både",
+            "100 g kikærter, iblødsatte natten over alternativt fra dåse",
+            "1/2 citron, saften herfra",
+            "salt",
+            "sort peber, friskkværnet",
+            "125 g rucola, og/eller spinatblade",
+            "40 g gedefeta, smuldret",
+            "1 håndfuld frisk koriander",
+            "1 håndfuld frisk mynte",
+            "2 spsk mandler, hakkede"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2017/02/kikaerte-salat-opskrift.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/kikaertesalat/",
+          "dateFound": "2020-02-14T17:53:14.513514+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Kofta",
+          "ingredients": [
+            "400 g hakket lammekød",
             "1 løg, finthakket",
-            "2 spsk olivenolie",
-            "3 tsk karry, medium",
-            "1 tsk ingefær, fintrevet",
-            "2 tsk stødt spidskommen",
-            "1 tsk stødt koriander",
-            "1  tsk stødt kardemomme",
-            "150 g røde linser",
-            "1 dåse hakkede tomater",
-            "1 dåse kokosmælk",
-            "240 g kikærter, udkogte og udblødte (eller 1 dåse)",
-            "3 dl grøntsagsbouillon",
-            "1 squash, skåret i tern af 1 cm",
-            "1 rød peberfrugt, skåret i tynde strimler",
-            "salt",
-            "sort peber, friskkværnet",
-            "3 dl basmati ris, kog efter anvisning på emballage",
-            "1 håndfuld bredbladet persille, grofthakket"
+            "3 fed hvidløg, finthakket",
+            "1 æg",
+            "40 g pinjekerner, ristede",
+            "50 g persille, finthakket",
+            "1/2 tsk chiliflager",
+            "1/2 tsk stødt spidskommen",
+            "flagesalt",
+            "sort peber, friskkværnet"
           ],
           "image": {
-            "src": "",
+            "src": "https://www.valdemarsro.dk/wp-content/2017/08/kofta.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/kikaertegryde/",
-          "dateFound": "2020-02-14T17:48:00.0922915+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/kofta/",
+          "dateFound": "2020-02-14T17:48:11.9594511+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Kirsebærsauce",
+          "heading": "Kokos Chiagrød",
           "ingredients": [
-            "400 g kirsebær, udstenede",
-            "1 dl portvin",
-            "1 dl kirsebærvin, af god kvalitet",
-            "1 1/2 dl vand",
-            "1 1/2 dl appelsinjuice",
-            "1/2 vaniljestang",
-            "65 g rørsukker",
-            "majsstivelse"
+            "2 dl kokosmælk",
+            "3 spsk chiafrø",
+            "1 knivspids vaniljepulver",
+            "1/2 tsk stødt kardemomme",
+            "1 knivspids salt",
+            "1/2 tsk kanel"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2015/01/risalamande.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2018/05/kokos-chiagrød-1.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/hjemmelavet-kirsebaersauce/",
-          "dateFound": "2020-02-14T18:04:09.37895+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/kokos-chiagroed/",
+          "dateFound": "2020-02-14T18:13:44.4247976+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Klassisk andesteg med æbler og svesker",
+          "heading": "Kold bearnaise dressing",
           "ingredients": [
-            "1 and, ca. 3 kg",
-            "4 æbler, skåret i tern",
-            "200 g svesker",
-            "3 rødløg, i både",
-            "salt",
-            "sort peber, friskkværnet",
-            "indmad fra anden",
-            "4 gulerødder, skrællede",
-            "5 stængler bladselleri",
-            "1 porre, renset",
-            "2 rødløg",
-            "4 laurbærblade",
-            "5 stængler frisk timian",
-            "vand til at fylde bradepanden halvt op"
+            "1 håndfuld frisk estragon, gerne en stor håndfuld",
+            "1 dl vand",
+            "2 skalotteløg, finthakket",
+            "1 tsk sukker",
+            "1 øko citron, 1 spsk saft og fintrevet skal",
+            "2 1/2 dl cremefraiche 38%",
+            "1 tsk salt",
+            "sort peber, friskkværnet"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/12/andesteg_aebler_svesker.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2019/09/kold-bearnaise-dressing.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/andesteg-med-svesker/",
-          "dateFound": "2020-02-14T18:03:05.7021337+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/kold-bearnaise-dressing/",
+          "dateFound": "2020-02-14T17:41:39.837429+00:00"
         }
       },
       {
@@ -1336,599 +1460,590 @@
       },
       {
         "recipe": {
-          "heading": "Kylling i Karry a la Ristaffel",
+          "heading": "Kylling i fad med pikant og grøntsager",
           "ingredients": [
-            "2 kyllingebryst",
-            "2 dl hønsebouillon",
-            "3 dl vand",
-            "2 spsk olivenolie",
-            "1 løg, finthakket",
-            "1 fed hvidløg, finthakket",
-            "1 æble, groftrevet",
-            "2 spsk karry, medium, juster efter styrke",
-            "1/2 tsk stødt gurkemeje",
-            "1 tsk stødt spidskommen",
-            "1/2 tsk stødt kardemomme",
-            "1/2 tsk stødt koriander",
-            "2 dl kogevand fra gryden med kogt kyllingebryst",
-            "3 dl mælk",
-            "1/2 dl piskefløde",
-            "majsstivelse, + lidt kold mælk til at ryste sammen med",
-            "salt",
-            "sort peber, friskkværnet",
-            "2 1/2 dl ris, fx. basmati, måske lidt mere hvis man spiser meget ris",
-            "2 kardemommekapsler",
-            "5 dl vand",
-            "salt",
-            "1 æble, i tern",
-            "1 banan, i skiver",
-            "1 mango, i tern",
-            "1/2 ananas, i tern",
-            "1 dl kokosmel",
-            "1 dl rosiner",
-            "1 dl mango chutney",
-            "1 håndfuld bredbladet persille",
-            "1 håndfuld frisk koriander"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2014/08/kylling-i-karry-opskrift.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/kylling-karry/",
-          "dateFound": "2020-02-14T17:49:29.1543831+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Kylling Vindaloo",
-          "ingredients": [
-            "1 tsk stødt kardemomme",
-            "1 tsk nellike, stødt",
-            "1 tsk kanel",
-            "1 tsk stødt koriander",
-            "1 tsk stødt spidskommen",
-            "1 tsk fennikelfrø, stødt",
-            "1 tsk sort peber, friskkværnet",
-            "1 tsk chiliflager, eller cayennepeber (styrke efter smag)",
-            "1 spsk ingefær, fintrevet",
-            "4 fed hvidløg, presset",
-            "1 tsk sennepsfrø, stødt eller sennepspulver",
-            "2 tsk stødt gurkemeje",
-            "1/2 dl æblecidereddike",
-            "1 spsk rørsukker, eller kokossukker",
-            "1 dl vand",
-            "3 spsk olivenolie, eller kokosolie",
-            "450 g kyllingebryst",
+            "2 kyllingebryst, i tern",
+            "2 spsk olivenolie, + evt. lidt smør",
+            "50 g bacon, sprødstegt",
             "2 løg, finthakket",
-            "1/2 dl hønsebouillon, eller kyllingefond",
-            "salt",
-            "sort peber, friskkværnet"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/08/kylling-vindaloo.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/kylling-vindaloo/",
-          "dateFound": "2020-02-14T17:46:55.3119437+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Labneh – mellemøstlig frisk ost",
-          "ingredients": [
-            "4 dl yoghurt, naturel, (3,5 % eller brug græsk yoghurt)",
-            "1 tsk flagesalt"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/07/labneh.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/labneh-mellemoestlig-frisk-ost/",
-          "dateFound": "2020-02-14T17:54:43.949465+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Lakselasagne med spinat",
-          "ingredients": [
-            "2 løg, finthakket",
-            "500 g spinat, frosne",
-            "1 knivspids muskatnød, fintrevet",
-            "175 g mascarpone",
-            "1 fed hvidløg, finthakket",
+            "3 fed hvidløg, finthakket",
+            "3 porrer, skåret i tynde strimler",
+            "2 røde peberfrugter, skåret i tynde strimler",
             "1 dåse hakkede tomater",
-            "1/2 dl piskefløde",
-            "1/2 tsk oregano, tørret",
-            "500 g laks",
-            "10 lasagneplader",
-            "flagesalt",
+            "1 spsk tomatpuré",
+            "1 tsk timian, tørret",
+            "100 g flødeost, pikant",
+            "1 dl piskefløde",
+            "salt",
             "sort peber, friskkværnet",
-            "1 spsk olivenolie",
-            "75 g parmesan, groftrevet"
+            "1 håndfuld persille",
+            "1 håndfuld frisk timian",
+            "1 håndfuld grønkål"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2011/08/lakselasagne-spinat-opskrift-1.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2018/02/pikantkylling.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/lakselasagne/",
-          "dateFound": "2020-02-14T17:50:08.6920411+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/kylling-fad/",
+          "dateFound": "2020-02-14T17:43:23.761947+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Lammeculotte",
+          "heading": "Kyllinge nuggets",
           "ingredients": [
-            "600 g lammeculotte",
-            "3 fed hvidløg",
-            "2 tsk salt",
-            "1 øko citron, revet skal herfra",
+            "3 dl kærnemælk",
+            "3 fed hvidløg, presset",
+            "500 g kyllingebryst",
+            "3 dl rasp",
+            "2 spsk sød paprika",
+            "1 tsk salt",
             "sort peber, friskkværnet",
-            "4 frisk salvie, blade",
-            "2 stængler frisk rosmarin",
-            "2 stængler frisk timian"
+            "3 æggehvider",
+            "2 spsk smør, til stegning",
+            "2 spsk olivenolie, til stegning"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/04/lammeculotte.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2013/01/nuggets.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/lammeculotte/",
-          "dateFound": "2020-02-14T17:45:54.640933+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/hjemmelavet-nuggets/",
+          "dateFound": "2020-02-14T17:49:40.4248332+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Luciakrans – flettet gyldent brød til lucia",
+          "heading": "Kyllingesalat med æbler og bacon",
           "ingredients": [
-            "3 dl mælk",
-            "25 g gær",
-            "1 knivspids safran, stødt",
-            "75 g smør",
-            "45 g sukker",
-            "1 knivspids salt",
-            "2 æg",
-            "400 g hvedemel",
-            "50 g grahamsmel, eller fuldkornshvedemel",
-            "1 spsk rosiner, til pynt (kan undlades)",
-            "1 spsk mørk chokolade, hakket, til pynt (kan undlades)"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2015/10/luciakrans.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/luciakrans-flettet-gyldent-broed-lucia/",
-          "dateFound": "2020-02-14T17:57:29.8389157+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Lækre sprøde polenta fritter",
-          "ingredients": [
-            "250 g polenta mel",
-            "1 l vand",
-            "1 nip salt",
-            "4 spsk olivenolie, ca - heraf ca 1 spsk til at smøre fadet med",
-            "3 stængler frisk rosmarin",
-            "3 spsk parmesan, fintrevet",
+            "60 g bacon, skåret i skiver",
+            "2 kyllingebryst",
+            "2 spsk olivenolie",
+            "1 spsk smør",
+            "125 g blandet salat",
+            "1 håndfuld rucola",
+            "1 æble, i tern",
+            "1 rødløg, i tynde ringe",
+            "1 håndfuld purløg, finthakket",
+            "1 håndfuld frisk dild",
             "flagesalt",
             "sort peber, friskkværnet",
             "1 dl cremefraiche 18 %",
-            "2 spsk mayonnaise",
-            "1 spsk parmesan, fintrevet",
-            "1 spsk frisk rosmarin, finthakket",
+            "3 spsk mayonnaise",
+            "1 tsk karry, medium",
+            "1 tsk honning",
+            "1 tsk æblecidereddike",
             "flagesalt",
-            "sort peber",
-            "1 dryp æblecidereddike"
+            "sort peber, friskkværnet"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2015/11/polenta-fritter-opskrift.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2018/01/kyllingesalat.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/laekre-sproede-polenta-fritter/",
-          "dateFound": "2020-02-14T17:48:50.6612538+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/kyllingesalat/",
+          "dateFound": "2020-02-14T17:52:58.7878437+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Løgsalat",
+          "heading": "Kyllingesuppe med grønkål og grønt",
           "ingredients": [
-            "2 salatløg",
-            "1 håndfuld bredbladet persille",
-            "5 stængler frisk mynte, bladene herfra",
-            "1 knivspids sumak, stødt - kan erstattes af 1 tsk friskrevet øko citronskal",
-            "1 tsk stødt spidskommen",
-            "1 knivspids stødt koriander",
+            "1 kyllinge skrog, og resterne af en kylling",
+            "1 spsk peberkorn",
+            "2 løg, i store tern",
+            "2 spsk æblecidereddike",
+            "1 tsk chiliflager",
+            "1 håndfuld frisk timian",
+            "1 stængel frisk rosmarin",
+            "1 1/2 l vand",
+            "400 g kyllingebryst, tilberedt og skåret i tern",
+            "150 g grønkål, finthakket"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2014/01/kyllingesuppe-1.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/kyllingesuppe-med-groenkaal-og-groent/",
+          "dateFound": "2020-02-14T18:13:50.907274+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Lakridsmandler – en nem og sund snack",
+          "ingredients": [
+            "100 g mandler",
+            "1 tsk lakridsrodspulver"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2011/11/lakridsmandler.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/lakridsmandler-en-nem-og-sund-snack/",
+          "dateFound": "2020-02-14T18:10:25.2513202+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Luksus Nachos",
+          "ingredients": [
+            "125 g nachos, (1 pose)",
+            "150 g sorte oliven",
+            "150 g cheddar ost, friskrevet",
+            "50 g jalapenos",
+            "1 håndfuld bredbladet persille, og koriander",
+            "150 g tomater, finthakket",
+            "1/2 rødløg",
+            "1 fed hvidløg, knust",
             "2 spsk olivenolie",
-            "1 citron, 1 spsk saft herfra",
-            "1 tsk peberkorn, evt rosa peberkorn"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/05/logsalat.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/loegsalat/",
-          "dateFound": "2020-02-14T17:53:20.6841712+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Melon med skinke – tapas",
-          "ingredients": [
-            "1 melon, cantaloupe",
-            "70 g parmaskinke, eller serrano",
-            "150 g frisk mozzarella",
-            "1 håndfuld frisk basilikum",
-            "træspyd",
-            "1 dryp balsamico glace"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2018/07/melon-skinke.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/melon-med-skinke-tapas/",
-          "dateFound": "2020-02-14T17:54:19.5425784+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Mexi bowl",
-          "ingredients": [
-            "240 g sorte bønner, svarende til 1 dåse drænede og skyllede",
-            "1 spsk olivenolie",
-            "1 løg, finthakket",
-            "2 fed hvidløg, finthakket",
-            "1 tsk stødt spidskommen",
-            "1 tsk stødt koriander",
-            "salt",
-            "sort peber, friskkværnet",
-            "1 dl grøntsagsbouillon",
-            "1 avocado, moden, i skiver",
-            "100 g hummus",
-            "1/4 rødkål, finthakket",
-            "1/2 rød chili, finthakket",
-            "1 tomat, grofthakkede",
-            "50 g cheddar ost, groftrevet",
-            "1/2 lime, saften herfra",
-            "75 g majskerner, ristede",
-            "1 rødløg, finthakket",
-            "50 g spinat",
-            "1/2 agurk, i tern",
-            "100 g cremefraiche 18 %",
-            "Kylling eller anden rest (kan undlades)",
-            "1 håndfuld frisk koriander",
-            "1 sød kartoffel"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/08/mexi-salad-bowl.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/mexi-bowl/",
-          "dateFound": "2020-02-14T17:51:19.0572673+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Nøddepostej",
-          "ingredients": [
-            "100 g hasselnødder",
-            "1 dl basmati ris, brune ris eller quinoa",
-            "350 g champignon, eller en blanding af svampe",
-            "1 løg, finthakket",
-            "2 fed hvidløg, finthakket",
-            "50 g valnødder",
-            "1 æble, groftrevet",
-            "200 g jordskokker, finthakket eller skåret i meget tynde skiver",
-            "2 æg",
-            "1 dl piskefløde",
-            "1 spsk tahin",
-            "1 tsk timian, tørret",
-            "1 spsk smør, + lidt til formen",
-            "1 spsk soja, eller tamari",
-            "sort peber, friskkværnet",
-            "salt, hvis nødvendigt"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/11/noeddepostej-svampe.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/noeddepostej/",
-          "dateFound": "2020-02-14T17:41:23.4456424+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "One pot pasta med spinat og ærter – opskrift fra min nye bog",
-          "ingredients": [
-            "400 g spaghetti",
-            "1 løg, finthakket",
-            "2 fed hvidløg, finthakket",
-            "2 squash, groftrevet",
-            "125 g spinat",
-            "200 g ærter, frosne, eller friske",
-            "1 håndfuld frisk basilikum",
-            "1 dl piskefløde",
-            "1 l grøntsagsbouillon",
-            "1 spsk olivenolie",
-            "1 tsk salt",
-            "sort peber, friskkværnet",
-            "pinjekerner, ristede",
-            "30 g parmesan, friskrevet",
-            "1 øko citron, fintrevet skal",
-            "frisk basilikum, finthakket"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/08/onepotpasta-aerter.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/one-pot-pasta-med-spinat-og-aerter/",
-          "dateFound": "2020-02-14T17:41:51.0550463+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Panna Cotta med appelsin",
-          "ingredients": [
-            "1 vaniljestang",
-            "60 g rørsukker",
-            "5 dl piskefløde",
-            "1 dl sødmælk",
-            "3 husblas, blade",
-            "2 dl appelsinjuice",
-            "25 g rørsukker",
-            "1,5 husblas, blade",
-            "90 g hvid chokolade, finthakket",
-            "0,75 dl piskefløde",
-            "1/2 tsk rålakridspulver"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/11/panna-cotta-opskrift.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/panna-cotta-med-appelsin/",
-          "dateFound": "2020-02-14T17:44:06.3738406+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Paprikasauce",
-          "ingredients": [
-            "1 tsk smør",
-            "1 tsk hvedemel",
-            "1 dl mælk",
-            "1 dl piskefløde",
-            "2 spsk tomatpuré",
-            "1 tsk rørsukker",
-            "1 tsk hvidløgspulver",
-            "1 tsk løgpulver",
-            "2 tsk sød paprika",
-            "1 knivspids karry, medium",
-            "1 knivspids cayenne peber",
-            "1 knivspids stødt spidskommen",
-            "1 tsk worcestershire sauce",
+            "1 citron, saften herfra",
+            "1 nip sukker",
             "salt",
             "sort peber, friskkværnet"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/03/paprikasauce.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2016/08/nachos-opskrift.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/paprikasauce/",
-          "dateFound": "2020-02-14T17:41:55.2194766+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/nachos/",
+          "dateFound": "2020-02-14T18:08:09.5252258+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Pasta med chorizo og svampe",
+          "heading": "Lynstegt karrykål med gulerødder",
           "ingredients": [
-            "500 g pasta",
-            "1 løg, finthakket",
-            "2 fed hvidløg, finthakket",
-            "2 spsk olivenolie",
+            "3 gulerødder",
+            "1/2 hvidkål",
+            "2 løg",
+            "2 fed hvidløg",
             "1 spsk smør",
-            "1  bakke svampe, fx brune champignon",
-            "100 g chorizo, skåret i skiver",
-            "1 dåse hakkede tomater",
-            "1 håndfuld frisk rosmarin, eller timian",
+            "1 tsk karry, medium",
+            "1/2 tsk sød paprika",
+            "1/2 tsk stødt spidskommen",
             "flagesalt",
-            "sort peber, friskkværnet"
+            "sort peber, friskkværnet",
+            "1 håndfuld bredbladet persille, finthakket",
+            "30 g saltede peanuts, finthakket"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2015/10/Pasta-chorizo-rosmarin.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2018/12/karrykaal.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/pasta-med-chorizo-og-svampe/",
-          "dateFound": "2020-02-14T18:12:14.9339583+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/karrykaal/",
+          "dateFound": "2020-02-14T17:42:46.6736201+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Pastapenne med tomatflødesauce og røget laks",
+          "heading": "Marcipankonfekt med appelsin",
           "ingredients": [
-            "500 g pasta penne",
+            "125 g marcipan",
+            "1 appelsin, øko, 1 spsk. appelsinsaft og 1 spsk. revet skal herfra",
+            "2 spsk grand marnier",
+            "2 spsk flormelis",
+            "1/4 tsk vaniljepulver",
+            "100 g mørk chokolade",
+            "appelsinskal i juliennestrimler",
+            "1 drys guldstøv, spiseligt"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2017/03/marcipan-appelsin.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/marcipankonfekt-med-appelsin/",
+          "dateFound": "2020-02-14T17:58:34.4394048+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Mexicansk Lasagne",
+          "ingredients": [
+            "2 tsk stødt spidskommen",
+            "2 tsk chiliflager",
+            "1 tsk stødt koriander",
+            "1 tsk sød paprika",
+            "1 tsk røget paprika",
+            "1 knivspids cayenne peber",
+            "2 løg, hakkede",
+            "2 fed hvidløg, finthakket",
+            "2 spsk olivenolie",
+            "400 g hakket oksekød",
+            "2 tsk oregano, tørret",
+            "5 stængler bladselleri, groftrevet",
+            "1 squash, groftrevet",
+            "1 dl tomatpuré",
+            "2 dåser hakkede tomater",
+            "salt",
+            "sort peber, friskkværnet",
+            "2 dl grøntsagsbouillon",
+            "220 g kidneybønner, udblødt og kogt (svarende til 1 dåse)",
+            "150 g majskerner",
+            "1 rød peberfrugt, i tern",
+            "1 spsk jalapenos, finthakket",
+            "125 g lasagneplader",
+            "150 g cheddar ost, friskrevet",
+            "3 spsk jalapenos",
+            "1 avocado",
+            "1 lime",
+            "125 g nachos"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2017/10/mexilasagne.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/mexicansk-lasagne/",
+          "dateFound": "2020-02-14T18:08:09.8422959+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Misosuppe",
+          "ingredients": [
+            "200 g svampe, efter eget valg",
+            "1 spsk olivenolie",
+            "flagesalt",
+            "1/2 l kogende vand",
+            "2 spsk miso",
+            "1 tsk grøntsagsbouillon, en smule til at smage til med",
+            "1 spsk ingefær, fintrevet",
+            "100 g nudler, kogt",
+            "3 stængler forårsløg",
+            "1 lime, friskpresset",
+            "20 g wakame tang",
+            "100 g tofu",
+            "1 håndfuld bønnespirer, eller lign.",
+            "1 håndfuld baby spinat"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/misosuppe.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/misosuppe/",
+          "dateFound": "2020-02-14T18:02:09.8146066+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Mulligatawny suppe",
+          "ingredients": [
+            "500 g kyllingebryst, i tern",
+            "8 dl grøntsagsbouillon",
+            "2 tsk karry, medium",
+            "1 tsk stødt spidskommen",
+            "2 spsk olivenolie",
             "1 løg, finthakket",
-            "1 fed hvidløg, finthakket",
+            "2 fed hvidløg",
+            "2 porrer, i skiver",
+            "1 rød peberfrugt, i strimler",
+            "2 tomater, i både",
+            "2 tsk timian, tørret",
+            "2 dl piskefløde",
+            "4 spsk majsstivelse",
+            "salt",
+            "sort peber, friskkværnet"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2007/10/mulligatawnysuppe.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/mulligatawny-suppe/",
+          "dateFound": "2020-02-14T17:47:12.1811112+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Myntedip med hvidløg og koriander",
+          "ingredients": [
+            "2 dl græsk yoghurt",
+            "2 håndfuld frisk mynte",
+            "2 håndfuld frisk koriander",
+            "1 tsk stødt spidskommen",
+            "2 fed hvidløg, presset",
+            "1 øko lime, saft og fintrevet skal",
+            "1 tsk flagesalt",
+            "sort peber, friskkværnet"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2019/12/myntedip.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/myntedip/",
+          "dateFound": "2020-02-13T21:58:53.9086594+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Nem og hurtig Lasagne",
+          "ingredients": [
+            "400 g hakket oksekød",
+            "1 spsk olivenolie",
+            "1 løg, finthakket",
+            "4 fed hvidløg",
+            "4 gulerødder, groftrevet",
+            "2 kartofler, groftrevet",
+            "1 squash, groftrevet",
             "1 spsk olivenolie",
             "2 dåser hakkede tomater",
-            "1 1/2 dl piskefløde",
-            "1 frisk basilikum",
-            "100 g røget laks, skåret i strimler",
-            "flagesalt",
-            "sort peber, friskkværnet"
+            "100 g tomatpuré",
+            "1 spsk oregano, tørret",
+            "1 spsk timian, tørret",
+            "2 dl grøntsagsbouillon",
+            "1 dl piskefløde",
+            "sort peber, friskkværnet",
+            "salt",
+            "250 g lasagneplader",
+            "125 g frisk mozzarella",
+            "1 spsk smør, til formen"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2015/09/Pasta-penne-tomat.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2010/04/nem-hurtig-lasagne.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/pastapenne-med-tomatfloedesauce-og-roeget-laks/",
-          "dateFound": "2020-02-14T17:48:55.9455412+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/hurtig-lasagne/",
+          "dateFound": "2020-02-14T17:42:41.9715311+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Pistacieis",
+          "heading": "Osso buco med safranrisotto",
           "ingredients": [
-            "100 g pistaciekerner",
-            "4 dl sødmælk",
-            "1 knivspids salt",
-            "75 g rørsukker",
-            "5 æggeblommer",
-            "3 dl piskefløde"
+            "8 okseskank",
+            "1 dl hvedemel",
+            "salt",
+            "sort peber, friskkværnet",
+            "3 spsk olivenolie",
+            "2 løg, finthakket",
+            "3 fed hvidløg, finthakket",
+            "2 spsk olivenolie",
+            "4 gulerødder, skrællede og finthakkede",
+            "4 stængler bladselleri",
+            "2 dåser hakkede tomater",
+            "3 spsk tomatpuré",
+            "3 dl hvidvin, tør",
+            "7 dl oksebouillon",
+            "3 laurbærblade",
+            "1 løg, finthakket",
+            "2 fed hvidløg, finthakket",
+            "1 spsk smør",
+            "275 g risotto ris",
+            "1 knivspids safran",
+            "2 dl hvidvin",
+            "5 dl grøntsagsbouillon, gerne lidt tynd",
+            "40 g parmesan, friskrevet",
+            "salt",
+            "sort peber, friskkværnet",
+            "3 dl persille, finthakket",
+            "2 fed hvidløg",
+            "1 øko citron, skallen herfra"
           ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/05/pistacieis.jpg",
-            "alt": ""
-          }
+          "image": null
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/pistacieis/",
-          "dateFound": "2020-02-14T17:44:35.7902478+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/osso-buco/",
+          "dateFound": "2020-02-14T18:11:20.328403+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Påskekage – gulerodslagkage med citronfromage",
+          "heading": "Panna Cotta med saltkaramelsauce",
           "ingredients": [
-            "300 g gulerødder, groftrevet",
-            "120 g smør, blødt",
-            "175 g sukker",
-            "150 g hvedemel",
-            "50 g mandelmel",
-            "4 æg",
-            "2 tsk bagepulver",
-            "1/2 tsk salt",
-            "5 husblas, blade",
-            "3 æggeblommer",
-            "3 æggehvider",
-            "80 g sukker",
-            "2 øko citroner, saft og skal herfra",
-            "1 1/2 dl piskefløde",
-            "2 dl piskefløde",
-            "6 stængler frisk rosmarin",
-            "påskeæg til pynt"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2018/03/paaskekage.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/paaskekage/",
-          "dateFound": "2020-02-14T17:55:07.6259349+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Påskesmåkager",
-          "ingredients": [
-            "125 g smør, stuetempereret",
-            "75 g rørsukker",
-            "125 g brun farin",
-            "1 æg, stort",
-            "2 spsk ahornsirup",
-            "1 tsk bagepulver",
-            "2 tsk kakao, usødet",
-            "2 tsk kanel",
-            "1 tsk vaniljepulver",
-            "250 g hvedemel",
-            "1 dl flormelis",
-            "koldt vand"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/04/paaske-harer-smaakager.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/paaskesmaakager/",
-          "dateFound": "2020-02-14T17:57:00.4667922+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Rabarbersnitter",
-          "ingredients": [
-            "10 stængler rabarber, rengjorte og skåret i tern",
-            "10 jordbær",
-            "1 knivspids vaniljepulver",
-            "90 g sukker",
-            "1 knivspids vaniljepulver",
-            "50 g flormelis",
-            "60 g mandelmel",
-            "150 g hvedemel",
-            "50 g havregryn, grovvalset",
-            "1/4 tsk salt",
-            "1 tsk bagepulver",
-            "150 g smør, stuetempereret",
-            "1 spsk vand, evt",
-            "3 spsk havregryn, grovvalset, til at drysse over"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/05/rabarber-snitter.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/rabarbersnitter/",
-          "dateFound": "2020-02-14T17:57:18.5383157+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Rabarbertærte – bagt på grill",
-          "ingredients": [
-            "200 g smør, stuetempereret",
+            "5 dl piskefløde",
+            "1 dl sødmælk",
             "50 g sukker",
-            "2 æg",
-            "350 g hvedemel",
-            "1 knivspids bagepulver",
-            "500 g rabarber, i tern",
-            "125 g sukker",
-            "2 spsk hvedemel",
-            "1/2 tsk vaniljepulver",
-            "1 tsk kanel",
-            "2 spsk mascarpone, eller piskefløde",
-            "1 spsk perlesukker, til at drysse med",
-            "1 æg, til pensling"
+            "1 vaniljestang",
+            "3 husblas, blade",
+            "1 øko citron, skallen herfra",
+            "1 dl saltkaramel, evt hjemmelavet"
           ],
           "image": {
-            "src": "",
+            "src": "https://www.valdemarsro.dk/wp-content/2017/02/panna-cotta-karamel.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/rabarbertaerte/",
-          "dateFound": "2020-02-14T17:51:58.6781976+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/panna-cotta/",
+          "dateFound": "2020-02-14T18:02:59.8348261+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Papayasalat – vietnamesisk",
+          "ingredients": [
+            "1 umoden papaya, i tynde strimler",
+            "1 gulerod, i tynde strimler",
+            "1/2 håndfuld thaibasilikum",
+            "1/2 håndfuld frisk mynte",
+            "1/2 håndfuld frisk koriander",
+            "1 lime, saften herfra",
+            "1 spsk rørsukker",
+            "1 spsk fishsauce",
+            "1 skalotteløg, meget finthakket",
+            "1 fed hvidløg, finthakket",
+            "1 tsk chili, evt lidt mere - styrke og mængde efter smag",
+            "1/2 dl peanuts, usaltede"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2015/06/papayasalat.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/papaysalat-vietnamesisk/",
+          "dateFound": "2020-02-14T17:53:32.0397112+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pasta med mozzarella og tomater",
+          "ingredients": [
+            "400 g pasta",
+            "1 dåse hakkede tomater",
+            "1 knivspids chiliflager, eller cayennepeber efter smag",
+            "15 cherrytomater",
+            "125 g frisk mozzarella",
+            "1 håndfuld frisk basilikum, finthakket"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2011/07/pasta-tomat-mozzarella.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/pasta-med-mozzarella-og-tomater/",
+          "dateFound": "2020-02-14T18:10:51.4051817+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Peanutbutter Cookies",
+          "ingredients": [
+            "75 g smør, stuetempereret",
+            "50 g rørsukker",
+            "50 g brun farin",
+            "60 g peanutbutter, crunchy",
+            "1 æg",
+            "100 g hvedemel",
+            "1 tsk bagepulver",
+            "100 g mørk chokolade, grofthakket",
+            "30 g saltede peanuts"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2016/08/peanutbuttercookies.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/peanutbutter-cookies/",
+          "dateFound": "2020-02-14T18:08:59.1747775+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pink &amp; Grøn smoothie med riskiks topping",
+          "ingredients": [
+            "70 g hindbær, frosne, Levevis® smoothie blanding pink*",
+            "2 dl mælk, efter eget valg",
+            "1 dl appelsinjuice",
+            "1 tsk honning",
+            "1 tsk kanel",
+            "1 knivspids vaniljepulver",
+            "1/2 pose Levevis® smoothie blanding grøn",
+            "2 dl mælk",
+            "1 dl appelsinjuice",
+            "1 tsk honning",
+            "1 tsk stødt kardemomme",
+            "1 knivspids vaniljepulver",
+            "smuldret riskiks"
+          ],
+          "image": null
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/smoothie-riskikstopping/",
+          "dateFound": "2020-02-14T18:06:23.2383502+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Pink tundeller",
+          "ingredients": [
+            "1 dåse tun i vand",
+            "1 spsk olivenolie",
+            "1 æg",
+            "1 fed hvidløg, presset",
+            "1/2 rødløg, fintrevet",
+            "150 g rødbeder, fintrevet",
+            "15 g havregryn, finvalset",
+            "1 knivspids cayenne peber",
+            "1/2 tsk stødt spidskommen",
+            "1 citron, 1 tsk. citronsaft herfra",
+            "salt",
+            "sort peber, friskkværnet",
+            "1 spsk olivenolie",
+            "1 spsk smør"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2013/01/tundeller-opskrift.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/pink-tundeller/",
+          "dateFound": "2020-02-14T17:49:39.7056733+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Ramsløgssnurrer",
+          "ingredients": [
+            "20 ramsløg, blade",
+            "2 spsk pinjekerner",
+            "40 g parmesan",
+            "1/2 dl olivenolie",
+            "sort peber",
+            "25 g gær",
+            "1 dl mælk",
+            "1 dl ymer, eller lign.",
+            "1/2 dl olivenolie",
+            "1 æg",
+            "300 g hvedemel",
+            "100 g grahamsmel",
+            "1 tsk salt",
+            "1 spsk honning",
+            "1 æg, sammenpisket, til at pensle med"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2017/03/ramsloegssnurre.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/ramsloegssnurre/",
+          "dateFound": "2020-02-14T17:45:58.0198004+00:00"
         }
       },
       {
@@ -1957,6 +2072,80 @@
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/ravioli-opskrift/",
           "dateFound": "2020-02-14T18:08:53.0193847+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Ravioli med svampe, hasselnødder og rosmarinsauce",
+          "ingredients": [
+            "450 g durummel",
+            "5 æg, str. l, (gem 1/2 æg til at pensle med)",
+            "1 spsk olivenolie",
+            "1 knivspids salt",
+            "4 spsk hasselnødder",
+            "1 spsk smør",
+            "1/2 rødløg, finthakket",
+            "1 fed hvidløg, finthakket",
+            "250 g champignon, rensede og finthakkede",
+            "salt",
+            "sort peber, friskkværnet",
+            "3 spsk ricotta",
+            "50 g smør",
+            "3 stængler frisk rosmarin",
+            "1 dl grøntsagsbouillon, eller kyllingefond",
+            "1 dl svampefyld",
+            "1 håndfuld frisk basilikum",
+            "1 håndfuld persille",
+            "sort peber, friskkværnet"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2017/02/hjemmelavet-ravioli.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/ravioli-med-svampe-hasselnoedder-og-rosmarinsauce/",
+          "dateFound": "2020-02-14T17:51:06.4596924+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Regnbueis – hjemmelavet trefarvet is",
+          "ingredients": [
+            "450 ml vaniljeis",
+            "450 ml jordbæris",
+            "450 ml chokoladeis"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2015/08/chokolade-vanilje-jordbaer-is.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/regnbueis/",
+          "dateFound": "2020-02-14T18:12:57.27261+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Risengrød med kanel og smørklat",
+          "ingredients": [
+            "2 l mælk",
+            "1 dl vand",
+            "6 dl grødris",
+            "1/2 tsk salt",
+            "4 tsk kanel, ægte",
+            "4 tsk rørsukker",
+            "4 tsk smør"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2010/10/risengroed-opskrift-.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/risengroed/",
+          "dateFound": "2020-02-14T17:50:21.4372058+00:00"
         }
       },
       {
@@ -2024,232 +2213,101 @@
       },
       {
         "recipe": {
-          "heading": "Rørt tatar med ovnbagte fritter",
+          "heading": "Rødkålssalat med æble",
           "ingredients": [
-            "600 g okseinderlår, eller mørbrad, skrabet",
-            "2 skalotteløg, finthakket",
-            "1 håndfuld persille, eller estragon, finthakket",
-            "1 spsk kapers",
-            "2 spsk cornichoner, finthakket",
-            "2 tsk worcestershire sauce",
-            "3 dråber tabasco",
+            "1/2 rødkål",
+            "2 rødløg, finthakket",
+            "1/2 granatæble, kernerne herfra",
+            "1 tsk frisk timian, finthakket",
+            "2 æbler, i tern",
+            "30 g hasselnødder, finthakket",
             "3 spsk olivenolie",
-            "1 spsk peberrod, fintrevet",
-            "2 tsk dijon sennep",
-            "2 æggeblommer",
-            "flagesalt",
-            "sort peber, friskkværnet",
-            "4 æggeblommer"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2014/08/tatar-opskrift.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/roert-tatar/",
-          "dateFound": "2020-02-14T18:03:36.1454165+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Rørt torskerognssalat",
-          "ingredients": [
-            "200 g torskerogn",
-            "2 spsk mayonnaise",
-            "1 spsk cremefraiche 38%",
-            "1 øko citron, saft og fintrevet skal",
-            "1 håndfuld purløg, finthakket",
-            "1 spsk kapers, finthakket",
-            "salt",
-            "sort peber, friskkværnet"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/08/roert-torskerognssalat.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/torskerognssalat/",
-          "dateFound": "2020-02-14T17:47:31.2359905+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Råkost med rødkål og gulerødder",
-          "ingredients": [
-            "1/4 rødkål",
-            "3 gulerødder",
-            "1 rødløg",
-            "1 æble",
-            "1 citron, saften herfra",
-            "20 g tranebær, tørrede eller abrikoser",
-            "1 spsk olivenolie",
+            "1 spsk honning",
             "1 tsk dijon sennep",
-            "1 tsk honning",
-            "salt",
-            "sort peber, friskkværnet",
-            "1 spsk solsikkekerner",
-            "1 spsk græskarkerner",
-            "1 spsk mandler, grofthakkede",
-            "1 spsk pistaciekerner, grofthakkede"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/02/raakost-roedkaal-guleroedder-1.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/raakost-med-roedkaal/",
-          "dateFound": "2020-02-14T17:48:27.9821796+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Safranboller med remonce",
-          "ingredients": [
-            "2 1/2 dl mælk",
-            "25 g gær",
-            "100 g smør",
-            "1 knivspids safran, stødt",
-            "50 g sukker",
-            "2 æg",
-            "450 g hvedemel",
-            "1 nip salt",
-            "1 æg, til at pensle med",
-            "100 g sukker",
-            "100 g marcipan",
-            "100 g smør, blødt",
-            "1/2 tsk vaniljepulver",
-            "100 g flormelis",
-            "1 knivspids safran, stødt",
-            "koldt vand",
-            "1 dl piskefløde"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/11/safranboller-1.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/safranboller/",
-          "dateFound": "2020-02-14T17:30:16.2863869+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Salade Nicoise",
-          "ingredients": [
-            "1 romainesalat",
-            "100 g grønne bønner",
-            "200 g blommetomater",
-            "100 g sorte oliven",
-            "1 tun steak, i sushi kvalitet",
-            "3 æg, kogt smilende",
-            "1 rødløg, lille",
-            "salt",
-            "sort peber, friskkværnet",
-            "2 spsk olivenolie",
-            "1 spsk hvidvinseddike",
-            "1 tsk honning",
-            "1 tsk dijon sennep"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2014/01/Salade_nicoise.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/salade-nicoise/",
-          "dateFound": "2020-02-14T17:53:50.3178489+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Scones",
-          "ingredients": [
-            "180 g hvedemel",
-            "30 g sukker",
-            "1/2 tsk salt",
-            "2 tsk bagepulver",
-            "70 g smør, stuetempereret",
-            "1 dl kærnemælk",
-            "1/4 dl piskefløde",
-            "1 æg, sammenpisket - til at pensle med"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2013/10/scones_opskrift_hjemmelavede_perfekte.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/scones/",
-          "dateFound": "2020-02-14T17:56:25.5287453+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Shakshuka",
-          "ingredients": [
-            "1 spsk olivenolie",
-            "2 tsk stødt spidskommen",
-            "1/2 tsk stødt kardemomme",
-            "1/2 tsk kanel",
-            "1/2 tsk stødt gurkemeje",
-            "1/2 tsk sød paprika, eller røget paprika",
-            "1 knivspids cayenne peber",
-            "1 løg, finthakket",
-            "2 fed hvidløg, finthakket",
-            "2 dåser hakkede tomater",
-            "1 rød peberfrugt, i tern",
-            "4 æg",
-            "1 håndfuld bredbladet persille, finthakket, til drys",
-            "50 g feta, smuldret til drys"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2015/10/shakshuka-opskrift-1.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/shakshuka/",
-          "dateFound": "2020-02-14T17:48:54.8282902+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Shepards Pie",
-          "ingredients": [
-            "500 g hakket oksekød, eller lam",
-            "1 spsk smør",
-            "1 løg, finthakket",
-            "2 fed hvidløg, finthakket",
-            "2 gulerødder, groftrevet",
-            "2 stængler bladselleri, groftrevet",
-            "2 spsk worcestershire sauce",
-            "2 spsk tomatpuré",
-            "1 tsk timian, tørret, eller 1 spsk frisk timian",
-            "1 spsk frisk rosmarin, finthakket",
-            "1 dl rødvin",
-            "2 dl kyllingefond, eller hønsebouillon",
-            "salt",
-            "sort peber, friskkværnet",
-            "1 kg kartoffel, skrællede",
-            "75 g smør",
-            "3 spsk piskefløde, (kan undlades)",
-            "2 spsk parmesan, friskrevet",
-            "1 spsk pankorasp, eller alm rasp",
-            "salt",
+            "2 spsk æblecidereddike",
+            "flagesalt",
             "sort peber, friskkværnet"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/02/Shepards-pie-opskrift.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2016/09/roedkaalssalat.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/shepards-pie/",
-          "dateFound": "2020-02-14T17:52:40.973762+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/roedkaalssalat/",
+          "dateFound": "2020-02-14T17:54:02.6426595+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Rødvinssauce",
+          "ingredients": [
+            "1 løg, finthakket",
+            "1 fed hvidløg, finthakket",
+            "100 g champignon, finthakket",
+            "4 dl rødvin",
+            "2 dl kalvefond",
+            "1 spsk worcestershire sauce",
+            "1 tsk timian, tørret",
+            "1 tsk smør",
+            "salt",
+            "sort peber",
+            "1 tsk majsstivelse, til at jævne saucen (kan undlades)"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2019/11/roedsvinssauce.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/roedvinssauce/",
+          "dateFound": "2020-02-14T17:41:17.9626459+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Romkugler",
+          "ingredients": [
+            "700 g chokoladekage",
+            "100 g mandelmel",
+            "500 g kage, gerne lidt blandede kagerester",
+            "200 g mørk chokolade, smeltet",
+            "100 g marcipan, groftrevet",
+            "2 spsk mørk rom, eller romessens",
+            "3 spsk marmelade, fx brombær, hindbær eller appelsin",
+            "30 g kokosmel",
+            "30 g hasselnødder, eller mandler, finthakket",
+            "1 spsk krymmel"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2015/10/romkugler.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/romkugler/",
+          "dateFound": "2020-02-14T17:55:58.4585228+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Sarah Bernhardt kager",
+          "ingredients": [
+            "1 æg, æggehviden herfra",
+            "70 g sukker",
+            "60 g marcipan",
+            "2 1/2 dl piskefløde",
+            "150 g mørk chokolade, gerne ca 64-66%",
+            "200 g mørk chokolade, til overtræk"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2016/04/sarah_bernhardt_opskrift.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/sarah-bernhardt-kager/",
+          "dateFound": "2020-02-14T17:55:36.4445008+00:00"
         }
       },
       {
@@ -2285,407 +2343,343 @@
       },
       {
         "recipe": {
-          "heading": "Specier med chokolade og kardemomme",
+          "heading": "Speltsalat med peberfrugt – opskrift",
           "ingredients": [
-            "1/2 tsk hjortetaksalt",
-            "1 spsk vand",
-            "175 g smør",
-            "225 g hvedemel",
-            "60 g flormelis",
-            "1/2 tsk stødt kardemomme",
-            "1 æg",
-            "50 g mørk chokolade, finthakket",
-            "1 øko appelsin, revet skal herfra"
+            "200 g speltkerner",
+            "1 rød peberfrugt, skåret i små tern",
+            "1 håndfuld bredbladet persille, finthakket",
+            "1 rødløg, finthakket i små tern",
+            "75 g gedefeta",
+            "2 spsk olivenolie",
+            "1 tsk sennep",
+            "1 tsk honning",
+            "1 spsk æblecidereddike",
+            "flagesalt",
+            "sort peber, friskkværnet",
+            "1 håndfuld bredbladet persille, eller evt kruspersille"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2007/12/specier-valdemarsro.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/speltsalat.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/specier/",
-          "dateFound": "2020-02-14T18:07:46.1908736+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/speltsalat-med-peberfrugt-opskrift/",
+          "dateFound": "2020-02-14T17:54:02.3065827+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Sprøde bergamotte småkager",
+          "heading": "Spidskålssalat med chorizo og granatæble",
           "ingredients": [
-            "75 g hvedemel",
-            "1/2 tsk bagepulver",
-            "30 g sukker",
-            "1 øko bergamotte, revet skal herfra (alternativt 1 citron)",
-            "1 knivspids vaniljepulver",
-            "60 g smør, stuetempereret"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2016/01/bergamottekage.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/bergamotte-smaakager/",
-          "dateFound": "2020-02-14T17:55:41.9067254+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Stuvet hvidkål",
-          "ingredients": [
-            "750 g hvidkål, skåret i strimler",
-            "3 dl vand",
-            "2 spsk smør",
-            "2 spsk hvedemel",
-            "1 dl piskefløde",
-            "2 dl mælk",
-            "salt",
-            "sort peber",
-            "1 knivspids muskatnød, friskrevet",
-            "1 øko citron, fintrevet skal",
-            "1 håndfuld bredbladet persille, finthakket"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/10/stuvet-hvidkaal.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/stuvet-hvidkaal/",
-          "dateFound": "2020-02-14T17:41:34.2401247+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Super lækker hjemmelavet mynteyoghurt",
-          "ingredients": [
-            "2 dl ymer, eller græsk yoghurt",
-            "1 banan, moden",
-            "1 håndfuld frisk mynte, finthakket",
-            "1/2 tsk vaniljepulver"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2014/04/hjemmelavet-mynteyoghurt.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/super-laekker-hjemmelavet-mynteyoghurt/",
-          "dateFound": "2020-02-14T18:09:58.238852+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Talkage med chokoladekage og mousse",
-          "ingredients": [
-            "200 g mørk chokolade",
-            "200 g smør",
-            "200 g sukker",
-            "4 æg",
-            "1 dl mælk",
-            "100 g hvedemel",
-            "60 g mandelmel",
-            "1/2 tsk vaniljepulver",
-            "2 tsk bagepulver",
-            "1/2 tsk salt",
-            "1 husblas, blad",
-            "100 g mælkechokolade",
-            "2 dl piskefløde",
-            "100 g jordbær",
-            "50 g blåbær",
-            "125 g Toffifee"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/05/talkage.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/talkage/",
-          "dateFound": "2020-02-14T17:44:47.6244687+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Tom Yum suppe",
-          "ingredients": [
-            "1 l hønsebouillon",
-            "1 spsk Tom Yum Pasta",
-            "150 g champignon",
-            "150 g rejer, store",
-            "5 skalotteløg, i tynde både",
-            "2 fed hvidløg, finthakket",
-            "1 stængel citrongræs, banket på langs",
-            "3 kaffirblade",
-            "1 spsk galangarod, finthakket (kan undlades)",
-            "1 spsk ingefær, finthakket",
-            "1 tsk kokossukker, eller rørsukker",
-            "2 spsk fishsauce",
-            "2 rød chili",
-            "5 cherrytomater",
-            "1 lime, saften herfra",
-            "1 dl kokosmælk",
-            "2 forårsløg, finthakket",
-            "1 håndfuld frisk koriander"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/01/Tom-yum-suppe-opskrift.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/tom-yum-suppe/",
-          "dateFound": "2020-02-14T18:00:45.6805555+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Toplækre muslibar – der ikke skal bages",
-          "ingredients": [
-            "14 dadler, uden sten",
-            "2 spsk kakao, usødet",
-            "1 spsk kanel",
-            "1/2 tsk stødt kardemomme",
-            "5 spsk havregryn, grovvalset, alternativt spelt, rugflager",
-            "5 spsk mandler, hakkede - fint eller groft efter smag",
-            "1 tsk sesamfrø",
-            "3 spsk havregryn, grovvalset, til at vende i",
-            "2 tsk kakaonibs"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2015/09/sund-muslibar.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/muslibar-der-ikke-skal-bages/",
-          "dateFound": "2020-02-14T17:56:04.5909838+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Valnøddelagkage",
-          "ingredients": [
-            "5 æg",
-            "1 1/2 tsk bagepulver",
-            "100 g hvedemel",
-            "75 g valnødder, blendet til nøddemel",
-            "125 g sukker",
-            "70 g smør",
-            "1/2 vaniljestang",
-            "1 knivspids salt",
-            "8 dl piskefløde",
-            "1 spsk sukker",
-            "1 vaniljestang",
-            "150 g mørk chokolade, grofthakket",
-            "125 g valnødder, grofthakket",
-            "3 spsk mørk rom",
-            "1/2 dl stærk kaffe",
-            "200 g flormelis",
-            "30 g valnødder, til pynt"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/03/valnoeddelagkage.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/valnoeddelagkage/",
-          "dateFound": "2020-02-14T17:57:05.1508393+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Varmende juledrik",
-          "ingredients": [
-            "1 l æblemost, ufiltreret",
-            "1 øko appelsin, i skiver",
-            "30 g ingefær, i skiver",
-            "2 stjerneanis",
-            "5 kardemommekapsler, knust"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/juledrik1.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/varmende-juledrik/",
-          "dateFound": "2020-02-14T18:07:50.3277996+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Vietnamesisk ribbensteg",
-          "ingredients": [
-            "1 ribbensteg, ca 800 g",
-            "1/2 tsk five spice, (se note)",
-            "1/2 tsk salt",
-            "1/2 tsk sort peber, friskkværnet",
-            "1 tsk brun farin",
+            "1 spidskål, fintsnittet",
+            "1 fennikel, fintsnittet",
             "1 rødløg, finthakket",
-            "1 øko citron, skallen herfra",
-            "1 tsk olivenolie",
-            "salt, til sværen"
+            "50 g chorizo, i små tern",
+            "1/2 dl granatæblekerner",
+            "1 spsk olivenolie",
+            "1 bakke karse",
+            "flagesalt",
+            "sort peber, friskkværnet",
+            "3 spsk olivenolie",
+            "1 spsk æblecidereddike",
+            "1 tsk honning",
+            "1 tsk dijon sennep"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/01/asiatisk-ribbensteg.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2018/02/spidskaal-chorizo.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/vietnamesisk-ribbensteg/",
-          "dateFound": "2020-02-14T17:42:36.846354+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/spidskaalssalat/",
+          "dateFound": "2020-02-14T17:52:52.7464597+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Vikingegryde",
+          "heading": "Squashmuffins",
           "ingredients": [
-            "5 skiver bacon",
-            "250 g champignon, skåret i kvarte",
-            "400 g kyllingefilet, i tern",
+            "225 g squash, groftrevet",
+            "175 g brun farin",
+            "3 æg",
+            "60 g smør, blødt og stuetempereret",
+            "200 g hvedemel",
+            "2 tsk kanel",
+            "1 tsk stødt kardemomme",
+            "1 tsk stødt ingefær",
+            "1/2 tsk salt",
+            "1/2 tsk vaniljepulver",
+            "1 tsk bagepulver",
+            "40 g mandler, grofthakkede",
+            "40 g valnødder, grofthakkede",
+            "75 g mørk chokolade, grofthakket"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2018/03/squashmuffins-opskrift.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/squashmuffins/",
+          "dateFound": "2020-02-14T17:55:07.4248892+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Svinekæber – braiserede med øl",
+          "ingredients": [
+            "8 svinekæber",
+            "1 tsk smør",
             "2 løg, finthakket",
-            "3 fed hvidløg, finthakket",
-            "300 g squash, groftrevet",
-            "150 g wienerpølser, skåret i skiver",
-            "1 tsk røget paprika",
-            "2 tsk sød paprika",
-            "1 tsk oregano, tørret",
-            "1 spsk hvedemel",
-            "2 dl grøntsagsbouillon",
-            "100 g tomatpuré",
-            "1 dåse hakkede tomater",
-            "2 røde peberfrugter, skåret i strimler",
-            "1 1/2 dl piskefløde",
+            "4 fed hvidløg, finthakket",
+            "1 porre, skåret i tynde ringe",
+            "3 dl mørk øl",
+            "3 dl grøntsagsbouillon",
+            "1 spsk tomatpuré",
+            "1 gulerod, i tern",
+            "3 laurbærblade",
+            "2 stængler frisk rosmarin",
+            "3 stængler frisk timian",
+            "sort peber, friskkværnet",
             "salt",
+            "1 spsk smør, koldt",
+            "salt",
+            "30 g hasselnødder",
+            "1/2 dl bredbladet persille, finthakket",
+            "1 fed hvidløg",
+            "1 øko citron, fintrevet skal"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2020/01/braiserede-svinekaeber.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/svinekaeber-braiserede-med-oel/",
+          "dateFound": "2020-02-13T21:58:58.5647023+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Tagliata med rucola og parmesan",
+          "ingredients": [
+            "750 g oksekød, mørt - fx. onglet, mørbrad eller ribeyes",
+            "5 spsk olivenolie",
+            "4 fed hvidløg",
+            "3 stængler frisk rosmarin, + lidt til servering",
+            "1 øko citron, revet skal herfra + 1-2 spsk. saft",
+            "flagesalt",
+            "sort peber, friskkværnet",
+            "50 g parmesan, friskrevet",
+            "125 g rucola",
+            "4 spsk pinjekerner, ristede",
+            "1 kg kartoffel",
+            "2 spsk olivenolie",
+            "flagesalt",
+            "5 stængler frisk rosmarin",
+            "2 fed hvidløg, finthakket"
+          ],
+          "image": null
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/tagliata/",
+          "dateFound": "2020-02-14T17:54:43.7664229+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Tex Mex Salat",
+          "ingredients": [
+            "1 dåse kidneybønner, eller 2 dl udblødte og kogte kidneybønner",
+            "1 dåse hakkede tomater",
+            "1 løg, finthakket",
+            "1 fed hvidløg, finthakket",
+            "1 spsk olivenolie",
+            "1 tsk stødt spidskommen",
+            "1 tsk stødt koriander",
+            "1 tsk røget paprika, eller chipotle",
+            "1/2 tsk cayenne peber, eller chili, justeres efter smag",
+            "1 avocado",
+            "1 rødløg, eller skalotteløg, finthakket",
+            "1 fed hvidløg, finthakket",
+            "1/2 tsk stødt spidskommen",
+            "1 lime, saften herfra",
+            "salt",
+            "sort peber, friskkværnet",
+            "1/2 salat, fx. romaine",
+            "2 håndfulde frisk koriander",
+            "10  cherrytomater, skåret i kvarte og blandet med lidt finthakket løg",
+            "1 majskolbe, friskkogt, kernerne derfra",
+            "1/2 agurk, skåret i tern",
+            "70 g cheddar ost, eller pecorino, friskrevet",
+            "25 g nachos",
+            "2 spsk cremefraiche 18 %, evt. rørt med 1 spsk lime og peber"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2015/07/mexicansk-salat.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/tex-mex-salat/",
+          "dateFound": "2020-02-14T17:53:27.668733+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Tomatpesto",
+          "ingredients": [
+            "200 g soltørrede tomater, i olie",
+            "30 g parmesan, groftrevet",
+            "3 spsk pinjekerner, eller mandler",
+            "1 fed hvidløg",
+            "1 spsk frisk basilikum, alternativt timian eller oregano",
+            "flagesalt",
             "sort peber, friskkværnet"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/09/vikingegryde.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2013/09/hjemmelavet_tomatpesto.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/vikingegryde/",
-          "dateFound": "2020-02-14T17:41:44.7965716+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/tomatpesto/",
+          "dateFound": "2020-02-14T18:02:35.8214677+00:00"
         }
       },
       {
         "recipe": {
-          "heading": "Æbleboller",
+          "heading": "Tunmousse",
           "ingredients": [
-            "4 dl koldt vand",
-            "1 dl yoghurt, naturel, alternativt A38 eller ymer",
-            "20 g gær",
-            "50 g græskarkerner",
-            "50 g havregryn, finvalset",
-            "175 g æbler, groftrevet",
-            "1 tsk salt",
-            "1 tsk kanel",
-            "100 g fuldkornshvedemel",
-            "375 g hvedemel",
-            "1 æg, til pensling"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2014/09/aebleboller-opskrift.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/aebleboller/",
-          "dateFound": "2020-02-14T18:05:35.359896+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "æblegrød",
-          "ingredients": [
-            "1 kg æble, skrællede og i tern",
-            "75 g sukker",
-            "1 vaniljestang",
-            "2 dl vand"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2012/10/aeblegrod_.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/aeblegrod/",
-          "dateFound": "2020-02-14T18:04:54.9069187+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Æbler med gele",
-          "ingredients": [
-            "4 æbler, gerne cox orange",
-            "1 l vand",
-            "2 dl sukker",
-            "1 knivspids vaniljepulver, eller 1/2 tsk vaniljesukker",
-            "1/2 øko citron, saften herfra",
-            "1 dl ribsgele"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2019/10/aebler-gele.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/aebler-med-gele/",
-          "dateFound": "2020-02-14T17:47:15.2628024+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Æbletrifli",
-          "ingredients": [
-            "500 g æbler",
-            "1 dl vand",
-            "1 vaniljestang, tom",
-            "1 dl rørsukker",
-            "1 dl havregryn, finvalset",
-            "1 spsk honning",
-            "50 g nødder, blandende og grofthakkede",
-            "2 æggeblommer",
-            "1 1/2 spsk rørsukker",
-            "1 vaniljestang, kornene herfra",
-            "1 dl piskefløde"
-          ],
-          "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2017/11/aebletrifli.jpg",
-            "alt": ""
-          }
-        },
-        "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/aebletrifli/",
-          "dateFound": "2020-02-14T17:45:04.6687197+00:00"
-        }
-      },
-      {
-        "recipe": {
-          "heading": "Æggesalat",
-          "ingredients": [
-            "7 æg",
-            "3 spsk mayonnaise",
-            "3 spsk cremefraiche 18 %",
-            "2 tsk karry, medium",
-            "1 tsk stødt gurkemeje",
-            "1 tsk sennep, grov, eller dijon sennep",
-            "flagesalt",
+            "1 løg",
+            "3 æg, hårdkogte",
+            "2 dåser tun i olie",
+            "2 dåser tun i vand",
+            "150 g mayonnaise",
+            "1 dl cremefraiche 18 %",
+            "1 spsk dild, tørret",
+            "salt",
             "sort peber, friskkværnet",
-            "75 g bacon, sprødstegt",
-            "karse, til drys",
-            "+ evt lidt hakket hårdkogt æg til pynt"
+            "1 øko citron, saft og lidt skal",
+            "4 husblas, blade",
+            "1 spsk olivenolie, til at smøre formen",
+            "1 dl frisk dild, finthakket",
+            "1 citron, i både til anretning"
           ],
           "image": {
-            "src": "https://www.valdemarsro.dk/wp-content/2018/03/aeggesalat-2.jpg",
+            "src": "https://www.valdemarsro.dk/wp-content/2018/11/tunmousse.jpg",
             "alt": ""
           }
         },
         "metadata": {
-          "foundAtUrl": "https://www.valdemarsro.dk/aeggesalat/",
-          "dateFound": "2020-02-14T17:45:49.0272624+00:00"
+          "foundAtUrl": "https://www.valdemarsro.dk/tunmousse/",
+          "dateFound": "2020-02-14T17:45:40.4744027+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Vegetar Pad Thai med grøntsager",
+          "ingredients": [
+            "3 fed hvidløg, finthakket",
+            "1 løg, finthakket",
+            "1 spsk ingefær, fintrevet",
+            "1 tsk chiliflager",
+            "1 squash, i tern",
+            "1 broccoli, i buketter",
+            "1 spidskål, i strimler",
+            "300 g nudler, brede",
+            "4 æg",
+            "4 forårsløg, finthakket",
+            "200 g bønnespirer",
+            "3 spsk olivenolie",
+            "6 spsk tamarind paste",
+            "2 spsk æblecidereddike",
+            "2 spsk soja",
+            "2 spsk rørsukker",
+            "1 håndfuld frisk koriander, grofthakket",
+            "2 lime, skåret i både",
+            "50 g peanuts, finthakket",
+            "1 rød chili, finthakket"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2019/05/vegetar-pad-thai.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/vegetar-pad-thai/",
+          "dateFound": "2020-02-14T17:41:59.3379264+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Vegetarisk Shepards Pie",
+          "ingredients": [
+            "2 løg",
+            "3 fed hvidløg",
+            "200 g champignon, finthakkede",
+            "2 spsk soltørrede tomater, finthakkede",
+            "2 gulerødder, groftrevede",
+            "1 squash, groftrevede",
+            "2 stængler bladselleri, groftrevede",
+            "1 aubergine, groftrevet",
+            "1 dåse hakkede tomater",
+            "2 spsk tomatpuré",
+            "2 spsk worcestershire sauce",
+            "1 dl grøntsagsbouillon",
+            "1 tsk timian, tørret",
+            "1 tsk røget paprika, kan erstattes af sød paprika",
+            "1 spsk olivenolie",
+            "salt",
+            "sort peber, friskkværnet",
+            "1 kg kartoffel",
+            "50 g smør",
+            "1 dl sødmælk",
+            "2 spsk parmesan, friskrevet",
+            "salt",
+            "sort peber, friskkværnet",
+            "2 spsk rasp, eller panko rasp"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2019/05/vegetar-shepards-pie.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/vegetarisk-shepards-pie/",
+          "dateFound": "2020-02-14T17:42:10.2429777+00:00"
+        }
+      },
+      {
+        "recipe": {
+          "heading": "Wraps med ristede kikærter og blomkål med sumak",
+          "ingredients": [
+            "125 g kikærter, iblødsat og kogte (eller fra dåse)",
+            "1 spsk olivenolie",
+            "1 løg, finthakket",
+            "2 fed hvidløg",
+            "1/2 blomkål, delt i buketter",
+            "1 håndfuld bredbladet persille",
+            "1 spsk kapers, drænet og finthakket",
+            "1 spsk sumak",
+            "1 citron, 2 spsk saft herfra",
+            "salt",
+            "sort peber, friskkværnet",
+            "30 g rucola",
+            "1/2 agurk, i små tern",
+            "3 tomater, i tern",
+            "6 tortillas pandekager",
+            "3 spsk græskarkerner, ristede på panden"
+          ],
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2017/01/blomkaal_kikaerter.jpg",
+            "alt": ""
+          }
+        },
+        "metadata": {
+          "foundAtUrl": "https://www.valdemarsro.dk/wraps-med-ristede-kikaerter-og-blomkaal-med-sumak/",
+          "dateFound": "2020-02-14T17:51:12.8533064+00:00"
         }
       }
     ]
