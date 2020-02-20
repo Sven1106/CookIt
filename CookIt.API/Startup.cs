@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using CookIt.API.Core;
 using CookIt.API.Data;
+using ImageScalerLib;
 
 namespace CookIt.API
 {
@@ -33,6 +34,8 @@ namespace CookIt.API
                 });
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddMvc(option => option.EnableEndpointRouting = false).AddNewtonsoftJson();
+            services.AddSingleton<KvpDb>();
+            services.AddSingleton<ImageService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

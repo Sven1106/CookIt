@@ -105,7 +105,7 @@
             {
                 <tr>
                     <td style="text-align: center;">
-                        <img class="lazy" style="width:200px; display:none;" src="@recipe.ImageUrl" data-imageUrl="@recipe.ImageUrl" alt="@recipe.Title" title="@recipe.Title" />
+                        <img class="lazy" style="width:200px;" src="" data-src="@recipe.ImageUrl" alt="@recipe.Title" title="@recipe.Title" />
                     </td>
                     <td>
                         <a href="@recipe.Url">@recipe.Title</a>
@@ -244,13 +244,14 @@
                     });
                 },
                 "drawCallback": function(){
-                    //$("img.lazy").lazyload();
+                        var lazy = $("img.lazy").Lazy({chainable: false});
+                        lazy.update();
                 }
             });
             setTimeout(function () {
                 $('#loading').hide();
                 $('#recipeList').show();
-            }, 5000);
+            }, 1000);
 
 
 

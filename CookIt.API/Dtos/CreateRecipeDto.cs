@@ -28,7 +28,7 @@ namespace CookIt.API.Dtos
     }
     public partial class ImageDTO
     {
-        public Uri Src { get; set; }
+        public string Src { get; set; }
         public string Alt { get; set; }
     }
     public partial class MetadataDTO

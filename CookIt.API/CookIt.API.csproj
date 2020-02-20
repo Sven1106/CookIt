@@ -24,10 +24,12 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.13" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0007" />
     <PackageReference Include="System.Threading" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CstLemmaLibrary\CstLemmaLibrary.csproj" />
+    <ProjectReference Include="..\ImageScalerLib\ImageScalerLib.csproj" />
     <ProjectReference Include="..\UdpipeCSharpWrapper\UdpipeLibrary.csproj" />
   </ItemGroup>
   <ItemGroup>

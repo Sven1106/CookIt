@@ -12,7 +12,7 @@ namespace CookIt.API.Dtos
         public string Title { get; set; }
         public Host Host { get; set; }
         public Uri Url { get; set; }
-        public Uri ImageUrl { get; set; }
+        public string ImageUrl { get; set; }
         public List<Ingredient> Ingredients { get; set; }
         public List<Ingredient> MatchedIngredients { get; set; }
     }

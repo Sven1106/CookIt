@@ -14,20 +14,20 @@ namespace CookIt.API.Models
         public string Title { get; set; }
         public Host Host { get; set; }
         public Uri Url { get; set; }
-        public Uri ImageUrl { get; set; }
+        public string ImageUrl { get; set; }
         public List<RecipeSentence> RecipeSentences { get; set; }
         
         public Recipe()
         {
 
         }
-        public Recipe(string Title, Host Host, Uri Url, Uri ImageUrl)
+        public Recipe(string title, Host host, Uri url, string imageUrl)
         {
             this.Id = Guid.NewGuid();
-            this.Title = Title;
-            this.Host = Host;
-            this.Url = Url;
-            this.ImageUrl = ImageUrl;
+            this.Title = title;
+            this.Host = host;
+            this.Url = url;
+            this.ImageUrl = imageUrl.ToString();
         }
     }
     public class RecipeFilter

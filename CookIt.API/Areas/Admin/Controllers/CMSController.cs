@@ -8,6 +8,7 @@ using CookIt.API.Areas.Admin.Models;
 using CookIt.API.Core;
 using CookIt.API.Dtos;
 using CookIt.API.Models;
+using ImageScalerLib;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Schema;
@@ -18,13 +19,15 @@ namespace CookIt.API.Areas.Admin.Controllers
     public class CMSController : Controller
     {
         private readonly UnitOfWorkManager _unitOfWorkManager;
+        private readonly ImageService _imageService;
         private string _currentDirectory;
         private JSchema _createRecipeSchema;
-        public CMSController(IUnitOfWork unitOfWork)
+        public CMSController(IUnitOfWork unitOfWork, ImageService imageService)
         {
             _unitOfWorkManager = new UnitOfWorkManager(unitOfWork);
             _currentDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
             _createRecipeSchema = JSchema.Parse(System.IO.File.ReadAllText(Path.Combine(_currentDirectory, "createRecipeSchema.json")));
+            _imageService = imageService;
         }
         public IActionResult Index()
         {
@@ -66,7 +69,7 @@ namespace CookIt.API.Areas.Admin.Controllers
         }
         public IActionResult DeleteRecipe(Guid id)
         {
-           _unitOfWorkManager.DeleteRecipe(id);
+            _unitOfWorkManager.DeleteRecipe(id);
 
             return RedirectToAction("Recipes");
         }

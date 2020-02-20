@@ -56,10 +56,10 @@ namespace CookIt.API.Core
                 Recipe recipe = _unitOfWork.RecipeRepo.Query.Where(r => r.Host == host && r.Title == item.Recipe.Heading).FirstOrDefault();
                 if (recipe == null) // CREATE
                 {
-                    Uri imageUrl;
+                    string imageUrl;
                     if (item.Recipe.Image == null)
                     {
-                        imageUrl = new Uri("https://via.placeholder.com/800x600");
+                        imageUrl = "https://via.placeholder.com/800x600";
                     }
                     else
                     {
