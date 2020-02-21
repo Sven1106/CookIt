@@ -15,9 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CstLemmaLibrary", "CstLemma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomObjects", "RandomObjects\RandomObjects.csproj", "{414AFFAD-D89B-438D-96CB-FD1E92AA90BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageResizer", "ImageResizer\ImageResizer.csproj", "{92A2CC35-1542-42BE-9DC6-7E226EEECA0E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageScalerLib", "ImageScalerLib\ImageScalerLib.csproj", "{179D5AC7-A844-4530-9B7A-B3C448A4AA33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageScalerLib", "ImageScalerLib\ImageScalerLib.csproj", "{179D5AC7-A844-4530-9B7A-B3C448A4AA33}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +47,6 @@ Global
 		{414AFFAD-D89B-438D-96CB-FD1E92AA90BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{414AFFAD-D89B-438D-96CB-FD1E92AA90BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{414AFFAD-D89B-438D-96CB-FD1E92AA90BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92A2CC35-1542-42BE-9DC6-7E226EEECA0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92A2CC35-1542-42BE-9DC6-7E226EEECA0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92A2CC35-1542-42BE-9DC6-7E226EEECA0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92A2CC35-1542-42BE-9DC6-7E226EEECA0E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{179D5AC7-A844-4530-9B7A-B3C448A4AA33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{179D5AC7-A844-4530-9B7A-B3C448A4AA33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{179D5AC7-A844-4530-9B7A-B3C448A4AA33}.Release|Any CPU.ActiveCfg = Release|Any CPU

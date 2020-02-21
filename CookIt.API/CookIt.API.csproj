@@ -33,13 +33,9 @@
     <ProjectReference Include="..\UdpipeCSharpWrapper\UdpipeLibrary.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="wwwroot\css\style.css" />
-    <None Include="wwwroot\css\tools.css" />
-    <None Include="wwwroot\images\Gfx\Cms-favicon.ico" />
-    <None Include="wwwroot\images\Gfx\Cms-favicon.png" />
-    <None Include="wwwroot\images\Gfx\CmsLogo.png" />
-  </ItemGroup>
+
 </Project>

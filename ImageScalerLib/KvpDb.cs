@@ -2,14 +2,17 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace ImageScalerLib
 {
     public class KvpDb
     {
-        private static string DBFILENAME = "kvpLite.sqlite";
+
+        private static string DBFILENAME = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "kvpLite.sqlite");
         private SQLiteConnection _dbConnection = null;
         public KvpDb()
         {
@@ -24,9 +27,16 @@ namespace ImageScalerLib
                     {
                         cmd.ExecuteNonQuery();
                     }
-                    this._dbConnection.Close();
+                }
+                else
+                {
+                    this._dbConnection.Open();
                 }
             }
+        }
+        ~KvpDb()
+        {
+            this._dbConnection.Clone();
         }
 
         public bool SetKvp(KeyValuePair<string, string> keyValuePair)
@@ -35,14 +45,12 @@ namespace ImageScalerLib
             {
                 return false;
             }
-            this._dbConnection.Open();
             using (SQLiteCommand cmd = new SQLiteCommand("INSERT INTO Kvp (key, value) values (@key, @value)", this._dbConnection))
             {
                 cmd.Parameters.AddWithValue("@key", keyValuePair.Key);
                 cmd.Parameters.AddWithValue("@value", keyValuePair.Value);
                 cmd.ExecuteNonQuery();
             }
-            this._dbConnection.Close();
             return true;
         }
         public KeyValuePair<string, string> GetKvp(string key)
@@ -52,7 +60,6 @@ namespace ImageScalerLib
             {
                 return keyValuePair;
             }
-            this._dbConnection.Open();
             using (SQLiteCommand cmd = new SQLiteCommand("SELECT * FROM Kvp WHERE key=@key", this._dbConnection))
             {
                 cmd.Parameters.AddWithValue("@key", key);
@@ -62,19 +69,16 @@ namespace ImageScalerLib
                     keyValuePair = new KeyValuePair<string, string>(dbresult.GetString(0), dbresult.GetString(1));
                 }
             }
-            this._dbConnection.Close();
             return keyValuePair;
         }
         private bool KvpExists(string key)
         {
-            this._dbConnection.Open();
             bool exists = false;
             using (SQLiteCommand cmd = new SQLiteCommand("SELECT EXISTS(SELECT 1 FROM Kvp WHERE key=@key LIMIT 1);", this._dbConnection))
             {
                 cmd.Parameters.AddWithValue("@key", key);
                 exists = (long)cmd.ExecuteScalar() == 1;
             }
-            this._dbConnection.Close();
             return exists;
         }
     }

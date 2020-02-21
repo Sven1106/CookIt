@@ -21,9 +21,10 @@ namespace CookIt.API.Controllers
             this._imageService = imageService;
         }
         [HttpPost]
-        public string Post(string url, int scaleToPercentage = 100)
+        public string Post(string url, int width, int height)
         {
-            return this._imageService.GetOrSetScaledImage(url, scaleToPercentage);
+            string base64 = this._imageService.GetOrSetScaledImage(url, width, height);
+            return base64;
         }
     }
 }
