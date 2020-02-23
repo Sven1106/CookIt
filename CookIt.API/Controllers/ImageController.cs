@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using System.Web;
+using CookIt.API.Dtos;
 using ImageScalerLib;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,10 +24,30 @@ namespace CookIt.API.Controllers
             this._imageService = imageService;
         }
         [HttpPost]
-        public string Post(string url, int width, int height)
+        public IActionResult GetScaledImage([FromBody] ImageResizeDto imageResize)
         {
-            string base64 = this._imageService.GetOrSetScaledImage(url, width, height);
-            return base64;
+            string base64 = this._imageService.GetOrSetScaledImage(imageResize.Src, imageResize.Width, imageResize.Height);
+            return Ok(base64);
+        }
+        [HttpDelete("DeleteImage")]
+        public IActionResult DeleteImage([FromBody] ImageResizeDto imageResize)
+        {
+            bool imageDeleted = this._imageService.DeleteImage(HttpUtility.UrlDecode(imageResize.Src), imageResize.Width, imageResize.Height);
+            if (imageDeleted == false)
+            {
+                return NoContent();
+            }
+            return Ok();
+        }
+        [HttpDelete("DeleteAllImages")]
+        public IActionResult DeleteAllImages()
+        {
+            bool imagesDeleted = this._imageService.DeleteAllImages();
+            if (imagesDeleted == false)
+            {
+                return NoContent();
+            }
+            return Ok();
         }
     }
 }

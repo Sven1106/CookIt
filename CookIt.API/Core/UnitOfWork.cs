@@ -18,11 +18,13 @@ namespace CookIt.API.Core
         public IIngredientRepository IngredientRepo { get; }
         public IRecipeSentenceRepository RecipeSentenceRepo { get; }
         public IRecipeSentenceIngredientRepository RecipeSentenceIngredientRepo { get; }
+        public IAuthRepository AuthRepository { get; }
 
 
         public UnitOfWork(AppDbContext context)
         {
             _context = context;
+            AuthRepository = new AuthRepository(_context);
             RecipeRepo = new RecipeRepository(_context);
             HostRepo = new HostRepository(_context);
             IngredientRepo = new IngredientRepository(_context);

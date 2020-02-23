@@ -54,10 +54,6 @@ namespace CookIt.API.Areas.Admin.Controllers
                 {
                 }
             }
-
-
-
-
             int rowsAdded = _unitOfWorkManager.CreateRecipes(createRecipeDto);
             return RedirectToAction("Recipes");
         }

@@ -7,6 +7,7 @@ using CookIt.API.Data;
 using CookIt.API.Dtos;
 using CookIt.API.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using Recipe = CookIt.API.Models.Recipe;
 
 namespace CookIt.API.Controllers
@@ -25,7 +26,6 @@ namespace CookIt.API.Controllers
         public ActionResult GetRecipesAsync([FromBody]RecipeFilter filter)
         {
             List<RecipeForListDto> recipes = _unitOfWorkManager.GetFilteredRecipes(filter);
-
             if (recipes == null || recipes.Count == 0)
             {
                 return NoContent();
@@ -42,5 +42,30 @@ namespace CookIt.API.Controllers
             }
             return Ok(recipe);
         }
+
+        [HttpPost("UpdateRecipeSentenceIngredient/{id}")]
+        public IActionResult UpdateRecipeSentenceIngredient(Guid id, [FromBody] JObject json)
+        {
+            string ingredientValue = json["ingredientValue"].ToString();
+            int changesMade = _unitOfWorkManager.UpdateRecipeSentenceIngredient(id, ingredientValue);
+            if (changesMade == 0)
+            {
+                return NoContent();
+            }
+            RecipeSentenceIngredient recipeSentenceIngredient = _unitOfWorkManager.GetRecipeSentenceIngredient(id);
+            return Ok(new { id = recipeSentenceIngredient.Id, ingredientId = recipeSentenceIngredient.Ingredient.Id, ingredientName = recipeSentenceIngredient.Ingredient.Name });
+        }
+
+        [HttpDelete("DeleteRecipeSentenceIngredient/{id}")]
+        public IActionResult DeleteRecipeSentenceIngredient(Guid id)
+        {
+            int changesMade = _unitOfWorkManager.DeleteRecipeSentenceIngredient(id);
+            if (changesMade == 0)
+            {
+                return NoContent();
+            }
+            return Ok();
+        }
+
     }
 }

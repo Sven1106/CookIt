@@ -1,21 +1,23 @@
-﻿using System;
-using System.Collections.Concurrent;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 
-namespace ImageScalerLib
+namespace KVPLiteLib
 {
-    public class KvpDb
+    public class KVPLite
     {
-
-        private static string DBFILENAME = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "kvpLite.sqlite");
+        private static string DBFILENAME = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), "KVPLite.sqlite");
         private SQLiteConnection _dbConnection = null;
-        public KvpDb()
+        public KVPLite()
         {
+            bool speedCompetition = false;
+            string pragmaSettings = "PRAGMA auto_vacuum = FULL;";
+            if (speedCompetition)
+            {
+                pragmaSettings += " PRAGMA synchronous = OFF; PRAGMA journal_mode = MEMORY;";
+            }
+
             if (this._dbConnection == null)
             {
                 this._dbConnection = new SQLiteConnection("Data Source=" + DBFILENAME + ";Version=3;");
@@ -23,18 +25,29 @@ namespace ImageScalerLib
                 {
                     SQLiteConnection.CreateFile(DBFILENAME);
                     this._dbConnection.Open();
-                    using (var cmd = new SQLiteCommand("CREATE TABLE Kvp (key char(8) primary key, value varchar(20000));", this._dbConnection))
+                    using (var cmd = new SQLiteCommand(pragmaSettings, this._dbConnection))
                     {
+                        cmd.CommandText += "CREATE TABLE Kvp (key char(8) primary key, value varchar(20000));";
                         cmd.ExecuteNonQuery();
                     }
                 }
                 else
                 {
                     this._dbConnection.Open();
+                    using (var cmd = new SQLiteCommand(pragmaSettings, this._dbConnection))
+                    {
+                        cmd.ExecuteNonQuery();
+                        cmd.CommandText = "SELECT COUNT(*) as COUNT FROM sqlite_master;";
+                        if ((long)cmd.ExecuteScalar() == 0)
+                        {
+                            cmd.CommandText = "CREATE TABLE Kvp (key char(8) primary key, value varchar(20000));";
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
                 }
             }
         }
-        ~KvpDb()
+        ~KVPLite()
         {
             this._dbConnection.Clone();
         }
@@ -50,6 +63,32 @@ namespace ImageScalerLib
                 cmd.Parameters.AddWithValue("@key", keyValuePair.Key);
                 cmd.Parameters.AddWithValue("@value", keyValuePair.Value);
                 cmd.ExecuteNonQuery();
+            }
+            return true;
+        }
+        public bool RemoveKvp(string key)
+        {
+            if (KvpExists(key) == false)
+            {
+                return false;
+            }
+            using (SQLiteCommand cmd = new SQLiteCommand("DELETE FROM Kvp WHERE key=@key", this._dbConnection))
+            {
+                cmd.Parameters.AddWithValue("@key", key);
+                cmd.ExecuteNonQuery();
+            }
+            return true;
+        }
+        public bool RemoveAllKvp()
+        {
+            using (SQLiteCommand cmd = new SQLiteCommand("DELETE FROM Kvp", this._dbConnection))
+            {
+                cmd.ExecuteNonQuery();
+                cmd.CommandText = "SELECT COUNT(*) as COUNT FROM Kvp;";
+                if ((long)cmd.ExecuteScalar() > 0)
+                {
+                    return false;
+                }
             }
             return true;
         }

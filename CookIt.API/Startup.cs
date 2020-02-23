@@ -4,9 +4,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using ImageScalerLib;
 using CookIt.API.Core;
 using CookIt.API.Data;
-using ImageScalerLib;
+using CookIt.API.Interfaces;
+using CookIt.API.Repositories;
 
 namespace CookIt.API
 {
@@ -32,10 +34,11 @@ namespace CookIt.API
                 {
                     opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddMvc(option => option.EnableEndpointRouting = false).AddNewtonsoftJson();
-            services.AddSingleton<KvpDb>();
+            services.AddCors();
             services.AddSingleton<ImageService>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<IAuthRepository, AuthRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

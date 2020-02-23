@@ -11,29 +11,34 @@ namespace CookIt.API.Data
         public DbSet<Recipe> Recipe { get; set; }
         public DbSet<RecipeSentence> RecipeSentence { get; set; }
         public DbSet<RecipeSentenceIngredient> RecipeSentenceIngredient { get; set; }
+        public DbSet<User> User{ get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Ingredient>(entity =>
             {
-                entity.Property(p => p.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
+                entity.Property(x => x.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
             });
             modelBuilder.Entity<Host>(entity =>
             {
-                entity.Property(p => p.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
+                entity.Property(x => x.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
             });
             modelBuilder.Entity<Recipe>(entity =>
             {
-                entity.Property(p => p.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
+                entity.Property(x => x.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
             });
             
             modelBuilder.Entity<RecipeSentence>(entity =>
             {
-                entity.Property(p => p.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
+                entity.Property(x => x.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
             });
             modelBuilder.Entity<RecipeSentenceIngredient>(entity =>
             {
-                entity.Property(p => p.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
+                entity.Property(x => x.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
+            });
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.Property(x => x.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
             });
         }
     }

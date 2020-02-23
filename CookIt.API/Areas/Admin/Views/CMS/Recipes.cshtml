@@ -105,7 +105,7 @@
             {
                 <tr>
                     <td style="text-align: center;">
-                        <img class="lazy" src="" data-src="@recipe.ImageUrl" width="150" height="100" alt="@recipe.Title" title="@recipe.Title" />
+                        <img class="lazyLoad" src="" data-src="@recipe.ImageUrl" width="150" height="100" alt="@recipe.Title" title="@recipe.Title" />
                     </td>
                     <td>
                         <a href="@recipe.Url">@recipe.Title</a>
@@ -154,18 +154,17 @@
             if (result) {
                     $("#myModal").modal("hide");
                     $.ajax({
-                        url: "/api/CMSApi/DeleteRecipeSentenceIngredient/" + currentSelectedRecipeSentenceIngredientId,
-                        method: "POST",
+                        url: "/api/Recipes/DeleteRecipeSentenceIngredient/" + currentSelectedRecipeSentenceIngredientId,
+                        method: "DELETE",
                         dataType: "json",
                         statusCode: {
                             204: function (error) {
-                                console.log("ERROR: /api/CMSApi/" + currentSelectedRecipeSentenceIngredientId + " => " + error);
+                                console.log("ERROR: /api/Recipe/DeleteRecipeSentenceIngredient/" + currentSelectedRecipeSentenceIngredientId + " => " + error);
                             },
                             200: function (data) {
                                 let ingredientBadgeElement = $("[data-recipeSentenceIngredientId=" + currentSelectedRecipeSentenceIngredientId + "]");
                                 ingredientBadgeElement.remove();
                             }
-
                         }
                     })
                 return true;
@@ -175,7 +174,6 @@
 
         function confirmUpdateOfMatchedIngredient() {
             let json = {
-                "recipeSentenceIngredientId": currentSelectedRecipeSentenceIngredientId,
                 "ingredientValue": $('#ingredientList').val()
             }
             let result = confirm("Are you sure?");
@@ -183,7 +181,7 @@
                 $("#myModal").modal("hide");
                 $.ajax({
                     contentType: "application/json",
-                    url: "/api/CMSApi/UpdateRecipeSentenceIngredient/",
+                    url: "/api/Recipes/UpdateRecipeSentenceIngredient/"+currentSelectedRecipeSentenceIngredientId,
                     method: "POST",
                     dataType: "json",
                     data: JSON.stringify(json),
@@ -244,18 +242,19 @@
                     });
                 },
                 "drawCallback": function(){
-                    let lazy = $("img.lazy");
-                    lazy.each(function (index, value) {
-                        console.log(value);
-                        let imageUrlEncoded = encodeURIComponent(value.getAttribute("data-src"));
+                    $("img.lazyLoad").each(function (index, value) {
+                        let json = {
+                            "src": encodeURIComponent(value.getAttribute("data-src")),
+                            "width": value.getAttribute("width"),
+                            "height": value.getAttribute("height")
+                        }
                         $.ajax({
-                        url: "/api/Image?url=" + imageUrlEncoded + "&width="+value.getAttribute("width") + "&height=" + value.getAttribute("height"),
+                        contentType: "application/json",
+                        url: "/api/Image",
                         method: "POST",
                         dataType: "json",
+                        data: JSON.stringify(json),
                         statusCode: {
-                            //204: function (error) {
-                            //    console.log("ERROR: /api/CMSApi/" + currentSelectedRecipeSentenceIngredientId + " => " + error);
-                            //},
                             200: function (data) {
                                 value.setAttribute("src", data.responseText);
                             }
@@ -263,7 +262,6 @@
                         }
                     })
                     });
-                        //lazy.update();
                 }
             });
             setTimeout(function () {
