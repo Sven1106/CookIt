@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace CookIt.API.Interfaces
 {
-    public interface IIngredientRepository: IRepository<Ingredient>
+    public interface IIngredientRepository
     {
+        List<Ingredient> GetIngredients();
     }
 }

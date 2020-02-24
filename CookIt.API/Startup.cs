@@ -9,6 +9,11 @@ using CookIt.API.Core;
 using CookIt.API.Data;
 using CookIt.API.Interfaces;
 using CookIt.API.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace CookIt.API
 {
@@ -28,7 +33,10 @@ namespace CookIt.API
             {
                 option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
-
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(1);
+            });
             services.AddControllers()
                 .AddNewtonsoftJson(opt =>
                 {
@@ -37,8 +45,22 @@ namespace CookIt.API
             services.AddMvc(option => option.EnableEndpointRouting = false).AddNewtonsoftJson();
             services.AddCors();
             services.AddSingleton<ImageService>();
-            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IIngredientRepository, IngredientRepository>();
+            services.AddScoped<IRecipeRepository, RecipeRepository>();
+            services.AddAuthentication()
+                .AddCookie(cfg => cfg.SlidingExpiration = true)
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value)),
+                        ValidateIssuer = false,
+                        ValidateAudience = false
+
+                    };
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,13 +75,13 @@ namespace CookIt.API
             // app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

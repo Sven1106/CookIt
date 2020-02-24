@@ -7,7 +7,7 @@ CREATE TABLE [Host] (
 GO
 CREATE TABLE [Ingredient] (
 	Id UNIQUEIDENTIFIER,
-	Name varchar(MAX) NOT NULL
+	[Name] varchar(MAX) NOT NULL
 )
 GO
 CREATE TABLE [Recipe] (
@@ -33,8 +33,10 @@ GO
 
 CREATE TABLE [User] (
   Id UNIQUEIDENTIFIER,
-  Username varchar(MAX) NOT NULL,
+  UserName varchar(MAX) NOT NULL,
   PasswordHash varbinary(MAX) NOT NULL,
-  PasswordSalt varbinary(MAX) NOT NULL
+  PasswordSalt varbinary(MAX) NOT NULL,
+  [Role] varchar(5) NOT NULL,
+
 )
 GO

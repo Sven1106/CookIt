@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using CookIt.API.Core;
 using CookIt.API.Dtos;
 using CookIt.API.Interfaces;
 using CookIt.API.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 
 namespace CookIt.API.Controllers
 {
@@ -15,27 +19,64 @@ namespace CookIt.API.Controllers
     [ApiController]
     public class AuthController : ControllerBase
     {
-        private readonly UnitOfWorkManager _unitOfWorkManager;
+        private readonly IConfiguration _iConfig;
+        private readonly IAuthRepository _authRepository;
 
-        public AuthController( IUnitOfWork unitOfWork)
+        public AuthController(IConfiguration iConfig, IAuthRepository authRepository)
         {
-            this._unitOfWorkManager = new UnitOfWorkManager(unitOfWork);
+            this._iConfig = iConfig;
+            this._authRepository = authRepository;
         }
         [HttpPost("register")]
-        public IActionResult Register(UserForRegisterDTO userForRegisterDTO)
+        public IActionResult Register(UserForRegisterDto userForRegisterDTO)
         {
             userForRegisterDTO.Username = userForRegisterDTO.Username.ToLower();
-            if (_unitOfWorkManager.UserExists(userForRegisterDTO.Username))
+            if (_authRepository.UserExists(userForRegisterDTO.Username))
             {
                 return BadRequest("Username already exists");
             }
-            User userToCreate = new User
+            User userToCreate = new User()
             {
-                Username = userForRegisterDTO.Username
+                Username = userForRegisterDTO.Username,
+                Role = Role.User
             };
 
-            _unitOfWorkManager.Register(userToCreate, userForRegisterDTO.Password);
+            _authRepository.Register(userToCreate, userForRegisterDTO.Password);
             return StatusCode(201);
+        }
+        [HttpPost("login")]
+        public IActionResult Login(UserForLoginDto userForLoginDto)
+        {
+            userForLoginDto.Username = userForLoginDto.Username.ToLower();
+            var user = _authRepository.Login(userForLoginDto.Username, userForLoginDto.Password);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var claims = new[] {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Role, user.Role)
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(this._iConfig.GetSection("AppSettings:Token").Value));
+
+            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.Now.AddDays(1),
+                SigningCredentials = credentials
+            };
+
+            var jwtTokenHandler = new JwtSecurityTokenHandler();
+            var createdToken = jwtTokenHandler.CreateToken(tokenDescriptor);
+            return Ok(new
+            {
+                token = jwtTokenHandler.WriteToken(createdToken)
+            });
         }
     }
 }

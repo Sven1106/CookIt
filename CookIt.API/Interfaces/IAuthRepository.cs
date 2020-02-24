@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace CookIt.API.Interfaces
 {
-    public interface IAuthRepository : IRepository<User>
+    public interface IAuthRepository
     {
-        //User Register(User user, string password);
-        //User Login(string username, string password);
-        //bool UserExists(string username);
+        User Register(User user, string password);
+        User Login(string username, string password);
+        bool UserExists(string username);
     }
 }

@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SQLite;
-using System.Linq;
-using System.Net;
-using System.Threading.Tasks;
-using System.Web;
+﻿using CookIt.API.Core;
 using CookIt.API.Dtos;
 using ImageScalerLib;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
@@ -15,24 +10,25 @@ namespace CookIt.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "", Roles = Role.Admin)]
     public class ImageController : ControllerBase
     {
         private readonly ImageService _imageService;
-
         public ImageController(ImageService imageService)
         {
             this._imageService = imageService;
         }
-        [HttpPost]
-        public IActionResult GetScaledImage([FromBody] ImageResizeDto imageResize)
+        [AllowAnonymous]
+        [HttpPost("GetScaledImage")]
+        public IActionResult GetScaledImage(ImageResizeDto imageResize)
         {
             string base64 = this._imageService.GetOrSetScaledImage(imageResize.Src, imageResize.Width, imageResize.Height);
             return Ok(base64);
         }
         [HttpDelete("DeleteImage")]
-        public IActionResult DeleteImage([FromBody] ImageResizeDto imageResize)
+        public IActionResult DeleteImage(ImageResizeDto imageResize)
         {
-            bool imageDeleted = this._imageService.DeleteImage(HttpUtility.UrlDecode(imageResize.Src), imageResize.Width, imageResize.Height);
+            bool imageDeleted = this._imageService.DeleteImage(imageResize.Src, imageResize.Width, imageResize.Height);
             if (imageDeleted == false)
             {
                 return NoContent();

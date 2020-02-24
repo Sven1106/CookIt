@@ -170,9 +170,9 @@ namespace ImageScalerLib
             return base64;
         }
 
-        public bool DeleteImage(string url, int width, int height)
+        public bool DeleteImage(string src, int width, int height)
         {
-            string key = url + "&width=" + width + "&height=" + height;
+            string key = src + "&width=" + width + "&height=" + height;
             bool imageDeleted = _KVPLite.RemoveKvp(key);
             return imageDeleted;
         }
