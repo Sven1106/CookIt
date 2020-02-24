@@ -1,5 +1,4 @@
-﻿using CookIt.API.Core;
-using CookIt.API.Models;
+﻿using CookIt.API.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +8,6 @@ namespace CookIt.API.Interfaces
 {
     public interface IIngredientRepository
     {
-        List<Ingredient> GetIngredients();
+        Task<List<Ingredient>> GetIngredients();
     }
 }

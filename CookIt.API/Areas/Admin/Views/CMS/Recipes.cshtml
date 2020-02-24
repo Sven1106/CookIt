@@ -1,4 +1,5 @@
-﻿@model CookIt.API.Areas.Admin.Models.RecipesVm
+﻿@using Microsoft.AspNetCore.Http;
+@model CookIt.API.Areas.Admin.Models.RecipesVm
 @{
     ViewData["Title"] = "Recipes";
     Layout = "~/Areas/Admin/Views/Shared/CMS_Layout.cshtml";
@@ -151,15 +152,16 @@
         }
         function confirmDeleteOfRecipeSentenceIngredient() {
             let result = confirm("Are you sure?");
+
             if (result) {
                     $("#myModal").modal("hide");
                     $.ajax({
-                        url: "/api/Recipes/DeleteRecipeSentenceIngredient/" + currentSelectedRecipeSentenceIngredientId,
+                        url: "/api/recipes/deleteRecipeSentenceIngredient/" + currentSelectedRecipeSentenceIngredientId,
                         method: "DELETE",
                         dataType: "json",
                         statusCode: {
                             204: function (error) {
-                                console.log("ERROR: /api/Recipe/DeleteRecipeSentenceIngredient/" + currentSelectedRecipeSentenceIngredientId + " => " + error);
+                                console.log(error);
                             },
                             200: function (data) {
                                 let ingredientBadgeElement = $("[data-recipeSentenceIngredientId=" + currentSelectedRecipeSentenceIngredientId + "]");
@@ -181,7 +183,7 @@
                 $("#myModal").modal("hide");
                 $.ajax({
                     contentType: "application/json",
-                    url: "/api/Recipes/UpdateRecipeSentenceIngredient/"+currentSelectedRecipeSentenceIngredientId,
+                    url: "/api/recipes/updateRecipeSentenceIngredient/"+currentSelectedRecipeSentenceIngredientId,
                     method: "POST",
                     dataType: "json",
                     data: JSON.stringify(json),
@@ -250,7 +252,7 @@
                         }
                         $.ajax({
                         contentType: "application/json",
-                        url: "/api/Image/GetScaledImage",
+                        url: "/api/image/getImage",
                         method: "POST",
                         dataType: "json",
                         data: JSON.stringify(json),

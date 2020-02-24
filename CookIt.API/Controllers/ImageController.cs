@@ -1,31 +1,36 @@
-﻿using CookIt.API.Core;
+﻿using CookIt.API.Models;
 using CookIt.API.Dtos;
 using ImageScalerLib;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-
+using System.Threading.Tasks;
 
 namespace CookIt.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "", Roles = Role.Admin)]
+    /*
+        This is a mixed Authorized Controller. It can be authorized with cookies or JWT.
+        The Ajax requests made to this controller are from same origin which means the cookieauthorization is used.
+    */
+    [Authorize(AuthenticationSchemes = AuthSchemes, Policy = "", Roles = Role.Admin)]
     public class ImageController : ControllerBase
     {
+        private const string AuthSchemes = CookieAuthenticationDefaults.AuthenticationScheme + "," + JwtBearerDefaults.AuthenticationScheme; // Authorizes against both Schemes.
         private readonly ImageService _imageService;
         public ImageController(ImageService imageService)
         {
             this._imageService = imageService;
         }
-        [AllowAnonymous]
-        [HttpPost("GetScaledImage")]
-        public IActionResult GetScaledImage(ImageResizeDto imageResize)
+        [HttpPost("getImage")]
+        public async Task<IActionResult> GetScaledImageAsync(ImageResizeDto imageResize)
         {
-            string base64 = this._imageService.GetOrSetScaledImage(imageResize.Src, imageResize.Width, imageResize.Height);
+            string base64 = await this._imageService.GetOrSetScaledImageAsync(imageResize.Src, imageResize.Width, imageResize.Height);
             return Ok(base64);
         }
-        [HttpDelete("DeleteImage")]
+        [HttpDelete("deleteImage")]
         public IActionResult DeleteImage(ImageResizeDto imageResize)
         {
             bool imageDeleted = this._imageService.DeleteImage(imageResize.Src, imageResize.Width, imageResize.Height);
@@ -35,7 +40,7 @@ namespace CookIt.API.Controllers
             }
             return Ok();
         }
-        [HttpDelete("DeleteAllImages")]
+        [HttpDelete("deleteAllImages")]
         public IActionResult DeleteAllImages()
         {
             bool imagesDeleted = this._imageService.DeleteAllImages();

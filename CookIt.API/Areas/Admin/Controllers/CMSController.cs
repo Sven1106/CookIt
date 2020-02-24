@@ -5,10 +5,14 @@ using System.IO;
 using System.Reflection;
 using System.Security.Claims;
 using System.Text;
+using System.Threading.Tasks;
+using System.Web;
 using CookIt.API.Areas.Admin.Models;
-using CookIt.API.Core;
+using CookIt.API.Models;
 using CookIt.API.Dtos;
 using CookIt.API.Interfaces;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -19,23 +23,20 @@ using Newtonsoft.Json.Schema;
 
 namespace CookIt.API.Areas.Admin.Controllers
 {
-    //[LoginAuthorize("Role", Role.Admin)]
-    [Authorize] // https://github.com/shawnwildermuth/dualauthcore
+    [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme, Policy = "", Roles = Role.Admin)] // https://github.com/shawnwildermuth/dualauthcore
     [Area("Admin")]
-    public class CMSController : Controller
+    public class CmsController : Controller
     {
         private readonly IRecipeRepository _recipeRepository;
         private readonly IIngredientRepository _ingredientRepository;
         private readonly IAuthRepository _authRepository;
-        private readonly IConfiguration _iConfig;
-        private string _currentDirectory;
-        private JSchema _createRecipeSchema;
-        public CMSController(IAuthRepository authRepository, IIngredientRepository ingredientRepository, IRecipeRepository recipeRepository, IConfiguration iConfig)
+        private readonly string _currentDirectory;
+        private readonly JSchema _createRecipeSchema;
+        public CmsController(IAuthRepository authRepository, IIngredientRepository ingredientRepository, IRecipeRepository recipeRepository)
         {
             _authRepository = authRepository;
             _ingredientRepository = ingredientRepository;
             _recipeRepository = recipeRepository;
-            _iConfig = iConfig;
             _currentDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
             _createRecipeSchema = JSchema.Parse(System.IO.File.ReadAllText(Path.Combine(_currentDirectory, "createRecipeSchema.json")));
         }
@@ -44,11 +45,11 @@ namespace CookIt.API.Areas.Admin.Controllers
         {
             return View();
         }
-        [HttpPost, AllowAnonymous]
-        public IActionResult Login(UserForLoginDto userForLoginDto)
+        [HttpPost, AllowAnonymous, ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
             userForLoginDto.Username = userForLoginDto.Username.ToLower();
-            var user = _authRepository.Login(userForLoginDto.Username, userForLoginDto.Password);
+            var user = await _authRepository.LoginAsync(userForLoginDto.Username, userForLoginDto.Password);
             if (user == null || user.Role != Role.Admin)
             {
                 return Unauthorized();
@@ -60,25 +61,24 @@ namespace CookIt.API.Areas.Admin.Controllers
                 new Claim(ClaimTypes.Role, user.Role)
             };
 
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(this._iConfig.GetSection("AppSettings:Token").Value));
+            var claimsIdentity = new ClaimsIdentity(
+                claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
-            var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+            var authProperties = new AuthenticationProperties();
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                new ClaimsPrincipal(claimsIdentity),
+                authProperties);
 
-            var tokenDescriptor = new SecurityTokenDescriptor
+            string returnUrl = HttpUtility.ParseQueryString(new Uri(HttpContext.Request.Headers["Referer"]).Query).Get("ReturnUrl");
+            if (returnUrl == null)
             {
-                Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(1),
-                SigningCredentials = credentials
-            };
-
-            var jwtTokenHandler = new JwtSecurityTokenHandler();
-            var createdToken = jwtTokenHandler.CreateToken(tokenDescriptor);
-
-            HttpContext.Session.SetString("JWT", jwtTokenHandler.WriteToken(createdToken));
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+            return Redirect(returnUrl);
         }
-        public ActionResult Signout()
+        public async Task<ActionResult> Signout()
         {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login");
         }
 
@@ -91,10 +91,12 @@ namespace CookIt.API.Areas.Admin.Controllers
             return View(_createRecipeSchema);
         }
         [HttpPost]
-        public IActionResult CreateRecipes(string json)
+        public async Task<IActionResult> CreateRecipes(string json)
         {
-            JSchemaValidatingReader jSchemaReader = new JSchemaValidatingReader(new JsonTextReader(new StringReader(json)));
-            jSchemaReader.Schema = _createRecipeSchema;
+            JSchemaValidatingReader jSchemaReader = new JSchemaValidatingReader(new JsonTextReader(new StringReader(json)))
+            {
+                Schema = _createRecipeSchema
+            };
 
             IList<string> errorMessages = new List<string>();
             jSchemaReader.ValidationEventHandler += (o, a) => errorMessages.Add(a.Message);
@@ -106,18 +108,18 @@ namespace CookIt.API.Areas.Admin.Controllers
                 {
                 }
             }
-            int rowsAdded = _recipeRepository.CreateRecipes(createRecipeDto);
+            int rowsAdded = await _recipeRepository.CreateRecipesAsync(createRecipeDto);
             return RedirectToAction("Recipes");
         }
 
-        public IActionResult Recipes()
+        public async Task<IActionResult> Recipes()
         {
-            RecipesVm recipesVm = new RecipesVm(_recipeRepository.GetRecipes(), _ingredientRepository.GetIngredients());
+            RecipesVm recipesVm = new RecipesVm(await _recipeRepository.GetRecipesAsync(), await _ingredientRepository.GetIngredients());
             return View(recipesVm);
         }
-        public IActionResult DeleteRecipe(Guid id)
+        public async Task<IActionResult> DeleteRecipe(Guid id)
         {
-            _recipeRepository.DeleteRecipe(id);
+            await _recipeRepository.DeleteRecipeAsync(id);
             return RedirectToAction("Recipes");
         }
 

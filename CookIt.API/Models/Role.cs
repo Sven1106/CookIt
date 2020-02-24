@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CookIt.API.Core
+namespace CookIt.API.Models
 {
     public static class Role
     {

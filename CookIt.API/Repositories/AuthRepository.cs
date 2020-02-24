@@ -1,11 +1,11 @@
-﻿using CookIt.API.Core;
-using CookIt.API.Data;
+﻿using CookIt.API.Data;
 using CookIt.API.Interfaces;
 using CookIt.API.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace CookIt.API.Repositories
 {
@@ -16,9 +16,9 @@ namespace CookIt.API.Repositories
         {
             _appDbContext = appDbContext;
         }
-        public User Login(string username, string password)
+        public async Task<User> LoginAsync(string username, string password)
         {
-            var user = _appDbContext.User.Where(x => x.Username == username).FirstOrDefault();
+            var user = await _appDbContext.User.Where(x => x.Username == username).FirstOrDefaultAsync();
             if (user == null)
             {
                 return null;
@@ -47,15 +47,15 @@ namespace CookIt.API.Repositories
             return true;
         }
 
-        public User Register(User user, string password)
+        public async Task<User> RegisterAsync(User user, string password)
         {
-            byte[] passwordHash, passwordSalt;
-            CreatePasswordHash(password, out passwordHash, out passwordSalt);
+
+            CreatePasswordHash(password, out byte[] passwordHash, out byte[] passwordSalt);
             user.Id = Guid.NewGuid();
             user.PasswordHash = passwordHash;
             user.PasswordSalt = passwordSalt;
-            _appDbContext.User.Add(user);
-            _appDbContext.SaveChanges();
+            await _appDbContext.User.AddAsync(user);
+            await _appDbContext.SaveChangesAsync();
             return user;
         }
 
@@ -68,9 +68,9 @@ namespace CookIt.API.Repositories
             }
         }
 
-        public bool UserExists(string username)
+        public async Task<bool> UserExistsAsync(string username)
         {
-            if (_appDbContext.User.Any(x => x.Username == username))
+            if (await _appDbContext.User.AnyAsync(x => x.Username == username))
             {
                 return true;
             }

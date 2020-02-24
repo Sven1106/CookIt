@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using ImageScalerLib;
-using CookIt.API.Core;
 using CookIt.API.Data;
 using CookIt.API.Interfaces;
 using CookIt.API.Repositories;
@@ -35,7 +34,7 @@ namespace CookIt.API
             });
             services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromMinutes(1);
+                options.IdleTimeout = TimeSpan.FromMinutes(30);
             });
             services.AddControllers()
                 .AddNewtonsoftJson(opt =>
@@ -49,7 +48,11 @@ namespace CookIt.API
             services.AddScoped<IIngredientRepository, IngredientRepository>();
             services.AddScoped<IRecipeRepository, RecipeRepository>();
             services.AddAuthentication()
-                .AddCookie(cfg => cfg.SlidingExpiration = true)
+                .AddCookie(options =>
+                {
+                    options.SlidingExpiration = true;
+                    options.LoginPath = "/Admin/Cms/Login/";
+                })
                 .AddJwtBearer(options =>
                 {
                     options.TokenValidationParameters = new TokenValidationParameters

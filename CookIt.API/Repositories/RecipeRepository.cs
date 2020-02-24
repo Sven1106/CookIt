@@ -1,5 +1,4 @@
-﻿using CookIt.API.Core;
-using CookIt.API.Data;
+﻿using CookIt.API.Data;
 using CookIt.API.Dtos;
 using CookIt.API.Interfaces;
 using CookIt.API.Models;
@@ -9,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace CookIt.API.Repositories
 {
@@ -19,9 +19,9 @@ namespace CookIt.API.Repositories
         {
             _appDbContext = appDbContext;
         }
-        public int CreateRecipes(CreateRecipeDto createRecipeDto)
+        public async Task<int> CreateRecipesAsync(CreateRecipeDto createRecipeDto)
         {
-            List<Ingredient> ingredients = _appDbContext.Ingredient.OrderBy(i => i.Name).ToList();
+            List<Ingredient> ingredients = await _appDbContext.Ingredient.OrderBy(i => i.Name).ToListAsync();
             Dictionary<string, List<string>> lemmasByIngredientName = CstLemmaWrapper.GetLemmasByTextDictionary(ingredients.Select(x => Helper.RemoveSpecialCharacters(x.Name)).ToList());
             Dictionary<Ingredient, List<string>> lemmasByIngredient = new Dictionary<Ingredient, List<string>>();
             foreach (var ingredient in ingredients)
@@ -30,17 +30,17 @@ namespace CookIt.API.Repositories
                 lemmasByIngredient.Add(ingredient, distinctLemmas);
             }
 
-            Host host = _appDbContext.Host.Where(h => h.Name == createRecipeDto.ProjectName).FirstOrDefault();
+            Host host = await _appDbContext.Host.Where(h => h.Name == createRecipeDto.ProjectName).FirstOrDefaultAsync();
             if (host == null)
             {
                 host = new Host(createRecipeDto.ProjectName, createRecipeDto.Domain, ImageScalerLib.ImageService.CreatePlaceholderImage(50, 50));
-                _appDbContext.Host.Add(host);
+                await _appDbContext.Host.AddAsync(host);
             }
 
             foreach (var item in createRecipeDto.Tasks.AllRecipes)
             {
                 //create recipe
-                Recipe recipe = _appDbContext.Recipe.Where(r => r.Host == host && r.Title == item.Recipe.Heading).FirstOrDefault();
+                Recipe recipe = await _appDbContext.Recipe.Where(r => r.Host == host && r.Title == item.Recipe.Heading).FirstOrDefaultAsync();
                 if (recipe == null) // CREATE
                 {
                     string imageUrl;
@@ -53,7 +53,7 @@ namespace CookIt.API.Repositories
                         imageUrl = item.Recipe.Image.Src;
                     }
                     recipe = new Recipe(item.Recipe.Heading, host, item.Metadata.FoundAtUrl, imageUrl);
-                    _appDbContext.Recipe.Add(recipe);
+                    await _appDbContext.Recipe.AddAsync(recipe);
 
                     List<string> decodedRecipeIngredients = item.Recipe.Ingredients.Select(x => WebUtility.HtmlDecode(Helper.RemoveSpecialCharacters(x))).ToList();
                     List<string> destinctRecipeIngredients = decodedRecipeIngredients.Distinct().ToList();
@@ -131,12 +131,12 @@ namespace CookIt.API.Repositories
                             }
                         }
                         RecipeSentence recipeIngredientForCreation = new RecipeSentence(recipe, recipeIngredientText);
-                        _appDbContext.RecipeSentence.Add(recipeIngredientForCreation);
+                        await _appDbContext.RecipeSentence.AddAsync(recipeIngredientForCreation);
 
                         foreach (var mostLikelyIngredient in mostLikelyIngredients)
                         {
                             RecipeSentenceIngredient recipeSentenceIngredient = new RecipeSentenceIngredient(recipeIngredientForCreation, mostLikelyIngredient);
-                            _appDbContext.RecipeSentenceIngredient.Add(recipeSentenceIngredient);
+                            await _appDbContext.RecipeSentenceIngredient.AddAsync(recipeSentenceIngredient);
                         }
                     }
                 }
@@ -145,34 +145,34 @@ namespace CookIt.API.Repositories
                 }
             }
 
-            return _appDbContext.SaveChanges();
+            return await _appDbContext.SaveChangesAsync();
         }
 
-        public Recipe GetRecipe(Guid id)
+        public async Task<Recipe> GetRecipeAsync(Guid id)
         {
-            Recipe recipe = _appDbContext.Recipe
+            Recipe recipe = await _appDbContext.Recipe
                 .AsNoTracking()
                 .Include(recipe => recipe.Host)
                 .Include(recipe => recipe.RecipeSentences)
                     .ThenInclude(recipeSentence => recipeSentence.RecipeSentenceIngredients)
                         .ThenInclude(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient)
                 .Where(x => x.Id == id)
-                .FirstOrDefault();
+                .FirstOrDefaultAsync();
             return recipe;
         }
 
-        public List<Recipe> GetRecipes()
+        public async Task<List<Recipe>> GetRecipesAsync()
         {
-            List<Recipe> recipes = _appDbContext.Recipe
+            List<Recipe> recipes = await _appDbContext.Recipe
                 .AsNoTracking()
                 .Include(recipe => recipe.Host)
                 .Include(recipe => recipe.RecipeSentences)
                     .ThenInclude(recipeSentence => recipeSentence.RecipeSentenceIngredients)
-                        .ThenInclude(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient).ToList();
+                        .ThenInclude(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient).ToListAsync();
             return recipes;
         }
 
-        public List<RecipeForListDto> GetFilteredRecipes(RecipeFilter filter)
+        public async Task<List<RecipeForListDto>> GetFilteredRecipesAsync(RecipeFilter filter)
         {
             List<Recipe> recipes = new List<Recipe>();
 
@@ -215,7 +215,7 @@ namespace CookIt.API.Repositories
             #region DTOMapping
 
             List<RecipeForListDto> filteredRecipesForList = new List<RecipeForListDto>();
-            filteredRecipesForList = query
+            filteredRecipesForList = await query
                 .Select(recipe => new RecipeForListDto
                 {
                     Id = recipe.Id,
@@ -225,7 +225,9 @@ namespace CookIt.API.Repositories
                     ImageUrl = recipe.ImageUrl,
                     Ingredients = recipe.RecipeSentences
                         .Select(recipeSentence => recipeSentence.RecipeSentenceIngredients
-                            .Any(x => filter.IngredientsIds != null ? filter.IngredientsIds.Contains(x.Ingredient.Id) : false)
+                            .Any(x => filter.IngredientsIds != null
+                                ? filter.IngredientsIds.Contains(x.Ingredient.Id)
+                                : false)
                             ? recipeSentence.RecipeSentenceIngredients
                                 .Select(x => x.Ingredient)
                                 .Where(x => filter.IngredientsIds != null
@@ -239,17 +241,16 @@ namespace CookIt.API.Repositories
                         )
                         .ToList(),
                     MatchedIngredients = recipe.RecipeSentences
-                        .Select(recipeSentence => recipeSentence.RecipeSentenceIngredients
+                        .Select( recipeSentence => recipeSentence.RecipeSentenceIngredients
                             .Select(x => x.Ingredient)
                             .Where(x => filter.IngredientsIds != null
                                 ? filter.IngredientsIds.Contains(x.Id)
                                 : false)
                             .FirstOrDefault()
                         )
-                        .AsQueryable()
                         .Where(x => x != null)
                         .ToList()
-                }).ToList();
+                }).ToListAsync();
 
             #endregion DTOMapping
 
@@ -265,21 +266,21 @@ namespace CookIt.API.Repositories
             return filteredRecipesForList;
         }
 
-        public int DeleteRecipe(Guid id)
+        public async Task<int> DeleteRecipeAsync(Guid id)
         {
-            Recipe recipe = _appDbContext.Recipe.Where(x => x.Id == id).FirstOrDefault();
+            Recipe recipe = await _appDbContext.Recipe.Where(x => x.Id == id).FirstOrDefaultAsync();
             if (recipe == null)
             {
                 return 0;
             }
-            List<RecipeSentence> recipeSentences = _appDbContext.RecipeSentence
+            List<RecipeSentence> recipeSentences = await _appDbContext.RecipeSentence
                 .Where(x => x.Recipe == recipe)
-                .ToList();
+                .ToListAsync();
             foreach (var recipeSentence in recipeSentences)
             {
-                List<RecipeSentenceIngredient> recipeSentenceIngredients = _appDbContext.RecipeSentenceIngredient
+                List<RecipeSentenceIngredient> recipeSentenceIngredients = await _appDbContext.RecipeSentenceIngredient
                     .Where(x => x.RecipeSentence == recipeSentence)
-                    .ToList();
+                    .ToListAsync();
                 foreach (var recipeSentenceIngredient in recipeSentenceIngredients)
                 {
                     _appDbContext.RecipeSentenceIngredient.Remove(recipeSentenceIngredient);
@@ -287,28 +288,28 @@ namespace CookIt.API.Repositories
                 _appDbContext.RecipeSentence.Remove(recipeSentence);
             }
             _appDbContext.Recipe.Remove(recipe);
-            return _appDbContext.SaveChanges();
+            return await _appDbContext.SaveChangesAsync();
         }
 
-        public RecipeSentenceIngredient GetRecipeSentenceIngredient(Guid id)
+        public async Task<RecipeSentenceIngredient> GetRecipeSentenceIngredientAsync(Guid id)
         {
-            RecipeSentenceIngredient recipeSentenceIngredient = _appDbContext.RecipeSentenceIngredient
+            RecipeSentenceIngredient recipeSentenceIngredient = await _appDbContext.RecipeSentenceIngredient
                 .AsNoTracking()
                 .Include(recipeSentenceIngredient => recipeSentenceIngredient.RecipeSentence) //TODO WHY IS THIS NOT INCLUDED??!
                 .Include(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient)
                 .Where(x => x.Id == id)
-                .FirstOrDefault();
-            return recipeSentenceIngredient;
+                .FirstOrDefaultAsync();
+            return  recipeSentenceIngredient;
         }
 
-        public int UpdateRecipeSentenceIngredient(Guid id, string ingredientValue)
+        public async Task<int> UpdateRecipeSentenceIngredientAsync(Guid id, string ingredientValue)
         {
             if (ingredientValue == "")
             {
                 return 0;
             }
 
-            RecipeSentenceIngredient recipeSentenceIngredient = _appDbContext.RecipeSentenceIngredient.Where(x => x.Id == id).FirstOrDefault();
+            RecipeSentenceIngredient recipeSentenceIngredient = await _appDbContext.RecipeSentenceIngredient.Where(x => x.Id == id).FirstOrDefaultAsync();
             if (recipeSentenceIngredient == null)
             {
                 return 0;
@@ -316,30 +317,30 @@ namespace CookIt.API.Repositories
             Ingredient ingredient;
             if (Guid.TryParse(ingredientValue, out Guid ingredientId))
             {
-                ingredient = _appDbContext.Ingredient.Where(x => x.Id == ingredientId).FirstOrDefault();
+                ingredient = await _appDbContext.Ingredient.Where(x => x.Id == ingredientId).FirstOrDefaultAsync();
             }
             else
             {
-                ingredient = _appDbContext.Ingredient.Where(x => x.Name == ingredientValue).FirstOrDefault();
+                ingredient = await _appDbContext.Ingredient.Where(x => x.Name == ingredientValue).FirstOrDefaultAsync();
             }
             if (ingredient == null)
             {
                 ingredient = new Ingredient(ingredientValue);
-                _appDbContext.Ingredient.Add(ingredient);
+                await _appDbContext.Ingredient.AddAsync(ingredient);
             }
             recipeSentenceIngredient.Ingredient = ingredient;
-            return _appDbContext.SaveChanges();
+            return await _appDbContext.SaveChangesAsync();
         }
 
-        public int DeleteRecipeSentenceIngredient(Guid id)
+        public async Task<int> DeleteRecipeSentenceIngredientAsync(Guid id)
         {
-            RecipeSentenceIngredient recipeSentenceIngredient = _appDbContext.RecipeSentenceIngredient.Where(x => x.Id == id).FirstOrDefault();
+            RecipeSentenceIngredient recipeSentenceIngredient = await _appDbContext.RecipeSentenceIngredient.Where(x => x.Id == id).FirstOrDefaultAsync();
             if (recipeSentenceIngredient == null)
             {
                 return 0;
             }
             _appDbContext.RecipeSentenceIngredient.Remove(recipeSentenceIngredient);
-            return _appDbContext.SaveChanges();
+            return await _appDbContext.SaveChangesAsync();
         }
     }
 }

@@ -11,6 +11,7 @@ using SixLabors.Fonts;
 using SixLabors.ImageSharp.Formats;
 using System.Text.RegularExpressions;
 using System.Web;
+using System.Threading.Tasks;
 
 namespace ImageScalerLib
 {
@@ -21,7 +22,7 @@ namespace ImageScalerLib
         {
             _KVPLite = new KVPLite();
         }
-        public string GetOrSetScaledImage(string src, int width, int height)
+        public async Task<string> GetOrSetScaledImageAsync(string src, int width, int height)
         {
             string key = src + "&width=" + width + "&height=" + height;
 
@@ -84,7 +85,7 @@ namespace ImageScalerLib
                     {
                         try
                         {
-                            using (Stream stream = webClient.OpenRead(srcDecoded))
+                            using (Stream stream = await webClient.OpenReadTaskAsync(srcDecoded))
                             {
                                 using (Image<Rgba32> image = Image.Load<Rgba32>(stream, out IImageFormat format))
                                 {

@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using CookIt.API.Core;
-using CookIt.API.Data;
 using CookIt.API.Dtos;
 using CookIt.API.Interfaces;
 using CookIt.API.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -16,21 +15,25 @@ using Recipe = CookIt.API.Models.Recipe;
 namespace CookIt.API.Controllers
 {
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "", Roles = Role.Admin)]
+    /*
+        This is a mixed Authorized Controller. It can be authorized with cookies or JWT.
+        The Ajax requests made to this controller are from same origin which means the cookieauthorization is used.
+    */
+    [Authorize(AuthenticationSchemes = AuthSchemes, Policy = "", Roles = Role.Admin)]
     [Route("api/[controller]")]
     public class RecipesController : ControllerBase
     {
+        private const string AuthSchemes = CookieAuthenticationDefaults.AuthenticationScheme + "," + JwtBearerDefaults.AuthenticationScheme; // Authorizes against both Schemes.
         private readonly IRecipeRepository _recipeRepository;
-
         public RecipesController(IRecipeRepository recipeRepository)
         {
             _recipeRepository = recipeRepository;
         }
 
-        [HttpGet, AllowAnonymous]
-        public ActionResult GetRecipesAsync([FromBody]RecipeFilter filter)
+        [HttpGet("getRecipes"), AllowAnonymous]
+        public async Task<ActionResult> GetRecipesAsync([FromBody]RecipeFilter filter)
         {
-            List<RecipeForListDto> recipes = _recipeRepository.GetFilteredRecipes(filter);
+            List<RecipeForListDto> recipes = await _recipeRepository.GetFilteredRecipesAsync(filter);
             if (recipes == null || recipes.Count == 0)
             {
                 return NoContent();
@@ -38,9 +41,9 @@ namespace CookIt.API.Controllers
             return Ok(recipes);
         }
         [HttpGet("{id}"), AllowAnonymous]
-        public ActionResult GetRecipeAsync(Guid id)
+        public async Task<ActionResult> GetRecipeAsync(Guid id)
         {
-            Recipe recipe = _recipeRepository.GetRecipe(id);
+            Recipe recipe = await _recipeRepository.GetRecipeAsync(id);
             if (recipe == null)
             {
                 return NoContent();
@@ -48,23 +51,23 @@ namespace CookIt.API.Controllers
             return Ok(recipe);
         }
 
-        [HttpPost("UpdateRecipeSentenceIngredient/{id}")]
-        public IActionResult UpdateRecipeSentenceIngredient(Guid id, [FromBody] JObject json)
+        [HttpPost("updateRecipeSentenceIngredient/{id}")]
+        public async Task<IActionResult> UpdateRecipeSentenceIngredientAsync(Guid id, [FromBody] JObject json)
         {
             string ingredientValue = json["ingredientValue"].ToString();
-            int changesMade = _recipeRepository.UpdateRecipeSentenceIngredient(id, ingredientValue);
+            int changesMade = await _recipeRepository.UpdateRecipeSentenceIngredientAsync(id, ingredientValue);
             if (changesMade == 0)
             {
                 return NoContent();
             }
-            RecipeSentenceIngredient recipeSentenceIngredient = _recipeRepository.GetRecipeSentenceIngredient(id);
+            RecipeSentenceIngredient recipeSentenceIngredient = await _recipeRepository.GetRecipeSentenceIngredientAsync(id);
             return Ok(new { id = recipeSentenceIngredient.Id, ingredientId = recipeSentenceIngredient.Ingredient.Id, ingredientName = recipeSentenceIngredient.Ingredient.Name });
         }
 
-        [HttpDelete("DeleteRecipeSentenceIngredient/{id}")]
-        public IActionResult DeleteRecipeSentenceIngredient(Guid id)
+        [HttpDelete("deleteRecipeSentenceIngredient/{id}")]
+        public async Task<IActionResult> DeleteRecipeSentenceIngredientAsync(Guid id)
         {
-            int changesMade = _recipeRepository.DeleteRecipeSentenceIngredient(id);
+            int changesMade = await _recipeRepository.DeleteRecipeSentenceIngredientAsync(id);
             if (changesMade == 0)
             {
                 return NoContent();

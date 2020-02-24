@@ -1,5 +1,4 @@
-﻿using CookIt.API.Core;
-using CookIt.API.Dtos;
+﻿using CookIt.API.Dtos;
 using CookIt.API.Models;
 using System;
 using System.Collections.Generic;
@@ -10,13 +9,13 @@ namespace CookIt.API.Interfaces
 {
     public interface IRecipeRepository
     {
-        int CreateRecipes(CreateRecipeDto createRecipeDto);
-        Recipe GetRecipe(Guid id);
-        List<Recipe> GetRecipes();
-        List<RecipeForListDto> GetFilteredRecipes(RecipeFilter filter);
-        int DeleteRecipe(Guid id);
-        RecipeSentenceIngredient GetRecipeSentenceIngredient(Guid id);
-        int UpdateRecipeSentenceIngredient(Guid id, string ingredientValue);
-        int DeleteRecipeSentenceIngredient(Guid id);
+        Task<int> CreateRecipesAsync(CreateRecipeDto createRecipeDto);
+        Task<Recipe> GetRecipeAsync(Guid id);
+        Task<List<Recipe>> GetRecipesAsync();
+        Task<List<RecipeForListDto>> GetFilteredRecipesAsync(RecipeFilter filter);
+        Task<int> DeleteRecipeAsync(Guid id);
+        Task<RecipeSentenceIngredient> GetRecipeSentenceIngredientAsync(Guid id);
+        Task<int> UpdateRecipeSentenceIngredientAsync(Guid id, string ingredientValue);
+        Task<int> DeleteRecipeSentenceIngredientAsync(Guid id);
     }
 }

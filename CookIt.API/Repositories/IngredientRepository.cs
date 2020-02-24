@@ -1,11 +1,8 @@
-﻿using CookIt.API.Core;
-using CookIt.API.Data;
+﻿using CookIt.API.Data;
 using CookIt.API.Interfaces;
 using CookIt.API.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace CookIt.API.Repositories
@@ -18,11 +15,11 @@ namespace CookIt.API.Repositories
             _appDbContext = appDbContext;
         }
 
-        public List<Ingredient> GetIngredients()
+        public async Task<List<Ingredient>> GetIngredients()
         {
-            List<Ingredient> ingredients = _appDbContext.Ingredient
+            List<Ingredient> ingredients = await _appDbContext.Ingredient
                .AsNoTracking()
-               .ToList();
+               .ToListAsync();
             return ingredients;
         }
     }

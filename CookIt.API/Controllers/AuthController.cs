@@ -5,7 +5,6 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
-using CookIt.API.Core;
 using CookIt.API.Dtos;
 using CookIt.API.Interfaces;
 using CookIt.API.Models;
@@ -28,10 +27,10 @@ namespace CookIt.API.Controllers
             this._authRepository = authRepository;
         }
         [HttpPost("register")]
-        public IActionResult Register(UserForRegisterDto userForRegisterDTO)
+        public async Task<IActionResult> RegisterAsync(UserForRegisterDto userForRegisterDTO)
         {
             userForRegisterDTO.Username = userForRegisterDTO.Username.ToLower();
-            if (_authRepository.UserExists(userForRegisterDTO.Username))
+            if (await _authRepository.UserExistsAsync(userForRegisterDTO.Username))
             {
                 return BadRequest("Username already exists");
             }
@@ -41,14 +40,14 @@ namespace CookIt.API.Controllers
                 Role = Role.User
             };
 
-            _authRepository.Register(userToCreate, userForRegisterDTO.Password);
+            await _authRepository.RegisterAsync(userToCreate, userForRegisterDTO.Password);
             return StatusCode(201);
         }
         [HttpPost("login")]
-        public IActionResult Login(UserForLoginDto userForLoginDto)
+        public async Task<IActionResult> LoginAsync(UserForLoginDto userForLoginDto)
         {
             userForLoginDto.Username = userForLoginDto.Username.ToLower();
-            var user = _authRepository.Login(userForLoginDto.Username, userForLoginDto.Password);
+            var user = await _authRepository.LoginAsync(userForLoginDto.Username, userForLoginDto.Password);
             if (user == null)
             {
                 return Unauthorized();
