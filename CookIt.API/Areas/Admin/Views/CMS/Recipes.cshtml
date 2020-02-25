@@ -176,14 +176,15 @@
 
         function confirmUpdateOfMatchedIngredient() {
             let json = {
-                "ingredientValue": $('#ingredientList').val()
+                "recipeSentenceIngredientId": currentSelectedRecipeSentenceIngredientId,
+                "ingredientIdOrNewIngredientName": $("#ingredientList").val()
             }
             let result = confirm("Are you sure?");
             if (result) {
                 $("#myModal").modal("hide");
                 $.ajax({
                     contentType: "application/json",
-                    url: "/api/recipes/updateRecipeSentenceIngredient/"+currentSelectedRecipeSentenceIngredientId,
+                    url: "/api/recipes/updateRecipeSentenceIngredient/",
                     method: "POST",
                     dataType: "json",
                     data: JSON.stringify(json),

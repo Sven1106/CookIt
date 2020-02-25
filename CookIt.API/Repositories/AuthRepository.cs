@@ -16,9 +16,9 @@ namespace CookIt.API.Repositories
         {
             _appDbContext = appDbContext;
         }
-        public async Task<User> LoginAsync(string username, string password)
+        public async Task<User> LoginAsync(string email, string password)
         {
-            var user = await _appDbContext.User.Where(x => x.Username == username).FirstOrDefaultAsync();
+            var user = await _appDbContext.User.Where(x => x.Email == email).FirstOrDefaultAsync();
             if (user == null)
             {
                 return null;
@@ -68,9 +68,9 @@ namespace CookIt.API.Repositories
             }
         }
 
-        public async Task<bool> UserExistsAsync(string username)
+        public async Task<bool> UserExistsAsync(string email)
         {
-            if (await _appDbContext.User.AnyAsync(x => x.Username == username))
+            if (await _appDbContext.User.AnyAsync(x => x.Email == email))
             {
                 return true;
             }

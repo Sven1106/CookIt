@@ -33,7 +33,8 @@ GO
 
 CREATE TABLE [User] (
   Id UNIQUEIDENTIFIER,
-  UserName varchar(MAX) NOT NULL,
+  [Name] varchar(MAX) NOT NULL,
+  Email varchar(MAX) NOT NULL,
   PasswordHash varbinary(MAX) NOT NULL,
   PasswordSalt varbinary(MAX) NOT NULL,
   [Role] varchar(5) NOT NULL,

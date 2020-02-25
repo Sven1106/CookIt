@@ -27,27 +27,36 @@ namespace CookIt.API.Controllers
             this._authRepository = authRepository;
         }
         [HttpPost("register")]
-        public async Task<IActionResult> RegisterAsync(UserForRegisterDto userForRegisterDTO)
+        public async Task<IActionResult> RegisterAsync(UserForRegisterDto userForRegisterDti)
         {
-            userForRegisterDTO.Username = userForRegisterDTO.Username.ToLower();
-            if (await _authRepository.UserExistsAsync(userForRegisterDTO.Username))
+            if (userForRegisterDti.Name == null || userForRegisterDti.Email == null || userForRegisterDti.Password == null)
             {
-                return BadRequest("Username already exists");
+                return BadRequest();
+            }
+            userForRegisterDti.Email = userForRegisterDti.Email.ToLower();
+            if (await _authRepository.UserExistsAsync(userForRegisterDti.Email))
+            {
+                return BadRequest("Email already exists");
             }
             User userToCreate = new User()
             {
-                Username = userForRegisterDTO.Username,
+                Name = userForRegisterDti.Name,
+                Email = userForRegisterDti.Email,
                 Role = Role.User
             };
 
-            await _authRepository.RegisterAsync(userToCreate, userForRegisterDTO.Password);
+            await _authRepository.RegisterAsync(userToCreate, userForRegisterDti.Password);
             return StatusCode(201);
         }
         [HttpPost("login")]
         public async Task<IActionResult> LoginAsync(UserForLoginDto userForLoginDto)
         {
-            userForLoginDto.Username = userForLoginDto.Username.ToLower();
-            var user = await _authRepository.LoginAsync(userForLoginDto.Username, userForLoginDto.Password);
+            if(userForLoginDto.Email == null || userForLoginDto.Password == null)
+            {
+                return BadRequest();
+            }
+            userForLoginDto.Email = userForLoginDto.Email.ToLower();
+            var user = await _authRepository.LoginAsync(userForLoginDto.Email, userForLoginDto.Password);
             if (user == null)
             {
                 return Unauthorized();
@@ -55,7 +64,8 @@ namespace CookIt.API.Controllers
 
             var claims = new[] {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Name, user.Name),
+                new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Role, user.Role)
             };
 
@@ -77,5 +87,8 @@ namespace CookIt.API.Controllers
                 token = jwtTokenHandler.WriteToken(createdToken)
             });
         }
+
+
+
     }
 }

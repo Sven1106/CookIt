@@ -48,8 +48,8 @@ namespace CookIt.API.Areas.Admin.Controllers
         [HttpPost, AllowAnonymous, ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
-            userForLoginDto.Username = userForLoginDto.Username.ToLower();
-            var user = await _authRepository.LoginAsync(userForLoginDto.Username, userForLoginDto.Password);
+            userForLoginDto.Email = userForLoginDto.Email.ToLower();
+            var user = await _authRepository.LoginAsync(userForLoginDto.Email, userForLoginDto.Password);
             if (user == null || user.Role != Role.Admin)
             {
                 return Unauthorized();
@@ -57,7 +57,8 @@ namespace CookIt.API.Areas.Admin.Controllers
 
             var claims = new[] {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Name, user.Name),
+                new Claim(ClaimTypes.Email, user.Email),
                 new Claim(ClaimTypes.Role, user.Role)
             };
 

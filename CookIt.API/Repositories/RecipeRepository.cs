@@ -302,9 +302,9 @@ namespace CookIt.API.Repositories
             return  recipeSentenceIngredient;
         }
 
-        public async Task<int> UpdateRecipeSentenceIngredientAsync(Guid id, string ingredientValue)
+        public async Task<int> UpdateRecipeSentenceIngredientAsync(Guid id, string ingredientIdOrNewIngredientName)
         {
-            if (ingredientValue == "")
+            if (ingredientIdOrNewIngredientName == "")
             {
                 return 0;
             }
@@ -315,17 +315,17 @@ namespace CookIt.API.Repositories
                 return 0;
             }
             Ingredient ingredient;
-            if (Guid.TryParse(ingredientValue, out Guid ingredientId))
+            if (Guid.TryParse(ingredientIdOrNewIngredientName, out Guid ingredientId))
             {
                 ingredient = await _appDbContext.Ingredient.Where(x => x.Id == ingredientId).FirstOrDefaultAsync();
             }
             else
             {
-                ingredient = await _appDbContext.Ingredient.Where(x => x.Name == ingredientValue).FirstOrDefaultAsync();
+                ingredient = await _appDbContext.Ingredient.Where(x => x.Name == ingredientIdOrNewIngredientName).FirstOrDefaultAsync();
             }
             if (ingredient == null)
             {
-                ingredient = new Ingredient(ingredientValue);
+                ingredient = new Ingredient(ingredientIdOrNewIngredientName);
                 await _appDbContext.Ingredient.AddAsync(ingredient);
             }
             recipeSentenceIngredient.Ingredient = ingredient;

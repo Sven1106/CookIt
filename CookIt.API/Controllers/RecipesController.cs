@@ -51,16 +51,19 @@ namespace CookIt.API.Controllers
             return Ok(recipe);
         }
 
-        [HttpPost("updateRecipeSentenceIngredient/{id}")]
-        public async Task<IActionResult> UpdateRecipeSentenceIngredientAsync(Guid id, [FromBody] JObject json)
+        [HttpPost("updateRecipeSentenceIngredient")]
+        public async Task<IActionResult> UpdateRecipeSentenceIngredientAsync(RecipeSentenceIngredientUpdateDto recipeSentenceIngredientUpdateDto)
         {
-            string ingredientValue = json["ingredientValue"].ToString();
-            int changesMade = await _recipeRepository.UpdateRecipeSentenceIngredientAsync(id, ingredientValue);
+            if (recipeSentenceIngredientUpdateDto.RecipeSentenceIngredientId == null|| recipeSentenceIngredientUpdateDto.IngredientIdOrNewIngredientName == null)
+            {
+                return BadRequest();
+            }
+            int changesMade = await _recipeRepository.UpdateRecipeSentenceIngredientAsync(recipeSentenceIngredientUpdateDto.RecipeSentenceIngredientId, recipeSentenceIngredientUpdateDto.IngredientIdOrNewIngredientName);
             if (changesMade == 0)
             {
                 return NoContent();
             }
-            RecipeSentenceIngredient recipeSentenceIngredient = await _recipeRepository.GetRecipeSentenceIngredientAsync(id);
+            RecipeSentenceIngredient recipeSentenceIngredient = await _recipeRepository.GetRecipeSentenceIngredientAsync(recipeSentenceIngredientUpdateDto.RecipeSentenceIngredientId);
             return Ok(new { id = recipeSentenceIngredient.Id, ingredientId = recipeSentenceIngredient.Ingredient.Id, ingredientName = recipeSentenceIngredient.Ingredient.Name });
         }
 
