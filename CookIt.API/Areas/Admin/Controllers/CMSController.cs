@@ -48,11 +48,15 @@ namespace CookIt.API.Areas.Admin.Controllers
         [HttpPost, AllowAnonymous, ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
+            if (userForLoginDto.Email == null || userForLoginDto.Password == null)
+            {
+                return RedirectToAction("Login");
+            }
             userForLoginDto.Email = userForLoginDto.Email.ToLower();
             var user = await _authRepository.LoginAsync(userForLoginDto.Email, userForLoginDto.Password);
             if (user == null || user.Role != Role.Admin)
             {
-                return Unauthorized();
+                return RedirectToAction("Login");
             }
 
             var claims = new[] {
@@ -92,7 +96,7 @@ namespace CookIt.API.Areas.Admin.Controllers
             return View(_createRecipeSchema);
         }
         [HttpPost]
-        public async Task<IActionResult> CreateRecipes(string json)
+        public async Task<IActionResult> CreateRecipes(string json = "")
         {
             JSchemaValidatingReader jSchemaReader = new JSchemaValidatingReader(new JsonTextReader(new StringReader(json)))
             {
@@ -120,6 +124,7 @@ namespace CookIt.API.Areas.Admin.Controllers
         }
         public async Task<IActionResult> DeleteRecipe(Guid id)
         {
+
             await _recipeRepository.DeleteRecipeAsync(id);
             return RedirectToAction("Recipes");
         }

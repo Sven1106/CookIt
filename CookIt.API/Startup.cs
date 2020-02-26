@@ -52,6 +52,7 @@ namespace CookIt.API
                 {
                     options.SlidingExpiration = true;
                     options.LoginPath = "/Admin/Cms/Login/";
+                    options.AccessDeniedPath = "/Admin/Cms/Login/";
                 })
                 .AddJwtBearer(options =>
                 {

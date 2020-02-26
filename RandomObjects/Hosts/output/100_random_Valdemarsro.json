@@ -1,6 +1,6 @@
 {
   "projectName": "Valdemarsro",
-  "domain": null,
+  "domain": "https://www.valdemarsro.dk/",
   "tasks": {
     "allRecipes": [
       {
@@ -727,7 +727,10 @@
             "3 spsk pinjekerner, ristede",
             "30 g feta"
           ],
-          "image": null
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2017/05/graesk-omelet.jpg",
+            "alt": ""
+          }
         },
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/graesk-omelet/",
@@ -969,7 +972,10 @@
             "200 g pærer, groftrevet",
             "1 pære, skåret i tynde skiver"
           ],
-          "image": null
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2017/09/havregrynsmuffins-honning.jpg",
+            "alt": ""
+          }
         },
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/havregrynsmuffins-honning-paere/",
@@ -1861,7 +1867,10 @@
             "2 fed hvidløg",
             "1 øko citron, skallen herfra"
           ],
-          "image": null
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2016/10/le-creuset.jpg",
+            "alt": ""
+          }
         },
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/osso-buco/",
@@ -1980,7 +1989,10 @@
             "1 knivspids vaniljepulver",
             "smuldret riskiks"
           ],
-          "image": null
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2016/10/le-creuset.jpg",
+            "alt": ""
+          }
         },
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/smoothie-riskikstopping/",
@@ -2480,7 +2492,10 @@
             "5 stængler frisk rosmarin",
             "2 fed hvidløg, finthakket"
           ],
-          "image": null
+          "image": {
+            "src": "https://www.valdemarsro.dk/wp-content/2017/08/Tagliata-1.jpg",
+            "alt": ""
+          }
         },
         "metadata": {
           "foundAtUrl": "https://www.valdemarsro.dk/tagliata/",
