@@ -32,14 +32,17 @@
     <PackageReference Include="System.Threading" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CstLemmaLibrary\CstLemmaLibrary.csproj" />
     <ProjectReference Include="..\ImageScalerLib\ImageScalerLib.csproj" />
-    <ProjectReference Include="..\UdpipeCSharpWrapper\UdpipeLibrary.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CstLemmaLibrary">
+      <HintPath>..\..\..\CstLemmaLibrary\bin\Debug\CstLemmaLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

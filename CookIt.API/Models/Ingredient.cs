@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using static UdpipeLibrary.UdpipeWrapper;
 
 namespace CookIt.API.Models
 {

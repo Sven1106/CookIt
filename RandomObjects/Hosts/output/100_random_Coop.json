@@ -1,6 +1,6 @@
 {
   "projectName": "Coop",
-  "domain": null,
+  "domain": "https://opskrifter.coop.dk/",
   "tasks": {
     "allRecipes": [
       {
