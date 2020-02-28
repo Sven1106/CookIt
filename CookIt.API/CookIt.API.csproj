@@ -32,9 +32,6 @@
     <PackageReference Include="System.Threading" Version="4.3.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ImageScalerLib\ImageScalerLib.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\js\" />
@@ -42,6 +39,9 @@
   <ItemGroup>
     <Reference Include="CstLemmaLibrary">
       <HintPath>..\..\..\CstLemmaLibrary\bin\Debug\CstLemmaLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageScalerLib">
+      <HintPath>..\..\..\ImageScalerLib\bin\Debug\netcoreapp3.1\ImageScalerLib.dll</HintPath>
     </Reference>
   </ItemGroup>
 
