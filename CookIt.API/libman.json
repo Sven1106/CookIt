@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "font-awesome@4.7.0",
+      "destination": "wwwroot/lib/font-awesome/"
+    },
+    {
+      "library": "twitter-bootstrap@3.3.7",
+      "destination": "wwwroot/lib/twitter-bootstrap/"
+    },
+    {
+      "library": "datatables@1.10.15",
+      "destination": "wwwroot/lib/datatables/"
+    },
+    {
+      "library": "bootstrap-toggle@2.2.2",
+      "destination": "wwwroot/lib/bootstrap-toggle/"
+    },
+    {
+      "library": "jsoneditor@8.6.0",
+      "destination": "wwwroot/lib/jsoneditor/"
+    },
+    {
+      "library": "normalize@8.0.1",
+      "destination": "wwwroot/lib/normalize/"
+    },
+    {
+      "library": "select2@4.0.12",
+      "destination": "wwwroot/lib/select2/"
+    },
+    {
+      "library": "jquery@3.4.1",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "library": "metisMenu@2.7.0",
+      "destination": "wwwroot/lib/metisMenu/"
+    },
+    {
+      "library": "tinymce@5.2.0",
+      "destination": "wwwroot/lib/tinymce/"
+    },
+    {
+      "library": "lodash.js@4.15.0",
+      "destination": "wwwroot/lib/lodash.js/"
+    },
+    {
+      "library": "spin.js@2.3.2",
+      "destination": "wwwroot/lib/spin.js/"
+    }
+  ]
+}

@@ -13,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 
 namespace CookIt.API
 {
@@ -32,10 +33,7 @@ namespace CookIt.API
             {
                 option.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
-            services.AddSession(options =>
-            {
-                options.IdleTimeout = TimeSpan.FromMinutes(30);
-            });
+
             services.AddControllers()
                 .AddNewtonsoftJson(opt =>
                 {
@@ -70,13 +68,12 @@ namespace CookIt.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseStaticFiles();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();
             }
-            app.UseStaticFiles();
-            // app.UseHttpsRedirection();
 
             app.UseRouting();
             app.UseAuthentication();
@@ -85,13 +82,16 @@ namespace CookIt.API
             {
                 endpoints.MapControllers();
             });
-            app.UseSession();
+            app.UseHttpsRedirection();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                  name: "areas",
-                  template: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
-                );
+                    name: "area",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                routes.MapAreaRoute(
+                    name: "default",
+                    areaName: "Admin",
+                    template: "{controller=Cms}/{action=Index}/{id?}");
             });
         }
     }
