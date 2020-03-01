@@ -196,12 +196,14 @@ namespace CookIt.API.Repositories
                         .Any(recipeSentence => recipeSentence.RecipeSentenceIngredients
                             .Any(recipeSentenceIngredient => filter.IngredientsIds
                                 .Contains(recipeSentenceIngredient.Ingredient.Id)
+                                )
                             )
-                        )
-                        && (recipe.RecipeSentences.Count - recipe.RecipeSentences
-                            .Count(recipeSentence => recipeSentence.RecipeSentenceIngredients
-                                .Any(x => filter.IngredientsIds.Contains(x.Ingredient.Id))
-                            ) <= filter.MissingIngredientsLimit
+                        && (filter.MissingIngredientsLimit == null
+                            ? true
+                            : recipe.RecipeSentences.Count - recipe.RecipeSentences
+                                .Count(recipeSentence => recipeSentence.RecipeSentenceIngredients
+                                    .Any(x => filter.IngredientsIds.Contains(x.Ingredient.Id))
+                                ) <= filter.MissingIngredientsLimit
                         )
                         && recipe.RecipeSentences
                             .Any(recipeSentence => recipeSentence.RecipeSentenceIngredients
@@ -227,7 +229,8 @@ namespace CookIt.API.Repositories
                         .Select(recipeSentence => recipeSentence.RecipeSentenceIngredients
                             .Any(x => filter.IngredientsIds != null
                                 ? filter.IngredientsIds.Contains(x.Ingredient.Id)
-                                : false)
+                                : false
+                            )
                             ? recipeSentence.RecipeSentenceIngredients
                                 .Select(x => x.Ingredient)
                                 .Where(x => filter.IngredientsIds != null
@@ -241,12 +244,13 @@ namespace CookIt.API.Repositories
                         )
                         .ToList(),
                     MatchedIngredients = recipe.RecipeSentences
-                        .Select( recipeSentence => recipeSentence.RecipeSentenceIngredients
-                            .Select(x => x.Ingredient)
-                            .Where(x => filter.IngredientsIds != null
-                                ? filter.IngredientsIds.Contains(x.Id)
-                                : false)
-                            .FirstOrDefault()
+                        .Select(recipeSentence => recipeSentence.RecipeSentenceIngredients
+                           .Select(x => x.Ingredient)
+                           .Where(x => filter.IngredientsIds != null
+                               ? filter.IngredientsIds.Contains(x.Id)
+                               : false
+                            )
+                           .FirstOrDefault()
                         )
                         .Where(x => x != null)
                         .ToList()
@@ -299,7 +303,7 @@ namespace CookIt.API.Repositories
                 .Include(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient)
                 .Where(x => x.Id == id)
                 .FirstOrDefaultAsync();
-            return  recipeSentenceIngredient;
+            return recipeSentenceIngredient;
         }
 
         public async Task<int> UpdateRecipeSentenceIngredientAsync(Guid id, string ingredientIdOrNewIngredientName)

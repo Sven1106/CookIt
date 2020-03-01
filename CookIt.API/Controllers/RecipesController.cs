@@ -25,13 +25,22 @@ namespace CookIt.API.Controllers
     {
         private const string AuthSchemes = CookieAuthenticationDefaults.AuthenticationScheme + "," + JwtBearerDefaults.AuthenticationScheme; // Authorizes against both Schemes.
         private readonly IRecipeRepository _recipeRepository;
-        public RecipesController(IRecipeRepository recipeRepository)
+        private readonly IIngredientRepository _ingredientRepository;
+
+        public RecipesController(IRecipeRepository recipeRepository, IIngredientRepository ingredientRepository)
         {
             _recipeRepository = recipeRepository;
+            _ingredientRepository = ingredientRepository;
         }
 
+        [HttpGet("getIngredients"), AllowAnonymous]
+        public async Task<ActionResult> GetIngredientsAsync()
+        {
+            List<Ingredient> ingredients =  await _ingredientRepository.GetIngredients();
+            return Ok(ingredients);
+        }
         [HttpGet("getRecipes"), AllowAnonymous]
-        public async Task<ActionResult> GetRecipesAsync([FromBody]RecipeFilter filter)
+        public async Task<ActionResult> GetRecipesAsync([FromQuery]RecipeFilter filter)
         {
             List<RecipeForListDto> recipes = await _recipeRepository.GetFilteredRecipesAsync(filter);
             if (recipes == null || recipes.Count == 0)
@@ -54,7 +63,7 @@ namespace CookIt.API.Controllers
         [HttpPost("updateRecipeSentenceIngredient")]
         public async Task<IActionResult> UpdateRecipeSentenceIngredientAsync(RecipeSentenceIngredientUpdateDto recipeSentenceIngredientUpdateDto)
         {
-            if (recipeSentenceIngredientUpdateDto.RecipeSentenceIngredientId == null|| recipeSentenceIngredientUpdateDto.IngredientIdOrNewIngredientName == null)
+            if (recipeSentenceIngredientUpdateDto.RecipeSentenceIngredientId == null || recipeSentenceIngredientUpdateDto.IngredientIdOrNewIngredientName == null)
             {
                 return BadRequest();
             }
