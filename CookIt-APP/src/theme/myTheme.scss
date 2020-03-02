@@ -1,0 +1,74 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat-core();
+
+// Define the default theme (same as the example above).
+$cookit-primary :(50: #fef6e1,
+  100: #fdeab5,
+  200: #fcdc84,
+  300: #facd52,
+  400: #f9c32d,
+  500: #f8b808,
+  600: #f7b107,
+  700: #f6a806,
+  800: #f5a004,
+  900: #f39102,
+  A100: #ffffff,
+  A200: #fff4e6,
+  A400: #ffddb3,
+  A700: #ffd19a,
+  contrast: (50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  ));
+$cookit-secondary : (50: #eaf2f6,
+  100: #cbdee9,
+  200: #a8c8db,
+  300: #85b2cd,
+  400: #6ba2c2,
+  500: #5191b7,
+  600: #4a89b0,
+  700: #407ea7,
+  800: #37749f,
+  900: #276290,
+  A100: #d1eaff,
+  A200: #9ed2ff,
+  A400: #6bbbff,
+  A700: #52afff,
+  contrast: (50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text,
+  ));
+$error-color : #B00020;
+$my-theme-primary: mat-palette($cookit-primary);
+$my-theme-accent: mat-palette($cookit-secondary);
+$my-theme: mat-light-theme($my-theme-primary, $my-theme-accent);
+
+// Include the default theme styles.
+@include angular-material-theme($my-theme);

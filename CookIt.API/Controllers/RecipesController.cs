@@ -37,6 +37,10 @@ namespace CookIt.API.Controllers
         public async Task<ActionResult> GetIngredientsAsync()
         {
             List<Ingredient> ingredients =  await _ingredientRepository.GetIngredients();
+            if (ingredients == null || ingredients.Count == 0)
+            {
+                return NoContent();
+            }
             return Ok(ingredients);
         }
         [HttpGet("getRecipes"), AllowAnonymous]

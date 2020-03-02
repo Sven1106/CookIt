@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
 import { SignInPageRoutingModule } from './sign-in-routing.module';
 
 import { SignInPage } from './sign-in.page';
-import { MatInputModule, MatFormFieldModule } from '@angular/material';
+import { MatInputModule, MatFormFieldModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -16,7 +16,9 @@ import { MatInputModule, MatFormFieldModule } from '@angular/material';
     IonicModule,
     SignInPageRoutingModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   declarations: [SignInPage]
 })

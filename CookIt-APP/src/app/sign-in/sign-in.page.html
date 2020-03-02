@@ -1,10 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>SignIn</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content></ion-content>
-<mat-form-field>
-  <input matInput formControlName="albumTitle" placeholder="Album Title">
-</mat-form-field>
+<ion-content class="ion-padding">
+  <ion-grid class="form" [formGroup]="signInForm">
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>E-mail</mat-label>
+          <input type="email" matInput formControlName="email" placeholder="eksempel@email.dk">
+          <mat-hint>*Påkrævet</mat-hint>
+          <mat-error *ngIf="signInForm.get('email').hasError('email') && !signInForm.hasError('required')">
+            Indtast venligst en gyldig e-mail
+          </mat-error>
+          <mat-error *ngIf="signInForm.get('email').hasError('required')">
+            E-mail er <strong>påkrævet</strong>
+          </mat-error>
+        </mat-form-field>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="password" placeholder="●●●●●">
+          <mat-hint>*Påkrævet</mat-hint>
+          <mat-error *ngIf="signInForm.get('password').hasError('required')">
+            Password er <strong>påkrævet</strong>
+          </mat-error>
+        </mat-form-field>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <button class="full-width" mat-flat-button color="primary">Log ind</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
