@@ -27,25 +27,25 @@ namespace CookIt.API.Controllers
             this._authRepository = authRepository;
         }
         [HttpPost("register")]
-        public async Task<IActionResult> RegisterAsync(UserForRegisterDto userForRegisterDti)
+        public async Task<IActionResult> RegisterAsync(UserForRegisterDto userForRegisterDto)
         {
-            if (userForRegisterDti.Name == null || userForRegisterDti.Email == null || userForRegisterDti.Password == null)
+            if (userForRegisterDto.Name == null || userForRegisterDto.Email == null || userForRegisterDto.Password == null)
             {
                 return BadRequest();
             }
-            userForRegisterDti.Email = userForRegisterDti.Email.ToLower();
-            if (await _authRepository.UserExistsAsync(userForRegisterDti.Email))
+            userForRegisterDto.Email = userForRegisterDto.Email.ToLower();
+            if (await _authRepository.UserExistsAsync(userForRegisterDto.Email))
             {
                 return BadRequest("Email already exists");
             }
             User userToCreate = new User()
             {
-                Name = userForRegisterDti.Name,
-                Email = userForRegisterDti.Email,
+                Name = userForRegisterDto.Name,
+                Email = userForRegisterDto.Email,
                 Role = Role.User
             };
 
-            await _authRepository.RegisterAsync(userToCreate, userForRegisterDti.Password);
+            await _authRepository.RegisterAsync(userToCreate, userForRegisterDto.Password);
             return StatusCode(201);
         }
         [HttpPost("login")]
