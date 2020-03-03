@@ -1,6 +1,32 @@
+@import "src/theme/myTheme.scss";
 .full-width {
   width: 100%;
 }
+
 mat-form-field {
-  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+mat-hint,
+mat-error {
+  line-height: 14px;
+}
+.logo {
+  margin-top:10vh;
+  width: 33%;
+  margin-bottom: 15vh;
+}
+.forgotPasswordBtn, .createUserBtn {
+  text-decoration: none;
+  font-size: 12px;
+}
+.forgotPasswordBtn {
+  color: #707070
+}
+.createUserBtn {
+  color: map-get($my-theme-primary, 500);
+}
+.signInBtn {
+  margin-top: 32px;
+  height: 48px;
 }

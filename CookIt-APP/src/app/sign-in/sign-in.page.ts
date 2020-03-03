@@ -1,3 +1,4 @@
+import { AuthService } from './../_services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 @Component({
@@ -8,7 +9,7 @@ import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms'
 export class SignInPage implements OnInit {
   signInForm: FormGroup;
   registerForm: FormGroup;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private authService: AuthService) { }
 
   ngOnInit() {
     this.createSignInForm();
@@ -17,7 +18,7 @@ export class SignInPage implements OnInit {
   createSignInForm() {
     this.signInForm = this.formBuilder.group({
       email: new FormControl('', [Validators.required, Validators.email]),
-      password:  new FormControl('', Validators.required)
+      password: new FormControl('', Validators.required)
     });
   }
 
@@ -31,6 +32,20 @@ export class SignInPage implements OnInit {
       { validator: this.passwordMatchValidator });
   }
   passwordMatchValidator(formGroup: FormGroup) {
-    return formGroup.get('password').value === formGroup.get('confirmPassword').value ? null : { 'mismatch': true };
+    return formGroup.get('password').value === formGroup.get('confirmPassword').value ? null : { mismatch: true };
+  }
+
+  signIn() {
+    console.log(this.signInForm.value);
+    this.authService.login(this.signInForm.value)
+      .subscribe( // returns an observable, and we always need to subscribe to them
+        next => {
+          // this.alertifyService.success('Logged in');
+          // this.router.navigate(['/members']);
+          console.log('Success');
+        }, error => {
+          console.log("failed");
+          console.log(error);
+        });
   }
 }

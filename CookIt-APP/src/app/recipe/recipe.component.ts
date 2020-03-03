@@ -17,7 +17,7 @@ export class RecipeComponent implements OnInit {
 
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.getRecipes();
     this.getIngredients();
     // this.auth.register({"name":"user","email":"user@user.dk","password":"user"}).subscribe(response => {
@@ -35,7 +35,6 @@ export class RecipeComponent implements OnInit {
       }, error => {
         console.log(error);
       });
-      
   }
   getIngredients(){
     this.http.get(this.baseUrl + 'recipes/getIngredients')

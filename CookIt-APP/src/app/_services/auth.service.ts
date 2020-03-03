@@ -21,7 +21,7 @@ export class AuthService {
             this.setDecodedToken(user.token);
           }
         })
-      )
+      );
   }
   register(model: any) {
     return this.httpClient.post(this.baseUrl + 'register', model);
@@ -42,5 +42,5 @@ export class AuthService {
     localStorage.setItem('token', token);
     this.decodedToken = this.jwtHelperService.decodeToken(token);
   }
-  
+
 }

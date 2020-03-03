@@ -66,6 +66,7 @@ $cookit-secondary : (50: #eaf2f6,
     A700: $light-primary-text,
   ));
 $error-color : #B00020;
+
 $my-theme-primary: mat-palette($cookit-primary);
 $my-theme-accent: mat-palette($cookit-secondary);
 $my-theme: mat-light-theme($my-theme-primary, $my-theme-accent);

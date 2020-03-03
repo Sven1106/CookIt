@@ -12,24 +12,31 @@ import { AppComponent } from './app.component';
 import { AuthService } from './_services/auth.service';
 import { environment } from 'src/environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 export function tokenGetter() {
   return localStorage.getItem('token');
 }
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
+  imports: [
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     HttpClientModule,
     JwtModule.forRoot({
       config: {
-        tokenGetter: tokenGetter,
+        tokenGetter,
         whitelistedDomains: [environment.apiDomain],
         blacklistedRoutes: [environment.apiDomain + '/api/auth']
       }
     }),
     BrowserAnimationsModule
 
+  ],
+  exports: [
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     StatusBar,
