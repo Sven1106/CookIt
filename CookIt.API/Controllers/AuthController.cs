@@ -31,7 +31,7 @@ namespace CookIt.API.Controllers
         {
             if (userForRegisterDto.Name == null || userForRegisterDto.Email == null || userForRegisterDto.Password == null)
             {
-                return BadRequest();
+                return BadRequest("Invalid Dto");
             }
             userForRegisterDto.Email = userForRegisterDto.Email.ToLower();
             if (await _authRepository.UserExistsAsync(userForRegisterDto.Email))
@@ -45,28 +45,46 @@ namespace CookIt.API.Controllers
                 Role = Role.User
             };
 
-            await _authRepository.RegisterAsync(userToCreate, userForRegisterDto.Password);
-            return StatusCode(201);
+            User createdUser = await _authRepository.RegisterAsync(userToCreate, userForRegisterDto.Password);
+            if (createdUser == null)
+            {
+                return StatusCode(500, "Register failed");
+            }
+            string userToken = CreateUserToken(createdUser.Id.ToString(), createdUser.Name, createdUser.Email, createdUser.Role);
+            return Ok(new
+            {
+                token = userToken
+            });
         }
         [HttpPost("login")]
         public async Task<IActionResult> LoginAsync(UserForLoginDto userForLoginDto)
         {
-            if(userForLoginDto.Email == null || userForLoginDto.Password == null)
+            if (userForLoginDto.Email == null || userForLoginDto.Password == null)
             {
-                return BadRequest();
+                return BadRequest("Invalid Dto");
             }
             userForLoginDto.Email = userForLoginDto.Email.ToLower();
             var user = await _authRepository.LoginAsync(userForLoginDto.Email, userForLoginDto.Password);
             if (user == null)
             {
-                return Unauthorized();
+                return BadRequest("Email or password is wrong");
             }
+            string userToken = CreateUserToken(user.Id.ToString(), user.Name, user.Email, user.Role);
+
+            return Ok(new
+            {
+                token = userToken
+            });
+        }
+
+        private string CreateUserToken(string id, string name, string email, string role)
+        {
 
             var claims = new[] {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.Name),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.NameIdentifier, id),
+                new Claim(ClaimTypes.Name, name),
+                new Claim(ClaimTypes.Email, email),
+                new Claim(ClaimTypes.Role,role)
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(this._iConfig.GetSection("AppSettings:Token").Value));
@@ -82,12 +100,8 @@ namespace CookIt.API.Controllers
 
             var jwtTokenHandler = new JwtSecurityTokenHandler();
             var createdToken = jwtTokenHandler.CreateToken(tokenDescriptor);
-            return Ok(new
-            {
-                token = jwtTokenHandler.WriteToken(createdToken)
-            });
+            return jwtTokenHandler.WriteToken(createdToken);
         }
-
 
 
     }

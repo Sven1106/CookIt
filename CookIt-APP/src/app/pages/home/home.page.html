@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border" [ngClass]="currentSubPage == 0 ? 'invisible': ''">
+  <ion-toolbar>
+    <ion-title>
+      <mat-icon class="backBtn" color="primary" aria-hidden="false" (click)="currentSubPage = 0">arrow_back</mat-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <div class="ion-text-center logo">
+          <img src="assets/logo/logo.svg" alt="">
+          <h3 class="subPageTitle">
+            {{title}}
+          </h3>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <app-signIn (signInFormEmitter)="signIn($event)" (changeSubPageEmitter)="changeSubPage($event)"
+          (changeTitleEmitter)="changeTitle($event)" *ngIf="currentSubPage == 0"></app-signIn>
+        <app-signUp (signUpFormEmitter)="signUp($event)" (changeSubPageEmitter)="changeSubPage($event)"
+          (changeTitleEmitter)="changeTitle($event)" *ngIf="currentSubPage == 1"></app-signUp>
+        <app-forgottenPassword (forgottenPasswordFormEmitter)="forgottenPassword($event)"
+          (changeTitleEmitter)="changeTitle($event)" *ngIf="currentSubPage == 2"></app-forgottenPassword>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

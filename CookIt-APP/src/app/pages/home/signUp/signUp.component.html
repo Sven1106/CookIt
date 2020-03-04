@@ -1,0 +1,82 @@
+<form [formGroup]="signUpForm" (submit)="this.signUpFormEmitter.emit(this.signUpForm)">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Navn</mat-label>
+          <input type="text" matInput formControlName="name" placeholder="John Doe">
+          <mat-hint>*Påkrævet</mat-hint>
+          <mat-error *ngIf="signUpForm.get('name').hasError('required')">
+            Navn er påkrævet
+          </mat-error>
+        </mat-form-field>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>E-mail</mat-label>
+          <input type="email" matInput formControlName="email" placeholder="eksempel@email.dk">
+          <mat-hint>*Påkrævet</mat-hint>
+          <mat-error *ngIf="signUpForm.get('email').invalid && !signUpForm.get('email').hasError('required')">
+            Indtast venligst en gyldig e-mail
+          </mat-error>
+          <mat-error *ngIf="signUpForm.get('email').hasError('required')">
+            E-mail er påkrævet
+          </mat-error>
+        </mat-form-field>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="password">
+          <mat-hint>*Påkrævet</mat-hint>
+          <mat-error *ngIf="signUpForm.get('password').hasError('minlength')">
+            Passwordet skal være mindst 4 karakter langt
+          </mat-error>
+          <mat-error *ngIf="signUpForm.get('password').hasError('required')">
+            Password er påkrævet
+          </mat-error>
+        </mat-form-field>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Bekræft password</mat-label>
+          <input type="password" matInput formControlName="confirmPassword" [errorStateMatcher]="matcher">
+          <mat-hint>*Påkrævet</mat-hint>
+          <mat-error *ngIf="signUpForm.hasError('mismatch')">
+            Passwords matcher ikke
+          </mat-error>
+        </mat-form-field>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <p class="ion-text-center termsOfService">
+          Ved at klikke på Opret bruger, accepterer du vores <ion-text color="primary">Vilkår</ion-text>. <br/>
+          Læs mere om, hvordan vi indsamler og bruger dine oplysninger, i vores <ion-text color="primary">datapolitik</ion-text>.
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <button type="submit" class="full-width submitBtn" [disabled]="!signUpForm.valid" mat-flat-button
+          color="primary">Opret bruger</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <div class="ion-text-center">
+          <p  (click)="this.changeSubPageEmitter.emit(0)">
+            Har du allerede en bruger? <br />
+            <a color="primary" class="createUserBtn">Log ind</a>
+          </p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</form>
