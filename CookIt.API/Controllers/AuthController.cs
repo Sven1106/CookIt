@@ -99,6 +99,7 @@ namespace CookIt.API.Controllers
             };
 
             var jwtTokenHandler = new JwtSecurityTokenHandler();
+
             var createdToken = jwtTokenHandler.CreateToken(tokenDescriptor);
             return jwtTokenHandler.WriteToken(createdToken);
         }

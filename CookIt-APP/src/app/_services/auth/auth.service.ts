@@ -13,7 +13,8 @@ export class AuthService {
   decodedToken: any;
   constructor(
     private httpClient: HttpClient,
-    private storage: Storage) { }
+    private storage: Storage
+  ) { }
 
   login(model: any) {
     return this.httpClient.post(this.baseUrl + 'login', model)
@@ -59,7 +60,7 @@ export class AuthService {
       this.decodedToken = this.jwtHelperService.decodeToken(token);
     }
   }
-  
+
   async setDecodedToken(token: string) {
     await this.storage.set('token', token);
     this.decodedToken = this.jwtHelperService.decodeToken(token);

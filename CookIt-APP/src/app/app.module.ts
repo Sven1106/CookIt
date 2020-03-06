@@ -1,3 +1,4 @@
+import { RecipeService } from './_services/recipe.service';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -10,7 +11,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule, MatFormFieldModule, MatButtonModule, MatSnackBarModule, MatIconModule } from '@angular/material';
+import { MatInputModule, MatFormFieldModule, MatButtonModule, MatSnackBarModule, MatIconModule, MatAutocompleteModule, MatChipsModule } from '@angular/material';
 
 
 import { environment } from 'src/environments/environment';
@@ -48,7 +49,9 @@ export function tokenGetter() {
     MatFormFieldModule,
     MatButtonModule,
     MatSnackBarModule,
-    MatIconModule
+    MatIconModule,
+    MatAutocompleteModule,
+    MatChipsModule
 
   ],
   providers: [
@@ -57,9 +60,10 @@ export function tokenGetter() {
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     NetworkService,
     Network,
+    PasswordStateMatcher,
     AuthService,
     AlertService,
-    PasswordStateMatcher,
+    RecipeService
   ],
   bootstrap: [AppComponent]
 })

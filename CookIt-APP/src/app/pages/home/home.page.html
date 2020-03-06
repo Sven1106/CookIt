@@ -5,10 +5,10 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content class="ion-padding">
+<ion-content [fullscreen]="true">
   <ion-grid>
     <ion-row>
-      <ion-col size-md="6" offset-md="3">
+      <ion-col  class="ion-padding" size-md="6" offset-md="3">
         <div class="ion-text-center logo">
           <img src="assets/logo/logo.svg" alt="">
           <h3 class="subPageTitle">
@@ -18,7 +18,7 @@
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>
+      <ion-col class="ion-padding" size-md="6" offset-md="3">
         <app-signIn (signInFormEmitter)="signIn($event)" (changeSubPageEmitter)="changeSubPage($event)"
           (changeTitleEmitter)="changeTitle($event)" *ngIf="currentSubPage == 0"></app-signIn>
         <app-signUp (signUpFormEmitter)="signUp($event)" (changeSubPageEmitter)="changeSubPage($event)"
@@ -27,6 +27,5 @@
           (changeTitleEmitter)="changeTitle($event)" *ngIf="currentSubPage == 2"></app-forgottenPassword>
       </ion-col>
     </ion-row>
-
   </ion-grid>
 </ion-content>

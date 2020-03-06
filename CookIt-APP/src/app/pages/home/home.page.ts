@@ -23,12 +23,12 @@ export class HomePage implements OnInit {
     private ref: ChangeDetectorRef
 
   ) {
-    this.changeSubPage(0);
+
   }
 
   ionViewWillEnter() {
     this.signOut();
-
+    this.changeSubPage(0);
   }
   ngOnInit() {
 
@@ -49,7 +49,7 @@ export class HomePage implements OnInit {
             this.router.navigate(['/user']);
           },
           error: (error: any) => {
-            // console.log(error);
+            // console.error(error);
             if (error instanceof HttpErrorResponse) {
               switch (error.status) {
                 case 400:
