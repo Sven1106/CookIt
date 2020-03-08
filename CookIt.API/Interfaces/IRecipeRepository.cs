@@ -12,7 +12,7 @@ namespace CookIt.API.Interfaces
         Task<int> CreateRecipesAsync(CreateRecipeDto createRecipeDto);
         Task<Recipe> GetRecipeAsync(Guid id);
         Task<List<Recipe>> GetRecipesAsync();
-        Task<List<RecipeForListDto>> GetFilteredRecipesAsync(RecipeFilter filter);
+        Task<List<RecipeForListDto>> GetFilteredRecipesAsync(GetRecipesFilterDto filter);
         Task<int> DeleteRecipeAsync(Guid id);
         Task<RecipeSentenceIngredient> GetRecipeSentenceIngredientAsync(Guid id);
         Task<int> UpdateRecipeSentenceIngredientAsync(Guid id, string ingredientValue);

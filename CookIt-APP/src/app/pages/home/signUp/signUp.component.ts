@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-import { PasswordStateMatcher } from 'src/app/_shared/PasswordStateMatcher';
+import { PasswordStateMatcher } from 'src/app/_shared/passwordStateMatcher';
 
 @Component({
   selector: 'app-signUp',

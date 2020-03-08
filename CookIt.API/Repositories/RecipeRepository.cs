@@ -172,7 +172,7 @@ namespace CookIt.API.Repositories
             return recipes;
         }
 
-        public async Task<List<RecipeForListDto>> GetFilteredRecipesAsync(RecipeFilter filter)
+        public async Task<List<RecipeForListDto>> GetFilteredRecipesAsync(GetRecipesFilterDto filter)
         {
             List<Recipe> recipes = new List<Recipe>();
 
@@ -210,6 +210,11 @@ namespace CookIt.API.Repositories
                                 .Any(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient.Id == IngredientErrors.NoIngredientFound)
                             ) == false
                     );
+            }
+
+            if (filter.RecipesIds != null) // Should this be here? Or should it be in another method like GetRecipesWithMatchedIngredients
+            {
+                query = query.Where(recipe => filter.RecipesIds.Contains(recipe.Id));
             }
 
             #endregion filtering

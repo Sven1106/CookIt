@@ -1,14 +1,16 @@
 <ion-header class="ion-no-border" [ngClass]="currentSubPage == 0 ? 'invisible': ''">
   <ion-toolbar>
-    <ion-title>
-      <mat-icon class="backBtn" color="primary" aria-hidden="false" (click)="currentSubPage = 0">arrow_back</mat-icon>
-    </ion-title>
+    <ion-buttons>
+      <ion-button (click)="currentSubPage = 0">
+        <ion-icon color="primary" style="font-size: 24px;" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
   <ion-grid>
     <ion-row>
-      <ion-col  class="ion-padding" size-md="6" offset-md="3">
+      <ion-col class="ion-padding" size-md="6" offset-md="3">
         <div class="ion-text-center logo">
           <img src="assets/logo/logo.svg" alt="">
           <h3 class="subPageTitle">

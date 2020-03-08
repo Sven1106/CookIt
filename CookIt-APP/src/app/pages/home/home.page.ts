@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 import { AlertService } from '../../_services/alert.service';
 import { AuthService } from '../../_services/auth/auth.service';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
+
 
 @Component({
   selector: 'app-home',
@@ -20,7 +22,8 @@ export class HomePage implements OnInit {
     private router: Router,
     private authService: AuthService,
     private alertService: AlertService,
-    private ref: ChangeDetectorRef
+    private ref: ChangeDetectorRef,
+    private nativePageTransitions: NativePageTransitions
 
   ) {
 
@@ -116,10 +119,29 @@ export class HomePage implements OnInit {
 
   forgottenPassword(forgottenPasswordForm: FormGroup) {
     setTimeout(() => {
-      this.alertService.success('Du vil inden for kort tid, modtage en e-mail med dit nye password');
+      this.alertService.success('Du vil inden for kort tid, modtage en e-mail med dit nye password', 3000);
     }, 1000);
   }
   signOut() {
     this.authService.removeDecodedToken();
   }
+  // ionViewWillLeave() {
+  //   let options: NativeTransitionOptions = {
+  //     direction: 'left',
+  //     duration: 500,
+  //     slowdownfactor: -1,
+  //     iosdelay: 50,
+  //     androiddelay: 50,
+  //   }
+
+  //   this.nativePageTransitions.slide(options)
+  //     .then((success) => {
+  //       console.log('success')
+  //     })
+  //     .catch((error) => {
+  //       console.log('error');
+  //       console.log(error);
+
+  //     });
+  // }
 }

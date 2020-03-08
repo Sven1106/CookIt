@@ -1,0 +1,55 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="primary" defaultHref="/tabs/recipes"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true" (ionScroll)="setCurrentScrollTop($event)">
+  <div class="recipeContainer" (click)="toggleDetails($event)" *ngFor=" let recipe of recipes">
+    <div class="recipe">
+      <div class="imageContainer">
+        <img
+          src="https://cdn-rdb.arla.com/Files/arla-dk/458605579/2df26087-a3cd-46af-a763-c5262007e0ad.jpg?mode=crop&w=1269&h=545&ak=6826258c&hm=286e88cd"
+          alt="">
+      </div>
+      <div class="contentContainer">
+        <div class="content">
+          <div class="title">
+            {{recipe.title}}
+          </div>
+
+          <div class="label" [style.left.%]="recipe.matchedIngredientsCount/recipe.ingredients.length *100">
+            <span class="labelText">Du har&nbsp;</span>{{recipe.matchedIngredientsCount}} /
+            {{recipe.ingredients.length}}<span class="labelText">&nbsp;ingredienser</span>
+          </div>
+          <div class="progressBar">
+            <div class="background">
+            </div>
+            <div class="foreground" [style.width.%]="recipe.matchedIngredientsCount/recipe.ingredients.length *100">
+            </div>
+          </div>
+
+          <div class="ingredientsContainer">
+            <div class="ingredients">
+              <div class="ingredient" *ngFor="let item of recipe.ingredients">
+                <div style="position: relative;">
+                  {{item.name}}
+                  <mat-icon style="position: absolute; top: 50%; right: 0; transform: translateY(-50%);" *ngIf="item.isMatch">check</mat-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="goToPageBtn">
+            <button type="submit" class="full-width" mat-flat-button (click)="goToUrl(recipe.url)" color="primary">Gå
+              til hjemmeside</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</ion-content>

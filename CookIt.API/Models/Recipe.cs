@@ -30,9 +30,11 @@ namespace CookIt.API.Models
             this.ImageUrl = imageUrl.ToString();
         }
     }
-    public class RecipeFilter
+    public class GetRecipesFilterDto
     {
+        [Required]
         public List<Guid> IngredientsIds { get; set; }
+        public List<Guid> RecipesIds { get; set; }
         public List<Guid> HostIds { get; set; }
         public int? MissingIngredientsLimit { get; set; }
     }

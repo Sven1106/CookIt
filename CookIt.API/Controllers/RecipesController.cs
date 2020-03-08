@@ -37,17 +37,29 @@ namespace CookIt.API.Controllers
         public async Task<ActionResult> GetIngredientsAsync()
         {
             List<Ingredient> ingredients =  await _ingredientRepository.GetIngredients();
-            if (ingredients == null || ingredients.Count == 0)
+            if (ingredients == null)
             {
-                return NoContent();
+                return StatusCode(500, "GetIngredients failed");
+            }
+            if (ingredients.Count == 0)
+            {
+                return BadRequest("No ingredients found");
             }
             return Ok(ingredients);
         }
         [HttpGet("getRecipes"), AllowAnonymous]
-        public async Task<ActionResult> GetRecipesAsync([FromQuery]RecipeFilter filter)
+        public async Task<ActionResult> GetRecipesAsync([FromQuery]GetRecipesFilterDto filter)
         {
+            if (filter.IngredientsIds == null || filter.IngredientsIds.Count == 0)
+            {
+                return BadRequest("Invalid Dto");
+            }
             List<RecipeForListDto> recipes = await _recipeRepository.GetFilteredRecipesAsync(filter);
-            if (recipes == null || recipes.Count == 0)
+            if (recipes == null)
+            {
+                return StatusCode(500, "GetRecipes failed");
+            }
+            if (recipes.Count == 0)
             {
                 return NoContent();
             }
@@ -59,7 +71,7 @@ namespace CookIt.API.Controllers
             Recipe recipe = await _recipeRepository.GetRecipeAsync(id);
             if (recipe == null)
             {
-                return NoContent();
+                return BadRequest("No recipe found");
             }
             return Ok(recipe);
         }
@@ -69,12 +81,12 @@ namespace CookIt.API.Controllers
         {
             if (recipeSentenceIngredientUpdateDto.RecipeSentenceIngredientId == null || recipeSentenceIngredientUpdateDto.IngredientIdOrNewIngredientName == null)
             {
-                return BadRequest();
+                return BadRequest("Invalid Dto");
             }
             int changesMade = await _recipeRepository.UpdateRecipeSentenceIngredientAsync(recipeSentenceIngredientUpdateDto.RecipeSentenceIngredientId, recipeSentenceIngredientUpdateDto.IngredientIdOrNewIngredientName);
             if (changesMade == 0)
             {
-                return NoContent();
+                return BadRequest("No changes were made");
             }
             RecipeSentenceIngredient recipeSentenceIngredient = await _recipeRepository.GetRecipeSentenceIngredientAsync(recipeSentenceIngredientUpdateDto.RecipeSentenceIngredientId);
             return Ok(new { id = recipeSentenceIngredient.Id, ingredientId = recipeSentenceIngredient.Ingredient.Id, ingredientName = recipeSentenceIngredient.Ingredient.Name });
@@ -86,7 +98,7 @@ namespace CookIt.API.Controllers
             int changesMade = await _recipeRepository.DeleteRecipeSentenceIngredientAsync(id);
             if (changesMade == 0)
             {
-                return NoContent();
+                return BadRequest("No recipeSentenceIngredient found");
             }
             return Ok();
         }

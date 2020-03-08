@@ -1,27 +1,37 @@
-import { RecipeService } from './_services/recipe.service';
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import {
+  IonicModule,
+  IonicRouteStrategy
+} from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Network } from '@ionic-native/network/ngx';
+import { NativePageTransitions } from '@ionic-native/native-page-transitions/ngx';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http'
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule, MatFormFieldModule, MatButtonModule, MatSnackBarModule, MatIconModule, MatAutocompleteModule, MatChipsModule } from '@angular/material';
-
+import {
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
+import {
+  MatInputModule, MatFormFieldModule, MatButtonModule,
+  MatSnackBarModule, MatIconModule, MatAutocompleteModule,
+  MatChipsModule, MatSliderModule, MatProgressBarModule
+} from '@angular/material';
 
 import { environment } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PasswordStateMatcher } from 'src/app/_shared/PasswordStateMatcher';
+import { PasswordStateMatcher } from 'src/app/_shared/passwordStateMatcher';
 import { AuthService } from './_services/auth/auth.service';
 import { AlertService } from './_services/alert.service';
 import { NetworkService } from './_services/network.service';
+import { RecipeService } from './_services/recipe.service';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -51,7 +61,9 @@ export function tokenGetter() {
     MatSnackBarModule,
     MatIconModule,
     MatAutocompleteModule,
-    MatChipsModule
+    MatChipsModule,
+    MatSliderModule,
+    MatProgressBarModule
 
   ],
   providers: [
@@ -63,7 +75,8 @@ export function tokenGetter() {
     PasswordStateMatcher,
     AuthService,
     AlertService,
-    RecipeService
+    RecipeService,
+    NativePageTransitions
   ],
   bootstrap: [AppComponent]
 })

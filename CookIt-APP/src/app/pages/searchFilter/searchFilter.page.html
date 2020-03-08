@@ -1,0 +1,73 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Søgefiltrering
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="has-tabs-bottom">
+  <div class="ion-margin">
+    <div style="margin-bottom: 80px;">
+      <mat-form-field appearance="outline" class="full-width" style="font-size: 14px;">
+        <mat-icon class="ion-margin-end" matPrefix>search</mat-icon>
+        <input type="text" matInput [formControl]="ingredientSearchForm" [matAutocomplete]="auto"
+          placeholder="Søg ingrediens">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayIngredientName"
+          (optionSelected)="addIngredientToAdditionalIngredients($event)">
+          <mat-option
+            *ngFor="let ingredientOption of filteredIngredientOptions | async| slice : 0 : ingredientSearchLimit"
+            [value]="ingredientOption">
+            {{ingredientOption.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <div id="additionalIngredients" style="min-height: 96px;">
+        <h4>
+          Yderlige ingredienser
+        </h4>
+        <p *ngIf="additionalIngredients.length == 0">
+          Ingen yderlige ingredienser
+        </p>
+        <mat-chip-list *ngIf="additionalIngredients.length > 0">
+          <mat-chip appearance="outline" *ngFor="let ingredient of additionalIngredients"
+            (click)="removeIngredientFromAdditionalIngredients(ingredient)">
+            {{ingredient.name}}
+            <mat-icon>cancel</mat-icon>
+          </mat-chip>
+        </mat-chip-list>
+      </div>
+      <div id="kitchenCupboard" style="min-height: 120px;">
+        <h4>
+          Mit køkkenskab
+        </h4>
+        <div class="ion-text-center">
+          <span (click)="toggleAllIngredientsInKitchenCupboard(0)">Fravælg alle</span>
+          <mat-slider (input)="toggleAllIngredientsInKitchenCupboard($event)" min="0" max="2" step="2"
+            value="{{sliderTriStateValue}}"></mat-slider><span (click)="toggleAllIngredientsInKitchenCupboard(2)">Vælg
+            alle</span>
+        </div>
+        <p *ngIf="ingredientsInKitchenCupboard.length == 0">
+          Ingen ingredienser i køkkenskabet
+        </p>
+        <mat-chip-list *ngIf="ingredientsInKitchenCupboard.length > 0">
+          <mat-chip class="mat-light" *ngFor="let ingredient of ingredientsInKitchenCupboard"
+            (click)="toggleIngredientInKitchenCupboard(ingredient)" [ngClass]="ingredient.isDisabled? 'disabled':''">
+            {{ingredient.name}}
+          </mat-chip>
+        </mat-chip-list>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer class="ion-padding ion-no-border">
+  <button type="submit" class="full-width submitBtn" mat-flat-button  color="primary"  [disabled]="ingredientsForSubmit.length == 0"(click)="searchRecipes()">Søg
+    opskrifter
+    <div *ngIf="gettingRecipes" class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </button>
+</ion-footer>

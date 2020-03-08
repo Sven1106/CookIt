@@ -6,9 +6,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-segment value="myIngredients" [(ngModel)]="selectedSegment">
-    <ion-segment-button value="myIngredients">
+<ion-content>
+  <ion-segment value="kitchenCupboard" [(ngModel)]="selectedSegment">
+    <ion-segment-button value="kitchenCupboard">
       <mat-icon>kitchen</mat-icon>
     </ion-segment-button>
     <ion-segment-button value="settings">
@@ -18,40 +18,35 @@
 
 
   <div class="ion-margin" [ngSwitch]="selectedSegment">
-    <div *ngSwitchCase="'myIngredients'">
-      <div style="margin-bottom: 80px;">
-        <mat-form-field appearance="outline" class="full-width" style="font-size: 14px;">
-          <mat-icon class="ion-margin-end" matPrefix>search</mat-icon>
-          <input type="text" matInput [formControl]="ingredientSearchForm" [matAutocomplete]="auto"
-            placeholder="Søg ingrediens">
-          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayFn"
-            (optionSelected)="addMyIngredient($event)">
-            <mat-option
-              *ngFor="let ingredientOption of filteredIngredientOptions | async| slice : 0 : ingredientSearchLimit"
-              [value]="ingredientOption">
-              {{ingredientOption.name}}
-            </mat-option>
-          </mat-autocomplete>
-        </mat-form-field>
+    <div *ngSwitchCase="'kitchenCupboard'">
+      <mat-form-field appearance="outline" class="full-width" style="font-size: 14px;">
+        <mat-icon class="ion-margin-end" matPrefix>search</mat-icon>
+        <input type="text" matInput [formControl]="ingredientSearchForm" [matAutocomplete]="auto"
+          placeholder="Søg ingrediens">
+        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayIngredientName"
+          (optionSelected)="addIngredientToKitchenCupboard($event)">
+          <mat-option
+            *ngFor="let ingredientOption of filteredIngredientOptions | async| slice : 0 : ingredientSearchLimit"
+            [value]="ingredientOption">
+            {{ingredientOption.name}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <div id="kitchenCupboard" style="min-height: 96px;">
         <h4>
           Mit køkkenskab
         </h4>
-        <mat-chip-list #chipList>
-          <mat-chip appearance="outline" *ngFor="let ingredient of myIngredients"
-            (click)="removeMyIngredient(ingredient)">
+        <p *ngIf="ingredientsInKitchenCupboard.length == 0">
+          Ingen ingredienser i køkkenskabet
+        </p>
+        <mat-chip-list *ngIf="ingredientsInKitchenCupboard.length > 0">
+          <mat-chip appearance="outline" *ngFor="let ingredient of ingredientsInKitchenCupboard"
+            (click)="removeIngredientFromKitchenCupboard(ingredient)">
             {{ingredient.name}}
             <mat-icon>cancel</mat-icon>
           </mat-chip>
         </mat-chip-list>
       </div>
-
-      <div style="position: fixed; right :0; bottom: 0; left: 0; padding: 16px; background-color: white;">
-        <button type="submit" class="full-width submitBtn" mat-flat-button color="primary" (click)="saveChanges()">Gem
-          ændringer</button>
-      </div>
-
-
-
     </div>
     <div *ngSwitchCase="'settings'" class="ion-padding-top">
       <h4>
@@ -59,7 +54,10 @@
       </h4>
       <a routerLink="/home" style="color:black;">Log ud</a>
     </div>
-
   </div>
 
 </ion-content>
+<ion-footer class="ion-padding ion-no-border" *ngIf="selectedSegment == 'kitchenCupboard'">
+  <button type="submit" class="full-width submitBtn" mat-flat-button color="primary" (click)="saveChanges()">Gem
+    ændringer</button>
+</ion-footer>

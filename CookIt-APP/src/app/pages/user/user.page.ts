@@ -1,11 +1,12 @@
-import { AlertService } from './../../_services/alert.service';
-import { Ingredient } from './../../_models/ingredient';
-import { RecipeService } from './../../_services/recipe.service';
+import { AlertService } from 'src/app/_services/alert.service';
+import { Ingredient } from 'src/app/_models/ingredient';
+import { RecipeService } from 'src/app/_services/recipe.service';
 import { Component, OnInit } from '@angular/core';
-import { map, startWith } from 'rxjs/operators';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { MatAutocompleteSelectedEvent } from '@angular/material';
+import { HttpErrorResponse } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-user',
@@ -19,88 +20,93 @@ export class UserPage implements OnInit {
   ingredientSearchForm = new FormControl();
   ingredientOptions: Ingredient[] = [];
   filteredIngredientOptions: Observable<Ingredient[]>;
-  myIngredients: Ingredient[] = [];
+  ingredientsInKitchenCupboard: Ingredient[] = [];
+  anyIngredientsInKitchenCupboardChanges: boolean = false;
   constructor(
     private recipeService: RecipeService,
     private alertService: AlertService
   ) {
-   
   }
   ngOnInit() {
-    this.filteredIngredientOptions = this.ingredientSearchForm.valueChanges
-      .pipe(
-        startWith(''),
-        map(value => typeof value === 'string' ? value : value.name),
-        map(name => name ? this.filterIngredients(name) : this.ingredientOptions.slice().filter((objFromA) => !this.myIngredients.find((objFromB) => objFromA.id === objFromB.id)))
-      );
-
-    this.loadData();
-    this.recipeService.getMyIngredientsInStorage().then(ingredients => {
+    this.recipeService.getIngredientsFromKitchenCupboardInStorage().then(ingredients => {
       if (ingredients == null) {
-        this.myIngredients = [];
+        this.ingredientsInKitchenCupboard = [];
       }
       else {
-        this.myIngredients = ingredients;
+        this.ingredientsInKitchenCupboard = this.recipeService.orderAsc(ingredients, "name");
       }
+      this.prepareData();
     });
+  }
+  ionViewWillLeave() {
+    if (this.anyIngredientsInKitchenCupboardChanges) {
+      console.log("unsaved changes");
+
+      if (true) {
+        this.anyIngredientsInKitchenCupboardChanges = false;
+      }
+      else {
+
+      }
+    }
   }
   ionViewWillEnter() {
-    this.selectedSegment = "myIngredients";
+    this.selectedSegment = "kitchenCupboard";
   }
 
-  displayFn(ingredient: Ingredient): string {
+  displayIngredientName(ingredient: Ingredient): string {
     return ingredient && ingredient.name ? ingredient.name : '';
   }
-  private filterIngredients(value: string): Ingredient[] {
-    const filterValue = value.toLowerCase();
-
-    //TODO Implement this: let startingWithFilterValue = this.ingredientOptions.filter(ingredient => ingredient.name.toLowerCase().indexOf(filterValue) === 0);  to filter ingredients that starts with filterValue
-    let containsFilterValue = this.ingredientOptions.filter(ingredient => ingredient.name.toLowerCase().indexOf(filterValue.toLowerCase()) > -1);
-    let sortedAfterShortestEditDistance = this.levenshteinIngredientArray(filterValue, containsFilterValue);
-    let ingredientsWithOutMyIngredients = sortedAfterShortestEditDistance.filter((objFromA) => !this.myIngredients.find((objFromB) => objFromA.id === objFromB.id));
-    return ingredientsWithOutMyIngredients
-  }
-
-  loadData() {
+  prepareData() {
     this.recipeService.getIngredients().subscribe({
-      next: (next) => {
+      next: (next: Ingredient[]) => {
         this.ingredientOptions = next.filter(x => x.id != '00000000-0000-0000-0000-000000000000');
+        this.filteredIngredientOptions = this.recipeService.setIngredientSearchObservable(this.ingredientSearchForm, this.ingredientOptions, this.ingredientsInKitchenCupboard);
       },
       error: (error) => {
-        console.log("loadData - Error");
-        console.log(error);
+        if (error instanceof HttpErrorResponse) {
+          switch (error.status) {
+            case 400:
+              this.alertService.error('Igen ingredienser fundet');
+              break;
+            case 0:
+              this.alertService.error('Ingen forbindelse til serveren');
+              break;
+            default:
+              const applicationError = error.headers.get('Application-Error');
+              if (applicationError) {
+                this.alertService.error(applicationError);
+              }
+              else {
+                this.alertService.error('Der opstod en fejl');
+              }
+              break;
+          }
+        }
       }
     });
   }
-  levenshteinIngredientArray = (searchValue: string, itemArray: Ingredient[]) => {
-    let arrayWithDistance = itemArray.map((ingredient: Ingredient) => {
-      return {
-        item: ingredient,
-        distance: this.levenshteinDistance(searchValue, ingredient.name)
-      };
-    });
-    let sortedArray = arrayWithDistance.sort((a, b) => a.distance - b.distance);
-    return sortedArray.map(x => x.item);
-  };
-  levenshteinDistance = (r: string, a: string) => {
-    let t = [], f = r.length, n = a.length; if (0 == f) return n; if (0 == n) return f; for (let v = f; v >= 0; v--)t[v] = []; for (let v = f; v >= 0; v--)t[v][0] = v; for (let e = n; e >= 0; e--)t[0][e] = e; for (let v = 1; f >= v; v++)for (let h = r.charAt(v - 1), e = 1; n >= e; e++) { if (v == e && t[v][e] > 4) return f; let i = a.charAt(e - 1), o = h == i ? 0 : 1, c = t[v - 1][e] + 1, u = t[v][e - 1] + 1, A = t[v - 1][e - 1] + o; c > u && (c = u), c > A && (c = A), t[v][e] = c, v > 1 && e > 1 && h == a.charAt(e - 2) && r.charAt(v - 2) == i && (t[v][e] = Math.min(t[v][e], t[v - 2][e - 2] + o)) } return t[f][n]
-  };
 
   saveChanges() {
-    this.recipeService.setMyIngredientsInStorage(this.myIngredients).then(() => {
-      this.alertService.success("Ændringerne blev gemt");
+    this.recipeService.setIngredientsInKitchenCupboardInStorage(this.ingredientsInKitchenCupboard).then(() => {
+      this.alertService.success("Ændringerne blev gemt", 1500);
+      this.anyIngredientsInKitchenCupboardChanges = false;
     });
   }
-  addMyIngredient(event: MatAutocompleteSelectedEvent) {
+  addIngredientToKitchenCupboard(event: MatAutocompleteSelectedEvent) {
     let ingredient: Ingredient = event.option.value;
-    this.myIngredients.push(ingredient);
+    this.ingredientsInKitchenCupboard.push(ingredient);
     this.ingredientSearchForm.setValue('');
+    this.ingredientsInKitchenCupboard = this.recipeService.orderAsc(this.ingredientsInKitchenCupboard, "name");
+    this.anyIngredientsInKitchenCupboardChanges = true;
   }
 
-  removeMyIngredient(ingredient: Ingredient): void {
-    const index = this.myIngredients.indexOf(ingredient);
+  removeIngredientFromKitchenCupboard(ingredient: Ingredient): void {
+    const index = this.ingredientsInKitchenCupboard.indexOf(ingredient);
     if (index >= 0) {
-      this.myIngredients.splice(index, 1);
+      this.ingredientsInKitchenCupboard.splice(index, 1);
+      this.ingredientsInKitchenCupboard = this.recipeService.orderAsc(this.ingredientsInKitchenCupboard, "name");
+      this.anyIngredientsInKitchenCupboardChanges = true;
     }
   }
 }
