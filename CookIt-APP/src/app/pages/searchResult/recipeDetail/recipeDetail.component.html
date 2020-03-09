@@ -1,0 +1,23 @@
+<div mat-dialog-title class="title">
+  {{recipe.title}}
+</div>
+<mat-dialog-content>
+  <div class="label">
+    <span class="labelText">Du har&nbsp;</span>{{recipe.matchedIngredientsCount}}/{{recipe.ingredients.length}}<span class="labelText">&nbsp;ingredienser</span>
+  </div>
+  <div class="ingredientsContainer">
+    <div class="ingredients">
+      <div class="ingredient" *ngFor="let item of recipe.ingredients">
+        <div style="position: relative;">
+          {{item.name}}
+          <mat-icon style="position: absolute; top: 50%; right: 0; transform: translateY(-50%);" *ngIf="item.isMatch">
+            check</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button type="submit" class="full-width" mat-flat-button (click)="goToUrl(recipe.url)" color="primary">Gå
+    til hjemmeside</button>
+</mat-dialog-actions>

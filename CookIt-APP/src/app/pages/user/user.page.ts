@@ -15,6 +15,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class UserPage implements OnInit {
 
+  anyChanges: boolean;
   selectedSegment: string;
   ingredientSearchLimit: number = 20;
   ingredientSearchForm = new FormControl();
@@ -102,6 +103,7 @@ export class UserPage implements OnInit {
   }
 
   removeIngredientFromKitchenCupboard(ingredient: Ingredient): void {
+    this.anyChanges = true;
     const index = this.ingredientsInKitchenCupboard.indexOf(ingredient);
     if (index >= 0) {
       this.ingredientsInKitchenCupboard.splice(index, 1);

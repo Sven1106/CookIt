@@ -1,17 +1,8 @@
+import { MaterialModule } from './material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {
-  MatInputModule,
-  MatFormFieldModule,
-  MatButtonModule,
-  MatSnackBarModule,
-  MatIconModule,
-  MatAutocompleteModule,
-  MatChipsModule,
-  MatProgressBarModule,
-  MatSliderModule
-} from '@angular/material';
+
 @NgModule({
   imports: [
     CommonModule
@@ -20,15 +11,7 @@ import {
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatSnackBarModule,
-    MatIconModule,
-    MatAutocompleteModule,
-    MatChipsModule,
-    MatProgressBarModule,
-    MatSliderModule
+    MaterialModule
   ]
 })
 export class SharedFormsModule { }

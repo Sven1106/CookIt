@@ -1,0 +1,52 @@
+@import "src/assets/scss/modules/_variables.scss";
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $lightestLight;
+}
+
+.label {
+    text-align: center;
+    min-width: 32px;
+    border-radius: 2px;
+    font-family: 'Jost-Bold';
+    font-weight: bold;
+    font-size: 18px;
+    padding: 8px 16px;
+
+    .labelText {
+        color: var(--ion-color-primary);
+    }
+}
+
+.ingredientsContainer {
+    position: relative;
+    padding: 0 16px;
+    margin-bottom: 52px;
+
+    .ingredients {
+        font-size: 14px;
+
+        .ingredient {
+            height: 100%;
+            padding: 8px 32px;
+            border-bottom: 1px solid $lightestLight;
+        }
+    }
+}
+
+.goToPageBtn {
+    height: 100%;
+    button {
+        height: 48px;
+    }
+}
+
+.dialog {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+}

@@ -20,7 +20,7 @@ import {
 import {
   MatInputModule, MatFormFieldModule, MatButtonModule,
   MatSnackBarModule, MatIconModule, MatAutocompleteModule,
-  MatChipsModule, MatSliderModule, MatProgressBarModule
+  MatChipsModule, MatSliderModule, MatProgressBarModule, MatDialogModule
 } from '@angular/material';
 
 import { environment } from 'src/environments/environment';
@@ -38,7 +38,6 @@ export function tokenGetter() {
 }
 @NgModule({
   declarations: [AppComponent],
-  entryComponents: [],
   imports: [
     BrowserAnimationsModule,
     FormsModule,
@@ -63,7 +62,8 @@ export function tokenGetter() {
     MatAutocompleteModule,
     MatChipsModule,
     MatSliderModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatDialogModule
 
   ],
   providers: [

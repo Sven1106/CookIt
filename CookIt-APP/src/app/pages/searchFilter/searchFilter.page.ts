@@ -9,21 +9,16 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { MatAutocompleteSelectedEvent } from '@angular/material';
 import { IngredientWithIsDisabledDto } from 'src/app/_models/ingredientWithIsDisabledDto';
 import { Recipe } from 'src/app/_models/recipe';
-import { pulseAnimation } from 'angular-animations';
 
 
 @Component({
   selector: 'app-searchFilter',
   templateUrl: './searchFilter.page.html',
-  styleUrls: ['./searchFilter.page.scss'],
-  animations: [
-    pulseAnimation({ anchor: 'pulse', duration: 3000 })
-  ]
+  styleUrls: ['./searchFilter.page.scss']
 })
 export class SearchFilterPage implements OnInit {
 
   gettingRecipes: boolean;
-  sliderTriStateValue: number;
   ingredientSearchLimit: number = 20;
   ingredientSearchForm = new FormControl();
   ingredientOptions: Ingredient[] = [];
@@ -44,10 +39,9 @@ export class SearchFilterPage implements OnInit {
   }
   ionViewWillEnter() {
     this.gettingRecipes = false;
-    this.sliderTriStateValue = 2;
     this.additionalIngredients = [];
     this.recipeService.getIngredientsFromKitchenCupboardInStorage().then(ingredients => {
-      if (ingredients == null) {
+      if (ingredients === null) {
         this.ingredientsInKitchenCupboard = [];
       }
       else {
@@ -60,7 +54,8 @@ export class SearchFilterPage implements OnInit {
   prepareData() {
     this.recipeService.getIngredients().subscribe({
       next: (next: Ingredient[]) => {
-        this.ingredientOptions = next.filter(x => x.id != '00000000-0000-0000-0000-000000000000').map(x => new Ingredient(x.id, x.name)); // TODO Figure out why .map(x => new Ingredient(x.id, x.name)); is necessary for casting from object to Ingredient. <Ingredient[]> or as Ingredient[] doesn't work
+        this.ingredientOptions = next.filter(x => x.id !== '00000000-0000-0000-0000-000000000000')
+        .map(x => new Ingredient(x.id, x.name));// TODO Figure out why .map(x => new Ingredient(x.id, x.name)); is necessary for casting from object to Ingredient. <Ingredient[]> or as Ingredient[] doesn't work
         this.updateFilteredIngredientOptions();
       },
       error: (error) => {
@@ -99,7 +94,7 @@ export class SearchFilterPage implements OnInit {
   }
 
   addIngredientToAdditionalIngredients(event: MatAutocompleteSelectedEvent) {
-    let ingredient: Ingredient = event.option.value;
+    const ingredient: Ingredient = event.option.value;
     this.additionalIngredients.push(ingredient);
     this.ingredientSearchForm.setValue('');
     this.updateFilteredIngredientOptions();
@@ -116,29 +111,18 @@ export class SearchFilterPage implements OnInit {
   }
   toggleIngredientInKitchenCupboard(ingredient: IngredientWithIsDisabledDto): void {
     ingredient.isDisabled = !ingredient.isDisabled;
-    if (this.ingredientsInKitchenCupboard.every(x => x.isDisabled == true)) {
-      this.sliderTriStateValue = 0;
-    }
-    else if (this.ingredientsInKitchenCupboard.every(x => x.isDisabled == false)) {
-      this.sliderTriStateValue = 2;
-    }
-    else {
-      this.sliderTriStateValue = 1;
-    }
     this.prepareIngredientsForSubmit();
   }
   toggleAllIngredientsInKitchenCupboard(e: any) {
-    let value: number = (typeof e === 'number' ? e : e.value)
-    if (value == 0) {
-      this.sliderTriStateValue = 0;
+    const value: number = (typeof e === 'number' ? e : e.value);
+    if (value === 0) {
       this.ingredientsInKitchenCupboard.forEach(element => {
         element.id = element.id;
         element.name = element.name;
         element.isDisabled = true;
       });
     }
-    else if (value == 2) {
-      this.sliderTriStateValue = 2;
+    else if (value === 2) {
       this.ingredientsInKitchenCupboard.forEach(element => {
         element.id = element.id;
         element.name = element.name;
@@ -150,8 +134,8 @@ export class SearchFilterPage implements OnInit {
   }
 
   private prepareIngredientsForSubmit() {
-    let activeIngredientsInKitchenCupboard = this.ingredientsInKitchenCupboard.filter(x => x.isDisabled == false);
-    let activeIngredientsInKitchenCupboardCorrectlyFormatted = activeIngredientsInKitchenCupboard.map(x => new Ingredient(x.id, x.name));
+    const activeIngredientsInKitchenCupboard = this.ingredientsInKitchenCupboard.filter(x => x.isDisabled === false);
+    const activeIngredientsInKitchenCupboardCorrectlyFormatted = activeIngredientsInKitchenCupboard.map(x => new Ingredient(x.id, x.name));
     this.ingredientsForSubmit = this.additionalIngredients.concat(activeIngredientsInKitchenCupboardCorrectlyFormatted);
   }
 
@@ -161,8 +145,8 @@ export class SearchFilterPage implements OnInit {
     this.recipeService.getRecipes(this.ingredientsForSubmit).subscribe({
       next: (next: Recipe[]) => {
         this.gettingRecipes = false;
-        if (next == null) {
-          this.alertService.success("Ingen opskrifter fundet", 2000);
+        if (next === null) {
+          this.alertService.success('Ingen opskrifter fundet', 2000);
         }
         else {
           localStorage.setItem('recipesFound', JSON.stringify(next));

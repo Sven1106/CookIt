@@ -8,7 +8,33 @@
 </ion-header>
 
 <ion-content [scrollEvents]="true" (ionScroll)="setCurrentScrollTop($event)">
-  <div class="recipeContainer" (click)="toggleDetails($event)" *ngFor=" let recipe of recipes">
+  <div class="recipeContainer" (click)="toggleDetails($event,recipe)" *ngFor=" let recipe of recipes">
+    <div class="recipe">
+      <div class="imageContainer">
+        <img
+          src="https://cdn-rdb.arla.com/Files/arla-dk/458605579/2df26087-a3cd-46af-a763-c5262007e0ad.jpg?mode=crop&w=1269&h=545&ak=6826258c&hm=286e88cd"
+          alt="">
+      </div>
+      <div class="contentContainer">
+        <div class="content">
+          <div class="title">
+            {{recipe.title}}
+          </div>
+
+          <div class="label" [style.left.%]="recipe.matchedIngredientsCount/recipe.ingredients.length *100">
+            {{recipe.matchedIngredientsCount}} / {{recipe.ingredients.length}}
+          </div>
+          <div class="progressBar">
+            <div class="background">
+            </div>
+            <div class="foreground" [style.width.%]="recipe.matchedIngredientsCount/recipe.ingredients.length *100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="recipeContainer" (click)="toggleDetails($event)" *ngFor=" let recipe of recipes">
     <div class="recipe">
       <div class="imageContainer">
         <img
@@ -50,6 +76,6 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
 
 </ion-content>

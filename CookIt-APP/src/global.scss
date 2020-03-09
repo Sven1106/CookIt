@@ -26,73 +26,7 @@
 @import "~@ionic/angular/css/flex-utils.css";
 @import "src/assets/scss/modules/_fonts.scss";
 
-$lightestLight: #F1F1F1;
-
-:root {
-    --ion-color-primary: #f8b808;
-    --ion-color-primary-rgb: 248, 184, 8;
-    --ion-color-primary-contrast: #000000;
-    --ion-color-primary-contrast-rgb: 0, 0, 0;
-    --ion-color-primary-shade: #daa207;
-    --ion-color-primary-tint: #f9bf21;
-
-    --ion-color-secondary: #5191b7;
-    --ion-color-secondary-rgb: 81, 145, 183;
-    --ion-color-secondary-contrast: #000000;
-    --ion-color-secondary-contrast-rgb: 0, 0, 0;
-    --ion-color-secondary-shade: #4780a1;
-    --ion-color-secondary-tint: #629cbe;
-
-    --ion-color-tertiary: #7044ff;
-    --ion-color-tertiary-rgb: 112, 68, 255;
-    --ion-color-tertiary-contrast: #ffffff;
-    --ion-color-tertiary-contrast-rgb: 255, 255, 255;
-    --ion-color-tertiary-shade: #633ce0;
-    --ion-color-tertiary-tint: #7e57ff;
-
-    --ion-color-success: #10dc60;
-    --ion-color-success-rgb: 16, 220, 96;
-    --ion-color-success-contrast: #ffffff;
-    --ion-color-success-contrast-rgb: 255, 255, 255;
-    --ion-color-success-shade: #0ec254;
-    --ion-color-success-tint: #28e070;
-
-    --ion-color-warning: #ffce00;
-    --ion-color-warning-rgb: 255, 206, 0;
-    --ion-color-warning-contrast: #ffffff;
-    --ion-color-warning-contrast-rgb: 255, 255, 255;
-    --ion-color-warning-shade: #e0b500;
-    --ion-color-warning-tint: #ffd31a;
-
-    --ion-color-danger: #F44336;
-    --ion-color-danger-rgb: 244, 67, 54;
-    --ion-color-danger-contrast: #ffffff;
-    --ion-color-danger-contrast-rgb: 255, 255, 255;
-    --ion-color-danger-shade: #d73b30;
-    --ion-color-danger-tint: #f5564a;
-
-    --ion-color-dark: #222428;
-    --ion-color-dark-rgb: 34, 34, 34;
-    --ion-color-dark-contrast: #ffffff;
-    --ion-color-dark-contrast-rgb: 255, 255, 255;
-    --ion-color-dark-shade: #1e2023;
-    --ion-color-dark-tint: #383a3e;
-
-    --ion-color-medium: #707070;
-    --ion-color-medium-rgb: 112, 112, 112;
-    --ion-color-medium-contrast: #ffffff;
-    --ion-color-medium-contrast-rgb: 255, 255, 255;
-    --ion-color-medium-shade: #636363;
-    --ion-color-medium-tint: #7e7e7e;
-
-    --ion-color-light: #B8B8B8;
-    --ion-color-light-rgb: 184, 184, 184;
-    --ion-color-light-contrast: #000000;
-    --ion-color-light-contrast-rgb: 0, 0, 0;
-    --ion-color-light-shade: #a2a2a2;
-    --ion-color-light-tint: #bfbfbf;
-}
-
+@import "src/assets/scss/modules/_variables.scss";
 
 .snackBarError {
     background-color: var(--ion-color-danger);
@@ -150,21 +84,7 @@ $lightestLight: #F1F1F1;
             z-index: 2;
 
             .contentContainer {
-
-                position: relative;
-                left: 50%;
-                width: 80%;
-                transform: translate(-50%, -10vh);
-                border-radius: 4px;
-                min-height: 60vh;
-
                 .content {
-
-                    .title {
-                        font-size: 20px;
-                        padding-bottom: 16px;
-                        border-bottom: 1px solid $lightestLight;
-                    }
 
                     .label {
                         font-size: 18px;
@@ -173,10 +93,6 @@ $lightestLight: #F1F1F1;
                         background-color: transparent;
                         width: 100%;
                         transform: none;
-
-                        &::after {
-                            content: none;
-                        }
 
                         .labelText {
 
@@ -187,32 +103,7 @@ $lightestLight: #F1F1F1;
                         }
                     }
 
-                    .progressBar {
-                        opacity: 0;
-                        height: 0;
-                    }
 
-                    .ingredientsContainer {
-                        margin-bottom: 52px;
-
-                        .ingredients {
-                            height: 100%;
-                            opacity: 1;
-                            transition: 0.4s ease-in-out 0.4s;
-                        }
-                    }
-
-                    .goToPageBtn {
-
-                        height: 100%;
-
-                        button {
-                            height: 48px;
-                            opacity: 1;
-                            transition: 0s ease-in-out 0.4s;
-                        }
-
-                    }
                 }
             }
         }
@@ -235,8 +126,6 @@ $lightestLight: #F1F1F1;
         }
 
         .contentContainer {
-
-            transition: 0.4s ease-in-out;
             position: relative;
             left: 0;
             width: 100%;
@@ -249,8 +138,6 @@ $lightestLight: #F1F1F1;
 
             .content {
                 width: 100%;
-                transition: 0.4s ease-in-out;
-
                 .title {
                     text-align: center;
                     font-size: 12px;
@@ -277,7 +164,6 @@ $lightestLight: #F1F1F1;
                     font-weight: bold;
                     text-align: center;
 
-                    // transition: font-size 0.4s ease-in-out;
                     &::after {
                         content: "";
                         position: absolute;
@@ -291,11 +177,6 @@ $lightestLight: #F1F1F1;
                         border-top: 5px solid var(--ion-color-primary);
                     }
 
-                    .labelText {
-                        opacity: 0;
-                        font-size: 0;
-                        transition: font-size 0s ease-in-out;
-                    }
                 }
 
                 .progressBar {
@@ -322,34 +203,6 @@ $lightestLight: #F1F1F1;
                         border-radius: inherit;
                     }
                 }
-
-                .ingredientsContainer {
-                    position: relative;
-                    padding: 0 16px;
-
-                    .ingredients {
-                        height: 0;
-                        opacity: 0;
-                        overflow: hidden;
-                        font-size: 14px;
-
-                        .ingredient {
-                            padding: 8px 32px;
-                            border-bottom: 1px solid $lightestLight;
-                        }
-                    }
-                }
-
-                .goToPageBtn {
-                    height: 0;
-
-                    button {
-                        height: 0;
-                        opacity: 0;
-                        overflow: hidden;
-                    }
-                }
-
             }
         }
     }
@@ -518,6 +371,7 @@ button.homeSubmitBtn {
     width: 70%;
     text-align: center;
 }
+
 .mat-snack-bar-handset {
-    margin-bottom: 56px!important;
+    margin-bottom: 56px !important;
 }

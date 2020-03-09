@@ -42,10 +42,8 @@
           Mit køkkenskab
         </h4>
         <div class="ion-text-center">
-          <span (click)="toggleAllIngredientsInKitchenCupboard(0)">Fravælg alle</span>
-          <mat-slider (input)="toggleAllIngredientsInKitchenCupboard($event)" min="0" max="2" step="2"
-            value="{{sliderTriStateValue}}"></mat-slider><span (click)="toggleAllIngredientsInKitchenCupboard(2)">Vælg
-            alle</span>
+          <button mat-raised-button (click)="toggleAllIngredientsInKitchenCupboard(0)">Fravælg alle</button>
+          <button mat-raised-button (click)="toggleAllIngredientsInKitchenCupboard(2)">Vælg alle</button>
         </div>
         <p *ngIf="ingredientsInKitchenCupboard.length == 0">
           Ingen ingredienser i køkkenskabet
@@ -61,7 +59,8 @@
   </div>
 </ion-content>
 <ion-footer class="ion-padding ion-no-border">
-  <button type="submit" class="full-width submitBtn" mat-flat-button  color="primary"  [disabled]="ingredientsForSubmit.length == 0"(click)="searchRecipes()">Søg
+  <button type="submit" class="full-width submitBtn" mat-flat-button color="primary"
+    [disabled]="ingredientsForSubmit.length == 0" (click)="searchRecipes()">Søg
     opskrifter
     <div *ngIf="gettingRecipes" class="lds-ring">
       <div></div>

@@ -58,6 +58,6 @@
 
 </ion-content>
 <ion-footer class="ion-padding ion-no-border" *ngIf="selectedSegment == 'kitchenCupboard'">
-  <button type="submit" class="full-width submitBtn" mat-flat-button color="primary" (click)="saveChanges()">Gem
+  <button type="submit" class="full-width submitBtn" [disabled]="anyIngredientsInKitchenCupboardChanges == false" mat-flat-button color="primary" (click)="saveChanges()">Gem
     ændringer</button>
 </ion-footer>
