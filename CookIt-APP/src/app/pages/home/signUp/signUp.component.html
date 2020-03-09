@@ -45,7 +45,13 @@
   </p>
 
   <button type="submit" class="full-width homeSubmitBtn" [disabled]="!signUpForm.valid" mat-flat-button
-    color="primary">Opret bruger</button>
+    color="primary">Opret bruger
+    <div *ngIf="signedUp" class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div></button>
 
   <div class="ion-text-center">
     <p (click)="this.changeSubPageEmitter.emit(0)">

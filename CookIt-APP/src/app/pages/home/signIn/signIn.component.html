@@ -21,8 +21,15 @@
   <div class="ion-text-end">
     <a class="forgotPasswordBtn" (click)="this.changeSubPageEmitter.emit(2)">Glemt password?</a>
   </div>
-  <button type="submit" class="full-width homeSubmitBtn" [disabled]="!signInForm.valid" mat-flat-button color="primary">Log
-    ind</button>
+  <button type="submit" class="full-width homeSubmitBtn" [disabled]="!signInForm.valid" mat-flat-button
+    color="primary">Log ind
+    <div *ngIf="signedIn" class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </button>
 
   <div class="ion-text-center">
     <p (click)="this.changeSubPageEmitter.emit(1)">

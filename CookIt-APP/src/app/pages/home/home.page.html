@@ -21,9 +21,9 @@
     </ion-row>
     <ion-row>
       <ion-col class="ion-padding" size-md="6" offset-md="3">
-        <app-signIn (signInFormEmitter)="signIn($event)" (changeSubPageEmitter)="changeSubPage($event)"
+        <app-signIn [signedIn]="signingIn" (signInFormEmitter)="signIn($event)" (changeSubPageEmitter)="changeSubPage($event)"
           (changeTitleEmitter)="changeTitle($event)" *ngIf="currentSubPage == 0"></app-signIn>
-        <app-signUp (signUpFormEmitter)="signUp($event)" (changeSubPageEmitter)="changeSubPage($event)"
+        <app-signUp [signedUp]="signingUp" (signUpFormEmitter)="signUp($event)" (changeSubPageEmitter)="changeSubPage($event)"
           (changeTitleEmitter)="changeTitle($event)" *ngIf="currentSubPage == 1"></app-signUp>
         <app-forgottenPassword (forgottenPasswordFormEmitter)="forgottenPassword($event)"
           (changeTitleEmitter)="changeTitle($event)" *ngIf="currentSubPage == 2"></app-forgottenPassword>

@@ -14,7 +14,8 @@ import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/na
 })
 export class HomePage implements OnInit {
 
-
+  signingIn: boolean;
+  signingUp: boolean;
   currentSubPage: number;
   title: string;
 
@@ -30,6 +31,8 @@ export class HomePage implements OnInit {
   }
 
   ionViewWillEnter() {
+    this.signingIn = false;
+    this.signingUp = false;
     this.signOut();
     this.changeSubPage(0);
   }
@@ -44,6 +47,7 @@ export class HomePage implements OnInit {
   }
 
   signIn(signInForm: FormGroup) {
+    this.signingIn = true;
     this.authService.login(signInForm.value)
       .subscribe(
         {
@@ -78,9 +82,11 @@ export class HomePage implements OnInit {
           }
         }
       );
+    this.signingIn = false;
   }
 
   signUp(signUpForm: FormGroup) {
+    this.signingUp = true;
     this.authService.register(signUpForm.value)
       .subscribe(
         {
@@ -115,6 +121,8 @@ export class HomePage implements OnInit {
           }
         }
       );
+    this.signingUp = false;
+
   }
 
   forgottenPassword(forgottenPasswordForm: FormGroup) {
@@ -125,23 +133,4 @@ export class HomePage implements OnInit {
   signOut() {
     this.authService.removeDecodedToken();
   }
-  // ionViewWillLeave() {
-  //   let options: NativeTransitionOptions = {
-  //     direction: 'left',
-  //     duration: 500,
-  //     slowdownfactor: -1,
-  //     iosdelay: 50,
-  //     androiddelay: 50,
-  //   }
-
-  //   this.nativePageTransitions.slide(options)
-  //     .then((success) => {
-  //       console.log('success')
-  //     })
-  //     .catch((error) => {
-  //       console.log('error');
-  //       console.log(error);
-
-  //     });
-  // }
 }

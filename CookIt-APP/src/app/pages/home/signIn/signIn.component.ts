@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -11,8 +11,9 @@ export class SignInComponent implements OnInit {
   signInForm: FormGroup;
   title: string = "";
   @Output() signInFormEmitter = new EventEmitter<FormGroup>();
-  @Output() changeSubPageEmitter = new EventEmitter<Number>();
+  @Output() changeSubPageEmitter = new EventEmitter<number>();
   @Output() changeTitleEmitter = new EventEmitter<string>()
+  @Input() signedIn: boolean; // TODO Why doesn't it work?
   constructor(
     private formBuilder: FormBuilder
   ) {

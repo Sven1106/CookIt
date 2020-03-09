@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { PasswordStateMatcher } from 'src/app/_shared/passwordStateMatcher';
 
@@ -11,8 +11,9 @@ export class SignUpComponent implements OnInit {
   signUpForm: FormGroup;
   title: string = "Opret bruger";
   @Output() signUpFormEmitter = new EventEmitter<FormGroup>();
-  @Output() changeSubPageEmitter = new EventEmitter<Number>();
-  @Output() changeTitleEmitter = new EventEmitter<string>()
+  @Output() changeSubPageEmitter = new EventEmitter<number>();
+  @Output() changeTitleEmitter = new EventEmitter<string>();
+  @Input() signedUp: boolean; // TODO Why doesn't it work?
   matcher = new PasswordStateMatcher();
 
   constructor(
