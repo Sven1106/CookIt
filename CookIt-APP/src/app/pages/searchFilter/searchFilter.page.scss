@@ -1,0 +1,12 @@
+@import "src/assets/scss/modules/_variables.scss";
+@import "src/assets/scss/modules/_buttons.scss";
+
+.toggleOn {
+    margin-right: 16px;
+    color: var(--ion-color-secondary);
+    border-color: var(--ion-color-secondary);
+}
+.toggleOff {
+    color: var(--ion-color-secondary);
+    border-color: var(--ion-color-secondary);
+}

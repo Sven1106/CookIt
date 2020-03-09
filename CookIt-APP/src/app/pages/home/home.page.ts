@@ -2,9 +2,9 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
-import { AlertService } from '../../_services/alert.service';
-import { AuthService } from '../../_services/auth/auth.service';
-import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions/ngx';
+import { RecipeService } from 'src/app/_services/recipe.service';
+import { AlertService } from 'src/app/_services/alert.service';
+import { AuthService } from 'src/app/_services/auth/auth.service';
 
 
 @Component({
@@ -23,9 +23,7 @@ export class HomePage implements OnInit {
     private router: Router,
     private authService: AuthService,
     private alertService: AlertService,
-    private ref: ChangeDetectorRef,
-    private nativePageTransitions: NativePageTransitions
-
+    private recipeService: RecipeService
   ) {
 
   }
@@ -33,6 +31,7 @@ export class HomePage implements OnInit {
   ionViewWillEnter() {
     this.signingIn = false;
     this.signingUp = false;
+
     this.signOut();
     this.changeSubPage(0);
   }
@@ -132,5 +131,6 @@ export class HomePage implements OnInit {
   }
   signOut() {
     this.authService.removeDecodedToken();
+    this.recipeService.removeKitchenCupboardInStorage();
   }
 }

@@ -63,11 +63,13 @@ export class AuthService {
 
   async setDecodedToken(token: string) {
     await this.storage.set('token', token);
+    localStorage.setItem('tokenForJwtModuleHttpRequest', token);
     this.decodedToken = this.jwtHelperService.decodeToken(token);
   }
 
   async removeDecodedToken() {
     await this.storage.remove('token');
+    localStorage.removeItem('tokenForJwtModuleHttpRequest');
     this.decodedToken = null;
   }
 }

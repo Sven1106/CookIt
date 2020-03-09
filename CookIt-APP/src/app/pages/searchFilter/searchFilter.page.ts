@@ -45,7 +45,7 @@ export class SearchFilterPage implements OnInit {
         this.ingredientsInKitchenCupboard = [];
       }
       else {
-        this.ingredientsInKitchenCupboard = this.recipeService.orderAsc(ingredients.map(x => new IngredientWithIsDisabledDto(x.id, x.name)), "name");
+        this.ingredientsInKitchenCupboard = this.recipeService.orderByNameAsc(ingredients.map(x => new IngredientWithIsDisabledDto(x.id, x.name)));
       }
       this.prepareData();
     });
@@ -55,7 +55,7 @@ export class SearchFilterPage implements OnInit {
     this.recipeService.getIngredients().subscribe({
       next: (next: Ingredient[]) => {
         this.ingredientOptions = next.filter(x => x.id !== '00000000-0000-0000-0000-000000000000')
-        .map(x => new Ingredient(x.id, x.name));// TODO Figure out why .map(x => new Ingredient(x.id, x.name)); is necessary for casting from object to Ingredient. <Ingredient[]> or as Ingredient[] doesn't work
+          .map(x => new Ingredient(x.id, x.name));// TODO Figure out why .map(x => new Ingredient(x.id, x.name)); is necessary for casting from object to Ingredient. <Ingredient[]> or as Ingredient[] doesn't work
         this.updateFilteredIngredientOptions();
       },
       error: (error) => {
@@ -84,8 +84,8 @@ export class SearchFilterPage implements OnInit {
   }
 
   private updateFilteredIngredientOptions() {
-    let ingredientInRecipeSearchDtoToIngredients = this.ingredientsInKitchenCupboard.map(x => new Ingredient(x.id, x.name));
-    let ingredientsToIgnore = this.additionalIngredients.concat(ingredientInRecipeSearchDtoToIngredients);
+    const ingredientInRecipeSearchDtoToIngredients = this.ingredientsInKitchenCupboard.map(x => new Ingredient(x.id, x.name));
+    const ingredientsToIgnore = this.additionalIngredients.concat(ingredientInRecipeSearchDtoToIngredients);
     this.filteredIngredientOptions = this.recipeService.setIngredientSearchObservable(this.ingredientSearchForm, this.ingredientOptions, ingredientsToIgnore);
   }
 
@@ -113,25 +113,25 @@ export class SearchFilterPage implements OnInit {
     ingredient.isDisabled = !ingredient.isDisabled;
     this.prepareIngredientsForSubmit();
   }
-  toggleAllIngredientsInKitchenCupboard(e: any) {
-    const value: number = (typeof e === 'number' ? e : e.value);
-    if (value === 0) {
-      this.ingredientsInKitchenCupboard.forEach(element => {
-        element.id = element.id;
-        element.name = element.name;
-        element.isDisabled = true;
-      });
-    }
-    else if (value === 2) {
-      this.ingredientsInKitchenCupboard.forEach(element => {
-        element.id = element.id;
-        element.name = element.name;
-        element.isDisabled = false;
-      });
-    }
-    this.ingredientsInKitchenCupboard = this.recipeService.orderAsc(this.ingredientsInKitchenCupboard, "name");
+  enableAllIngredientsInKitchenCupboard() {
+    this.ingredientsInKitchenCupboard.forEach(element => {
+      element.id = element.id;
+      element.name = element.name;
+      element.isDisabled = false;
+    });
+    this.ingredientsInKitchenCupboard = this.recipeService.orderByNameAsc(this.ingredientsInKitchenCupboard);
     this.prepareIngredientsForSubmit();
   }
+  disableAllIngredientsInKitchenCupboard() {
+    this.ingredientsInKitchenCupboard.forEach(element => {
+      element.id = element.id;
+      element.name = element.name;
+      element.isDisabled = true;
+    });
+    this.ingredientsInKitchenCupboard = this.recipeService.orderByNameAsc(this.ingredientsInKitchenCupboard);
+    this.prepareIngredientsForSubmit();
+  }
+
 
   private prepareIngredientsForSubmit() {
     const activeIngredientsInKitchenCupboard = this.ingredientsInKitchenCupboard.filter(x => x.isDisabled === false);

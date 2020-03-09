@@ -38,12 +38,17 @@
         </mat-chip-list>
       </div>
       <div id="kitchenCupboard" style="min-height: 120px;">
-        <h4>
-          Mit køkkenskab
-        </h4>
-        <div class="ion-text-center">
-          <button mat-raised-button (click)="toggleAllIngredientsInKitchenCupboard(0)">Fravælg alle</button>
-          <button mat-raised-button (click)="toggleAllIngredientsInKitchenCupboard(2)">Vælg alle</button>
+        <div class="ion-margin-bottom" style="vertical-align: bottom;">
+          <div style="width:50%; display: inline-block; font-size: 20px; font-weight: 500;">
+            Mit køkkenskab
+          </div>
+          <div style="width:50%; display: inline-block; text-align: right;">
+            <button style="margin-right: 8px;" class="toggleOff btn-xs" mat-stroked-button
+              (click)="disableAllIngredientsInKitchenCupboard()">Fravælg
+              alle</button>
+            <button class="toggleOn btn-xs" mat-stroked-button (click)="enableAllIngredientsInKitchenCupboard()">Vælg
+              alle</button>
+          </div>
         </div>
         <p *ngIf="ingredientsInKitchenCupboard.length == 0">
           Ingen ingredienser i køkkenskabet

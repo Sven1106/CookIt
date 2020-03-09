@@ -11,8 +11,7 @@
   <div class="recipeContainer" (click)="toggleDetails($event,recipe)" *ngFor=" let recipe of recipes">
     <div class="recipe">
       <div class="imageContainer">
-        <img
-          src="https://cdn-rdb.arla.com/Files/arla-dk/458605579/2df26087-a3cd-46af-a763-c5262007e0ad.jpg?mode=crop&w=1269&h=545&ak=6826258c&hm=286e88cd"
+        <img src="{{recipe.imageSrc}}"
           alt="">
       </div>
       <div class="contentContainer">

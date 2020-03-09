@@ -23,8 +23,6 @@ import {
   MatChipsModule, MatSliderModule, MatProgressBarModule, MatDialogModule
 } from '@angular/material';
 
-import { environment } from 'src/environments/environment';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PasswordStateMatcher } from 'src/app/_shared/passwordStateMatcher';
@@ -34,7 +32,8 @@ import { NetworkService } from './_services/network.service';
 import { RecipeService } from './_services/recipe.service';
 
 export function tokenGetter() {
-  return localStorage.getItem('token');
+
+  return localStorage.getItem('tokenForJwtModuleHttpRequest');
 }
 @NgModule({
   declarations: [AppComponent],
@@ -50,8 +49,8 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter,
-        whitelistedDomains: [environment.apiDomain],
-        blacklistedRoutes: [environment.apiDomain + '/api/auth']
+        whitelistedDomains: ['localhost:49615'], // auto sends JWT to these domains
+        blacklistedRoutes: ['localhost:49615/api/auth'] // doesnt auto sends JWT to these domains
       }
     }),
     MatInputModule,

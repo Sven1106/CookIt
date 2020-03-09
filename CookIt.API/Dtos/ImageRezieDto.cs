@@ -8,7 +8,6 @@ namespace CookIt.API.Dtos
 {
     public class ImageResizeDto
     {
-        [Required]
         public string Src { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }

@@ -12,38 +12,33 @@ import { Recipe } from 'src/app/_models/recipe';
 })
 export class RecipeService {
   baseUrl = environment.apiDomain + 'api/';
-  recipes: any;
+  recipes: Recipe;
   constructor(
-    private http: HttpClient,
+    private httpClient: HttpClient,
     private storage: Storage
   ) {
 
 
   }
 
-  ngOnInit() {
-
-  }
   getRecipes(ingredients: Ingredient[]): Observable<Recipe[]> {
     let params = new HttpParams();
     ingredients.forEach(ingredient => {
       params = params.append('ingredientsIds', ingredient.id);
     });
 
-    return this.http.get<Recipe[]>(this.baseUrl + 'recipes/getRecipes', { params: params });
+    return this.httpClient.get<Recipe[]>(this.baseUrl + 'recipes/getRecipes', { params: params });
   }
   getIngredients(): Observable<Ingredient[]> {
-    return this.http.get<Ingredient[]>(this.baseUrl + 'recipes/getIngredients');
+    return this.httpClient.get<Ingredient[]>(this.baseUrl + 'recipes/getIngredients');
   }
   async getIngredientsFromKitchenCupboardInStorage() {
     return await this.storage.get('kitchenCupboard').then((kitchenCupboard: Ingredient[]) => {
-      //console.log("get: " + JSON.stringify(kitchenCupboard));
       return kitchenCupboard;
     });
   }
 
   async setIngredientsInKitchenCupboardInStorage(ingredients: Ingredient[]) {
-    //console.log("set: " + JSON.stringify(ingredients));
     await this.storage.set('kitchenCupboard', ingredients);
   }
 
@@ -51,10 +46,10 @@ export class RecipeService {
     this.storage.remove('kitchenCupboard');
   }
 
-  orderAsc(array: any, propertyname: string): any {
-    return array.sort(function (a, b) {
-      if (eval("a." + propertyname) < eval("b." + propertyname)) { return -1; }
-      if (eval("a." + propertyname) > eval("b." + propertyname)) { return 1; }
+  orderByNameAsc(array: any): any {
+    return array.sort((a, b) => {
+      if (a.name < b.name) { return -1; }
+      if (a.name > b.name) { return 1; }
       return 0;
     })
   }
@@ -70,22 +65,22 @@ export class RecipeService {
   private filterIngredients(value: string = '', unfilteredIngredientList: Ingredient[], ingredientsToIgnore: Ingredient[]): Ingredient[] {
     const filterValue = value.toLowerCase();
     let ingredientsWithOutMyIngredients: Ingredient[] = [];
-    if (filterValue != '') {
-      //TODO Implement this: let startingWithFilterValue = unfilteredIngredientList.filter(ingredient => ingredient.name.toLowerCase().indexOf(filterValue) === 0);  to filter ingredients that starts with filterValue
-      let containsFilterValue = unfilteredIngredientList.filter(ingredient => ingredient.name.toLowerCase().indexOf(filterValue.toLowerCase()) > -1);
-      let sortedAfterShortestEditDistance = this.levenshteinIngredientArray(filterValue, containsFilterValue);
+    if (filterValue !== '') {
+      // TODO Implement this: let startingWithFilterValue = unfilteredIngredientList.filter(ingredient => ingredient.name.toLowerCase().indexOf(filterValue) === 0);  to filter ingredients that starts with filterValue
+      const containsFilterValue = unfilteredIngredientList.filter(ingredient => ingredient.name.toLowerCase().indexOf(filterValue.toLowerCase()) > -1);
+      const sortedAfterShortestEditDistance = this.levenshteinIngredientArray(filterValue, containsFilterValue);
       ingredientsWithOutMyIngredients = sortedAfterShortestEditDistance.filter((objFromA) => !ingredientsToIgnore.find((objFromB) => objFromA.id === objFromB.id));
     }
-    return ingredientsWithOutMyIngredients
+    return ingredientsWithOutMyIngredients;
   }
   private levenshteinIngredientArray = (searchValue: string, itemArray: Ingredient[]) => {
-    let arrayWithDistance = itemArray.map((ingredient: Ingredient) => {
+    const arrayWithDistance = itemArray.map((ingredient: Ingredient) => {
       return {
         item: ingredient,
         distance: this.levenshteinDistance(searchValue, ingredient.name)
       };
     });
-    let sortedArray = arrayWithDistance.sort((a, b) => a.distance - b.distance);
+    const sortedArray = arrayWithDistance.sort((a, b) => a.distance - b.distance);
     return sortedArray.map(x => x.item);
   };
   private levenshteinDistance = (r: string, a: string) => {

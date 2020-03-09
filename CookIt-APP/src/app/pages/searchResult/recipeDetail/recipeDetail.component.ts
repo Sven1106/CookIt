@@ -1,6 +1,10 @@
+import { ImageRequest } from 'src/app/_models/imageRequest';
+import { ImageService } from './../../../_services/image.service';
 import { RecipeSearchResultDto } from './../../../_models/recipeSearchResultDto';
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { map } from 'rxjs/operators';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-recipeDetail',
@@ -8,12 +12,21 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
   styleUrls: ['./recipeDetail.component.scss']
 })
 
-export class RecipeDetailComponent {
+export class RecipeDetailComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<RecipeDetailComponent>,
-    @Inject(MAT_DIALOG_DATA) public recipe: RecipeSearchResultDto
+    @Inject(MAT_DIALOG_DATA) public recipe: RecipeSearchResultDto,
+    public imageService: ImageService
   ) {
+
+
+  }
+  ngOnInit() {
+    this.dialogRef.updatePosition({
+      top: '25vh'
+    });
+
 
   }
 
@@ -24,4 +37,6 @@ export class RecipeDetailComponent {
   goToUrl(event: string) {
     window.open(event, '_system');
   }
+
+
 }

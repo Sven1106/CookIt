@@ -7,6 +7,10 @@ import { IngredientWithIsMatchDto } from 'src/app/_models/ingredientWithIsMatchD
 import { Component, OnInit, Inject } from '@angular/core';
 import { RecipeSearchResultDto } from 'src/app/_models/recipeSearchResultDto';
 import { MatDialog } from '@angular/material/dialog';
+import { ImageRequest } from 'src/app/_models/imageRequest';
+import { ImageService } from 'src/app/_services/image.service';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Platform } from '@ionic/angular';
 
 
 
@@ -25,21 +29,32 @@ export class SearchResultPage implements OnInit {
   recipes: RecipeSearchResultDto[];
   currentSelectedRecipeContainerElement: HTMLElement;
   constructor(
+    public dialog: MatDialog,
     private alertService: AlertService,
-    public dialog: MatDialog
+    private imageService: ImageService,
+    private platform: Platform
   ) { }
 
   ngOnInit() {
-    this.recipes = JSON.parse(localStorage.getItem('recipesFound')).map((recipe: Recipe) => {
-      const ingredientsWithIsMatchDto: IngredientWithIsMatchDto[] = [];
-      recipe.ingredients.forEach(ingredient => {
-        const ingredientWithIsMatchDto: IngredientWithIsMatchDto = new IngredientWithIsMatchDto(ingredient.id, ingredient.name, recipe.matchedIngredients.some(x => x.id == ingredient.id));
-        ingredientsWithIsMatchDto.push(ingredientWithIsMatchDto);
+
+    const thumbNailRequest: ImageRequest = new ImageRequest('');
+    thumbNailRequest.width = this.platform.width();
+    thumbNailRequest.height = Math.floor(this.platform.width() * 0.75);
+    this.imageService.getImage(thumbNailRequest).subscribe((placeholderImg) => {
+      this.recipes = JSON.parse(localStorage.getItem('recipesFound')).map((recipe: Recipe) => {
+        const ingredientsWithIsMatchDto: IngredientWithIsMatchDto[] = [];
+        recipe.ingredients.forEach(ingredient => {
+          const ingredientWithIsMatchDto: IngredientWithIsMatchDto = new IngredientWithIsMatchDto(ingredient.id, ingredient.name, recipe.matchedIngredients.some(x => x.id === ingredient.id));
+          ingredientsWithIsMatchDto.push(ingredientWithIsMatchDto);
+        });
+        const recipeSearchResultDto = new RecipeSearchResultDto(recipe.id, recipe.title, recipe.host, recipe.url, recipe.imageUrl, placeholderImg, ingredientsWithIsMatchDto, recipe.matchedIngredients.length);
+        return recipeSearchResultDto;
       });
-      const recipeSearchResultDto = new RecipeSearchResultDto(recipe.id, recipe.title, recipe.host, recipe.url, recipe.imageUrl, ingredientsWithIsMatchDto, recipe.matchedIngredients.length);
-      return recipeSearchResultDto;
+      this.setTitle();
+      this.lazyLoadImage();
     });
-    this.setTitle();
+
+
 
   }
   setTitle() {
@@ -63,7 +78,7 @@ export class SearchResultPage implements OnInit {
   }
 
   toggleDetails(e: any, recipe: RecipeSearchResultDto) {
-     this.currentSelectedRecipeContainerElement = e.currentTarget;
+    this.currentSelectedRecipeContainerElement = e.currentTarget;
     const clientYOffset = this.currentSelectedRecipeContainerElement.offsetTop;
     console.log(clientYOffset);
     const clientXOffset = this.currentSelectedRecipeContainerElement.offsetLeft;
@@ -94,13 +109,8 @@ export class SearchResultPage implements OnInit {
     // this.setTitle();
     // this.currentSelectedRecipeContainerElement.classList.toggle('detailedView');
     const dialogRef = this.dialog.open(RecipeDetailComponent, {
-      width: '90vw',
       data: recipe,
     });
-
-    // dialogRef.updatePosition({
-    //   top: `200px`
-    // });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
@@ -113,4 +123,45 @@ export class SearchResultPage implements OnInit {
     return document.querySelector('ion-content');
   }
 
+
+  lazyLoadImage() {
+    this.recipes.forEach((recipe, index) => {
+      const imageRequest: ImageRequest = new ImageRequest(recipe.imageUrl);
+      imageRequest.width = this.platform.width();
+      imageRequest.height = Math.floor(this.platform.width() * 0.75);
+
+      this.imageService.getImage(imageRequest)
+        .subscribe({
+          next: (result: string) => {
+            recipe.imageSrc = result;
+            this.recipes.splice(index, 1, recipe);
+          },
+          error: (error: any) => {
+            console.error(error);
+            if (error instanceof HttpErrorResponse) {
+              switch (error.status) {
+                case 400:
+                  console.log('E-mail eller Password er forkert');
+                  break;
+                case 0:
+                  console.log('Ingen forbindelse til serveren');
+                  break;
+                default:
+                  const applicationError = error.headers.get('Application-Error');
+                  if (applicationError) {
+                    console.log(applicationError);
+                  }
+                  else {
+                    console.log('Der opstod en fejl');
+                  }
+                  break;
+              }
+            }
+          },
+          complete: () => {
+            // console.log("complete");
+          }
+        });
+    });
+  }
 }

@@ -34,7 +34,7 @@ export class UserPage implements OnInit {
         this.ingredientsInKitchenCupboard = [];
       }
       else {
-        this.ingredientsInKitchenCupboard = this.recipeService.orderAsc(ingredients, "name");
+        this.ingredientsInKitchenCupboard = this.recipeService.orderByNameAsc(ingredients);
       }
       this.prepareData();
     });
@@ -52,7 +52,7 @@ export class UserPage implements OnInit {
     }
   }
   ionViewWillEnter() {
-    this.selectedSegment = "kitchenCupboard";
+    this.selectedSegment = 'kitchenCupboard';
   }
 
   displayIngredientName(ingredient: Ingredient): string {
@@ -98,7 +98,7 @@ export class UserPage implements OnInit {
     let ingredient: Ingredient = event.option.value;
     this.ingredientsInKitchenCupboard.push(ingredient);
     this.ingredientSearchForm.setValue('');
-    this.ingredientsInKitchenCupboard = this.recipeService.orderAsc(this.ingredientsInKitchenCupboard, "name");
+    this.ingredientsInKitchenCupboard = this.recipeService.orderByNameAsc(this.ingredientsInKitchenCupboard);
     this.anyIngredientsInKitchenCupboardChanges = true;
   }
 
@@ -107,7 +107,7 @@ export class UserPage implements OnInit {
     const index = this.ingredientsInKitchenCupboard.indexOf(ingredient);
     if (index >= 0) {
       this.ingredientsInKitchenCupboard.splice(index, 1);
-      this.ingredientsInKitchenCupboard = this.recipeService.orderAsc(this.ingredientsInKitchenCupboard, "name");
+      this.ingredientsInKitchenCupboard = this.recipeService.orderByNameAsc(this.ingredientsInKitchenCupboard);
       this.anyIngredientsInKitchenCupboardChanges = true;
     }
   }
