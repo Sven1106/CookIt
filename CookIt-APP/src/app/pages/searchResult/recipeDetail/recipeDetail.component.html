@@ -1,10 +1,8 @@
 <div mat-dialog-title class="titleContainer">
   <div class="title">
-    <mat-icon style="position: absolute; top: 50%; left: 0; transform: translateY(-50%);" (click)="toggleFavorite($event)"> favorite</mat-icon>
+    <mat-icon class="mat-icon-vertical-center-left favBtn" ngClass="{{recipe.isFavorite ? 'active':''}}" (click)="toggleFavorite(recipe)"> {{recipe.isFavorite? 'favorite':'favorite_border'}}</mat-icon>
     {{recipe.title}}
-    <mat-icon style="position: absolute; top: 50%; right: 0; transform: translateY(-50%);">cross</mat-icon>
   </div>
-
 </div>
 <mat-dialog-content>
   <div class="label">
@@ -14,11 +12,9 @@
   <div class="ingredientsContainer">
     <div class="ingredients">
       <div class="ingredient" *ngFor="let item of recipe.ingredients">
-        <div style="position: relative;">
           {{item.name}}
-          <mat-icon style="position: absolute; top: 50%; right: 0; transform: translateY(-50%);" *ngIf="item.isMatch">
+          <mat-icon class="mat-icon-vertical-center-right" *ngIf="item.isMatch">
             check</mat-icon>
-        </div>
       </div>
     </div>
   </div>

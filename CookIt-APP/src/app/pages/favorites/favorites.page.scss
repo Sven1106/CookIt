@@ -1,0 +1,91 @@
+.favoriteRecipeContainer {
+    .favoriteRecipe {
+        padding: 16px;
+
+        .imageContainer {
+            display: inline-block;
+            width: 35%;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+
+
+
+        .contentContainer {
+            display: inline-block;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 4px 4px;
+
+            .content {
+                .title {
+                    text-align: center;
+                    font-size: 16px;
+                    font-family: 'Jost-Bold';
+                    font-weight: bold;
+                    margin-bottom: 8px;
+                    border-bottom: 1px solid transparent;
+                }
+
+                .label {
+                    font-family: 'Jost-Bold';
+                    position: relative;
+                    // left:0; Får værdi fra JS
+                    top: 0;
+                    display: inline-block;
+                    padding: 4px 8px;
+                    background-color: var(--ion-color-primary);
+                    font-size: 12px;
+                    line-height: 12px;
+                    min-width: 32px;
+                    border-radius: 2px;
+                    transform: translateX(-50%);
+                    font-weight: bold;
+                    text-align: center;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        bottom: -5px;
+                        transform: translateX(-50%);
+                        width: 0;
+                        height: 0;
+                        border-left: 5px solid transparent;
+                        border-right: 5px solid transparent;
+                        border-top: 5px solid var(--ion-color-primary);
+                    }
+
+                }
+
+                .progressBar {
+                    transition: 0.2s ease-in-out;
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+                    border-radius: 2px;
+                    height: 8px;
+                    opacity: 1;
+
+                    .background {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-color: grey;
+                        border-radius: inherit;
+                    }
+
+                    .foreground {
+                        position: absolute;
+                        height: 100%;
+                        background-color: var(--ion-color-primary);
+                        border-radius: inherit;
+                    }
+                }
+            }
+        }
+    }
+}

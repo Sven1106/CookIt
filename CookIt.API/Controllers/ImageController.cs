@@ -27,10 +27,6 @@ namespace CookIt.API.Controllers
         [HttpPost("getImage")]
         public async Task<IActionResult> GetScaledImageAsync(ImageResizeDto imageResize)
         {
-            if(imageResize.Src == null)
-            {
-                return BadRequest();
-            }
             string base64 = await this._imageService.GetOrSetScaledImageAsync(imageResize.Src, imageResize.Width, imageResize.Height);
             return Ok(base64);
         }

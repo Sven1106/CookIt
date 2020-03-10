@@ -228,3 +228,6 @@ button.homeSubmitBtn {
     opacity: 0 !important;
 }
 
+.custom-dialog-container .mat-dialog-container { // It appears it wont override if it is in the component.scss file
+    overflow: hidden !important;
+}

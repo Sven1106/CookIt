@@ -1,18 +1,19 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { Storage } from '@ionic/storage';
 import { FormControl } from '@angular/forms';
 import { map, startWith } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { Ingredient } from 'src/app/_models/ingredient';
-import { Recipe } from 'src/app/_models/recipe';
+import { RecipeWithMatchedIngredients } from 'src/app/_models/recipe';
 @Injectable({
   providedIn: 'root'
 })
 export class RecipeService {
   baseUrl = environment.apiDomain + 'api/';
-  recipes: Recipe;
+  recipes: RecipeWithMatchedIngredients;
   constructor(
     private httpClient: HttpClient,
     private storage: Storage
@@ -21,14 +22,24 @@ export class RecipeService {
 
   }
 
-  getRecipes(ingredients: Ingredient[]): Observable<Recipe[]> {
+  getAllFavoriteRecipes(): Observable<RecipeWithMatchedIngredients[]> {
+    return this.httpClient.get<RecipeWithMatchedIngredients[]>(this.baseUrl + 'user/getAllFavoriteRecipes');
+  }
+
+  toggleFavoriteRecipe(id: string) {
+    return this.httpClient.post<RecipeWithMatchedIngredients[]>(this.baseUrl + 'user/toggleFavoriteRecipe/' + id, '');
+  }
+
+  getRecipes(ingredients: Ingredient[]): Observable<RecipeWithMatchedIngredients[]> {
     let params = new HttpParams();
+    const missingIngredientsLimit = '10';
     ingredients.forEach(ingredient => {
       params = params.append('ingredientsIds', ingredient.id);
     });
-
-    return this.httpClient.get<Recipe[]>(this.baseUrl + 'recipes/getRecipes', { params: params });
+    params = params.append('missingIngredientsLimit', missingIngredientsLimit);
+    return this.httpClient.get<RecipeWithMatchedIngredients[]>(this.baseUrl + 'recipes/getRecipes', { params: params });
   }
+
   getIngredients(): Observable<Ingredient[]> {
     return this.httpClient.get<Ingredient[]>(this.baseUrl + 'recipes/getIngredients');
   }

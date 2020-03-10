@@ -8,7 +8,7 @@ import { AlertService } from 'src/app/_services/alert.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { MatAutocompleteSelectedEvent } from '@angular/material';
 import { IngredientWithIsDisabledDto } from 'src/app/_models/ingredientWithIsDisabledDto';
-import { Recipe } from 'src/app/_models/recipe';
+import { RecipeWithMatchedIngredients } from 'src/app/_models/recipe';
 
 
 @Component({
@@ -143,7 +143,7 @@ export class SearchFilterPage implements OnInit {
   searchRecipes() {
     this.gettingRecipes = true;
     this.recipeService.getRecipes(this.ingredientsForSubmit).subscribe({
-      next: (next: Recipe[]) => {
+      next: (next: RecipeWithMatchedIngredients[]) => {
         this.gettingRecipes = false;
         if (next === null) {
           this.alertService.success('Ingen opskrifter fundet', 2000);

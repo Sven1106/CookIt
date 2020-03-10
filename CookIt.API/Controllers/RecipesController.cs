@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using CookIt.API.Dtos;
 using CookIt.API.Interfaces;
@@ -36,7 +37,7 @@ namespace CookIt.API.Controllers
         [HttpGet("getIngredients"), AllowAnonymous]
         public async Task<ActionResult> GetIngredientsAsync()
         {
-            List<Ingredient> ingredients =  await _ingredientRepository.GetIngredients();
+            List<Ingredient> ingredients = await _ingredientRepository.GetIngredients();
             if (ingredients == null)
             {
                 return StatusCode(500, "GetIngredients failed");
@@ -47,25 +48,36 @@ namespace CookIt.API.Controllers
             }
             return Ok(ingredients);
         }
-        [HttpGet("getRecipes"), AllowAnonymous]
+        [HttpGet("getRecipes")]
         public async Task<ActionResult> GetRecipesAsync([FromQuery]GetRecipesFilterDto filter)
         {
-            if (filter.IngredientsIds == null || filter.IngredientsIds.Count == 0)
+            List<RecipeWithMatchedIngredientsDto> recipesWithMatchedIngredients = new List<RecipeWithMatchedIngredientsDto>();
+            if (Guid.TryParse(User.FindFirst(ClaimTypes.NameIdentifier).Value, out Guid userId))
             {
-                return BadRequest("Invalid Dto");
+                if (filter.IngredientsIds == null || filter.IngredientsIds.Count == 0)
+                {
+                    return BadRequest("Invalid Dto");
+                }
+
+                recipesWithMatchedIngredients = await _recipeRepository.GetFilteredRecipesAsync(filter, userId);
+                if (recipesWithMatchedIngredients == null)
+                {
+                    return StatusCode(500, "GetRecipes failed");
+                }
+                if (recipesWithMatchedIngredients.Count == 0)
+                {
+                    return NoContent();
+                }
+
             }
-            List<RecipeForListDto> recipes = await _recipeRepository.GetFilteredRecipesAsync(filter);
-            if (recipes == null)
+            else
             {
-                return StatusCode(500, "GetRecipes failed");
+                return StatusCode(500, "No valid userId found in claims");
             }
-            if (recipes.Count == 0)
-            {
-                return NoContent();
-            }
-            return Ok(recipes);
+
+            return Ok(recipesWithMatchedIngredients);
         }
-        [HttpGet("{id}"), AllowAnonymous]
+        [HttpGet("{id}")]
         public async Task<ActionResult> GetRecipeAsync(Guid id)
         {
             Recipe recipe = await _recipeRepository.GetRecipeAsync(id);

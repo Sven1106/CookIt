@@ -24,8 +24,8 @@ namespace CookIt.API.Controllers
         {
             _recipeRepository = recipeRepository;
         }
-        [HttpPost("addRecipeToFavorite/{recipeId}")]
-        public async Task<IActionResult> AddRecipeToFavorite(Guid recipeId)
+        [HttpPost("toggleFavoriteRecipe/{recipeId}")]
+        public async Task<IActionResult> ToggleFavoriteRecipe(Guid recipeId)
         {
             if (Guid.TryParse(User.FindFirst(ClaimTypes.NameIdentifier).Value, out Guid userId))
             {
@@ -34,7 +34,8 @@ namespace CookIt.API.Controllers
                 {
                     return BadRequest("No recipe found");
                 }
-                int changesMade = await _recipeRepository.CreateFavoriteRecipeAsync(userId, recipe);
+
+                int changesMade = await _recipeRepository.ToggleFavoriteRecipeAsync(userId, recipeId);
                 if (changesMade == 0)
                 {
                     return BadRequest("No changes were made");
@@ -42,7 +43,7 @@ namespace CookIt.API.Controllers
             }
             else
             {
-                return StatusCode(500, "AddRecipeToFavorite failed");
+                return StatusCode(500, "No valid userId found in claims");
             }
             return Ok();
         }
@@ -50,24 +51,29 @@ namespace CookIt.API.Controllers
         [HttpGet("getAllFavoriteRecipes")]
         public async Task<IActionResult> GetAllFavoriteRecipes()
         {
-            List<FavoriteRecipeDto> favoriteRecipes = new List<FavoriteRecipeDto>();
+            List<RecipeWithMatchedIngredientsDto> recipesWithMatchedIngredients = new List<RecipeWithMatchedIngredientsDto>();
             if (Guid.TryParse(User.FindFirst(ClaimTypes.NameIdentifier).Value, out Guid userId))
             {
-                favoriteRecipes = await _recipeRepository.GetFavoriteRecipes(userId);
-                if (favoriteRecipes == null)
+                GetRecipesFilterDto getRecipesFilterDto = new GetRecipesFilterDto();
+                recipesWithMatchedIngredients = await _recipeRepository.GetFilteredRecipesAsync(getRecipesFilterDto, userId);
+
+                if (recipesWithMatchedIngredients == null)
                 {
                     return StatusCode(500, "GetFavoriteRecipes failed");
                 }
-                if (favoriteRecipes.Count == 0)
+
+                recipesWithMatchedIngredients = recipesWithMatchedIngredients.Where(x => x.IsFavorite == true).ToList();
+                if (recipesWithMatchedIngredients.Count == 0)
                 {
                     return NoContent();
                 }
+
             }
             else
             {
-                return StatusCode(500, "No userId found in claims");
+                return StatusCode(500, "No valid userId found in claims");
             }
-            return Ok(favoriteRecipes);
+            return Ok(recipesWithMatchedIngredients);
         }
     }
 }

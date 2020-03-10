@@ -9,7 +9,7 @@ namespace CookIt.API.Dtos
     public class FavoriteRecipeDto
     {
         public Guid Id { get; set; }
-        public RecipeForListDto Recipe { get; set; }
+        public RecipeWithMatchedIngredientsDto Recipe { get; set; }
 
     }
 }

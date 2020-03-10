@@ -7,5 +7,12 @@
 </ion-header>
 
 <ion-content>
-
+  <div class="favoriteRecipeContainer" *ngFor=" let recipe of favoriteRecipes">
+    <div class="favoriteRecipe">
+      <div class="imageContainer">
+        <img src="{{recipe.imageSrc}}"
+          alt="">
+      </div>
+    </div>
+  </div>
 </ion-content>
