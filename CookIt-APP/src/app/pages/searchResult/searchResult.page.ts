@@ -82,7 +82,6 @@ export class SearchResultPage implements OnInit {
     const clientYOffset = this.currentSelectedRecipeContainerElement.offsetTop;
     console.log(clientYOffset);
     const clientXOffset = this.currentSelectedRecipeContainerElement.offsetLeft;
-    const content = this.getContent();
     // const allRecipeElements = document.querySelectorAll('.recipeContainer');
     // allRecipeElements.forEach((recipeElement) => {
     //   if (recipeElement  !== this.currentSelectedRecipeContainerElement) {

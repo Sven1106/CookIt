@@ -12,6 +12,7 @@ namespace CookIt.API.Data
         public DbSet<RecipeSentence> RecipeSentence { get; set; }
         public DbSet<RecipeSentenceIngredient> RecipeSentenceIngredient { get; set; }
         public DbSet<User> User{ get; set; }
+        public DbSet<FavoriteRecipe> FavoriteRecipe{ get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -37,6 +38,10 @@ namespace CookIt.API.Data
                 entity.Property(x => x.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
             });
             modelBuilder.Entity<User>(entity =>
+            {
+                entity.Property(x => x.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
+            });
+            modelBuilder.Entity<FavoriteRecipe>(entity =>
             {
                 entity.Property(x => x.Id).HasColumnType("UniqueIdentifier").HasDefaultValueSql("NEWID()");
             });

@@ -19,6 +19,59 @@ namespace CookIt.API.Repositories
         {
             _appDbContext = appDbContext;
         }
+        public async Task<int> CreateFavoriteRecipeAsync(Guid userId, Recipe recipe)
+        {
+            User user = await _appDbContext.User.FindAsync(userId);
+            FavoriteRecipe favoriteRecipe = new FavoriteRecipe(user, recipe);
+            await _appDbContext.FavoriteRecipe.AddAsync(favoriteRecipe);
+            return await _appDbContext.SaveChangesAsync();
+        }
+
+        public async Task<List<FavoriteRecipeDto>> GetFavoriteRecipes(Guid userId)
+        {
+            IQueryable<FavoriteRecipe> query = _appDbContext.FavoriteRecipe
+                .AsNoTracking()
+                .Include(favoriteRecipe => favoriteRecipe.User)
+                .Include(favoriteRecipe => favoriteRecipe.Recipe)
+                    .ThenInclude(recipe => recipe.Host)
+                .Include(favoriteRecipe => favoriteRecipe.Recipe)
+                    .ThenInclude(recipe => recipe.RecipeSentences)
+                        .ThenInclude(recipeSentence => recipeSentence.RecipeSentenceIngredients)
+                         .ThenInclude(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient);
+
+            query.Where(x => x.User.Id == userId);
+
+
+
+
+            var bla = await query.ToListAsync();
+
+
+                    //IQueryable<Recipe> query = _appDbContext.Recipe
+                    //.AsNoTracking()
+                    //.Include(recipe => recipe.Host)
+                    //.Include(recipe => recipe.RecipeSentences)
+                    //    .ThenInclude(recipeSentence => recipeSentence.RecipeSentenceIngredients)
+                    //        .ThenInclude(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient);
+
+
+
+
+            //List<FavoriteRecipe> favoriteRecipes = await _appDbContext.FavoriteRecipe.Where(x => x.UserId == userId).ToListAsync();
+
+            List<FavoriteRecipeDto> favoriteRecipeDtos = new List<FavoriteRecipeDto>();
+            //foreach (var favoriteRecipe in favoriteRecipes)
+            //{
+            //    Recipe recipe = _appDbContext.Recipe.Find(favoriteRecipe.RecipeId);
+            //    FavoriteRecipeDto favoriteRecipeDto = new FavoriteRecipeDto(favoriteRecipe.Id, favoriteRecipe.UserId, recipe);
+            //    favoriteRecipeDtos.Add(favoriteRecipeDto);
+            //}
+
+            return favoriteRecipeDtos;
+        }
+
+
+
         public async Task<int> CreateRecipesAsync(CreateRecipeDto createRecipeDto)
         {
             List<Ingredient> ingredients = await _appDbContext.Ingredient.OrderBy(i => i.Name).ToListAsync();

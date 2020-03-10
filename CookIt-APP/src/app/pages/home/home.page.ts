@@ -47,6 +47,7 @@ export class HomePage implements OnInit {
 
   signIn(signInForm: FormGroup) {
     this.signingIn = true;
+    console.log(signInForm);
     this.authService.login(signInForm.value)
       .subscribe(
         {

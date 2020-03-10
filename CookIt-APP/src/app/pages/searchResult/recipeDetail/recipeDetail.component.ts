@@ -3,8 +3,6 @@ import { ImageService } from './../../../_services/image.service';
 import { RecipeSearchResultDto } from './../../../_models/recipeSearchResultDto';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { map } from 'rxjs/operators';
-import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-recipeDetail',
@@ -23,6 +21,7 @@ export class RecipeDetailComponent implements OnInit {
 
   }
   ngOnInit() {
+    this.dialogRef.updateSize('90vw');
     this.dialogRef.updatePosition({
       top: '25vh'
     });
@@ -38,5 +37,8 @@ export class RecipeDetailComponent implements OnInit {
     window.open(event, '_system');
   }
 
+  toggleFavorite(e) {
+    console.log(e);
+  }
 
 }

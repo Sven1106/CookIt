@@ -17,5 +17,7 @@ namespace CookIt.API.Interfaces
         Task<RecipeSentenceIngredient> GetRecipeSentenceIngredientAsync(Guid id);
         Task<int> UpdateRecipeSentenceIngredientAsync(Guid id, string ingredientValue);
         Task<int> DeleteRecipeSentenceIngredientAsync(Guid id);
+        Task<int> CreateFavoriteRecipeAsync(Guid userId, Recipe recipe);
+        Task<List<FavoriteRecipeDto>> GetFavoriteRecipes(Guid userId);
     }
 }

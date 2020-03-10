@@ -1,3 +1,4 @@
+import { environment } from './../environments/environment';
 import {
   IonicModule,
   IonicRouteStrategy
@@ -35,6 +36,24 @@ export function tokenGetter() {
 
   return localStorage.getItem('tokenForJwtModuleHttpRequest');
 }
+
+export function extractHostname(url) {
+  let hostname;
+  //find & remove protocol (http, ftp, etc.) and get hostname
+
+  if (url.indexOf("//") > -1) {
+    hostname = url.split('/')[2];
+  }
+  else {
+    hostname = url.split('/')[0];
+  }
+
+  //find & remove "?"
+  hostname = hostname.split('?')[0];
+  return hostname;
+}
+
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -49,8 +68,8 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter,
-        whitelistedDomains: ['localhost:49615'], // auto sends JWT to these domains
-        blacklistedRoutes: ['localhost:49615/api/auth'] // doesnt auto sends JWT to these domains
+        whitelistedDomains: [extractHostname(environment.apiDomain)], // auto sends JWT to these domains
+        blacklistedRoutes: [extractHostname(environment.apiDomain) + '/api/auth'] // doesnt auto sends JWT to these domains
       }
     }),
     MatInputModule,
