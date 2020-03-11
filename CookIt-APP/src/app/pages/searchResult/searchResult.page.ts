@@ -1,11 +1,11 @@
-import { RecipeDetailComponent } from './recipeDetail/recipeDetail.component';
+import { RecipeDetailComponent } from '../../_shared/recipeDetail/recipeDetail.component';
 
 import { AlertService } from 'src/app/_services/alert.service';
-import { RecipeWithMatchedIngredients } from 'src/app/_models/recipe';
+import { RecipeWithMatchedIngredients } from 'src/app/_models/recipeWithMatchedIngredients';
 import { IngredientWithIsMatchDto } from 'src/app/_models/ingredientWithIsMatchDto';
 
 import { Component, OnInit, Inject } from '@angular/core';
-import { RecipeForListDto } from 'src/app/_models/recipeSearchResultDto';
+import { RecipeForListDto } from 'src/app/_models/RecipeForListDto';
 import { MatDialog } from '@angular/material/dialog';
 import { ImageRequest } from 'src/app/_models/imageRequest';
 import { ImageService } from 'src/app/_services/image.service';
@@ -30,13 +30,11 @@ export class SearchResultPage implements OnInit {
   currentSelectedRecipeContainerElement: HTMLElement;
   constructor(
     public dialog: MatDialog,
-    private alertService: AlertService,
     private imageService: ImageService,
     private platform: Platform
   ) { }
 
   ngOnInit() {
-
     const thumbNailRequest: ImageRequest = new ImageRequest('');
     thumbNailRequest.width = this.platform.width();
     thumbNailRequest.height = Math.floor(this.platform.width() * 0.75);
@@ -61,7 +59,8 @@ export class SearchResultPage implements OnInit {
     this.title = this.isDetailedView ? 'Detaljer om opskriften' : this.recipes.length + ' opskrifter fundet';
   }
 
-  toggleDetails(e: any, recipe: RecipeForListDto) {
+  toggleDetails(recipe: RecipeForListDto) {
+    console.log(recipe);
     const dialogRef = this.dialog.open(RecipeDetailComponent, {
       panelClass: 'custom-dialog-container',
       data: recipe,
@@ -69,8 +68,6 @@ export class SearchResultPage implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
 
     });
-
-
   }
   getContent() {
     return document.querySelector('ion-content');

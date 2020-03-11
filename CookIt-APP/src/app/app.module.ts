@@ -31,6 +31,7 @@ import { AuthService } from './_services/auth/auth.service';
 import { AlertService } from './_services/alert.service';
 import { NetworkService } from './_services/network.service';
 import { RecipeService } from './_services/recipe.service';
+import { RecipeDetailComponent } from './_shared/recipeDetail/recipeDetail.component';
 
 export function tokenGetter() {
 
@@ -55,7 +56,8 @@ export function extractHostname(url) {
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, RecipeDetailComponent],
+  entryComponents: [RecipeDetailComponent],
   imports: [
     BrowserAnimationsModule,
     FormsModule,

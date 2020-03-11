@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-  <div class="recipeContainer" (click)="toggleDetails($event,recipe)" *ngFor=" let recipe of recipes">
+  <div class="recipeContainer" (click)="toggleDetails(recipe)" *ngFor=" let recipe of recipes">
     <div class="recipe">
       <div class="imageContainer">
         <img src="{{recipe.imageSrc}}"

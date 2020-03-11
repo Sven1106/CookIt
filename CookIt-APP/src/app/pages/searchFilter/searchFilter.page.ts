@@ -8,7 +8,7 @@ import { AlertService } from 'src/app/_services/alert.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { MatAutocompleteSelectedEvent } from '@angular/material';
 import { IngredientWithIsDisabledDto } from 'src/app/_models/ingredientWithIsDisabledDto';
-import { RecipeWithMatchedIngredients } from 'src/app/_models/recipe';
+import { RecipeWithMatchedIngredients } from 'src/app/_models/recipeWithMatchedIngredients';
 
 
 @Component({

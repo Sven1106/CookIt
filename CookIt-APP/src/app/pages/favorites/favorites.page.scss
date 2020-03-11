@@ -1,9 +1,15 @@
 .favoriteRecipeContainer {
+    margin-bottom: 16px;
+    border-radius: 0 8px 8px 0;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
     .favoriteRecipe {
-        padding: 16px;
+        display: table-row;
+
 
         .imageContainer {
-            display: inline-block;
+            display: table-cell;
             width: 35%;
 
             img {
@@ -15,60 +21,72 @@
 
 
         .contentContainer {
-            display: inline-block;
-            background-color: white;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            border-radius: 0 0 4px 4px;
+            position: relative;
+            vertical-align: top;
+            display: table-cell;
+            width: 65%;
+            height: 100%;
+           
 
             .content {
+
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: 30px;
                 .title {
                     text-align: center;
-                    font-size: 16px;
+                    font-size: 18px;
                     font-family: 'Jost-Bold';
                     font-weight: bold;
                     margin-bottom: 8px;
                     border-bottom: 1px solid transparent;
                 }
 
-                .label {
-                    font-family: 'Jost-Bold';
-                    position: relative;
-                    // left:0; Får værdi fra JS
-                    top: 0;
-                    display: inline-block;
-                    padding: 4px 8px;
-                    background-color: var(--ion-color-primary);
-                    font-size: 12px;
-                    line-height: 12px;
-                    min-width: 32px;
-                    border-radius: 2px;
-                    transform: translateX(-50%);
-                    font-weight: bold;
-                    text-align: center;
 
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        left: 50%;
-                        bottom: -5px;
-                        transform: translateX(-50%);
-                        width: 0;
-                        height: 0;
-                        border-left: 5px solid transparent;
-                        border-right: 5px solid transparent;
-                        border-top: 5px solid var(--ion-color-primary);
-                    }
-
-                }
 
                 .progressBar {
+                    position: absolute;
+                    bottom: 0;
                     transition: 0.2s ease-in-out;
-                    position: relative;
                     display: inline-block;
                     width: 100%;
                     border-radius: 2px;
                     height: 8px;
                     opacity: 1;
+
+                    .label {
+                        font-family: 'Jost-Bold';
+                        position: absolute;
+                        // left:0; Får værdi fra JS
+                        bottom: 14px;
+                        display: inline-block;
+                        padding: 4px 8px;
+                        background-color: var(--ion-color-primary);
+                        font-size: 12px;
+                        line-height: 12px;
+                        min-width: 32px;
+                        border-radius: 2px;
+                        transform: translateX(-50%);
+                        font-weight: bold;
+                        text-align: center;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 50%;
+                            bottom: -5px;
+                            transform: translateX(-50%);
+                            width: 0;
+                            height: 0;
+                            border-left: 5px solid transparent;
+                            border-right: 5px solid transparent;
+                            border-top: 5px solid var(--ion-color-primary);
+                        }
+
+                    }
 
                     .background {
                         position: absolute;
@@ -84,6 +102,7 @@
                         background-color: var(--ion-color-primary);
                         border-radius: inherit;
                     }
+
                 }
             }
         }

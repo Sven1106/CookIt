@@ -49,13 +49,12 @@ namespace CookIt.API.Controllers
         }
 
         [HttpGet("getAllFavoriteRecipes")]
-        public async Task<IActionResult> GetAllFavoriteRecipes()
+        public async Task<IActionResult> GetAllFavoriteRecipes([FromQuery]GetRecipesFilterDto filter)
         {
             List<RecipeWithMatchedIngredientsDto> recipesWithMatchedIngredients = new List<RecipeWithMatchedIngredientsDto>();
             if (Guid.TryParse(User.FindFirst(ClaimTypes.NameIdentifier).Value, out Guid userId))
             {
-                GetRecipesFilterDto getRecipesFilterDto = new GetRecipesFilterDto();
-                recipesWithMatchedIngredients = await _recipeRepository.GetFilteredRecipesAsync(getRecipesFilterDto, userId);
+                recipesWithMatchedIngredients = await _recipeRepository.GetFilteredRecipesAsync(filter, userId);
 
                 if (recipesWithMatchedIngredients == null)
                 {

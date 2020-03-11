@@ -7,11 +7,34 @@
 </ion-header>
 
 <ion-content>
-  <div class="favoriteRecipeContainer" *ngFor=" let recipe of favoriteRecipes">
-    <div class="favoriteRecipe">
-      <div class="imageContainer">
-        <img src="{{recipe.imageSrc}}"
-          alt="">
+  <div class="ion-margin favoriteRecipes">
+    <p *ngIf="favoriteRecipes.length == 0">
+      Ingen farvorit opskrifter
+    </p>
+    <div class="favoriteRecipeContainer" *ngFor=" let recipe of favoriteRecipes" (click)="toggleDetails(recipe)">
+      <div class="favoriteRecipe">
+        <div class="imageContainer">
+          <img src="{{recipe.imageSrc}}" alt="">
+        </div>
+        <div class="contentContainer">
+          <div class="content">
+            <div class="title">
+              {{recipe.title}}
+            </div>
+
+
+            <div class="progressBar">
+              <div class="label" [style.left.%]="recipe.matchedIngredientsCount/recipe.ingredients.length *100">
+                {{recipe.matchedIngredientsCount}} / {{recipe.ingredients.length}}
+              </div>
+              <div class="background">
+              </div>
+              <div class="foreground" [style.width.%]="recipe.matchedIngredientsCount/recipe.ingredients.length *100">
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
