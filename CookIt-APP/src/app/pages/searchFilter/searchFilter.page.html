@@ -16,7 +16,7 @@
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayIngredientName"
           (optionSelected)="addIngredientToAdditionalIngredients($event)">
           <mat-option
-            *ngFor="let ingredientOption of filteredIngredientOptions | async| slice : 0 : ingredientSearchLimit"
+            *ngFor="let ingredientOption of filteredIngredientList | async| slice : 0 : ingredientSearchLimit"
             [value]="ingredientOption">
             {{ingredientOption.name}}
           </mat-option>

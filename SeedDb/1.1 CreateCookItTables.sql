@@ -38,6 +38,7 @@ CREATE TABLE [User] (
   PasswordHash varbinary(MAX) NOT NULL,
   PasswordSalt varbinary(MAX) NOT NULL,
   [Role] varchar(5) NOT NULL,
+  UserIngredients varchar(MAX)
 
 )
 GO

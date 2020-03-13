@@ -2,8 +2,8 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
-import { RecipeService } from 'src/app/_services/recipe.service';
-import { AlertService } from 'src/app/_services/alert.service';
+import { RecipeService } from 'src/app/_services/recipe/recipe.service';
+import { AlertService } from 'src/app/_services/alert/alert.service';
 import { AuthService } from 'src/app/_services/auth/auth.service';
 
 
@@ -47,7 +47,6 @@ export class HomePage implements OnInit {
 
   signIn(signInForm: FormGroup) {
     this.signingIn = true;
-    console.log(signInForm);
     this.authService.login(signInForm.value)
       .subscribe(
         {
@@ -132,6 +131,5 @@ export class HomePage implements OnInit {
   }
   signOut() {
     this.authService.removeDecodedToken();
-    this.recipeService.removeKitchenCupboardInStorage();
   }
 }

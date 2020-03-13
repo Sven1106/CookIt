@@ -37,4 +37,9 @@ namespace CookIt.API.Models
         public List<Guid> HostIds { get; set; }
         public int? MissingIngredientsLimit { get; set; }
     }
+
+    public class GetFavoriteRecipesDto
+    {
+        public List<Guid> IngredientsIds { get; set; }
+    }
 }

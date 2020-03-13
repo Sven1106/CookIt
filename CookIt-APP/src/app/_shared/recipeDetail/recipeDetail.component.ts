@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { RecipeService } from 'src/app/_services/recipe.service';
+import { RecipeService } from 'src/app/_services/recipe/recipe.service';
 import { RecipeForListDto } from 'src/app/_models/RecipeForListDto';
 import { HttpErrorResponse } from '@angular/common/http';
 
@@ -12,13 +12,13 @@ import { HttpErrorResponse } from '@angular/common/http';
 
 export class RecipeDetailComponent implements OnInit {
 
+  oldIsFavorite: boolean;
   constructor(
     public dialogRef: MatDialogRef<RecipeDetailComponent>,
     @Inject(MAT_DIALOG_DATA) public recipe: RecipeForListDto,
-    private recipeService: RecipeService
+    public recipeService: RecipeService
   ) {
-
-
+    this.oldIsFavorite = this.recipe.isFavorite;
   }
   ngOnInit() {
     this.dialogRef.updateSize('90vw');
@@ -30,15 +30,11 @@ export class RecipeDetailComponent implements OnInit {
 
   }
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
   goToUrl(event: string) {
     window.open(event, '_system');
   }
 
   toggleFavorite(recipe: RecipeForListDto) {
-    this.recipeService.toggleFavoriteRecipe(recipe);
+    this.recipe.isFavorite = !this.recipe.isFavorite;
   }
 }

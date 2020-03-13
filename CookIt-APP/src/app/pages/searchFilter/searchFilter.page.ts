@@ -3,12 +3,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Ingredient } from 'src/app/_models/ingredient';
 import { Observable } from 'rxjs';
-import { RecipeService } from 'src/app/_services/recipe.service';
-import { AlertService } from 'src/app/_services/alert.service';
+import { RecipeService } from 'src/app/_services/recipe/recipe.service';
+import { AlertService } from 'src/app/_services/alert/alert.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { MatAutocompleteSelectedEvent } from '@angular/material';
 import { IngredientWithIsDisabledDto } from 'src/app/_models/ingredientWithIsDisabledDto';
 import { RecipeWithMatchedIngredients } from 'src/app/_models/recipeWithMatchedIngredients';
+import { List } from 'lodash';
 
 
 @Component({
@@ -22,11 +23,9 @@ export class SearchFilterPage implements OnInit {
   ingredientSearchLimit: number = 20;
   ingredientSearchForm = new FormControl();
   ingredientOptions: Ingredient[] = [];
-  filteredIngredientOptions: Observable<Ingredient[]>;
+  filteredIngredientList: Observable<Ingredient[]>;
   additionalIngredients: Ingredient[] = [];
   ingredientsInKitchenCupboard: IngredientWithIsDisabledDto[] = [];
-
-
   ingredientsForSubmit: Ingredient[] = [];
   constructor(
     private recipeService: RecipeService,
@@ -35,58 +34,63 @@ export class SearchFilterPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.recipeService.ingredients.subscribe(ingredients => {
+      this.ingredientOptions = ingredients.filter(x => x.id !== '00000000-0000-0000-0000-000000000000');
+    });
+    this.recipeService.ingredientsInKitchenCupboard.subscribe(ingredientsInKitchenCupboard => {
+      this.ingredientsInKitchenCupboard = ingredientsInKitchenCupboard;
+      this.updateFilteredIngredientOptions();
+      this.prepareIngredientsForSubmit();
+    });
 
   }
   ionViewWillEnter() {
     this.gettingRecipes = false;
     this.additionalIngredients = [];
-    this.recipeService.getIngredientsFromKitchenCupboardInStorage().then(ingredients => {
-      if (ingredients === null) {
-        this.ingredientsInKitchenCupboard = [];
-      }
-      else {
-        this.ingredientsInKitchenCupboard = this.recipeService.orderByNameAsc(ingredients.map(x => new IngredientWithIsDisabledDto(x.id, x.name)));
-      }
-      this.prepareData();
-    });
-  }
+    // this.recipeService.initData().subscribe(
+    //   {
+    //     next: () => {
+    //       if (this.recipeService.ingredientsInKitchenCupboard === null) {
+    //         this.ingredientsInKitchenCupboard = [];
+    //       }
+    //       else {
+    //         this.ingredientsInKitchenCupboard = this.recipeService.orderByNameAsc(this.recipeService.ingredientsInKitchenCupboard.map(x => new IngredientWithIsDisabledDto(x.id, x.name)));
+    //       }
+    //       this.prepareData();
+    //     },
+    //     error: (error: any) => {
+    //       console.error(error);
+    //       if (error instanceof HttpErrorResponse) {
+    //         switch (error.status) {
+    //           case 400:
+    //             console.log('Ingen opskrifter fundet eller ingen ændringer lavet');
+    //             break;
+    //           case 0:
+    //             console.log('Ingen forbindelse til serveren');
+    //             break;
+    //           default:
+    //             const applicationError = error.headers.get('Application-Error');
+    //             if (applicationError) {
+    //               console.log(applicationError);
+    //             }
+    //             else {
+    //               console.log('Der opstod en fejl');
+    //             }
+    //             break;
+    //         }
+    //       }
+    //     },
+    //     complete: () => {
+    //       console.log('complete');
+    //     }
+    //   });
 
-  prepareData() {
-    this.recipeService.getIngredients().subscribe({
-      next: (next: Ingredient[]) => {
-        this.ingredientOptions = next.filter(x => x.id !== '00000000-0000-0000-0000-000000000000')
-          .map(x => new Ingredient(x.id, x.name));// TODO Figure out why .map(x => new Ingredient(x.id, x.name)); is necessary for casting from object to Ingredient. <Ingredient[]> or as Ingredient[] doesn't work
-        this.updateFilteredIngredientOptions();
-      },
-      error: (error) => {
-        if (error instanceof HttpErrorResponse) {
-          switch (error.status) {
-            case 400:
-              this.alertService.error('Igen ingredienser fundet');
-              break;
-            case 0:
-              this.alertService.error('Ingen forbindelse til serveren');
-              break;
-            default:
-              const applicationError = error.headers.get('Application-Error');
-              if (applicationError) {
-                this.alertService.error(applicationError);
-              }
-              else {
-                this.alertService.error('Der opstod en fejl');
-              }
-              break;
-          }
-        }
-      }
-    });
-    this.prepareIngredientsForSubmit();
   }
 
   private updateFilteredIngredientOptions() {
     const ingredientInRecipeSearchDtoToIngredients = this.ingredientsInKitchenCupboard.map(x => new Ingredient(x.id, x.name));
-    const ingredientsToIgnore = this.additionalIngredients.concat(ingredientInRecipeSearchDtoToIngredients);
-    this.filteredIngredientOptions = this.recipeService.setIngredientSearchObservable(this.ingredientSearchForm, this.ingredientOptions, ingredientsToIgnore);
+    const alreadySelectedIngredients = this.additionalIngredients.concat(ingredientInRecipeSearchDtoToIngredients);
+    this.filteredIngredientList = this.recipeService.setIngredientSearchObservable(this.ingredientSearchForm, this.ingredientOptions, alreadySelectedIngredients);
   }
 
   displayIngredientName(ingredient: Ingredient): string {
@@ -142,14 +146,13 @@ export class SearchFilterPage implements OnInit {
 
   searchRecipes() {
     this.gettingRecipes = true;
-    this.recipeService.getRecipes(this.ingredientsForSubmit).subscribe({
-      next: (next: RecipeWithMatchedIngredients[]) => {
+    this.recipeService.searchForRecipes(this.ingredientsForSubmit).subscribe({
+      next: (next: boolean) => {
         this.gettingRecipes = false;
-        if (next === null) {
+        if (next === false) {
           this.alertService.success('Ingen opskrifter fundet', 2000);
         }
         else {
-          localStorage.setItem('recipesFound', JSON.stringify(next));
           this.router.navigateByUrl('tabs/recipes/searchResult');
         }
       },
@@ -157,7 +160,7 @@ export class SearchFilterPage implements OnInit {
         if (error instanceof HttpErrorResponse) {
           switch (error.status) {
             case 400:
-              this.alertService.error('Igen ingredienser fundet');
+              this.alertService.error('Igen ingredienser matchede');
               break;
             case 0:
               this.alertService.error('Ingen forbindelse til serveren');

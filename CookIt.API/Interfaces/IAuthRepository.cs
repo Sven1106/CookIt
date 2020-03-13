@@ -8,5 +8,6 @@ namespace CookIt.API.Interfaces
         Task<User> RegisterAsync(User user, string password);
         Task<User> LoginAsync(string email, string password);
         Task<bool> UserExistsAsync(string email);
+
     }
 }

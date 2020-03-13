@@ -19,6 +19,85 @@ namespace CookIt.API.Repositories
         {
             _appDbContext = appDbContext;
         }
+        public async Task<List<RecipeWithMatchedIngredientsDto>> GetFavoriteRecipesAsync(GetFavoriteRecipesDto filter, Guid userId)
+        {
+            List<Recipe> recipes = new List<Recipe>();
+
+            IQueryable<Recipe> query = _appDbContext.Recipe
+                .AsNoTracking()
+                .Include(recipe => recipe.Host)
+                .Include(recipe => recipe.RecipeSentences)
+                    .ThenInclude(recipeSentence => recipeSentence.RecipeSentenceIngredients)
+                        .ThenInclude(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient);
+
+            #region filtering
+
+
+            IQueryable<FavoriteRecipe> favoriteRecipes = _appDbContext.FavoriteRecipe.Where(x => x.UserId == userId).AsQueryable();
+
+            query = query
+                .Where(recipe => (favoriteRecipes != null ? favoriteRecipes.Any(x => x.RecipeId == recipe.Id) : false) == true);
+
+            #endregion filtering
+
+
+            #region DTOMapping
+            List<RecipeWithMatchedIngredientsDto> filteredRecipesForList = new List<RecipeWithMatchedIngredientsDto>();
+            filteredRecipesForList = await query
+                .Select(recipe => new RecipeWithMatchedIngredientsDto
+                {
+                    Id = recipe.Id,
+                    Title = recipe.Title,
+                    Host = recipe.Host,
+                    Url = recipe.Url,
+                    ImageUrl = recipe.ImageUrl,
+                    IsFavorite = true,
+                    Ingredients = recipe.RecipeSentences
+                        .Select(recipeSentence => recipeSentence.RecipeSentenceIngredients
+                            .Any(x => filter.IngredientsIds != null
+                                ? filter.IngredientsIds.Contains(x.Ingredient.Id)
+                                : false
+                            )
+                            ? recipeSentence.RecipeSentenceIngredients
+                                .Select(x => x.Ingredient)
+                                .Where(x => filter.IngredientsIds != null
+                                    ? filter.IngredientsIds.Contains(x.Id)
+                                    : false
+                                )
+                                .FirstOrDefault()
+                            : recipeSentence.RecipeSentenceIngredients
+                                .Select(recipeSentenceIngredient => recipeSentenceIngredient.Ingredient)
+                                .FirstOrDefault()
+                        )
+                        .ToList(),
+                    MatchedIngredients = recipe.RecipeSentences
+                        .Select(recipeSentence => recipeSentence.RecipeSentenceIngredients
+                           .Select(x => x.Ingredient)
+                           .Where(x => filter.IngredientsIds != null
+                               ? filter.IngredientsIds.Contains(x.Id)
+                               : false
+                            )
+                           .FirstOrDefault()
+                        )
+                        .Where(x => x != null)
+                        .ToList()
+                }).ToListAsync();
+            var bla = await query.ToListAsync();
+            #endregion DTOMapping
+
+            #region sorting
+
+            filteredRecipesForList = filteredRecipesForList
+                .OrderBy(x => x.Ingredients.Count - x.MatchedIngredients.Count)
+                .ThenBy(x => x.Title)
+                .ToList();
+
+            #endregion sorting
+
+            return filteredRecipesForList;
+        }
+
+
         public async Task<int> ToggleFavoriteRecipeAsync(Guid userId, Guid recipeId)
         {
             FavoriteRecipe favoriteRecipe = await _appDbContext.FavoriteRecipe.Where(x => x.RecipeId == recipeId).FirstOrDefaultAsync();
@@ -33,17 +112,6 @@ namespace CookIt.API.Repositories
             }
             return await _appDbContext.SaveChangesAsync();
         }
-
-        public async Task<List<FavoriteRecipe>> GetFavoriteRecipes(Guid userId)
-        {
-            List<FavoriteRecipe> favoriteRecipes = await _appDbContext.FavoriteRecipe
-                .AsNoTracking()
-                .Where(x => x.UserId == userId)
-                .ToListAsync();
-            return favoriteRecipes;
-        }
-
-
 
         public async Task<int> CreateRecipesAsync(CreateRecipeDto createRecipeDto)
         {
@@ -187,6 +255,7 @@ namespace CookIt.API.Repositories
             return recipe;
         }
 
+
         public async Task<List<Recipe>> GetRecipesAsync()
         {
             List<Recipe> recipes = await _appDbContext.Recipe
@@ -252,7 +321,7 @@ namespace CookIt.API.Repositories
                     Host = recipe.Host,
                     Url = recipe.Url,
                     ImageUrl = recipe.ImageUrl,
-                    IsFavorite = favoriteRecipes != null ? favoriteRecipes.Any(x=> x.RecipeId == recipe.Id) : false,
+                    IsFavorite = favoriteRecipes != null ? favoriteRecipes.Any(x => x.RecipeId == recipe.Id) : false,
                     Ingredients = recipe.RecipeSentences
                         .Select(recipeSentence => recipeSentence.RecipeSentenceIngredients
                             .Any(x => filter.IngredientsIds != null

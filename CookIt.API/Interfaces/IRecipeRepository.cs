@@ -13,11 +13,11 @@ namespace CookIt.API.Interfaces
         Task<Recipe> GetRecipeAsync(Guid id);
         Task<List<Recipe>> GetRecipesAsync();
         Task<List<RecipeWithMatchedIngredientsDto>> GetFilteredRecipesAsync(GetRecipesFilterDto filter, Guid id);
+        Task<List<RecipeWithMatchedIngredientsDto>> GetFavoriteRecipesAsync(GetFavoriteRecipesDto filter, Guid id);
         Task<int> DeleteRecipeAsync(Guid id);
         Task<RecipeSentenceIngredient> GetRecipeSentenceIngredientAsync(Guid id);
         Task<int> UpdateRecipeSentenceIngredientAsync(Guid id, string ingredientValue);
         Task<int> DeleteRecipeSentenceIngredientAsync(Guid id);
         Task<int> ToggleFavoriteRecipeAsync(Guid userId, Guid recipe);
-        Task<List<FavoriteRecipe>> GetFavoriteRecipes(Guid userId);
     }
 }

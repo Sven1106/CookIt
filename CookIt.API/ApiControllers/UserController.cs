@@ -20,9 +20,12 @@ namespace CookIt.API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IRecipeRepository _recipeRepository;
-        public UserController(IRecipeRepository recipeRepository)
+        private readonly IIngredientRepository _ingredientRepository;
+
+        public UserController(IRecipeRepository recipeRepository, IIngredientRepository ingredientRepository)
         {
             _recipeRepository = recipeRepository;
+            _ingredientRepository = ingredientRepository;
         }
         [HttpPost("toggleFavoriteRecipe/{recipeId}")]
         public async Task<IActionResult> ToggleFavoriteRecipe(Guid recipeId)
@@ -48,20 +51,18 @@ namespace CookIt.API.Controllers
             return Ok();
         }
 
-        [HttpGet("getAllFavoriteRecipes")]
-        public async Task<IActionResult> GetAllFavoriteRecipes([FromQuery]GetRecipesFilterDto filter)
+        [HttpGet("getFavoriteRecipes")]
+        public async Task<IActionResult> GetFavoriteRecipes([FromQuery]GetFavoriteRecipesDto filter)
         {
             List<RecipeWithMatchedIngredientsDto> recipesWithMatchedIngredients = new List<RecipeWithMatchedIngredientsDto>();
             if (Guid.TryParse(User.FindFirst(ClaimTypes.NameIdentifier).Value, out Guid userId))
             {
-                recipesWithMatchedIngredients = await _recipeRepository.GetFilteredRecipesAsync(filter, userId);
+                recipesWithMatchedIngredients = await _recipeRepository.GetFavoriteRecipesAsync(filter, userId);
 
                 if (recipesWithMatchedIngredients == null)
                 {
                     return StatusCode(500, "GetFavoriteRecipes failed");
                 }
-
-                recipesWithMatchedIngredients = recipesWithMatchedIngredients.Where(x => x.IsFavorite == true).ToList();
                 if (recipesWithMatchedIngredients.Count == 0)
                 {
                     return NoContent();
@@ -74,5 +75,56 @@ namespace CookIt.API.Controllers
             }
             return Ok(recipesWithMatchedIngredients);
         }
+
+
+
+
+
+
+
+
+        [HttpGet("getUserIngredients")]
+        public async Task<IActionResult> GetUserIngredients()
+        {
+            List<Ingredient> userIngredients = new List<Ingredient>();
+            if (Guid.TryParse(User.FindFirst(ClaimTypes.NameIdentifier).Value, out Guid userId))
+            {
+                userIngredients = await _ingredientRepository.GetUserIngredients(userId);
+
+                if (userIngredients == null)
+                {
+                    return StatusCode(500, "GetAllUserIngredients failed");
+                }
+
+                if (userIngredients.Count == 0)
+                {
+                    return NoContent();
+                }
+            }
+            else
+            {
+                return StatusCode(500, "No valid userId found in claims");
+            }
+            return Ok(userIngredients);
+        }
+
+        [HttpPost("updateUserIngredients")]
+        public async Task<IActionResult> UpdateUserIngredients(UpdateUserIngredientDto updateUserIngredientDto)
+        {
+            if (Guid.TryParse(User.FindFirst(ClaimTypes.NameIdentifier).Value, out Guid userId))
+            {
+                int changesMade = await _ingredientRepository.UpdateUserIngredients(userId, updateUserIngredientDto.Ingredients);
+                if (changesMade == 0)
+                {
+                    return BadRequest("No changes were made");
+                }
+            }
+            else
+            {
+                return StatusCode(500, "No valid userId found in claims");
+            }
+            return Ok();
+        }
+
     }
 }

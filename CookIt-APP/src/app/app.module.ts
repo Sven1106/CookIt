@@ -28,9 +28,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PasswordStateMatcher } from 'src/app/_shared/passwordStateMatcher';
 import { AuthService } from './_services/auth/auth.service';
-import { AlertService } from './_services/alert.service';
-import { NetworkService } from './_services/network.service';
-import { RecipeService } from './_services/recipe.service';
+import { AlertService } from './_services/alert/alert.service';
+import { NetworkService } from './_services/network/network.service';
+import { RecipeService } from './_services/recipe/recipe.service';
 import { RecipeDetailComponent } from './_shared/recipeDetail/recipeDetail.component';
 
 export function tokenGetter() {

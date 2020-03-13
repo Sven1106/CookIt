@@ -1,11 +1,12 @@
+import { RecipeService } from 'src/app/_services/recipe/recipe.service';
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { debounceTime } from 'rxjs/operators';
-import { AlertService } from './_services/alert.service';
-import { NetworkService } from './_services/network.service';
+import { AlertService } from './_services/alert/alert.service';
+import { NetworkService } from './_services/network/network.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private networkService: NetworkService,
-    private alert: AlertService
+    private alertService: AlertService,
+    private recipeService: RecipeService
   ) {
     this.initializeApp();
   }
@@ -37,8 +39,8 @@ export class AppComponent {
       .pipe(debounceTime(300))
       .subscribe((connected: boolean) => {
         this.isConnected = connected;
-        if (this.isConnected == false) {
-          this.alert.error('Ingen internet');
+        if (this.isConnected === false) {
+          this.alertService.error('Ingen internet');
         }
       });
   }

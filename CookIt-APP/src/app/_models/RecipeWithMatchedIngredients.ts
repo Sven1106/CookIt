@@ -9,4 +9,7 @@ export class RecipeWithMatchedIngredients {
     isFavorite: boolean;
     ingredients: Ingredient[];
     matchedIngredients: Ingredient[];
+    constructor() {
+
+    }
 }

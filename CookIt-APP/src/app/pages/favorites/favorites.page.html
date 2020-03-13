@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title>
-      Farvoritter
+      Favoritter
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,7 +9,7 @@
 <ion-content>
   <div class="ion-margin favoriteRecipes">
     <p *ngIf="favoriteRecipes.length == 0">
-      Ingen farvorit opskrifter
+      Ingen favorit opskrifter
     </p>
     <div class="favoriteRecipeContainer" *ngFor=" let recipe of favoriteRecipes" (click)="toggleDetails(recipe)">
       <div class="favoriteRecipe">
@@ -21,8 +21,6 @@
             <div class="title">
               {{recipe.title}}
             </div>
-
-
             <div class="progressBar">
               <div class="label" [style.left.%]="recipe.matchedIngredientsCount/recipe.ingredients.length *100">
                 {{recipe.matchedIngredientsCount}} / {{recipe.ingredients.length}}

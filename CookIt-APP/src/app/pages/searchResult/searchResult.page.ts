@@ -1,6 +1,7 @@
+import { RecipeService } from 'src/app/_services/recipe/recipe.service';
 import { RecipeDetailComponent } from '../../_shared/recipeDetail/recipeDetail.component';
 
-import { AlertService } from 'src/app/_services/alert.service';
+import { AlertService } from 'src/app/_services/alert/alert.service';
 import { RecipeWithMatchedIngredients } from 'src/app/_models/recipeWithMatchedIngredients';
 import { IngredientWithIsMatchDto } from 'src/app/_models/ingredientWithIsMatchDto';
 
@@ -8,9 +9,10 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { RecipeForListDto } from 'src/app/_models/RecipeForListDto';
 import { MatDialog } from '@angular/material/dialog';
 import { ImageRequest } from 'src/app/_models/imageRequest';
-import { ImageService } from 'src/app/_services/image.service';
+import { ImageService } from 'src/app/_services/image/image.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Platform } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 
 
@@ -30,8 +32,10 @@ export class SearchResultPage implements OnInit {
   currentSelectedRecipeContainerElement: HTMLElement;
   constructor(
     public dialog: MatDialog,
+    private platform: Platform,
     private imageService: ImageService,
-    private platform: Platform
+    private recipeService: RecipeService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -39,34 +43,38 @@ export class SearchResultPage implements OnInit {
     thumbNailRequest.width = this.platform.width();
     thumbNailRequest.height = Math.floor(this.platform.width() * 0.75);
     this.imageService.getImage(thumbNailRequest).subscribe((placeholderImg) => {
-      this.recipes = JSON.parse(localStorage.getItem('recipesFound')).map((recipe: RecipeWithMatchedIngredients) => {
-        const ingredientsWithIsMatchDto: IngredientWithIsMatchDto[] = [];
-        recipe.ingredients.forEach(ingredient => {
-          const ingredientWithIsMatchDto: IngredientWithIsMatchDto = new IngredientWithIsMatchDto(ingredient.id, ingredient.name, recipe.matchedIngredients.some(x => x.id === ingredient.id));
-          ingredientsWithIsMatchDto.push(ingredientWithIsMatchDto);
+      this.recipeService.searchRecipes.subscribe(x => {
+        if (x.length === 0) {
+          this.router.navigateByUrl('tabs/recipes/searchFilter');
+        }
+        this.recipes = x.map((recipe: RecipeWithMatchedIngredients) => {
+          const ingredientsWithIsMatchDto: IngredientWithIsMatchDto[] = [];
+          recipe.ingredients.forEach(ingredient => {
+            const ingredientWithIsMatchDto: IngredientWithIsMatchDto = new IngredientWithIsMatchDto(ingredient.id, ingredient.name, recipe.matchedIngredients.some(x => x.id === ingredient.id));
+            ingredientsWithIsMatchDto.push(ingredientWithIsMatchDto);
+          });
+          const recipeSearchResultDto = new RecipeForListDto(recipe.id, recipe.title, recipe.host, recipe.url, recipe.imageUrl, placeholderImg, recipe.isFavorite, ingredientsWithIsMatchDto, recipe.matchedIngredients.length);
+          return recipeSearchResultDto;
         });
-        const recipeSearchResultDto = new RecipeForListDto(recipe.id, recipe.title, recipe.host, recipe.url, recipe.imageUrl, placeholderImg, recipe.isFavorite, ingredientsWithIsMatchDto, recipe.matchedIngredients.length);
-        return recipeSearchResultDto;
+        this.setTitle();
+        this.lazyLoadImage();
       });
-      this.setTitle();
-      this.lazyLoadImage();
     });
-
-
-
   }
+
   setTitle() {
     this.title = this.isDetailedView ? 'Detaljer om opskriften' : this.recipes.length + ' opskrifter fundet';
   }
 
   toggleDetails(recipe: RecipeForListDto) {
-    console.log(recipe);
     const dialogRef = this.dialog.open(RecipeDetailComponent, {
       panelClass: 'custom-dialog-container',
       data: recipe,
     });
-    dialogRef.afterClosed().subscribe(result => {
-
+    dialogRef.afterClosed().subscribe((data) => {
+      if (dialogRef.componentInstance.oldIsFavorite !== recipe.isFavorite) {
+        this.recipeService.toggleFavoriteRecipe(recipe);
+      }
     });
   }
   getContent() {

@@ -25,8 +25,7 @@
           placeholder="Søg ingrediens">
         <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayIngredientName"
           (optionSelected)="addIngredientToKitchenCupboard($event)">
-          <mat-option
-            *ngFor="let ingredientOption of filteredIngredientOptions | async| slice : 0 : ingredientSearchLimit"
+          <mat-option *ngFor="let ingredientOption of filteredIngredientList | async| slice : 0 : ingredientSearchLimit"
             [value]="ingredientOption">
             {{ingredientOption.name}}
           </mat-option>
@@ -39,8 +38,8 @@
         <p *ngIf="ingredientsInKitchenCupboard.length == 0">
           Ingen ingredienser i køkkenskabet
         </p>
-        <mat-chip-list *ngIf="ingredientsInKitchenCupboard.length > 0">
-          <mat-chip appearance="outline" *ngFor="let ingredient of ingredientsInKitchenCupboard"
+        <mat-chip-list *ngIf="modifiedIngredientsInKitchenCupboard.length > 0">
+          <mat-chip appearance="outline" *ngFor="let ingredient of modifiedIngredientsInKitchenCupboard"
             (click)="removeIngredientFromKitchenCupboard(ingredient)">
             {{ingredient.name}}
             <mat-icon>cancel</mat-icon>
@@ -58,6 +57,7 @@
 
 </ion-content>
 <ion-footer class="ion-padding ion-no-border" *ngIf="selectedSegment == 'kitchenCupboard'">
-  <button type="submit" class="full-width submitBtn" [disabled]="anyIngredientsInKitchenCupboardChanges == false" mat-flat-button color="primary" (click)="saveChanges()">Gem
+  <button type="submit" class="full-width submitBtn" [disabled]="anyIngredientsInKitchenCupboardChanges == false"
+    mat-flat-button color="primary" (click)="saveChanges()">Gem
     ændringer</button>
 </ion-footer>

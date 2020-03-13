@@ -1,6 +1,6 @@
-import { AlertService } from 'src/app/_services/alert.service';
+import { AlertService } from 'src/app/_services/alert/alert.service';
 import { Ingredient } from 'src/app/_models/ingredient';
-import { RecipeService } from 'src/app/_services/recipe.service';
+import { RecipeService } from 'src/app/_services/recipe/recipe.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
@@ -20,8 +20,9 @@ export class UserPage implements OnInit {
   ingredientSearchLimit: number = 20;
   ingredientSearchForm = new FormControl();
   ingredientOptions: Ingredient[] = [];
-  filteredIngredientOptions: Observable<Ingredient[]>;
+  filteredIngredientList: Observable<Ingredient[]>;
   ingredientsInKitchenCupboard: Ingredient[] = [];
+  modifiedIngredientsInKitchenCupboard: Ingredient[] = [];
   anyIngredientsInKitchenCupboardChanges: boolean = false;
   constructor(
     private recipeService: RecipeService,
@@ -29,27 +30,27 @@ export class UserPage implements OnInit {
   ) {
   }
   ngOnInit() {
-    this.recipeService.getIngredientsFromKitchenCupboardInStorage().then(ingredients => {
-      if (ingredients == null) {
-        this.ingredientsInKitchenCupboard = [];
-      }
-      else {
-        this.ingredientsInKitchenCupboard = this.recipeService.orderByNameAsc(ingredients);
-      }
-      this.prepareData();
+    this.recipeService.ingredients.subscribe(ingredients => {
+      this.ingredientOptions = ingredients.filter(x => x.id !== '00000000-0000-0000-0000-000000000000');
+    });
+    this.recipeService.ingredientsInKitchenCupboard.subscribe(ingredientsInKitchenCupboard => {
+      this.ingredientsInKitchenCupboard = ingredientsInKitchenCupboard;
+      this.modifiedIngredientsInKitchenCupboard = this.ingredientsInKitchenCupboard.map(x => x);
+      this.filteredIngredientList = this.recipeService.setIngredientSearchObservable(this.ingredientSearchForm, this.ingredientOptions,  this.modifiedIngredientsInKitchenCupboard);
     });
   }
   ionViewWillLeave() {
-    if (this.anyIngredientsInKitchenCupboardChanges) {
-      console.log("unsaved changes");
+    // ToDO
+    // if (this.anyIngredientsInKitchenCupboardChanges) {
+    //   console.log("unsaved changes");
 
-      if (true) {
-        this.anyIngredientsInKitchenCupboardChanges = false;
-      }
-      else {
+    //   if (true) {
+    //     this.anyIngredientsInKitchenCupboardChanges = false;
+    //   }
+    //   else {
 
-      }
-    }
+    //   }
+    // }
   }
   ionViewWillEnter() {
     this.selectedSegment = 'kitchenCupboard';
@@ -58,56 +59,57 @@ export class UserPage implements OnInit {
   displayIngredientName(ingredient: Ingredient): string {
     return ingredient && ingredient.name ? ingredient.name : '';
   }
-  prepareData() {
-    this.recipeService.getIngredients().subscribe({
-      next: (next: Ingredient[]) => {
-        this.ingredientOptions = next.filter(x => x.id != '00000000-0000-0000-0000-000000000000');
-        this.filteredIngredientOptions = this.recipeService.setIngredientSearchObservable(this.ingredientSearchForm, this.ingredientOptions, this.ingredientsInKitchenCupboard);
-      },
-      error: (error) => {
-        if (error instanceof HttpErrorResponse) {
-          switch (error.status) {
-            case 400:
-              this.alertService.error('Igen ingredienser fundet');
-              break;
-            case 0:
-              this.alertService.error('Ingen forbindelse til serveren');
-              break;
-            default:
-              const applicationError = error.headers.get('Application-Error');
-              if (applicationError) {
-                this.alertService.error(applicationError);
-              }
-              else {
-                this.alertService.error('Der opstod en fejl');
-              }
-              break;
-          }
-        }
-      }
-    });
-  }
 
   saveChanges() {
-    this.recipeService.setIngredientsInKitchenCupboardInStorage(this.ingredientsInKitchenCupboard).then(() => {
-      this.alertService.success("Ændringerne blev gemt", 1500);
-      this.anyIngredientsInKitchenCupboardChanges = false;
-    });
+    this.recipeService.updateUserIngredients(this.modifiedIngredientsInKitchenCupboard)
+      .subscribe(
+        {
+          next: () => {
+            this.alertService.success("Ændringerne blev gemt", 1500);
+            this.anyIngredientsInKitchenCupboardChanges = false;
+          },
+          error: (error: any) => {
+            console.error(error);
+            if (error instanceof HttpErrorResponse) {
+              switch (error.status) {
+                case 400:
+                  console.log('Ingen opskrifter fundet eller ingen ændringer lavet');
+                  break;
+                case 0:
+                  console.log('Ingen forbindelse til serveren');
+                  break;
+                default:
+                  const applicationError = error.headers.get('Application-Error');
+                  if (applicationError) {
+                    console.log(applicationError);
+                  }
+                  else {
+                    console.log('Der opstod en fejl');
+                  }
+                  break;
+              }
+            }
+          },
+          complete: () => {
+            console.log('complete');
+          }
+        });
+
   }
   addIngredientToKitchenCupboard(event: MatAutocompleteSelectedEvent) {
     let ingredient: Ingredient = event.option.value;
-    this.ingredientsInKitchenCupboard.push(ingredient);
+    this.modifiedIngredientsInKitchenCupboard.push(ingredient);
     this.ingredientSearchForm.setValue('');
-    this.ingredientsInKitchenCupboard = this.recipeService.orderByNameAsc(this.ingredientsInKitchenCupboard);
+    this.modifiedIngredientsInKitchenCupboard = this.recipeService.orderByNameAsc(this.modifiedIngredientsInKitchenCupboard);
     this.anyIngredientsInKitchenCupboardChanges = true;
   }
 
   removeIngredientFromKitchenCupboard(ingredient: Ingredient): void {
     this.anyChanges = true;
-    const index = this.ingredientsInKitchenCupboard.indexOf(ingredient);
+    const index = this.modifiedIngredientsInKitchenCupboard.indexOf(ingredient);
     if (index >= 0) {
-      this.ingredientsInKitchenCupboard.splice(index, 1);
-      this.ingredientsInKitchenCupboard = this.recipeService.orderByNameAsc(this.ingredientsInKitchenCupboard);
+      this.modifiedIngredientsInKitchenCupboard.splice(index, 1);
+      this.modifiedIngredientsInKitchenCupboard = this.recipeService.orderByNameAsc(this.modifiedIngredientsInKitchenCupboard);
       this.anyIngredientsInKitchenCupboardChanges = true;
     }
   }
