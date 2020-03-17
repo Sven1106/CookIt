@@ -19,8 +19,7 @@ import { SharedFormsModule } from '../../_shared/sharedForms.module';
     CommonModule,
     IonicModule,
     HomePageRoutingModule,
-    SharedFormsModule,
-
+    SharedFormsModule
   ],
   providers: [
   ]

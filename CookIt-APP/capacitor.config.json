@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "New Ionic App",
+  "appName": "Værsgo",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
@@ -18,8 +18,6 @@
   },
   "server": {
     "url": "http://192.168.1.37:8100",
-    "cleartext": true,
-    "originalUrl": "http://192.168.1.243:8100",
-    "originalCleartext": true
+    "cleartext": true
   }
 }

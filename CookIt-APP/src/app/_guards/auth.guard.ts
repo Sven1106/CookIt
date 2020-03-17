@@ -13,7 +13,6 @@ export class AuthGuard implements CanActivate {
         let isLoggedIn: boolean;
         await this.authService.isLoggedIn().then((value) => {
             isLoggedIn = value;
-            console.log('isLoggedIn');
             this.recipeService.initData();
         });
         if (isLoggedIn) {
