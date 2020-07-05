@@ -1,35 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TabsPage } from './tabs.page';
+import { TabsComponent } from './tabs.component';
 
 const routes: Routes = [
   {
     path: 'tabs',
-    component: TabsPage,
+    component: TabsComponent,
     children: [
       {
         path: 'favorites',
-        loadChildren: () => import('../pages/favorites/favorites.module').then(m => m.FavoritesPageModule)
+        loadChildren: () => import('@featureModules/favorites/favorites.module').then(m => m.FavoritesPageModule)
       },
       {
         path: 'recipes',
-        children: [
-          { path: '', redirectTo: 'searchfilter', pathMatch: 'full' },
-          {
-            path: 'searchfilter',
-            loadChildren: () => import('../pages/searchFilter/searchFilter.module').then(m => m.SearchFilterPageModule)
-          },
-          {
-            path: 'searchResult',
-            loadChildren: () => import('../pages/searchResult/searchResult.module').then( m => m.SearchresultPageModule)
-          }
-        ]
-
+        loadChildren: () => import('@featureModules/recipes/recipes.module').then(m => m.RecipesModule)
       },
       {
         path: 'user',
         loadChildren: () =>
-          import('../pages/user/user.module').then(m => m.UserPageModule)
+          import('@featureModules/user/user.module').then(m => m.UserPageModule)
       },
       {
         path: '',

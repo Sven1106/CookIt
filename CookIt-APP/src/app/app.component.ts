@@ -1,11 +1,11 @@
-import { RecipeService } from 'src/app/_services/recipe/recipe.service';
+import { RecipeService } from '@core/services/recipe/recipe.service';
 import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { debounceTime } from 'rxjs/operators';
-import { AlertService } from './_services/alert/alert.service';
+import { AlertService } from '@core/services/alert/alert.service';
 
 @Component({
   selector: 'app-root',

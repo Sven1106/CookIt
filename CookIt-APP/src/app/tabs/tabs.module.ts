@@ -1,4 +1,4 @@
-import { SharedFormsModule } from './../_shared/sharedForms.module';
+import { SharedModule } from './../shared/shared.module';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 import { TabsPageRoutingModule } from './tabs-routing.module';
 
-import { TabsPage } from './tabs.page';
+import { TabsComponent } from './tabs.component';
 
 @NgModule({
   imports: [
@@ -14,8 +14,8 @@ import { TabsPage } from './tabs.page';
     CommonModule,
     FormsModule,
     TabsPageRoutingModule,
-    SharedFormsModule
+    SharedModule
   ],
-  declarations: [TabsPage]
+  declarations: [TabsComponent]
 })
 export class TabsPageModule {}

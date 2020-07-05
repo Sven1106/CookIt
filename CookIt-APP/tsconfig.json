@@ -3,6 +3,12 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "@environments/*": ["src/environments/*"],
+      "@core/*" : ["src/app/core/*"],
+      "@featureModules/*": ["src/app/featureModules/*"],
+      "@shared/*": ["src/app/shared/*"],
+    },
     "sourceMap": true,
     "declaration": false,
     "module": "esnext",
