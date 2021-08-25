@@ -1,170 +1,90 @@
 import { Box, Typography } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
-import React, { useReducer } from 'react';
-import {
-	onFocusOut,
-	onInputChange,
-	UPDATE_FORM,
-	ValidationType,
-} from '../../utils/FormUtils';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 import { LinkButton } from '../common/LinkButton';
 import { PrimaryButton } from '../common/PrimaryButton';
 import { Logo } from './Logo';
 
-const formsReducer = (state: validationFormState, action: validationAction) => {
-	switch (action.type) {
-		case UPDATE_FORM:
-			const { name, value, hasError, error, touched, isFormValid } =
-				action.data;
-			return {
-				...state,
-				[name]: {
-					...(state[name as keyof validationFormState] as object),
-					value,
-					hasError,
-					error,
-					touched,
-				},
-				isFormValid,
-			};
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 
-		default:
-			return state;
-	}
+type SignInFormProps = {
+	signIn: Function;
+};
+type Inputs = {
+	email: string;
+	password: string;
 };
 
-type validationField = {
-	value: string;
-	touched: boolean;
-	hasError: boolean;
-	error: string;
-};
+const signInFormSchema = yup.object().shape({
+	email: yup
+		.string()
+		.email('Dette er ikke en gyldig e-mail')
+		.required('E-mail må ikke være tom'),
+	password: yup
+		.string()
+		.min(8, 'Password skal være mindst 8 karakter langt')
+		.required('Password må ikke være tomt'),
+});
 
-type validationAction = {
-	type: string;
-	data: validationData;
-};
-type validationData = {
-	name: string;
-	value: any;
-	touched: boolean;
-	hasError: boolean;
-	error: string;
-	isFormValid: boolean;
-};
-
-type validationFormState = {
-	email: validationField;
-	password: validationField;
-	isFormValid: boolean;
-};
-
-const SignInForm = () => {
-	const initialState: validationFormState = {
-		email: { value: '', touched: false, hasError: false, error: '' },
-		password: { value: '', touched: false, hasError: false, error: '' },
-		isFormValid: false,
-	};
-	const [state, dispatch] = useReducer(formsReducer, initialState);
-
-	const formSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault();
-
-		// for (const propertyName in state) {
-
-		// 	const item = state[propertyName];
-		// 	const { value } = item;
-		// 	const inputType: ValidationType =
-		// 		ValidationType[propertyName as keyof typeof ValidationType];
-		// 	const { hasError, error } = validateInput(inputType, value);
-
-		// 	if (propertyName) {
-		// 		dispatch({
-		// 			type: UPDATE_FORM,
-		// 			data: {
-		// 				name: propertyName,
-		// 				value,
-		// 				hasError,
-		// 				error,
-		// 				touched: true,
-		// 				isFormValid: state.isFormValid,
-		// 			},
-		// 		});
-		// 	}
-		// }
-		if (state.isFormValid === false) {
-			console.log('Form not valid');
-		} else {
-			//callback
-		}
-	};
+const SignInForm = (props: SignInFormProps) => {
+	const { handleSubmit, control } = useForm<Inputs>({
+		mode: 'onTouched',
+		resolver: yupResolver(signInFormSchema),
+	});
+	const onSubmit: SubmitHandler<Inputs> = (data) =>
+		props.signIn(data.email, data.password);
 	return (
-		<form
-			onSubmit={formSubmitHandler}
-			onInvalidCapture={(e) => e.preventDefault()}
-		>
+		<form onSubmit={handleSubmit(onSubmit)}>
 			<Box padding={2}>
 				<Logo />
 				<Box>
-					<TextField
-						id="email"
-						type="email"
-						label="E-mail"
-						variant="outlined"
-						size="small"
-						helperText={
-							state.email.hasError && state.email.touched
-								? state.email.error
-								: '*Påkrævet'
-						}
-						error={state.email.hasError && state.email.touched}
-						value={state.email.value}
-						fullWidth
-						onChange={(e) => {
-							onInputChange(
-								ValidationType.email,
-								e.target.value,
-								dispatch,
-								state
-							);
-						}}
-						onBlur={(e) => {
-							onFocusOut(ValidationType.email, e.target.value, dispatch, state);
-						}}
+					<Controller
+						name="email"
+						control={control}
+						defaultValue=""
+						render={({
+							field: { onBlur, onChange, value },
+							fieldState: { error },
+						}) => (
+							<TextField
+								type="email"
+								label="E-mail"
+								variant="outlined"
+								size="small"
+								fullWidth
+								value={value}
+								onChange={onChange}
+								onBlur={onBlur}
+								error={!!error}
+								helperText={error ? error.message : '*Påkrævet'}
+							/>
+						)}
 					/>
 				</Box>
 
 				<Box mt={1}>
-					<TextField
-						id="password"
-						type="password"
-						label="Password"
-						variant="outlined"
-						size="small"
-						helperText={
-							state.password.hasError && state.password.touched
-								? state.password.error
-								: '*Påkrævet'
-						}
-						error={state.password.hasError && state.password.touched}
-						value={state.password.value}
-						fullWidth
-						onChange={(e) => {
-							onInputChange(
-								ValidationType.password,
-								e.target.value,
-								dispatch,
-								state
-							);
-						}}
-						onBlur={(e) => {
-							onFocusOut(
-								ValidationType.password,
-								e.target.value,
-								dispatch,
-								state
-							);
-						}}
+					<Controller
+						name="password"
+						control={control}
+						defaultValue=""
+						render={({
+							field: { onBlur, onChange, value },
+							fieldState: { error },
+						}) => (
+							<TextField
+								type="password"
+								label="Password"
+								variant="outlined"
+								size="small"
+								fullWidth
+								value={value}
+								onChange={onChange}
+								onBlur={onBlur}
+								error={!!error}
+								helperText={error ? error.message : '*Påkrævet'}
+							/>
+						)}
 					/>
 				</Box>
 
